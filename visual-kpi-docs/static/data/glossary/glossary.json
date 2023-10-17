@@ -1,0 +1,108 @@
+{
+  "vocabularyList": [
+    {
+      "name": "PI",
+      "description": ""
+    },
+    {
+      "name": "KPI",
+      "description": ""
+    },
+    {
+      "name": "Dashboard",
+      "description": ""
+    },
+    {
+      "name": "Group",
+      "description": ""
+    },
+    {
+      "name": "State",
+      "description": ""
+    },
+    {
+      "name": "Unkown State",
+      "description": "When the actual value of a KPI exceeds the logical range defined by the minimum and maximum limits, the KPI enters an unknown state. If you analyze a percentage-based KPI and its value exceeds 100 or becomes negative, it enters the unknown state, for example."
+    },
+    {
+      "name": "Object",
+      "description": ""
+    },
+    {
+      "name": "Trends",
+      "description": ""
+    },
+    {
+      "name": "Time Series",
+      "description": ""
+    },
+    {
+      "name": "Timestamp",
+      "description": ""
+    },
+    {
+      "name": "Limit",
+      "description": ""
+    },
+    {
+      "name": "Target",
+      "description": ""
+    },
+    {
+      "name": "Time Range",
+      "description": ""
+    },
+    {
+      "name": "Profile",
+      "description": ""
+    },
+    {
+      "name": "Watchlist",
+      "description": ""
+    },
+    {
+      "name": "Attributes",
+      "description": ""
+    },
+    {
+      "name": "Alert",
+      "description": ""
+    },
+    {
+      "name": "Escalating alert",
+      "description": ""
+    },
+    {
+      "name": "Actual",
+      "description": ""
+    },
+    {
+      "name": "SPC",
+      "description": ""
+    },
+    {
+      "name": "Interface",
+      "description": ""
+    },
+    {
+      "name": "KPI Context",
+      "description": ""
+    },
+    {
+      "name": "KPI Metadata",
+      "description": ""
+    },
+    {
+      "name": "Remote Context Server (RCS)",
+      "description": ""
+    },
+    {
+      "name": "Data decoration",
+      "description": ""
+    },
+    {
+      "name": "ODBC",
+      "description": ""
+    }
+  ]
+}
