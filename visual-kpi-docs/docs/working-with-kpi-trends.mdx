@@ -1,0 +1,216 @@
+---
+id: working-with-kpi-trends
+title: Working with KPI Trends
+sidebar_position: 1
+slug: /working-with-kpi-trends
+description: Explore Transpara's trends visualization tool to monitor your business's real-time performance, focusing on Key Performance Indicator (KPI) trends. Learn how to access KPI trends, navigate the KPI panel, and utilize interactive tools for a comprehensive analysis.
+tags: ['trend', 'KPI', 'guide']
+---
+
+import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
+
+# Working with KPI Trends
+
+Transpara's trend visualization empowers you to monitor your performance in real-time. Trends can provide insights into your business's performance over time. Key Performance Indicator (KPI) trends are vital to the Transpara system, allowing you to visualize data in an obvious way (via status, color and alerting) and highlight issues from anywhere. In this guide, we'll explore the trend visualization features available to you when using KPIs trends in Transpara.
+
+:::info Trend Types
+Transpara enables several trend types, including KPI trends, statistical process control (SPC) charts, and multiple-pen trends. The use of each trend type varies depending on your specific use case.
+
+This article focuses on KPI trends only. Check the respective [SPC](#) and [multiple-pen trend](#) guides to learn more about them.
+:::
+
+## How to Access KPI Trends
+
+To access a KPI trend, you need to follow the steps below:
+
+1. Access the [**Visual KPI**](#) platform.
+2. Navigate to the **Dashboard** tab.
+3. Click on the **Expand** button at the top-right corner of your desired KPI. You'll access the visualization panel for the selected KPI.
+
+<StylizedImage
+  imgURL="img/transpara/expand-btn.png"
+  alt="KPI panel expand button"
+  wSize="600px"
+/>
+
+## KPI Panel Information
+
+KPI trends display data in near real-time, updating every few seconds to reflect the latest information. On every KPI trend page you will find:
+
+1. **KPI data**: On the center of the screen you find the graph with the live KPI data. Horizontal lines represent the actual value, limits and/or a target, which you can customize as needed. Each of these can be static or dynamically read from data sources and/or via calculations and analytics. The limits and target are what determine the KPI's status and allow you to get obvious insights about the KPI is performing now, over time, and even future (e.g. forecasting). If you have forecast or future data available, it will be displayed at the right of the vertical dashed line,which represents the current time, on the trend.
+
+2. **Legend**: All existing lines on the graph are identified on the legend. Clicking on a legend item’s colored box with toggle its visibility.
+
+3. **Time Range Control**: It displays the current time range. In addition, it provides buttons to navigate to older or new time intervals. You can modify the time range of the KPI view using the **Time Ranges** functionality.
+
+4. **Trend Options**: The KPI trend visualization provides several features to change how you view and analyze the KPI data. See the [Trend Options](#features-of-the-kpi-trend) section to learn more about the available features.
+
+5. **Trend Gestures**: These tools enable you to interact with the graph. For further information, check the [Trend Gestures](#trend-gestures) section.
+
+<StylizedImage
+  imgURL="img/transpara/kpi-panel.png"
+  alt="KPI panel available options"
+  wSize="900px"
+/>
+
+## Features of the KPI Trend
+
+Access the KPI panel features by clicking on the buttons located at the top-left. Below you find a list and description of the existing options from left to right.
+
+- **Trend Options**:
+
+  - **Trend Scale**: Choose between **Single Scale** if you're analyzing a single KPI or related KPIs or **Multi-Scale** if you're dealing with multiple KPIs or pens/actuals that are on different y-axis scales.
+
+  - **Trend Type**: Transpara KPI data points are obtained at fixed intervals and this option determines the connection between the data points when creating the trend graph.The Trend Type lets you change the visual pen style for the actual and target of the KPI trend. You can choose from the following options:
+
+    - Interpolated: automatically draws an interpolated line between data points, making a smooth trend where the line appears to have data between actual data points
+
+    - Step: Draws a step from each data point to the next (looking like stairs)
+
+    - Symbol: Draws just dots for each data point
+
+    - Interpolated + Symbol: Combines an interpolated trend with symbols for each data point
+
+    - Step + Symbol: Combines an step trend with symbols for each data point
+
+  - **Auto Play**: Enable or turn off automatic updating or movement of the trend as new data is received. When Auto Play is On, trend is essentially live and moves in near real-time. When off, the trend is static. Use the off option when you want the trend to be fixed to do additional analysis without it changing.
+
+  - **Pen Width**: Change the KPI line width on the trend.
+
+- **Ad-Hoc Trend**: Use this option for marking advanced adjustments, adding new pens from data sources, or other customizations.
+
+<StylizedImage
+  imgURL="img/transpara/kpi-hand-trend.png"
+  alt="Hoc Trend Panel"
+  wSize="600px"
+/>
+
+- **Export**: Exports the data from KPI trend to either a .csv file for external data analysis or to a table in the browser,handy if you are on a phone and don't have Excel, to explore the data in more detail.
+
+- **Time Range**: Defines the time range visualized in the trend. Choose from predefined options or create custom ranges. When defining custom data ranges, use the symbol described in the table below. You can define both fixed time ranges (static) or relative time ranges (moving). As an example, let's define a custom relative time range composed by the data from the last 7 days:
+  - **Start Time**: Insert **\*-7days**, meaning you want the starting time to be seven days before the current date (**\***).
+  - **End Time**: Insert **\***, meaning you want the last data point presented to correspond to the current date (real-time data).
+
+<table>
+  <thead>
+    <tr>
+      <th>Symbol</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>*</td>
+      <td>
+        Current date, it will be updated constantly, reflecting the current date
+        and time.
+      </td>
+    </tr>
+    <tr>
+      <td>min</td>
+      <td>Represents minutes.</td>
+    </tr>
+    <tr>
+      <td>hour</td>
+      <td>Represents hours.</td>
+    </tr>
+    <tr>
+      <td>day</td>
+      <td>Represents days.</td>
+    </tr>
+    <tr>
+      <td>bom</td>
+      <td>Used to define the beginning of the month.</td>
+    </tr>
+    <tr>
+      <td>boy</td>
+      <td>Used to define the beginning of the year.</td>
+    </tr>
+    <tr>
+      <td>noon</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>sa</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+- **Revert**: Restores the trend to its default state (time range, zoom level, etc).
+
+- **View Detail**: Access additional information about the KPI, including responsible parties, statistics based on the currently viewed range, group membership, custom attributes, and other properties.
+
+- **Gauge View**: Switch between the KPI trend view (line chart) and gauge view (dial chart). The gauge view shows the current KPI value in relation to its target and limits, similar to a car fuel gauge.
+
+<StylizedImage
+  imgURL="img/transpara/kpi-gauge-view.png"
+  alt="Gauge view"
+  wSize="600px"
+/>
+
+## Interaction Tools
+
+In addition to the features above, Transpara provides additional tools and gestures for a richer experience:
+
+- **Status Background**: Visualize KPI performance compared to reference values, if available. In the example below, when the **Status Background** is activated, you can easily see times when the **Actual** value (blue) surpasses the **High Limit** (red). This is an obvious way to see when a KPI is acting erratically or knowing where to zoom in without having to read the data in detail.
+
+<StylizedImage
+  imgURL="img/transpara/kpi-status-background.gif"
+  alt="Status Background example"
+  wSize="700px"
+/>
+
+- **Box Zoom**: Select and zoom in on specific part of the trend, allowing for closer inspection of time intervals, events or amplitudes. When you have the **Box Zoom** tool selected, you can perform different operations:
+
+  - Select an rectangular area to zoom in, which zooms both x and y axes.
+  - Create a thin horizontal area with your mouse to zoom in only on the x-axis (time).
+
+<StylizedImage
+  imgURL="img/transpara/new-box-zoom.gif"
+  alt="Box zoom example"
+  wSize="700px"
+/>
+
+- **Using the mouse wheel**: Regardless of what other tools are selected, you can perform the following zoom operations using your mouse:
+
+  - Scrolling the mouse wheel will zoom in/out (both x and y axis)
+  - Holding ctrl and scrolling the mouse wheel up/down will zoom in/out the x-axis only (changing the time range only).
+  - Hold alt and scrolling the mouse wheel up/down will zoom in/out the y-axis only (more detail, but same time range).
+
+<StylizedImage
+  imgURL="img/transpara/new-kpi-zoom.gif"
+  alt="Zoom example"
+  wSize="700px"
+/>
+
+- **Drag Mode**: Click and drag the mouse to move the KPI trend data within the view.
+
+<StylizedImage
+  imgURL="img/transpara/kpi-move.gif"
+  alt="Move example"
+  wSize="700px"
+/>
+
+- **Cursor Mode**: Hover over the KPI trend to view values at specific points in time. You can lock the current cursors on the screen by clicking on the chart.
+
+<StylizedImage
+  imgURL="img/transpara/kpi-cursor-mode.gif"
+  alt="Cursor mode example"
+  wSize="700px"
+/>
+
+- **Snap To**: Enable this option to snap the cursors to only actual data points that exist in the data source, ignoring interpolated data in between points.
+
+- **Tread Comments**: Add comments to the KPI trend to annotate specific points, intervals, or ranges. Comments can facilitate discussions among users by creating a threaded discussion that is stored forever along with the trend. The following trend comment features exist:
+
+  - **Full-Range Comment**: Selecting the green comment button will create a comment for the entire visible range of the trend.
+  - **Point Comments**: Single-clicking anywhere in the trend will create a comment at that exact point in time.
+  - **Range Comments**: By clicking and dragging your mouse over a range of data will create a comment associated with that specific range of time.
+  - **Comment Codes**: Custom comment codes or categories can be specified in the setup (Designer) that allow users to choose from a drop-down list of items, e.g. comment type, failure codes, reason codes, etc.
+  - **Manual Adjustments**: In the comment dialog, users can adjust the exact start/end time of the comment and make other changes
+  - **Threaded Discussion**: Once comments have been created, other users or the same user can reply to these comments in a threaded discussion to promote collaboration and knowledge capture.
+
+:::info Mobile version
+All interaction functionalities are also available on mobile devices, ensuring you have access to critical data and features while on the go.
+:::

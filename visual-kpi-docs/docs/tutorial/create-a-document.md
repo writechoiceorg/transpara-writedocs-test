@@ -1,5 +1,10 @@
 ---
+id: create-a-document
+title: Create a document
 sidebar_position: 2
+slug: /tutorial/create-a-document
+description: Create a document description.
+tags: ['document', 'guide', 'create', 'overview']
 ---
 
 # Create a Document

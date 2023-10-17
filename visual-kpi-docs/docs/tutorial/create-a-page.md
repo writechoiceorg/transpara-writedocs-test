@@ -1,5 +1,10 @@
 ---
+id: create-a-page
+title: Create a Page
 sidebar_position: 1
+slug: /tutorial/create-a-page
+description: Create a Page description.
+tags: ['page', 'guide', 'create', 'overview']
 ---
 
 # Create a Page
