@@ -28,3 +28,57 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+.site_logo {
+  border-radius: 4px;
+}
+
+/*-------------------------------- Markdown Header sizes ------------------------------  */
+
+.markdown h1 {
+  --ifm-h1-font-size: 2.125rem !important;
+}
+
+.markdown h2 {
+  --ifm-h2-font-size: 1.625rem !important;
+}
+
+.markdown h3 {
+  --ifm-h3-font-size: 1.375rem !important;
+}
+
+/*-------------------------------- Tables configuration ------------------------------  */
+
+table {
+  width: fit-content;
+  margin: auto;
+  margin-bottom: var(--ifm-spacing-vertical);
+}
+
+table thead th {
+  background-color: #ddd7e9;
+  border: none;
+  text-align: left;
+}
+
+table tr {
+  width: 100%;
+}
+
+table tr td {
+  background-color: #ffffff;
+  border: none;
+}
+
+table thead,
+table tbody {
+  border: 1px solid #ddd7e9;
+}
+
+table thead tr {
+  border: 0 !important;
+}
+
+table {
+  font-size: small;
+}
