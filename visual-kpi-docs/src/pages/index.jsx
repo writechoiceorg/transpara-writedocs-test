@@ -10,80 +10,31 @@ import '../css/HomePage.css';
 import '../css/sidebar.css';
 import '../css/navbar.css';
 import HomepageHeader from '../components/Homepage/Header';
-import HomepageSection from '../components/Homepage/Section';
+import Card from '../components/Homepage/Card';
 
-const sectionContent = [
-  {
-    title1: 'Low-Code Application',
-    title2: 'Guides',
-  },
-  {
-    title1: 'Developers',
-    title2: 'Documentation',
-  },
-  {
-    title1: 'Developers',
-    title2: 'Documentation',
-  },
-];
+const mainCard = {
+  title: "How to use the documentation",
+  content: "Here you find an extensive guide to learn how to take better advantage of our documentation.",
+  button: "Learn more",
+}
 
-const cardContent = {
-  section1: [
-    { 
-      title: 'Tutorial and Guides',
-      content: `End-to-end solution for managing
-       and mitigating risk to accelerate the 
-       creation of business value-producing applications.`,
-      button: 'Create First App for Free',
-    },
-    {
-      title: 'User Reference',
-      content: `Accelerate digital business transformation
-       with visual composition and modeling-based approach
-       for faster app delivery and continuous innovation.`,
-      button: 'Schedule Demo',
-    },
-  ],
-  section2: [
-    { 
-      title: 'Tutorial and Guides',
-      content: `End-to-end solution for managing
-       and mitigating risk to accelerate the 
-       creation of business value-producing applications.`,
-      button: 'Create First App for Free',
-    },
-    {
-      title: 'Tutorial and Guides',
-      content: `Accelerate digital business transformation
-       with visual composition and modeling-based approach
-       for faster app delivery and continuous innovation.`,
-      button: 'Schedule Demo',
-    },
-  ],
-  section3: [
-    { 
-      title: 'Tutorial and Guides',
-      content: `End-to-end solution for managing
-       and mitigating risk to accelerate the 
-       creation of business value-producing applications.`,
-      button: 'Create First App for Free',
-    },
-    {
-      title: 'Product Roadmap',
-      content: `Accelerate digital business transformation
-       with visual composition and modeling-based approach
-       for faster app delivery and continuous innovation.`,
-      button: 'Schedule Demo',
-    },
-    {
-      title: 'Questions',
-      content: `Accelerate digital business transformation
-       with visual composition and modeling-based approach
-       for faster app delivery and continuous innovation.`,
-      button: 'Schedule Demo',
-    },
-  ],
-};
+const secondaryCards = [
+  {
+    title: "Installation",
+    content: "How to install.",
+    button: "Learn more",
+  },
+  {
+    title: "Tutorial",
+    content: "Here you find a tutorial.",
+    button: "Learn more",
+  },
+  {
+    title: "Viewers",
+    content: "Here you find viewers.",
+    button: "Learn more",
+  }
+]
 
 export default function Home() {
   // const {siteConfig} = useDocusaurusContext();
@@ -93,20 +44,14 @@ export default function Home() {
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>
-        {
-          sectionContent.map((content, idx) => (
-            <>
-              <HomepageSection
-                key={idx}
-                title1={content.title1} 
-                title2={content.title2} 
-                cards={cardContent[`section${idx + 1}`]}
-                className={`cards${cardContent[`section${idx + 1}`].length}`}
-              />
-              { idx < sectionContent.length - 1 && <div className='breakLine'/>}
-            </>
-          ))
-        }
+        <Card card={ mainCard } className="main_card"/>
+        <div className="secondary_section">
+          {
+            secondaryCards.map((card) => (
+              <Card key={card.title} card={ card } className="secondary_card"/>
+            ))
+          }
+        </div>
       </main>
     </Layout>
   );

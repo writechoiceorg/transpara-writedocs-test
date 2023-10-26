@@ -11,9 +11,11 @@ export default function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container header_container">
-        <h1>Quickstart<br />Joget DX</h1>
-        <p>Joget empowers everyone to digitalize at speed and scale.</p>
-        <HomeBtn text={'Get Started'} btnClass={'headerBtn'} route={'docs/joget-docs'}/>
+          <h1>Visual KPIs<br />Docs</h1>
+        <div>
+          <p>Visual KPIs small hero text.</p>
+          <HomeBtn text={'How Visual KPI Works'} btnClass={'headerBtn'} route={'docs/joget-docs'}/>
+        </div>
       </div>
     </header>
   );
