@@ -43,7 +43,7 @@
 }
 
 .theme-doc-sidebar-item-category-level-1 div {
-  padding-left: 10px;
+  /* padding-left: 10px; */
 }
 
 .theme-doc-sidebar-item-category-level-1 a {
@@ -51,8 +51,17 @@
 }
 
 .menu__link--active {
-  color: var(--ifm-color-primary) !important;
+  color: var(--transpara-highlights-color1) !important;
   font-weight: 600;
+}
+
+.breadcrumbs__item--active .breadcrumbs__link {
+  color: var(--transpara-highlights-color1) !important;
+  font-weight: 600;
+}
+
+.breadcrumbs__link:hover, .menu__link:hover {
+  color: var(--transpara-highlights-color2);
 }
 
 .theme-doc-sidebar-item-category, .theme-doc-sidebar-item-link {

@@ -1,6 +1,6 @@
 .headerBtn {
   /* width: 189px; */
-  border: transparent;
+  border: 1px solid transparent;
   border-radius: 12px;
   color: white;
   cursor: pointer;
@@ -18,7 +18,7 @@
 
 .sectionBtn {
   width: 180px;
-  border: transparent;
+  border: 1px solid transparent;
   border-radius: 12px;
   color: white;
   cursor: pointer;
@@ -32,9 +32,11 @@
 }
 
 .headerBtn:hover, .sectionBtn:hover {
-  background: #666666;
+  background: var(--transpara-highlights-color1);
   text-decoration: none;
   color: white;
+  border: 1px solid var(--transpara-highlights-color1);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .headerBtn h4, .sectionBtn h4 {
