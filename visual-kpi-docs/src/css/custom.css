@@ -6,7 +6,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #FFFFFF;
+  --ifm-color-primary: white;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
   --ifm-color-primary-darkest: #205d3b;
@@ -44,6 +44,10 @@
 
 .site_logo {
   border-radius: 4px;
+}
+
+.pagination-nav__label {
+  color: black !important;
 }
 
 /*-------------------------------- Markdown Header sizes ------------------------------  */
