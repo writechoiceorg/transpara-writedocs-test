@@ -6,7 +6,7 @@ export default function Card({ card, className }) {
     <div className={className}>
       <h4 className='cardTitle'>{card.title}</h4>
       <p>{card.content}</p>
-      <HomeBtn text={card.button} btnClass={'sectionBtn'}/>
+      <HomeBtn text={card.button} btnClass={'sectionBtn'} route={card.route}/>
     </div>
   );
 }

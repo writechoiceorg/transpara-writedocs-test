@@ -14,7 +14,7 @@ export default function HomepageHeader() {
           <h1>Visual KPIs<br />Docs</h1>
         <div>
           <p>Visual KPIs small hero text.</p>
-          <HomeBtn text={'How Visual KPI Works'} btnClass={'headerBtn'} route={'docs/joget-docs'}/>
+          <HomeBtn text={'How Visual KPI Works'} btnClass={'headerBtn'} route={'/docs/how-visual-kpi-works'}/>
         </div>
       </div>
     </header>

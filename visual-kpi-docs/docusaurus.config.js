@@ -103,19 +103,13 @@ const config = {
             position: 'left',
             activeBaseRegex: "/$",
           },
-          // {
-          //   type: 'docSidebar',
-          //   sidebarId: 'docs',
-          //   position: 'left',
-          //   label: 'Tutorial',
-          //   to: '/tutorial',
-          // },
-          // {
-          //   to: 'tutorial',
-          //   label: 'Tutorial',
-          //   position: 'left',
-          //   activeBaseRegex: "/tutorial",
-          // },
+          {
+            type: 'docSidebar',
+            sidebarId: 'docs',
+            position: 'left',
+            label: 'Documentation',
+            to: '/docs',
+          },
           {
             type: 'search',
             position: 'right',

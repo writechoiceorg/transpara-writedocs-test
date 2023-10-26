@@ -8,11 +8,11 @@
 }
 
 .navbar__items .navbar__link, .navbar__items--right {
-  color: white;
+  color: var(--transpara-primary-color5);
 }
 
 .navbar__item, .navbar__link {
-  font-size: 14px !important;
+  font-size: 16px !important;
 }
 
 .navbar--fixed-top {

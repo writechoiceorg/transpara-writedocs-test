@@ -16,6 +16,7 @@ const mainCard = {
   title: "How to use the documentation",
   content: "Here you find an extensive guide to learn how to take better advantage of our documentation.",
   button: "Learn more",
+  route: "/docs/how-to-use-the-documentation",
 }
 
 const secondaryCards = [
@@ -23,16 +24,19 @@ const secondaryCards = [
     title: "Installation",
     content: "How to install.",
     button: "Learn more",
+    route: "/docs/",
   },
   {
     title: "Tutorial",
     content: "Here you find a tutorial.",
     button: "Learn more",
+    route: "/docs/",
   },
   {
     title: "Viewers",
     content: "Here you find viewers.",
     button: "Learn more",
+    route: "/docs/",
   }
 ]
 
