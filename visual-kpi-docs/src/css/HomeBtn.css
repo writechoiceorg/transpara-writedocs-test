@@ -1,0 +1,38 @@
+.headerBtn {
+  width: 189px;
+  border: transparent;
+  border-radius: 62.30482864379883px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 25px;
+  background-color: #41786F;
+  transition: all 0.5s ease;
+}
+
+.sectionBtn {
+  width: 253px;
+  border: transparent;
+  border-radius: 57.02px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: #166559;
+  transition: all 0.5s ease;
+  margin-top: 35px;
+}
+
+.headerBtn:hover, .sectionBtn:hover {
+  background: #383B3A;
+  text-decoration: none;
+  color: white;
+}
+
+.headerBtn h4, .sectionBtn h4 {
+  margin: 0;
+}

@@ -1,0 +1,247 @@
+.header_container {
+  margin: 0 175px;
+  padding: 0;
+}
+
+.header_container h1 {
+  color: #FFF;
+  font-family: var(--main-font);
+  font-size: 65.1px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 65.1px */
+  margin-bottom: 40px;
+}
+
+.header_container p {
+  color: #FFF;
+  font-family: var(--main-font);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 24px */
+  margin-bottom: 40px;
+  max-width: 462px;
+}
+
+.hero {
+  height: 470px;
+  background-image: url('https://raw.githubusercontent.com/writechoiceorg/joget-docs/main/joget/static/img/HomeBackgroundWidescreen.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 0 !important;
+}
+
+.sectionContainer {
+  margin: 80px 175px;
+}
+
+.sectionTitle1 {
+  color: #008D65;
+  font-family: var(--main-font);
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 100%; /* 65.1px */
+  margin: 0;
+}
+
+.sectionTitle2 {
+  color: #4F4F4F;
+  font-family: var(--main-font);
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 100%;
+  margin-bottom: 50px;
+}
+
+.sectionContainer .cards2 {
+  display: grid;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 0 0 0;
+}
+
+.sectionContainer .cards3 {
+  display: grid;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 0 0 0;
+}
+
+.sectionCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 385.08px;
+}
+
+.sectionCard .cardTitle {
+  color: #383B3A;
+  font-family: var(--main-font);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.sectionCard p {
+  max-width: 85%;
+  margin: 0;
+}
+
+.breakLine {
+  border: 1px solid #4F4F4F;
+  border-bottom: transparent;
+  height: 0.5px;
+  margin: 0 175px;
+}
+
+@media (max-width: 1440px) {
+  .header_container {
+    margin: 0 151px;
+  }
+
+  .navbar--fixed-top {
+    padding-left: 151px;
+  }
+
+  .sectionContainer {
+    margin: 80px 151px;;
+  }
+
+  .breakLine {
+    margin: 0 151px;
+  }
+
+  .sectionCard {
+    width: 385.08px;
+  }
+}
+
+@media (max-width: 1285px) {
+  .header_container {
+    margin: 0 69px;
+  }
+
+  .navbar--fixed-top {
+    padding-left: 69px;
+  }
+
+  .sectionContainer {
+    margin: 80px 69px;;
+  }
+
+  .breakLine {
+    margin: 0 69px;
+  }
+
+  .sectionCard {
+    width: fit-content;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header_container {
+    margin: 0 62px;
+  }
+
+  .navbar--fixed-top {
+    padding-left: 62px;
+  }
+
+  .sectionContainer {
+    margin: 80px 62px;;
+  }
+
+  .breakLine {
+    margin: 0 62px;
+  }
+
+  .sectionCard {
+    width: fit-content;
+  }
+}
+
+@media (max-width: 600px) {
+  .header_container {
+    margin: 0 40px;
+  }
+
+  .navbar--fixed-top {
+    padding-left: 40px;
+  }
+
+  .sectionContainer {
+    margin: 80px 40px;;
+  }
+
+  .breakLine {
+    margin: 0 40px;
+  }
+
+  .sectionContainer .cards2, .sectionContainer .cards3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .sectionCard {
+    margin-bottom: 70px;
+  }
+
+  .navbar__toggle {
+    left: 5px;
+  }
+}
+
+@media (max-width: 440px) {
+  .hero h1, .sectionTitle1, .sectionTitle2 {
+    font-size: 2.5em !important;
+  }
+
+  .sectionContainer p {
+    max-width: 100%;
+  }
+
+  .hero p {
+    font-size: 1.2em !important;
+  }
+  .hero {
+    background-image: url('https://raw.githubusercontent.com/writechoiceorg/joget-docs/main/joget/static/img/HomeBackgroundSmartPhone.png');
+  }
+
+  .header_container {
+    margin: 0 25px;
+  }
+
+  .sectionContainer {
+    margin: 50px 25px;;
+  }
+}
+
+@media (max-width: 395px) {
+  .sectionTitle1, .sectionTitle2 {
+    font-size: 2.1em !important;
+  }
+
+  .header_container {
+    margin: 0 20px;
+  }
+
+  .sectionContainer {
+    margin: 40px 20px;
+  }
+
+  .sectionCard {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 300px) {
+  .sectionContainer {
+    margin: 20px 10px;
+  }
+}
