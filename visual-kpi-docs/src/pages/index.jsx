@@ -9,6 +9,7 @@ import Layout from '@theme/Layout';
 import '../css/HomePage.css';
 import '../css/sidebar.css';
 import '../css/navbar.css';
+import '../css/svg.css';
 import HomepageHeader from '../components/Homepage/Header';
 import Card from '../components/Homepage/Card';
 
