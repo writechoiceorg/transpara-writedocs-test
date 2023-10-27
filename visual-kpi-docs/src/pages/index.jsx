@@ -12,32 +12,45 @@ import '../css/navbar.css';
 import HomepageHeader from '../components/Homepage/Header';
 import Card from '../components/Homepage/Card';
 
-const mainCard = {
-  title: "How to use the documentation",
-  content: "Here you find an extensive guide to learn how to take better advantage of our documentation.",
-  button: "Learn more",
-  route: "/docs/how-to-use-the-documentation",
-}
-
-const secondaryCards = [
+const first3Cards = [
   {
     title: "Installation",
     content: "How to install.",
     button: "Learn more",
     route: "/docs/",
+    imageClass: "image1",
   },
   {
     title: "Tutorial",
     content: "Here you find a tutorial.",
     button: "Learn more",
     route: "/docs/",
+    imageClass: "image2",
   },
   {
     title: "Viewers",
     content: "Here you find viewers.",
     button: "Learn more",
     route: "/docs/",
+    imageClass: "image3",
   }
+]
+
+const second2Cards = [
+  {
+    title: "Installation",
+    content: "How to install.",
+    button: "Learn more",
+    route: "/docs/",
+    imageClass: "image4",
+  },
+  {
+    title: "Tutorial",
+    content: "Here you find a tutorial.",
+    button: "Learn more",
+    route: "/docs/",
+    imageClass: "image5",
+  },
 ]
 
 export default function Home() {
@@ -48,11 +61,17 @@ export default function Home() {
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>
-        <Card card={ mainCard } className="main_card"/>
-        <div className="secondary_section">
+        <div className="cards_container first_cards_section">
           {
-            secondaryCards.map((card) => (
-              <Card key={card.title} card={ card } className="secondary_card"/>
+            first3Cards.map((card) => (
+              <Card key={card.title} card={ card } className="card"/>
+            ))
+          }
+        </div>
+        <div className="cards_container secondary_cards_section">
+          {
+            second2Cards.map((card) => (
+              <Card key={card.title} card={ card } className="card"/>
             ))
           }
         </div>

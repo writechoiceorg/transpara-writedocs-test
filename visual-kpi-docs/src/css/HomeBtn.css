@@ -1,5 +1,5 @@
 .headerBtn {
-  /* width: 189px; */
+  width: fit-content;
   border: 1px solid transparent;
   border-radius: 12px;
   color: white;
@@ -12,33 +12,16 @@
   transition: all 0.5s ease;
 }
 
-.headerBtn svg, .sectionBtn svg {
-  transform: rotate(-45deg);
-}
-
-.sectionBtn {
-  width: 180px;
-  border: 1px solid transparent;
-  border-radius: 12px;
-  color: white;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 20px;
-  background-color: var(--transpara-primary-color1);
-  transition: all 0.5s ease;
-  margin-top: 10px;
-}
 
 .headerBtn:hover, .sectionBtn:hover {
-  background: var(--transpara-highlights-color1);
+  background: transparent;
   text-decoration: none;
-  color: white;
-  border: 1px solid var(--transpara-highlights-color1);
+  color: var(--transpara-primary-color1);
+  border: 1px solid var(--transpara-primary-color1);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .headerBtn h4, .sectionBtn h4 {
   margin: 0;
+  padding: 0 10px;
 }
