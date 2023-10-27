@@ -7,6 +7,10 @@
   margin-right: 150px;
 }
 
+/* .navbar__link--active {
+  background-color: black;
+} */
+
 .navbar__items .navbar__link, .navbar__items--right {
   color: var(--transpara-primary-color5);
 }
@@ -33,7 +37,7 @@
 }
 
 .navbar__item {
-  margin-right: 100px;
+  margin: 0 24px 0 6px;
 }
 
 .language_dropdown {

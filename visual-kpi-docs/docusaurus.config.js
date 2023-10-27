@@ -101,7 +101,6 @@ const config = {
             to: '/',
             label: 'Home',
             position: 'left',
-            activeBaseRegex: "/$",
           },
           {
             type: 'docSidebar',
