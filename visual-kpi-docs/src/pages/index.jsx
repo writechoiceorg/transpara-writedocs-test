@@ -13,15 +13,36 @@ import '../css/svg.css';
 import HomepageHeader from '../components/Homepage/Header';
 import Card from '../components/Homepage/Card';
 
-const first3Cards = [
+const mainCard = {
+  title: "How to use the documentation",
+  content: "Find out all available user paths Visual KPI documentation provides. Here you get a complete overvier of what you find on the documentation and how to take the most of it.",
+  button: "Learn more",
+  route: "/docs/how-to-use-the-documentation",
+}
+
+const essentials = [
   {
-    title: "Installation",
-    content: "How to install.",
+    title: "Setup and automation",
+    content: "Configure your system for Visual KPI software instalattion and importing your existing KPIs.",
+    button: "Learn more",
+    route: "/docs/",
+  },
+  // {
+  //   title: "Automation",
+  //   content: "Check how to import your existing KPIs to Visual KPI seamnsly.",
+  //   button: "Learn more",
+  //   route: "/docs/",
+  // },
+  {
+    title: "Design",
+    content: "Create KPIs, charts, tables and define the hierarchy of your data.",
     button: "Learn more",
     route: "/docs/",
     imageClass: "image1",
   },
   {
+    title: "Use Visual KPI",
+    content: "Explore all features and functionalities available on Visual KPI.",
     title: "Tutorial",
     content: "Here you find a tutorial.",
     button: "Learn more",
@@ -36,6 +57,77 @@ const first3Cards = [
     imageClass: "image3",
   }
 ]
+
+const allOptions = [
+  {
+    title: "Setup and Instalation",
+    content: "Prepare your system and intall the Visual KPI software.",
+    button: "Learn more",
+    route: "/docs/",
+  },
+  {
+    title: "Automation",
+    content: "Check how to import your existing KPIs to Visual KPI seamnsly.",
+    button: "Learn more",
+    route: "/docs/",
+  },
+  {
+    title: "Interfaces",
+    content: "Use existing interfaces or create new ones to connect new data sources into your system.",
+    button: "Learn more",
+    route: "/docs/",
+  },
+  {
+    title: "Design",
+    content: "Create KPIs, charts, tables and define the hierarchy of your data.",
+    button: "Learn more",
+    route: "/docs/",
+  },
+  {
+    title: "Use Visual KPI",
+    content: "Explore all features and functionalities available on Visual KPI.",
+    button: "Learn more",
+    route: "/docs/",
+  }
+]
+
+const first3Cards = [
+  {
+    title: "Setup and Instalation",
+    content: "Prepare your system and intall the Visual KPI software.",
+    button: "Learn more",
+    route: "/docs/",
+  },
+  {
+    title: "Automation",
+    content: "Check how to import your existing KPIs to Visual KPI seamnsly.",
+    button: "Learn more",
+    route: "/docs/",
+  },
+  {
+    title: "Interfaces",
+    content: "Use existing interfaces or create new ones to connect new data sources into your system.",
+    button: "Learn more",
+    route: "/docs/",
+  },
+]
+
+const otherUSers = [
+  {
+    title: "Design",
+    content: "Create KPIs, charts, tables and define the hierarchy of your data.",
+    button: "Learn more",
+    route: "/docs/",
+  },
+  {
+    title: "Use Visual KPI",
+    content: "Explore all features and functionalities available on Visual KPI.",
+    button: "Learn more",
+    route: "/docs/",
+  }
+]
+
+
 
 const second2Cards = [
   {
@@ -76,6 +168,21 @@ export default function Home() {
             ))
           }
         </div>
+        {/* <div className="secondary_section">
+          {
+            administrator.map((card) => (
+              <Card key={card.title} card={ card } className="secondary_card"/>
+            ))
+          }
+        </div>
+        <div className="secondary_section">
+          {
+            otherUSers.map((card) => (
+              <Card key={card.title} card={ card } className="secondary_card"/>
+            ))
+          }
+        </div> */}
+        {/* <Card card={ mainCard } className="main_card"/> */}
       </main>
     </Layout>
   );

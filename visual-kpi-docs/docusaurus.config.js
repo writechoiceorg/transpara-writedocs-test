@@ -79,6 +79,12 @@ const config = {
       // },
       // Replace with your project's social card
       // image: 'img/docusaurus-social-card.jpg',
+      docs: {
+        sidebar: {
+          // hideable: true,
+          autoCollapseCategories: true,
+        },
+      },
       zoom: {
         selector: '.markdown :not(em) > img',
         background: {
@@ -130,10 +136,14 @@ const config = {
                 label: 'Home',
                 to: '/',
               },
-              // {
-              //   label: 'Tutorial',
-              //   to: '/tutorial',
-              // },
+              {
+                label: 'Documentation',
+                to: '/docs/',
+              },
+              {
+                label: 'FAQ',
+                to: '/docs/faq',
+              },
             ],
           },
           // {
