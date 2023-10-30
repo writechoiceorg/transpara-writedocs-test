@@ -13,8 +13,8 @@ export default function HomepageHeader() {
       <div className="container header_container">
           <h1>Visual KPIs<br />Docs</h1>
         <div>
-          <p>Visual KPIs small hero text.</p>
-          <HomeBtn text={'How Visual KPI Works'} btnClass={'headerBtn'} route={'/docs/how-visual-kpi-works'}/>
+          <p>Everything in One Place, <br /> From Any Place</p>
+          <HomeBtn text={'Get started'} btnClass={'headerBtn'} route={'/docs/how-visual-kpi-works'}/>
         </div>
       </div>
     </header>

@@ -22,8 +22,8 @@
 .sidebar_title {
   padding-left: 0 !important;
   text-transform: uppercase;
-  color: #166559;
-  font-size: 16px;
+  color: #669900;
+  font-size: 14px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -60,18 +60,19 @@
   font-weight: 600;
 }
 
-.breadcrumbs__link:hover, .menu__link:hover {
+.breadcrumbs__link:hover,
+.menu__link:hover {
   color: var(--transpara-highlights-color2);
 }
 
-.theme-doc-sidebar-item-category, .theme-doc-sidebar-item-link {
-  margin:  16px 0 !important;
+.theme-doc-sidebar-item-category,
+.theme-doc-sidebar-item-link {
+  margin: 8px 0 !important;
 }
 
 .theme-doc-sidebar-menu {
-  margin-top: 39px !important;
+  margin-top: 15px !important;
 }
-
 
 /* ------------------------ SVGs Icons ------------------------ */
 .joget_docs a:before {
