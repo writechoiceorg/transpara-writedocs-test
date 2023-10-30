@@ -110,3 +110,7 @@ table thead tr {
 table {
   font-size: small;
 }
+
+.navbar__link:hover {
+  position: relative;
+}

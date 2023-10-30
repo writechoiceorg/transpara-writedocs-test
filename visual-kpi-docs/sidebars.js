@@ -21,7 +21,7 @@ const sidebars = {
   docs: [
     {
       type: 'html',
-      value: '<span class=\'sidebar-title\'>Getting Started</span>',
+      value: '<span class=\'sidebar_title\'>Getting Started</span>',
       defaultStyle: true,
       className: 'sidebar_title',
     },
@@ -70,7 +70,7 @@ const sidebars = {
     },
     {
       type: 'html',
-      value: '<span class=\'sidebar-title\'>Setup and Administration</span>',
+      value: '<span class=\'sidebar_title\'>Setup and Administration</span>',
       defaultStyle: true,
       className: 'sidebar_title',
     },
@@ -129,7 +129,7 @@ const sidebars = {
     
     {
       type: 'html',
-      value: '<span class=\'sidebar-title\'>Visual KPI Design</span>',
+      value: '<span class=\'sidebar_title\'>Visual KPI Design</span>',
       defaultStyle: true,
       className: 'sidebar_title',
     },
@@ -193,7 +193,7 @@ const sidebars = {
     },
     {
       type: 'html',
-      value: '<span class=\'sidebar-title\'>End User</span>',
+      value: '<span class=\'sidebar_title\'>End User</span>',
       defaultStyle: true,
       className: 'sidebar_title',
     },
@@ -302,7 +302,7 @@ const sidebars = {
     },
     {
       type: 'html',
-      value: '<span class=\'sidebar-title\'>Reference Guides</span>',
+      value: '<span class=\'sidebar_title\'>Reference Guides</span>',
       defaultStyle: true,
       className: 'sidebar_title',
     },
@@ -313,7 +313,7 @@ const sidebars = {
     },
     {
       type: 'html',
-      value: '<span class=\'sidebar-title\'>Supporting Pages</span>',
+      value: '<span class=\'sidebar_title\'>Supporting Pages</span>',
       defaultStyle: true,
       className: 'sidebar_title',
     },

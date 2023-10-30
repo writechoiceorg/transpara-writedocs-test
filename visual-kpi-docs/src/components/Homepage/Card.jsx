@@ -9,7 +9,7 @@ export default function Card({ card, className }) {
       <div className="card_text">
         <h4 className='cardTitle'>{card.title}</h4>
         <p>{card.content}</p>
-        <a href="">Get Started</a>
+        {/* <a href="">Get Started</a> */}
       </div>
     </a>
   );

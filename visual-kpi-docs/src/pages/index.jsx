@@ -97,18 +97,21 @@ const first3Cards = [
     content: "Prepare your system and intall the Visual KPI software.",
     button: "Learn more",
     route: "/docs/",
+    imageClass: "image1",
   },
   {
     title: "Automation",
     content: "Check how to import your existing KPIs to Visual KPI seamnsly.",
     button: "Learn more",
     route: "/docs/",
+    imageClass: "image2",
   },
   {
     title: "Interfaces",
     content: "Use existing interfaces or create new ones to connect new data sources into your system.",
     button: "Learn more",
     route: "/docs/",
+    imageClass: "image3",
   },
 ]
 
