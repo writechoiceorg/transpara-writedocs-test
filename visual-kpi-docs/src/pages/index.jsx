@@ -9,6 +9,7 @@ import Layout from '@theme/Layout';
 import '../css/HomePage.css';
 import '../css/sidebar.css';
 import '../css/navbar.css';
+import '../css/svg.css';
 import HomepageHeader from '../components/Homepage/Header';
 import Card from '../components/Homepage/Card';
 
@@ -37,12 +38,23 @@ const essentials = [
     content: "Create KPIs, charts, tables and define the hierarchy of your data.",
     button: "Learn more",
     route: "/docs/",
+    imageClass: "image1",
   },
   {
     title: "Use Visual KPI",
     content: "Explore all features and functionalities available on Visual KPI.",
+    title: "Tutorial",
+    content: "Here you find a tutorial.",
     button: "Learn more",
     route: "/docs/",
+    imageClass: "image2",
+  },
+  {
+    title: "Viewers",
+    content: "Here you find viewers.",
+    button: "Learn more",
+    route: "/docs/",
+    imageClass: "image3",
   }
 ]
 
@@ -79,7 +91,7 @@ const allOptions = [
   }
 ]
 
-const administrator = [
+const first3Cards = [
   {
     title: "Setup and Instalation",
     content: "Prepare your system and intall the Visual KPI software.",
@@ -117,6 +129,23 @@ const otherUSers = [
 
 
 
+const second2Cards = [
+  {
+    title: "Installation",
+    content: "How to install.",
+    button: "Learn more",
+    route: "/docs/",
+    imageClass: "image4",
+  },
+  {
+    title: "Tutorial",
+    content: "Here you find a tutorial.",
+    button: "Learn more",
+    route: "/docs/",
+    imageClass: "image5",
+  },
+]
+
 export default function Home() {
   // const {siteConfig} = useDocusaurusContext();
   return (
@@ -125,17 +154,17 @@ export default function Home() {
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>
-      {/* <div className="secondary_section">
+        <div className="cards_container first_cards_section">
           {
-            essentials.map((card) => (
-              <Card key={card.title} card={ card } className="secondary_card"/>
+            first3Cards.map((card) => (
+              <Card key={card.title} card={ card } className="card"/>
             ))
           }
-        </div> */}
-      <div className="secondary_section">
+        </div>
+        <div className="cards_container secondary_cards_section">
           {
-            allOptions.map((card) => (
-              <Card key={card.title} card={ card } className="secondary_card"/>
+            second2Cards.map((card) => (
+              <Card key={card.title} card={ card } className="card"/>
             ))
           }
         </div>

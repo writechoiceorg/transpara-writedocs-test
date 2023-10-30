@@ -42,6 +42,17 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+.hero {
+  background-color: transparent !important;
+}
+
+.main-wrapper {
+  background-image: url('../../static/img/background-master.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 .site_logo {
   border-radius: 4px;
 }

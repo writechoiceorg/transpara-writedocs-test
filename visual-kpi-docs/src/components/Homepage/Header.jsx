@@ -11,10 +11,13 @@ export default function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container header_container">
-          <h1>Visual KPIs<br />Docs</h1>
-        <div>
-          <p>Everything in One Place, <br /> From Any Place</p>
-          <HomeBtn text={'Get started'} btnClass={'headerBtn'} route={'/docs/how-visual-kpi-works'}/>
+        <div className="first_column">
+          <h1>Visual KPI Docs</h1>
+          <p>Visual KPIs small hero text.</p>
+        </div>
+        <div className="second_column">
+          <p>Nam eu posuere risus. Fusce pellentesque mollis commodo. Phasellus molestie nec velit ac efficitur. Vestibulum volutpat euismod elit eu condimentum.</p>
+          <HomeBtn text={'How Visual KPI Works'} btnClass={'headerBtn'} route={'/docs/how-visual-kpi-works'}/>
         </div>
       </div>
     </header>

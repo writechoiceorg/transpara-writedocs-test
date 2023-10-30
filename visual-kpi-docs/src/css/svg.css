@@ -1,0 +1,32 @@
+.hidesvg {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.icon {
+	display: inline-block;
+	color: #444444;
+  width: 1em;
+	height: 1em;
+	fill: currentColor;
+}
+.icon::after {
+  /* Using currentColor above lets
+  us use `color` for changing the color
+  of our icons: */
+  color: rgb(255, 0, 0);
+  fill: black;
+  
+  /* The width and height of the SVG
+  was previously set to 1em.
+  This allows us to use `font-size`
+  to change the size of our icon: */
+  font-size: 48px;
+}
+
+.path1 {
+  fill: black !important;
+  color: black;
+}
