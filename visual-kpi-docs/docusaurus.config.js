@@ -138,7 +138,7 @@ const config = {
               },
               {
                 label: 'Documentation',
-                to: '/docs/',
+                to: '/docs',
               },
               {
                 label: 'FAQ',
