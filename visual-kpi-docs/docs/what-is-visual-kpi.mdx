@@ -7,8 +7,11 @@ tags: []
 ---
 
 import selection from '@site/static/font/selection.json';
+import positions from '@site/static/data/icons/iconsPosition.json';
 import SvgFont from '@site/src/components/SvgFont/SvgFont';
 
-Test text with icons <SvgFont data={selection.icons[100]} /> Test text with icons <SvgFont data={selection.icons[101]} /> Test text with icons <SvgFont data={selection.icons[102]} />.
+Test text with icons <SvgFont data={selection.icons[100]} position={positions["100"]} /> 
+Test text with icons <SvgFont data={selection.icons[101]} position={positions["101"]}/> 
+Test text with icons <SvgFont data={selection.icons[102]} position={positions["102"]}/>.
 
-<SvgFont data={selection.icons[103]} /> Test text with icons.
+<SvgFont data={selection.icons[103]} position={positions["103"]}/> Test text with icons.
