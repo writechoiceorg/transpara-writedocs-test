@@ -47,9 +47,9 @@
 }
 
 .main-wrapper {
-  background-image: url('../../static/img/background-master.png');
+  background-image: url('../../static/img/circles-background-opaque.png');
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
