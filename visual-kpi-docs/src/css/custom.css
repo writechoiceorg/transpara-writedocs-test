@@ -32,6 +32,7 @@
   --transpara-highlights-color2: #6699cc;
 
   --ifm-font-family-base: 'Inter', system-ui, sans-serif !important;
+  --ifm-link-color: var(--transpara-primary-color1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
