@@ -1,0 +1,91 @@
+.navbar {
+  background: var(--ifm-color-primary);
+  height: 90px;
+}
+
+.navbar__brand {
+  margin-right: 150px;
+}
+
+/* .navbar__link--active {
+  background-color: black;
+} */
+
+.navbar__items .navbar__link, .navbar__items--right {
+  color: var(--transpara-primary-color5);
+}
+
+.navbar__item, .navbar__link {
+  font-size: 16px !important;
+}
+
+.navbar--fixed-top {
+  padding-left: 175px;
+}
+
+.navbar__toggle {
+  position: absolute;
+  left: 15px;
+}
+
+.navbar__toggle svg {
+  color: white;
+}
+
+.navbar__items--right {
+  margin: 0 160px 0 0;
+}
+
+.navbar__item {
+  margin: 0 24px 0 6px;
+}
+
+.language_dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.language_dropdown svg {
+  margin: 0;
+}
+
+.dropdown > .navbar__link:after {
+  background-image: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><polyline points="208 96 128 176 48 96" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"/></svg>');
+  border-style: none;
+  content: '';
+  position: relative;
+  justify-self: center;
+  align-self: center;
+  top: 5px;
+  margin: 0;
+  width: 12px;
+  height: 12px;
+}
+
+@media (max-width: 1440px) {
+  .navbar__items--right {
+    margin: 0 135px 0 0;
+  }
+
+  .navbar--fixed-top {
+    padding-left: 151px;
+  }
+}
+
+@media (max-width: 1285px) {
+  .navbar__items--right {
+    margin: 0 55px 0 0;
+  }
+
+  .navbar--fixed-top {
+    padding-left: 69px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar__items--right {
+    margin: 0 50px 0 0;
+  }
+}

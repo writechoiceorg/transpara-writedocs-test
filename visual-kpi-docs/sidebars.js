@@ -20,8 +20,20 @@ const sidebars = {
   
   docs: [
     {
+      type: 'html',
+      value: '<span class=\'sidebar_title\'>Getting Started</span>',
+      defaultStyle: true,
+      className: 'sidebar_title',
+    },
+    {
       type: 'doc',
       id: 'what-is-visual-kpi',
+      // label: 'What is Visual KPI',
+      // className: '',
+    },
+    {
+      type: 'doc',
+      id: 'visual-kpi-approach',
       // label: 'What is Visual KPI',
       // className: '',
     },
@@ -37,33 +49,157 @@ const sidebars = {
       // label: 'How to Use the Documentation',
       // className: '',
     },
+    
+    {
+      type: 'category',
+      label: "Core Concepts",
+      // className: '',
+      link: {
+        type: 'doc',
+        id: 'core-concepts/core-concepts',
+      },
+      items: [
+        'core-concepts/kpi',
+        'core-concepts/hierarchy',
+        'core-concepts/design',
+        'core-concepts/data-sources',
+        'core-concepts/interfaces',
+        'core-concepts/access-level',
+
+      ],
+    },
+    {
+      type: 'html',
+      value: '<span class=\'sidebar_title\'>Setup and Administration</span>',
+      defaultStyle: true,
+      className: 'sidebar_title',
+    },
     {
       type: 'doc',
-      id: 'glossary',
-      label: 'Glossary',
+      id: 'setup-and-administration/setup-and-administration',
+      // label: 'How to Use the Documentation',
       // className: '',
     },
     {
       type: 'category',
-      label: "Get Started",
+      label: "Installation",
       // className: '',
       link: {
         type: 'doc',
-        id: 'get-started/overview',
+        id: 'setup-and-administration/installation/overview',
       },
       items: [
-        'get-started/visual-kpi-core-concepts',
-        'get-started/ways-to-use-visual-kpi',
-        'get-started/objects',
-        'get-started/navigation',
-        'get-started/data-update-and-timestamp',
-        'get-started/notifications',
-        'get-started/access-level'
+        'setup-and-administration/installation/prepare-your-system',
+        'setup-and-administration/installation/install-visual-kpi',
+        'setup-and-administration/installation/system-update',
       ],
     },
     {
       type: 'category',
-      label: "Viewers",
+      label: "Interfaces",
+      // className: '',
+      link: {
+        type: 'doc',
+        id: 'setup-and-administration/interfaces/interfaces',
+      },
+      items: [
+      ],
+    },
+    {
+      type: 'category',
+      label: "Automation",
+      // className: '',
+      link: {
+        type: 'doc',
+        id: 'setup-and-administration/automation/automation',
+      },
+      items: [
+        'setup-and-administration/automation/rcs',
+        'setup-and-administration/automation/how-to-use-the-rcs',
+        'setup-and-administration/automation/rsc-and-visual-kpi-design',
+        'setup-and-administration/automation/use-cases'
+      ],
+    },
+    {
+      type: 'doc',
+      id: 'setup-and-administration/best-practices',
+      // label: 'How to Use the Documentation',
+      // className: '',
+    },
+    
+    {
+      type: 'html',
+      value: '<span class=\'sidebar_title\'>Visual KPI Design</span>',
+      defaultStyle: true,
+      className: 'sidebar_title',
+    },
+    {
+      type: 'doc',
+      id: 'visual-kpi-design/overview',
+      // label: 'How to Use the Documentation',
+      // className: '',
+    },
+    {
+      type: 'category',
+      label: "Installation and Setup",
+      // className: '',
+      link: {
+        type: 'doc',
+        id: 'visual-kpi-design/installation-and-setup/installation',
+      },
+      items: [
+        'visual-kpi-design/installation-and-setup/installation',
+        'visual-kpi-design/installation-and-setup/setup-and-connection',
+        'visual-kpi-design/installation-and-setup/visual-kpi-designer-ui',
+      ],
+    },
+    {
+      type: 'category',
+      label: "Authoring",
+      // className: '',
+      link: {
+        type: 'doc',
+        id: 'visual-kpi-design/authoring/authoring',
+      },
+      items: [
+        'visual-kpi-design/authoring/default-settings',
+        'visual-kpi-design/authoring/manage-objects',
+      ],
+    },
+    {
+      type: 'category',
+      label: "Design",
+      // className: '',
+      link: {
+        type: 'doc',
+        id: 'visual-kpi-design/design/design',
+      },
+      items: [
+        'visual-kpi-design/design/create-a-kpi',
+        'visual-kpi-design/design/create-an-spc',
+        'visual-kpi-design/design/create-a-chart',
+        'visual-kpi-design/design/create-a-trend',
+        'visual-kpi-design/design/create-a-table',
+        'visual-kpi-design/design/create-a-group',
+        'visual-kpi-design/design/create-navbar-links',
+        'visual-kpi-design/design/target-and-limit-generator',
+      ],
+    },
+    {
+      type: 'doc',
+      id: 'visual-kpi-design/best-practices',
+      // label: 'How to Use the Documentation',
+      // className: '',
+    },
+    {
+      type: 'html',
+      value: '<span class=\'sidebar_title\'>End User</span>',
+      defaultStyle: true,
+      className: 'sidebar_title',
+    },
+    {
+      type: 'category',
+      label: "End User",
       // className: '',
       link: {
         type: 'doc',
@@ -164,20 +300,46 @@ const sidebars = {
         },
       ],
     },
+    {
+      type: 'html',
+      value: '<span class=\'sidebar_title\'>Reference Guides</span>',
+      defaultStyle: true,
+      className: 'sidebar_title',
+    },
+    {
+      type: 'doc',
+      id: 'references/references',
+      label: 'References',
+    },
+    {
+      type: 'html',
+      value: '<span class=\'sidebar_title\'>Supporting Pages</span>',
+      defaultStyle: true,
+      className: 'sidebar_title',
+    },
+    {
+      type: 'doc',
+      id: 'supporting-pages/faq',
+      label: 'FAQ',
+    },
     
-    // {
-    //   type: 'html',
-    //   value: "<span class='sidebar-title'>ARTICLES</span>",
-    //   defaultStyle: true,
-    // },
-    // {
-    //   type: 'doc',
-    //   id: 'working-with-kpi-trends',
-    //   label: 'Working with KPI Trends',
-    //   // className: '',
-    // }
+    {
+      type: 'doc',
+      id: 'supporting-pages/troubleshooting',
+      label: 'Troubleshooting',
+    },
+    {
+      type: 'doc',
+      id: 'supporting-pages/training',
+      label: 'Training',
+    },
+    {
+      type: 'doc',
+      id: 'supporting-pages/glossary',
+      label: 'Glossary',
+    },
+    
   ],
-   
 };
 
 module.exports = sidebars;
