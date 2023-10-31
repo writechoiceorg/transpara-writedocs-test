@@ -5,8 +5,10 @@
  */
 
 /* You can override the default Infima variables here. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 :root {
-  --ifm-color-primary: white;
+  --ifm-color-primary: #fafafa;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
   --ifm-color-primary-darkest: #205d3b;
@@ -16,18 +18,20 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --transpara-primary-color1: #669900;
-  --transpara-primary-color2: #99CC00;
-  --transpara-primary-color3: #BBB666;
+  --transpara-primary-color2: #99cc00;
+  --transpara-primary-color3: #bbb666;
   --transpara-primary-color4: #666666;
-  --transpara-primary-color5: #00000;
-  --transpara-primary-color6: #CCCCCC;
+  --transpara-primary-color5: #000000;
+  --transpara-primary-color6: #cccccc;
   --transpara-primary-color7: #333333;
-  --transpara-primary-color8: #FFFFFF;
-  --transpara-optional-color1: #EBE7DC;
+  --transpara-primary-color8: #ffffff;
+  --transpara-optional-color1: #ebe7dc;
   --transpara-optional-color2: #999999;
-  --transpara-optional-color3: #E8E8E8;
-  --transpara-highlights-color1: #FF6600;
-  --transpara-highlights-color2: #6699CC;
+  --transpara-optional-color3: #e8e8e8;
+  --transpara-highlights-color1: #ff6600;
+  --transpara-highlights-color2: #6699cc;
+
+  --ifm-font-family-base: 'Inter', system-ui, sans-serif !important;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -129,12 +133,12 @@ table {
 
 .navbar__items:not(.navbar__items--right)
   .navbar__link:hover:not(.navbar__link--active):after {
-    content: '■';
-    position: absolute;
-    top: 11px;
-    margin-left: 8px;
-    color: var(--transpara-primary-color1);
-    transform: rotate(45deg);
-    font-size: 4px;
-    line-height: 11px;
-  }
+  content: '■';
+  position: absolute;
+  top: 11px;
+  margin-left: 8px;
+  color: var(--transpara-primary-color1);
+  transform: rotate(45deg);
+  font-size: 4px;
+  line-height: 11px;
+}
