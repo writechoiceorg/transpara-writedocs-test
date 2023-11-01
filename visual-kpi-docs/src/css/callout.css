@@ -1,0 +1,48 @@
+.callout {
+  display: flex;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 20px 0 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.unique-callout {
+  background-color: #66990045;
+}
+
+.support-callout {
+  background-color: #ffebcc;
+}
+
+.callout-icon {
+  margin-right: 20px;
+}
+
+.callout-icon img {
+  cursor: default;
+}
+
+.callout-icon img {
+  max-width: 50px; /* Adjust the size of the icon as needed */
+}
+
+/* Callout Content */
+.callout-content {
+  flex: 1; /* Take up the remaining space */
+}
+
+/* Callout Title */
+.callout-title {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #333;
+}
+
+/* Callout Content Text */
+.callout-text {
+  font-size: 1rem;
+  color: #555;
+  margin: 10px 0;
+}
