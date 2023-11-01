@@ -11,7 +11,7 @@ export default function UniqueCallout({ title, content }) {
       {title.toUpperCase()}
     </div>
     <div className="callout-content unique-callout-content admonitionContent_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-styles-module">
-      <p className="callout-text unique-callout-text">{content}</p>
+      <p>{content}</p>
     </div>
   </div>
   )

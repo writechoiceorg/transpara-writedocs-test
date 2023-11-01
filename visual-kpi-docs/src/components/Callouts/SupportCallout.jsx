@@ -12,7 +12,7 @@ export default function SupportCallout() {
           SUPPORT
       </div>
       <div className="callout-content support-callout-content admonitionContent_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-styles-module">
-        <p className="callout-text support-callout-text">Call Transpara Support example text.</p>
+        <p>Call Transpara Support example text.</p>
       </div>
     </div>
   )

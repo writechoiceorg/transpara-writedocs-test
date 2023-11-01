@@ -12,7 +12,7 @@ export default function TrainingCallout({ title, content }) {
         {title.toUpperCase()}
       </div>
       <div className="callout-content training-callout-content admonitionContent_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-styles-module">
-        <p className="callout-text training-callout-text">{content}</p>
+        <p>{content}</p>
       </div>
     </div>
   )
