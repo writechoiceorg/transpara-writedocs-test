@@ -21,7 +21,7 @@
 } */
 
 .callout-icon {
-  margin-right: 0.4em;
+  margin-right: 0.4em !important;;
 }
 
 .callout-icon img {
