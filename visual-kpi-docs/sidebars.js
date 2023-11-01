@@ -235,7 +235,7 @@ const sidebars = {
           ],
         },
         'end-users/groups-hierarchy',
-        'end-users/search-tool',
+        'end-users/search-feature',
         {
           type: 'category',
           label: "Visualization options",
