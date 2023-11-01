@@ -18,14 +18,13 @@
   border-color: black;
 } */
 
-.callout-icon {
-  margin-right: 20px;
-  
-}
-
 .callout-icon img {
   cursor: default;
   width: 22px !important;
+}
+
+.callout-content p {
+  margin: 0;
 }
 
 
