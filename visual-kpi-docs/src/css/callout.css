@@ -2,7 +2,9 @@
   font: var(--ifm-heading-font-weight) var(--ifm-h5-font-size) / var(--ifm-heading-line-height) var(--ifm-heading-font-family);
   margin-bottom: 0.3rem;
 }
-
+.callout {
+  margin-bottom: 1em;
+}
 .unique-callout {
   background-color: #66990029;
   border-color: var(--transpara-primary-color1);
@@ -17,6 +19,10 @@
   background-color: #ffebcc;
   border-color: black;
 } */
+
+.callout-icon {
+  margin-right: 0.4em;
+}
 
 .callout-icon img {
   cursor: default;
