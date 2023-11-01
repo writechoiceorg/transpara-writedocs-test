@@ -1,20 +1,22 @@
-.callout {
-  display: flex;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 20px;
-  margin: 20px 0 20px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.callout-heading {
+  font: var(--ifm-heading-font-weight) var(--ifm-h5-font-size) / var(--ifm-heading-line-height) var(--ifm-heading-font-family);
+  margin-bottom: 0.3rem;
 }
 
 .unique-callout {
-  background-color: #66990045;
+  background-color: #66990029;
+  border-color: var(--transpara-primary-color1);
 }
 
 .support-callout {
   background-color: #ffebcc;
+  border-color: rgb(255, 153, 0);
 }
+
+/* .training-callout {
+  background-color: #ffebcc;
+  border-color: black;
+} */
 
 .callout-icon {
   margin-right: 20px;

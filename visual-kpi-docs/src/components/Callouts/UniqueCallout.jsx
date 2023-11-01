@@ -3,14 +3,16 @@ import '../../css/callout.css';
 
 export default function UniqueCallout({ title, content }) {
   return (
-    <div className="callout unique-callout">
-      <div className="callout-icon">
+    <div className="callout unique-callout theme-admonition theme-admonition-note alert alert--secondary admonition_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-styles-module">
+    <div className="callout-heading admonitionHeading_node_modules-\@docusaurus-theme-classic-lib-theme-Admonition-styles-module">
+      <span className="callout-icon admonitionIcon_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-styles-module">
         <img src="https://raw.githubusercontent.com/transpara/documentation/main/visual-kpi-docs/static/img/favicon.png" alt="Callout Icon" />
-      </div>
-      <div className="callout-content callout-callout-content">
-        <h2 className="callout-title callout-callout-title">{title}</h2>
-        <p className="callout-text callout-callout-text">{content}</p>
-      </div>
+      </span>
+      {title.toUpperCase()}
     </div>
+    <div className="callout-content unique-callout-content admonitionContent_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-styles-module">
+      <p className="callout-text unique-callout-text">{content}</p>
+    </div>
+  </div>
   )
 }

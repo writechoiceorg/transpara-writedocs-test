@@ -4,12 +4,14 @@ import { Video  } from '@phosphor-icons/react';
 
 export default function TrainingCallout({ title, content }) {
   return (
-    <div className="callout training-callout">
-      <div className="callout-icon">
-        <Video size={24} color="black" weight="bold" />
+    <div className="callout training-callout theme-admonition theme-admonition-note alert alert--secondary admonition_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-styles-module">
+      <div className="callout-heading admonitionHeading_node_modules-\@docusaurus-theme-classic-lib-theme-Admonition-styles-module">
+        <span className="admonitionIcon_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-styles-module">
+          <Video size={24} color="black" weight="bold" />
+        </span>
+        {title.toUpperCase()}
       </div>
-      <div className="callout-content training-callout-content">
-        <h2 className="callout-title training-callout-title">{title}</h2>
+      <div className="callout-content training-callout-content admonitionContent_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-styles-module">
         <p className="callout-text training-callout-text">{content}</p>
       </div>
     </div>
