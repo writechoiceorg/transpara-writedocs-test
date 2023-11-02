@@ -99,7 +99,7 @@ const config = {
         title: '',
         logo: {
           alt: 'Site Logo',
-          src: 'img/transpara.webp',
+          src: 'img/transpara_logo.png',
           className: 'site_logo',
         },
         items: [

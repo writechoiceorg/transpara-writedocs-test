@@ -1,15 +1,22 @@
 .navbar {
-  background: var(--ifm-color-primary);
+  background: white !important;
   height: 90px;
 }
 
-.navbar__brand {
-  margin-right: 150px;
+.navbar__logo {
+  width: 210px;
+  height: fit-content;
 }
 
-/* .navbar__link--active {
-  background-color: black;
-} */
+.site_logo {
+  width: fit-content;
+  height: fit-content;
+}
+
+.navbar__brand {
+  margin-right: 80px;
+}
+
 
 .navbar__items .navbar__link, .navbar__items--right {
   color: var(--transpara-primary-color5);
@@ -63,6 +70,35 @@
   width: 12px;
   height: 12px;
 }
+
+.navbar__link:hover {
+  position: relative;
+}
+
+.navbar__items:not(.navbar__items--right)
+  .navbar__link:hover:not(.navbar__link--active):before {
+  content: '■';
+  position: absolute;
+  top: 11px;
+  margin-left: -10px;
+  color: var(--transpara-primary-color1);
+  transform: rotate(45deg);
+  font-size: 4px;
+  line-height: 11px;
+}
+
+.navbar__items:not(.navbar__items--right)
+  .navbar__link:hover:not(.navbar__link--active):after {
+  content: '■';
+  position: absolute;
+  top: 11px;
+  margin-left: 8px;
+  color: var(--transpara-primary-color1);
+  transform: rotate(45deg);
+  font-size: 4px;
+  line-height: 11px;
+}
+
 
 @media (max-width: 1440px) {
   .navbar__items--right {

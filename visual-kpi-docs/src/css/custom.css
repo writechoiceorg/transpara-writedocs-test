@@ -56,10 +56,6 @@
   font-family: 'Open Sans' !important;
 }
 
-.navbar--fixed-top {
-  background-color: white !important;
-}
-
 main {
   background-color: white !important;
 }
@@ -73,10 +69,6 @@ main {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.site_logo {
-  border-radius: 4px;
 }
 
 .pagination-nav__label {
@@ -132,32 +124,3 @@ table thead tr {
 table {
   font-size: small;
 }
-
-.navbar__link:hover {
-  position: relative;
-}
-
-.navbar__items:not(.navbar__items--right)
-  .navbar__link:hover:not(.navbar__link--active):before {
-  content: '■';
-  position: absolute;
-  top: 11px;
-  margin-left: -10px;
-  color: var(--transpara-primary-color1);
-  transform: rotate(45deg);
-  font-size: 4px;
-  line-height: 11px;
-}
-
-.navbar__items:not(.navbar__items--right)
-  .navbar__link:hover:not(.navbar__link--active):after {
-  content: '■';
-  position: absolute;
-  top: 11px;
-  margin-left: 8px;
-  color: var(--transpara-primary-color1);
-  transform: rotate(45deg);
-  font-size: 4px;
-  line-height: 11px;
-}
-
