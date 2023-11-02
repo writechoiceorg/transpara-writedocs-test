@@ -31,8 +31,12 @@
   --transpara-optional-color3: #e8e8e8;
   --transpara-highlights-color1: #ff6600;
   --transpara-highlights-color2: #6699cc;
-
   --ifm-font-family-base: 'Inter', system-ui, sans-serif !important;
+  /* Search bar configurations. */
+  --aa-primary-color-rgb: 102, 153, 0 !important; 
+  --aa-muted-color-rgb: 102, 153, 0 !important;
+  --aa-input-border-color-rgb: 102, 153, 0 !important;
+  /* -------------------------- */
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -53,8 +57,13 @@
 }
 
 .navbar--fixed-top {
-  background-color: white !important;;
+  background-color: white !important;
 }
+
+main {
+  background-color: white !important;
+}
+
 .hero {
   background-color: transparent !important;
 }
@@ -151,3 +160,4 @@ table {
   font-size: 4px;
   line-height: 11px;
 }
+

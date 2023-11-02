@@ -118,6 +118,7 @@ const config = {
           {
             type: 'search',
             position: 'right',
+            className: 'searchbar'
           },
           // {
           //   href: 'https://github.com/orgs/writechoiceorg/',
