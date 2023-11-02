@@ -9,7 +9,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap');
 
 :root {
-  --ifm-color-primary: #fafafa;
+  --ifm-color-primary: #669900;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
   --ifm-color-primary-darkest: #205d3b;
@@ -52,7 +52,9 @@
   font-family: 'Open Sans' !important;
 }
 
-
+.navbar--fixed-top {
+  background-color: white !important;;
+}
 .hero {
   background-color: transparent !important;
 }
