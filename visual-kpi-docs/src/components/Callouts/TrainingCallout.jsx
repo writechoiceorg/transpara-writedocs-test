@@ -9,9 +9,12 @@ export default function TrainingCallout({ title, content }) {
     <div className="callout training-callout theme-admonition theme-admonition-note alert alert--secondary admonition_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-styles-module">
       <div className="callout-heading admonitionHeading_node_modules-\@docusaurus-theme-classic-lib-theme-Admonition-styles-module">
         <span className="callout-icon admonitionIcon_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-styles-module">
-          <SvgFont data={selection.icons[116]} position={positions["116"]} size={22}/>
+          <SvgFont data={selection.icons[116]} position={positions["116"]} size={20}/>
         </span>
-        {title.toUpperCase()}
+        <p>
+          {title.toUpperCase()}
+
+        </p>
       </div>
       <div className="callout-content training-callout-content admonitionContent_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-styles-module">
         <p>{content}</p>

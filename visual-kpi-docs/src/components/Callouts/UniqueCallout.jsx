@@ -8,7 +8,9 @@ export default function UniqueCallout({ title, content }) {
       <span className="callout-icon admonitionIcon_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-styles-module">
         <img src="https://raw.githubusercontent.com/transpara/documentation/main/visual-kpi-docs/static/img/favicon.png" alt="Callout Icon" />
       </span>
-      {title.toUpperCase()}
+      <p>
+        {title.toUpperCase()}
+      </p>
     </div>
     <div className="callout-content unique-callout-content admonitionContent_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-styles-module">
       <p>{content}</p>
