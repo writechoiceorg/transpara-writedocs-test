@@ -1,5 +1,5 @@
 .callout-heading {
-  font: var(--ifm-heading-font-weight) var(--ifm-h5-font-size) / var(--ifm-heading-line-height) var(--ifm-heading-font-family);
+  /* font: var(--ifm-heading-font-weight) var(--ifm-h5-font-size) / var(--ifm-heading-line-height) var(--ifm-heading-font-family); */
   margin-bottom: 0.3rem;
   display: flex;
   height: 25.89px !important;
@@ -30,6 +30,7 @@
 }
 
 .callout-heading p {
+  font: var(--ifm-heading-font-weight) var(--ifm-h5-font-size) / var(--ifm-heading-line-height) var(--ifm-heading-font-family);
   margin: 0;
   align-self: center;
 }
