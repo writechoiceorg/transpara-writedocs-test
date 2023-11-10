@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 export default function SvgFont({ data, position }) {
   const [path, setPath] = useState('');
-  console.log(data)
+
   useEffect(() => {
     const path = data.icon.paths.reduce((acc, curr) => acc + ` ${curr}`, '');
     setPath(path);
