@@ -106,7 +106,7 @@ const AdmonitionConfigs = {
       <Translate
         id="theme.admonition.unique"
         description="The default label used for the unique admonition (:::unique)">
-        training
+        unique
       </Translate>
     )
   },
