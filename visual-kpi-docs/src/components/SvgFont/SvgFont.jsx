@@ -18,7 +18,7 @@ export default function SvgFont({ data, position, size }) {
           </symbol>
         </defs>
       </svg>
-      <svg className="icon" ><use href={`#${data.properties.name}`}></use></svg>
+      <svg className="icon"><use href={`#${data.properties.name}`}></use></svg>
     </span>  
   )
 }

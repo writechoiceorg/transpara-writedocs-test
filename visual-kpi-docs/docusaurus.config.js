@@ -48,6 +48,22 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          admonitions: {
+            tag: ':::',
+            keywords: [
+                'info',
+                'success',
+                'danger',
+                'note',
+                'tip',
+                'warning',
+                'important',
+                'caution',
+                'support',
+                'training',
+                'unique',
+              ],
+          },
           // routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
