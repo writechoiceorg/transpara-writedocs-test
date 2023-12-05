@@ -116,6 +116,18 @@ const config = {
             to: '/docs',
           },
           {
+            to: 'https://www.transpara.com/',
+            label: 'Learn more',
+            position: 'right',
+            className: 'navbar-buttons'
+          },
+          {
+            to: '?',
+            label: 'Contact the support',
+            position: 'right',
+            className: 'navbar-buttons'
+          },
+          {
             type: 'search',
             position: 'right',
             className: 'searchbar'
@@ -147,6 +159,19 @@ const config = {
               },
             ],
           },
+          {
+            title: 'Trasnpara',
+            items: [
+              {
+                label: 'Learn more',
+                to: 'https://www.transpara.com/',
+              },
+              {
+                label: 'Contact the support',
+                to: '/docs',
+              },
+            ],
+          }
           // {
           //   title: 'Community',
           //   items: [
