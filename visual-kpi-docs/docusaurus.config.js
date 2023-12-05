@@ -8,12 +8,12 @@ const darkTheme = themes.dracula;
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   plugins: [
-    [
-      require.resolve('@cmfcmf/docusaurus-search-local'),
-      {
-        indexBlog: false,
-      },
-    ],
+    // [
+    //   require.resolve('@cmfcmf/docusaurus-search-local'),
+    //   {
+    //     indexBlog: false,
+    //   },
+    // ],
     require.resolve('docusaurus-plugin-image-zoom'),
     'docusaurus-plugin-sass',
   ],
@@ -116,10 +116,10 @@ const config = {
             label: 'Documentation',
             to: '/docs',
           },
-          {
-            type: 'search',
-            position: 'right',
-          },
+          // {
+          //   type: 'search',
+          //   position: 'right',
+          // },
           // {
           //   href: 'https://github.com/orgs/writechoiceorg/',
           //   label: 'GitHub',
