@@ -1,18 +1,19 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const {themes} = require('prism-react-renderer');
+const lightTheme = themes.github;
+const darkTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   plugins: [
-    [
-      require.resolve('@cmfcmf/docusaurus-search-local'),
-      {
-        indexBlog: false,
-      },
-    ],
+    // [
+    //   require.resolve('@cmfcmf/docusaurus-search-local'),
+    //   {
+    //     indexBlog: false,
+    //   },
+    // ],
     require.resolve('docusaurus-plugin-image-zoom'),
     'docusaurus-plugin-sass',
   ],
@@ -143,11 +144,11 @@ const config = {
             position: 'right',
             className: 'navbar_link_buttons'
           },
-          {
-            type: 'search',
-            position: 'right',
-            className: 'searchbar'
-          },
+          // {
+          //   type: 'search',
+          //   position: 'right',
+          //   className: 'searchbar'
+          // },
           // {
           //   href: 'https://github.com/orgs/writechoiceorg/',
           //   label: 'GitHub',
@@ -192,8 +193,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Transpara. Built with Docusaurus.`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: lightTheme,
+        darkTheme: darkTheme,
       },
       colorMode: {
         defaultMode: 'light',
