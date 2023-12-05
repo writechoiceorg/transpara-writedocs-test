@@ -160,33 +160,11 @@ export default function Home() {
       <main>
         <div className="cards_container first_cards_section">
           {
-            first3Cards.map((card) => (
+            [...first3Cards, ...second2Cards].map((card) => (
               <Card key={card.title} card={ card } className="card"/>
             ))
           }
         </div>
-        <div className="cards_container secondary_cards_section">
-          {
-            second2Cards.map((card) => (
-              <Card key={card.title} card={ card } className="card"/>
-            ))
-          }
-        </div>
-        {/* <div className="secondary_section">
-          {
-            administrator.map((card) => (
-              <Card key={card.title} card={ card } className="secondary_card"/>
-            ))
-          }
-        </div>
-        <div className="secondary_section">
-          {
-            otherUSers.map((card) => (
-              <Card key={card.title} card={ card } className="secondary_card"/>
-            ))
-          }
-        </div> */}
-        {/* <Card card={ mainCard } className="main_card"/> */}
       </main>
     </Layout>
   );
