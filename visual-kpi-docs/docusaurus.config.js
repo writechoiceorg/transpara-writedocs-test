@@ -119,13 +119,13 @@ const config = {
             to: 'https://www.transpara.com/',
             label: 'Learn more',
             position: 'right',
-            className: 'navbar-buttons'
+            className: 'navbar_link_buttons'
           },
           {
-            to: '?',
+            to: 'https://www.transpara.com/contact-us/',
             label: 'Contact the support',
             position: 'right',
-            className: 'navbar-buttons'
+            className: 'navbar_link_buttons'
           },
           {
             type: 'search',
@@ -168,32 +168,10 @@ const config = {
               },
               {
                 label: 'Contact the support',
-                to: '/docs',
+                to: 'https://www.transpara.com/contact-us/  ',
               },
             ],
           }
-          // {
-          //   title: 'Community',
-          //   items: [
-          //     {
-          //       label: 'Instagram',
-          //       href: 'https://www.instagram.com/write.choice/',
-          //     },
-          //     {
-          //       label: 'Linkedin',
-          //       href: 'https://www.linkedin.com/company/write-choice-technical-writing-services/',
-          //     },
-          //   ],
-          // },
-          // {
-          //   title: 'More',
-          //   items: [
-          //     {
-          //       label: 'GitHub',
-          //       href: 'https://github.com/orgs/writechoiceorg',
-          //     },
-          //   ],
-          // },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Transpara. Built with Docusaurus.`,
       },
