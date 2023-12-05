@@ -50,7 +50,6 @@ const config = {
       ({
         docs: {
           admonitions: {
-            tag: ':::',
             keywords: [
                 'info',
                 'success',
