@@ -1,7 +1,7 @@
 .headerBtn {
   width: fit-content;
   border: 1px solid transparent;
-  border-radius: 12px;
+  border-radius: 8px;
   color: white;
   cursor: pointer;
   display: flex;

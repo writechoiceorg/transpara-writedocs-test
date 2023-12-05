@@ -100,7 +100,7 @@ const config = {
         title: '',
         logo: {
           alt: 'Site Logo',
-          src: 'img/transpara.webp',
+          src: 'img/transpara_logo.png',
           className: 'site_logo',
         },
         items: [
@@ -116,9 +116,22 @@ const config = {
             label: 'Documentation',
             to: '/docs',
           },
+          {
+            to: 'https://www.transpara.com/',
+            label: 'Learn more',
+            position: 'right',
+            className: 'navbar_link_buttons'
+          },
+          {
+            to: 'https://www.transpara.com/contact-us/',
+            label: 'Contact the support',
+            position: 'right',
+            className: 'navbar_link_buttons'
+          },
           // {
           //   type: 'search',
           //   position: 'right',
+          //   className: 'searchbar'
           // },
           // {
           //   href: 'https://github.com/orgs/writechoiceorg/',
@@ -147,28 +160,19 @@ const config = {
               },
             ],
           },
-          // {
-          //   title: 'Community',
-          //   items: [
-          //     {
-          //       label: 'Instagram',
-          //       href: 'https://www.instagram.com/write.choice/',
-          //     },
-          //     {
-          //       label: 'Linkedin',
-          //       href: 'https://www.linkedin.com/company/write-choice-technical-writing-services/',
-          //     },
-          //   ],
-          // },
-          // {
-          //   title: 'More',
-          //   items: [
-          //     {
-          //       label: 'GitHub',
-          //       href: 'https://github.com/orgs/writechoiceorg',
-          //     },
-          //   ],
-          // },
+          {
+            title: 'Trasnpara',
+            items: [
+              {
+                label: 'Learn more',
+                to: 'https://www.transpara.com/',
+              },
+              {
+                label: 'Contact the support',
+                to: 'https://www.transpara.com/contact-us/  ',
+              },
+            ],
+          }
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Transpara. Built with Docusaurus.`,
       },
