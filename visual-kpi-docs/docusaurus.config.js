@@ -1,18 +1,19 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const {themes} = require('prism-react-renderer');
+const lightTheme = themes.github;
+const darkTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   plugins: [
-    [
-      require.resolve('@cmfcmf/docusaurus-search-local'),
-      {
-        indexBlog: false,
-      },
-    ],
+    // [
+    //   require.resolve('@cmfcmf/docusaurus-search-local'),
+    //   {
+    //     indexBlog: false,
+    //   },
+    // ],
     require.resolve('docusaurus-plugin-image-zoom'),
     'docusaurus-plugin-sass',
   ],
@@ -99,7 +100,7 @@ const config = {
         title: '',
         logo: {
           alt: 'Site Logo',
-          src: 'img/transpara.webp',
+          src: 'img/transpara_logo.png',
           className: 'site_logo',
         },
         items: [
@@ -116,9 +117,22 @@ const config = {
             to: '/docs',
           },
           {
-            type: 'search',
+            to: 'https://www.transpara.com/',
+            label: 'Learn more',
             position: 'right',
+            className: 'navbar_link_buttons'
           },
+          {
+            to: 'https://www.transpara.com/contact-us/',
+            label: 'Contact the support',
+            position: 'right',
+            className: 'navbar_link_buttons'
+          },
+          // {
+          //   type: 'search',
+          //   position: 'right',
+          //   className: 'searchbar'
+          // },
           // {
           //   href: 'https://github.com/orgs/writechoiceorg/',
           //   label: 'GitHub',
@@ -146,34 +160,25 @@ const config = {
               },
             ],
           },
-          // {
-          //   title: 'Community',
-          //   items: [
-          //     {
-          //       label: 'Instagram',
-          //       href: 'https://www.instagram.com/write.choice/',
-          //     },
-          //     {
-          //       label: 'Linkedin',
-          //       href: 'https://www.linkedin.com/company/write-choice-technical-writing-services/',
-          //     },
-          //   ],
-          // },
-          // {
-          //   title: 'More',
-          //   items: [
-          //     {
-          //       label: 'GitHub',
-          //       href: 'https://github.com/orgs/writechoiceorg',
-          //     },
-          //   ],
-          // },
+          {
+            title: 'Trasnpara',
+            items: [
+              {
+                label: 'Learn more',
+                to: 'https://www.transpara.com/',
+              },
+              {
+                label: 'Contact the support',
+                to: 'https://www.transpara.com/contact-us/  ',
+              },
+            ],
+          }
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Transpara. Built with Docusaurus.`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: lightTheme,
+        darkTheme: darkTheme,
       },
       colorMode: {
         defaultMode: 'light',

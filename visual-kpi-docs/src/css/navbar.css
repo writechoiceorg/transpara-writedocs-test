@@ -1,15 +1,22 @@
 .navbar {
-  background: var(--ifm-color-primary);
+  background: white !important;
   height: 90px;
 }
 
-.navbar__brand {
-  margin-right: 150px;
+.navbar__logo {
+  width: 210px;
+  height: fit-content;
 }
 
-/* .navbar__link--active {
-  background-color: black;
-} */
+.site_logo {
+  width: fit-content;
+  height: fit-content;
+}
+
+.navbar__brand {
+  margin-right: 80px;
+}
+
 
 .navbar__items .navbar__link, .navbar__items--right {
   color: var(--transpara-primary-color5);
@@ -64,6 +71,72 @@
   height: 12px;
 }
 
+.navbar__link:hover {
+  position: relative;
+}
+
+.navbar__items:not(.navbar__items--right)
+  .navbar__link:hover:not(.navbar__link--active):before {
+  content: '■';
+  position: absolute;
+  top: 11px;
+  margin-left: -10px;
+  color: var(--transpara-primary-color1);
+  transform: rotate(45deg);
+  font-size: 4px;
+  line-height: 11px;
+}
+
+.navbar__items:not(.navbar__items--right)
+  .navbar__link:hover:not(.navbar__link--active):after {
+  content: '■';
+  position: absolute;
+  top: 11px;
+  margin-left: 8px;
+  color: var(--transpara-primary-color1);
+  transform: rotate(45deg);
+  font-size: 4px;
+  line-height: 11px;
+}
+
+.aa-DetachedSearchButton {
+  border-radius: 8px !important;
+  border-color: var(--transpara-primary-color1);
+}
+
+.navbar__toggle.clean-btn svg {
+  color: black !important;
+  fill: black !important;
+}
+
+.navbar-sidebar__brand img {
+  width: 135px;
+}
+
+@media (min-width: 996px) {
+  .navbar_link_buttons {
+    width: fit-content;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: white !important;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 10px;
+    background-color: var(--transpara-primary-color1);
+    transition: all 0.5s ease;
+  }
+
+  .navbar_link_buttons:hover {
+    background: transparent;
+    text-decoration: none;
+    color: var(--transpara-primary-color1) !important;
+    border: 1px solid var(--transpara-primary-color1);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+}
+
 @media (max-width: 1440px) {
   .navbar__items--right {
     margin: 0 135px 0 0;
@@ -87,5 +160,23 @@
 @media (max-width: 1024px) {
   .navbar__items--right {
     margin: 0 50px 0 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .aa-DetachedSearchButton {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar__brand img {
+    width: 175px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar__brand img {
+    width: 150px !important;
   }
 }

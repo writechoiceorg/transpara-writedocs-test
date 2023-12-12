@@ -6,4 +6,70 @@ description: 'Describes how to solve problems frequently faced by users'
 tags: []
 ---
 
-Separete the problems for user category.
+import selection from '@site/static/font/selection.json';
+import positions from '@site/static/data/icons/iconsPosition.json';
+import SvgFont from '@site/src/components/SvgFont/SvgFont';
+import Glossary from '@site/src/components/Glossary/Glossary';
+
+import UniqueCallout from '@site/src/components/Callouts/UniqueCallout';
+import SupportCallout from '@site/src/components/Callouts/SupportCallout';
+import TrainingCallout from '@site/src/components/Callouts/TrainingCallout';
+
+Test text with icons <SvgFont data={selection.icons[100]} position={positions["100"]} /> 
+Test text with icons <SvgFont data={selection.icons[101]} position={positions["101"]}/> 
+Test text with icons <SvgFont data={selection.icons[102]} position={positions["102"]}/>.
+
+<SvgFont data={selection.icons[103]} position={positions["103"]}/> Test text with icons. 
+
+
+<Glossary word={'Test'} content={'Test text with icons Test text with icons Test text with icons Test text with icons.'}/>  Test text with icons. Test text with icons. Test text with icons.
+
+Test text with icons. Test text with icons. Test text with icons. Test text with icons. Test text with icons. Test text with icons. Test text with icons. Test text with icons. Test text with icons.
+Test text with icons. Test text with icons. Test text with icons. Test text with icons. Test text with icons. Test text with icons. <Glossary word={'Test'} content={'Test text with icons Test text with icons Test text with icons Test text with icons. a Test text with icons Test text with icons Test text with icons Test text with icons. Test text with icons Test text with icons'}/>
+
+
+
+<UniqueCallout
+  title="Important Message "
+  content="This is a sample unique callout component. This is a sample unique callout component. This is a sample unique callout component."
+/>
+<TrainingCallout
+  title="Training"
+  content="This is a sample training callout. This is a sample training callout. This is a sample training callout."
+/>
+
+<SupportCallout />
+
+
+
+
+:::note
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::tip
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::info
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+
+:::danger
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::warning
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
