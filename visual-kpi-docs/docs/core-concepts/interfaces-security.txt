@@ -1,0 +1,7 @@
+THIS CONTENT IS NOT IN USE
+
+## Interface Security & Authentication
+
+Authentication and security are vital for interfaces, with service accounts favored over individual user accounts due to their reliability. Custom service accounts within the domain are encouraged when network service accounts are not an option due to security policies. Group-based [security within Visual KPI]()  allows precise control over access based on roles and permissions, enhancing software security.
+
+The recommendation is to install the software on servers within a domain rather than on workgroup member servers. Domain-based servers are preferred due to their enhanced security and greater control. Additionally, utilizing fully qualified domain names (FQDNs) for improved network reliability is recommended. It's essential to ensure that DNS (Domain Name System) resolution is functioning correctly to facilitate effective FQDN usage.
