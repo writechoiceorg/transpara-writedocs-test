@@ -6,41 +6,39 @@ description: 'Describes the Interfaces definition and how they are used to integ
 tags: []
 ---
 
-In Visual KPI, Interfaces serve as the essential conduits for retrieving data from external systems. Interfaces are inherently read-only, designed to fetch data without the capability to modify it. Users must select the appropriate Interface type to fulfill their specific data access needs. 
+Visual KPI Interfaces serve as essential tools for fetching data from external systems. These interfaces are designed for read-only purposes, allowing users to retrieve data without the ability to modify it. Users must choose the appropriate Interface type to meet their specific data access requirements.
 
-## Interfaces porpose
+## Purpose of interfaces
 
-The purpose of Interfaces is to adapt data from different data sources and make them alike  to the Visual KPI server. The remote data may not have the same configuration or organization that the one used by Visual KPI. As a result, the data must be *prepared*, shaping the external data into a uniform data colection before being made available for Visual KPI. 
+The primary goal of Interfaces is to adapt data from various sources and standardize it for use within the Visual KPI server. External data may differ in configuration or organization from that used by Visual KPI, requiring preparation to shape the data into a uniform collection. This data preparation occurs in real-time, ensuring that the external data is seamlessly *translated* for use by Visual KPI and presented to end users.
 
-It's important to notice that the *data preparation* by the Interface happens in real-time. As data is constantly been acquired from externas data sources, the Interfaces *translates* the upcoming data in real-time. The result is used by Visual KPI and displayed to the end user.
+## Interface outputs
 
-The Interface, to perform all necessary actions to make data available, is composed by three main components:
+An Interface should provide three key data structures to ensure Visual KPI functions properly:
 
-- The connection to the data source.
-- The query system, to read request and and prepared the received data.
-- Security systems to ensure authentication and avoid data leakage.
+- **Current Value**: Enables retrieval of the current KPI value.
+- **Trend Data**: Users can retrieve a series of trend KPI values between two timestamps.
+- **Historical Value**: Provides access to historical data at a specific time or before a given time.
 
-## The integration process
+## Interface components
 
-The basic process to start using an Interface is composed by a series of steps. Below you find the steps considering that you are interested in presenting a KPI related to a reactor temperature:
+To make data available, an Interface needs to be built with three main components:
 
-1. First, you define what is your KPI, such as the reactor temperature.
-2. Specify where to find the KPI data, which is the data souce to be used (oracle Server, SQL, API, … ).
-3. Identify the data inside the data source. From all tables, columns, or endpoints, what is the one that provides the reactor temperature information.
-4. Define how to query the data. Should you queries to a SQL server or perform request to an API request, for example.
-5. Perform data acquisition test to identify how to standardize the data acquisition queries/requests. 
-6. Identify the security and authentication actions necessary to consume the data from the data source.
-7. Write the Interface code. The Interface creation is a one time process. After its creation no more action are required, only if the data source is modified.
+- **Connection to the Data Source**: Establishes a connection to the external data source.
+- **Query System**: Reads requests and prepares received data for use within Visual KPI.
+- **Security Systems**: Ensures authentication and prevents data leakage.
 
+## Integration process
+The process to set up and use an Interface involves the following steps:
 
-## Interfaces outputs
+1. Define the KPI, such as reactor temperature.
+2. Specify the data source (Oracle Server, SQL, API, etc.) for the KPI.
+3. Identify the specific data within the source that provides reactor temperature information.
+4. Define the data querying method (SQL, API requests, etc.).
+5. Perform data acquisition tests to standardize queries/requests.
+6. Identify security and authentication actions required for data consumption.
+7. Write the Interface code, a one-time process unless the data source is modified.
 
-An Interface should provide three key data structures to ensure Visual KPI will work proporly:
+## Next Steps
 
-1. **Current Value**: The Interface should provide a way to obtain the current value of the KPI.
-2. **Trend Data**: It should allow users to retrieve a series of trend KPI between two timestamps, typically a start and end time.
-3. **Historical Value**: Users should be able to access historical data, either at a specific time or before a given time.
-
-## What is Next?
-
-Understanding Visual KPI Interface is crucial because it enables clients know how data is capture and made available by Visual KPI effectively. For a more detailed guides of how to setup an interface Interfaces in Visual KPI, you can access the [Interfaces](../setup-and-administration/interfaces) content. You can also see the [Visual KPI Interfaces Training](https://www.transpara.com/course/visual-kpi-interfaces/).
+Understanding Visual KPI Interfaces is crucial for clients as it explains how data is captured and made available effectively. Refer to the [Interfaces](../setup-and-administration/interfaces) documentation for detailed guides on setting up Interfaces in Visual KPI. Additional training resources are available through the [Visual KPI Interfaces Training](https://www.transpara.com/course/visual-kpi-interfaces/)..
