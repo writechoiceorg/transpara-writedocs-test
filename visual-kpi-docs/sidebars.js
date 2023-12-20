@@ -198,108 +198,26 @@ const sidebars = {
       className: 'sidebar_title',
     },
     {
+      type: 'doc',
+      id: 'end-user/overview',
+      // label: '',
+      // className: '',
+    },
+    {
       type: 'category',
-      label: "End User",
+      label: "End User Core Concepts",
       // className: '',
       link: {
         type: 'doc',
-        id: 'viewers/overview',
+        id: 'end-user/core-concepts/core-concepts',
       },
       items: [
-        'viewers/navigation',
-        {
-          type: 'category',
-          label: "KPI Trends",
-          // className: '',
-          link: {
-            type: 'doc',
-            id: 'viewers/kpi-trends/kpi-trends',
-          },
-          items: [
-            'viewers/kpi-trends/view-options',
-            'viewers/kpi-trends/trend-comments',
-          ],
-        },
-        'viewers/charts',
-        'viewers/tables',
-        {
-          type: 'category',
-          label: "Dashboard",
-          // className: '',
-          link: {
-            type: 'doc',
-            id: 'viewers/dashboard/dashboard',
-          },
-          items: [
-            'viewers/dashboard/share-dashboard',
-          ],
-        },
-        'viewers/groups-hierarchy',
-        'viewers/search-tool',
-        {
-          type: 'category',
-          label: "Visualization options",
-          // className: '',
-          link: {
-            type: 'doc',
-            id: 'viewers/visualization-options/visualization-options',
-          },
-          items: [
-            {
-              type: 'category',
-              label: "Charts visualizations",
-              // className: '',
-              link: {
-                type: 'doc',
-                id: 'viewers/visualization-options/charts-visualizations/charts-visualizations',
-              },
-              items: [
-                
-              ],
-            },  
-            {
-              type: 'category',
-              label: "KPI visualizations",
-              // className: '',
-              link: {
-                type: 'doc',
-                id: 'viewers/visualization-options/kpi-visualizations/kpi-visualizations',
-              },
-              items: [
-                
-              ],
-            },  
-          ],
-        },
-        'viewers/time-range',
-        'viewers/ad-hoc-view',
-        'viewers/analytics-tools',
-        'viewers/alerts',
-        'viewers/bookmarks', 
-        {
-          type: 'category',
-          label: "Use Cases",
-          // className: '',
-          link: {
-            type: 'doc',
-            id: 'viewers/use-cases/use-cases',
-          },
-          items: [
-          ],
-        },
-        {
-          type: 'category',
-          label: "Best Practices",
-          // className: '',
-          link: {
-            type: 'doc',
-            id: 'viewers/best-practices/best-practices',
-          },
-          items: [
-          ],
-        },
+        'viewers/alerts'
       ],
     },
+    
+
+
     {
       type: 'html',
       value: '<span class=\'sidebar_title\'>Reference Guides</span>',
