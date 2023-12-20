@@ -76,7 +76,7 @@ const sidebars = {
     },
     {
       type: 'doc',
-      id: 'setup-and-administration/setup-and-administration',
+      id: 'setup-and-administration/overview',
       // label: 'How to Use the Documentation',
       // className: '',
     },
