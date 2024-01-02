@@ -214,6 +214,7 @@ const sidebars = {
       items: [
         'end-user/core-concepts/browser',
         'end-user/core-concepts/responsive',
+        'end-user/core-concepts/real-time',
       ],
     },
     
