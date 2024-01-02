@@ -212,7 +212,7 @@ const sidebars = {
         id: 'end-user/core-concepts/core-concepts',
       },
       items: [
-        'viewers/alerts'
+        'end-user/core-concepts/browser',
       ],
     },
     
