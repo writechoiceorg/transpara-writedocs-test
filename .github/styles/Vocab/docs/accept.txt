@@ -1,0 +1,7 @@
+Docusaurus
+Transpara
+Netlify
+KPIs
+Heitor
+branch_name
+subpages
