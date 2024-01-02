@@ -213,6 +213,7 @@ const sidebars = {
       },
       items: [
         'end-user/core-concepts/browser',
+        'end-user/core-concepts/responsive',
       ],
     },
     
