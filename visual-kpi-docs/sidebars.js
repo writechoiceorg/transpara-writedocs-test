@@ -216,6 +216,7 @@ const sidebars = {
         'end-user/core-concepts/responsive',
         'end-user/core-concepts/real-time',
         'end-user/core-concepts/interactive',
+        'end-user/core-concepts/kpi',
       ],
     },
     
