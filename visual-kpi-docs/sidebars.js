@@ -205,7 +205,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: "End User Core Concepts",
+      label: "Core Concepts",
       // className: '',
       link: {
         type: 'doc',
@@ -217,6 +217,18 @@ const sidebars = {
         'end-user/core-concepts/real-time',
         'end-user/core-concepts/interactive',
         'end-user/core-concepts/kpi',
+      ],
+    },
+    {
+      type: 'category',
+      label: "Basic Navigation",
+      // className: '',
+      link: {
+        type: 'doc',
+        id: 'end-user/basic-navigation/basic-navigation',
+      },
+      items: [
+        'end-user/core-concepts/browser',
       ],
     },
     
