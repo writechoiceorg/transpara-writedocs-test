@@ -228,7 +228,7 @@ const sidebars = {
         id: 'end-user/basic-navigation/basic-navigation',
       },
       items: [
-        'end-user/core-concepts/browser',
+        'end-user/basic-navigation/profiles',
       ],
     },
     
