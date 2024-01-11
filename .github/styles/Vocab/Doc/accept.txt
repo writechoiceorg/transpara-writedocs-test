@@ -9,3 +9,6 @@ Watchlist
 Ad-Hoc
 Geo Maps
 Geo Map
+tooltips
+tooltip
+Extron
