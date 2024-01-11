@@ -229,6 +229,7 @@ const sidebars = {
       },
       items: [
         'end-user/basic-navigation/profiles',
+        'end-user/basic-navigation/dashboards',
       ],
     },
     
