@@ -233,7 +233,19 @@ const sidebars = {
         'end-user/basic-navigation/groups',
       ],
     },
-    
+    {
+      type: 'category',
+      label: "Features",
+      // className: '',
+      link: {
+        type: 'doc',
+        id: 'end-user/features/features',
+      },
+      items: [
+        'end-user/features/profiles',
+        
+      ],
+    },
 
 
     {
