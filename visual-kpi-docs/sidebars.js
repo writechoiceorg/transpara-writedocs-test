@@ -243,7 +243,11 @@ const sidebars = {
       },
       items: [
         'end-user/features/profiles',
-        
+        'end-user/features/dashboards',
+        'end-user/features/groups',
+        'end-user/features/visualization/visualization',
+        'end-user/features/visualization/kpi',
+
       ],
     },
 

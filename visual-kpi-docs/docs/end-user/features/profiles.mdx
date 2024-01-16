@@ -6,6 +6,9 @@ description: Presents advanced information about the profiles configuration of V
 tags: ['features', 'quick-start', 'end-user', 'advanced', 'profile']
 ---
 import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
+import selection from '@site/static/font/selection.json';
+import positions from '@site/static/data/icons/iconsPosition.json';
+import SvgFont from '@site/src/components/SvgFont/SvgFont';
 
 Profiles are where your Dashboards live and all the personalized layer of visual KPI is for an end user. A profile is a collection of important things that are personalized for a user, but it doesn't need to be a person, it could be a role, a site, a room, an asset, or anything else you might want. 
 
@@ -13,16 +16,16 @@ A profile can be grouped into profile groups, like only for executives, maintena
 
 1. **Dashboards**: You can create and personalize as many dashboards as you want for each profile, so you can easily toggle back and forth between them. You can also copy dashboards from other profiles and lock them to block editing of any format from other users.
 2. **Bookmark bar**: If you change profiles then you're going to change to a different bookmark bar but if you only change dashboards you'll stay within the same profile, so your bookmark bar stays the same. 
-3. **Watchlist**: The watchlist gives you a set of customizable favorites list of KPIs. You can add as many to it as you want and the orange number beside the timestamp tells you how many KPIs on your watchlist are in an alert condition. By default, you see them sorted by 'in alert' and 'not alert'.  You can you multiple [KPI Visualizations](./visualization/kpi) with the top bar icons and sort the list by using the arroes beside the collum title. 
+3. **Watchlist**: The watchlist gives you a set of customizable favorites list of KPIs. You can add as many to it as you want and the orange number beside the timestamp tells you how many KPIs on your watchlist are in an alert condition. By default, you see them sorted by 'in alert' and 'not alert'. You can you multiple [KPI Visualizations](./visualization/kpi) with the top bar icons and sort the list by using the arroes beside the collum title. 
 
 <StylizedImage
-  imgURL="img/docs/end-user/features/profiles/features-profilesoptions.png"
-  alt="Customizable Items"
+  imgURL="img/docs/end-user/features/profiles/features-profilesoptions-cut.png"
+  alt="Profile Options"
 />
 
 ## Bookmark bar
 
-Click the bookmark bar icon to edit your favorite list. You can configure it in a few different ways:
+Click the **Bookmark Bar** icon (<SvgFont data={selection.icons[119]} position={positions["100"]} />) and **Edit Bookmarks** icon (<SvgFont data={selection.icons[260]} position={positions["100"]} />) to edit your favorite list. You can configure it in a few different ways:
 
 - Relocate by drag and droping
 - Change name and description
@@ -31,9 +34,13 @@ Click the bookmark bar icon to edit your favorite list. You can configure it in 
 - Add new bookmarks, such as any Visual KPI object from any profile or an external link
 
 The example below shows the bookmark options and how to add a new one.
-[add gif features-bookmarkbar]
 
-Here are some of the items you can pin to the Visual KPI bookmark bar:
+<StylizedImage
+  imgURL="img/docs/end-user/features/profiles/features-bookmarkbar.gif"
+  alt="Bookmark Bar Presentation"
+/>
+
+The list below presents some of the items you can pin to the Visual KPI bookmark bar:
 
 - A dashboard in your profile
 - A dashboard from another profile to which you have access
@@ -41,18 +48,23 @@ Here are some of the items you can pin to the Visual KPI bookmark bar:
 - A chart
 - A KPI trend
 - An ad hoc trend
-- Embedded content you’ve added to Visual KPI charts
+- Embedded content you've added to Visual KPI charts
 
-You can also pin an element to the bookmark bar using the Options icon. Navigate to the dashboard, object, or other element you want to pin to the bookmark bar and use the Options icon to access the pull-down menu to select Pin to Bookmark Bar.
-[add image features-optionsmenu]
+You can also pin an element to the bookmark bar using the Options icon (<SvgFont data={selection.icons[188]} position={positions["100"]} />). Navigate to the dashboard, object, or other element you want to pin to the bookmark bar and use the Options icon (<SvgFont data={selection.icons[188]} position={positions["100"]} />) to access the pull-down menu to select Pin to Bookmark Bar.
+
+<StylizedImage
+  imgURL="img/docs/end-user/features/profiles/features-menuoptions-cut.png"
+  alt="Menu Options"
+/>
 
 ## Working with profiles
 
 Follow the steps below to create a Profile: 
 
-1. Click the Profile icon under your company logo. 
-2. Click Change Profile. 
-3. Select a Profile Group. 
+1. Click the **Profile** icon (<SvgFont data={selection.icons[118]} position={positions["100"]} />) under your company logo. 
+2. Click **Change Profile**. 
+3. Select a **Profile Group**. 
+4. Name the new profile, describe it, and click Save. 
 
 :::note Profile Groups
 
@@ -60,14 +72,16 @@ Depending on how your Visual KPI site is configured, you may have Private and Pu
 
 :::
 
-4. Name the new profile, describe it, and click Save. 
-[add gif create-profile] 
+<StylizedImage
+  imgURL="img/docs/end-user/features/profiles/create-profile.gif"
+  alt="Create Profile"
+/>
 
 ## How to switch to a different profile
 
 Follow the steps below to change to a different Profile:
 
-1. Click the **Profile** icon under your company logo. 
+1. Click the **Profile** icon (<SvgFont data={selection.icons[118]} position={positions["100"]} />) under your company logo. 
 2. Select **Change Profile** or select from a recently viewed profile. 
 3. Select the appropriate **Profile Group**, if applicable. Your profile may live under one of these groups. 
 4. Select the profile you want to view. 
