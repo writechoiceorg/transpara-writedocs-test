@@ -231,6 +231,7 @@ const sidebars = {
         'end-user/basic-navigation/profiles',
         'end-user/basic-navigation/dashboards',
         'end-user/basic-navigation/groups',
+        'end-user/basic-navigation/visualization',
       ],
     },
     
