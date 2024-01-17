@@ -6,7 +6,7 @@ Heitor
 branch_name
 subpages
 Watchlist
-Ad-Hoc
+Ad Hoc
 Geo Maps
 Geo Map
 tooltips
@@ -16,3 +16,4 @@ High High High
 High High
 KPY Map
 KPY Maps
+lookups

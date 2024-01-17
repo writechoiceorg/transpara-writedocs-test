@@ -232,10 +232,11 @@ const sidebars = {
         'end-user/basic-navigation/dashboards',
         'end-user/basic-navigation/groups',
         'end-user/basic-navigation/visualization',
+        'end-user/basic-navigation/search',
       ],
     },
     
-
+    
 
     {
       type: 'html',
