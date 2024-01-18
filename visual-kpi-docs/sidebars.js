@@ -233,10 +233,10 @@ const sidebars = {
         'end-user/basic-navigation/groups',
       ],
     },
+
     {
       type: 'category',
       label: "Features",
-      // className: '',
       link: {
         type: 'doc',
         id: 'end-user/features/features',
@@ -245,9 +245,19 @@ const sidebars = {
         'end-user/features/profiles',
         'end-user/features/dashboards',
         'end-user/features/groups',
-        'end-user/features/visualization/visualization',
-        'end-user/features/visualization/kpi',
-
+        {
+          type: 'category',
+          label: "Visualizations",
+          link: {
+            type: 'doc',
+            id: 'end-user/features/visualizations/visualizations',
+          },
+          items: [
+            'end-user/features/visualizations/kpi',
+            'end-user/features/visualizations/charts',
+            'end-user/features/visualizations/trends',
+          ],
+        },
       ],
     },
 
