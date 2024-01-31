@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../css/HomeBtn.css';
 // import { ArrowRight } from '@phosphor-icons/react';
+
 export default function HomeBtn({ text, btnClass, route }) {
   return (
     <a className={btnClass} href={route}>
