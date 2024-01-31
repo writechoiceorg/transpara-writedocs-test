@@ -6,7 +6,7 @@
 
 /* You can override the default Infima variables here. */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --ifm-color-primary: #669900;
@@ -178,51 +178,4 @@ table thead tr {
 
 table {
   font-size: small;
-}
-
-/*-------------------------------- Custom CALLOUTS configuration ------------------------------  */
-.alert--support {
-  --ifm-alert-background-color: #ffebcc;
-  --ifm-alert-background-color-highlight: rgba(255, 187, 28, 0.15);
-  --ifm-alert-foreground-color: rgb(66,69,73);
-  --ifm-alert-border-color: rgb(255, 153, 0);
-}
-
-html[data-theme='dark'] .alert--support {
-  --ifm-alert-background-color: #ffebcc;
-  --ifm-alert-background-color-highlight: rgba(255, 53, 28, 0.15);
-  --ifm-alert-foreground-color: rgb(255,255,255);
-  --ifm-alert-border-color: rgb(255, 153, 0);
-}
-
-.alert--training {
-  --ifm-alert-background-color: #f7f7f7;
-  --ifm-alert-background-color-highlight: rgba(206, 206, 206, 0.15);
-  --ifm-alert-foreground-color: rgb(66,69,73);
-  --ifm-alert-border-color: rgb(202, 202, 202);
-}
-
-html[data-theme='dark'] .alert--training {
-  --ifm-alert-background-color: #f7f7f7;
-  --ifm-alert-background-color-highlight: rgba(206, 206, 206, 0.15);
-  --ifm-alert-foreground-color: rgb(255,255,255);
-  --ifm-alert-border-color: rgb(202, 202, 202);
-}
-
-.alert--unique {
-  --ifm-alert-background-color: #66990029;
-  --ifm-alert-background-color-highlight: rgba(102, 153, 28, 0.15);
-  --ifm-alert-foreground-color: rgb(66,69,73);
-  --ifm-alert-border-color: var(--transpara-primary-color1);
-}
-
-html[data-theme='dark'] .alert--unique {
-  --ifm-alert-background-color: #66990029;
-  --ifm-alert-background-color-highlight: rgba(102, 153, 28, 0.15);
-  --ifm-alert-foreground-color: rgb(255,255,255);
-  --ifm-alert-border-color: var(--transpara-primary-color1);
-}
-
-.callout_img {
-  cursor: default !important;
 }
