@@ -7,8 +7,6 @@ tags: ['features', 'quick-start', 'end-user', 'advanced', 'visualization', 'view
 ---
 
 import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
-import selection from '@site/static/font/selection.json';
-import positions from '@site/static/data/icons/iconsPosition.json';
 import SvgFont from '@site/src/components/SvgFont/SvgFont';
 
 Charts show data as it relates to its defined limits. Visual KPI uses many chart types to visualize data using status, colors, and limits. The chart view options are:
@@ -25,7 +23,7 @@ Charts show data as it relates to its defined limits. Visual KPI uses many chart
 
 ### Bar charts
 
-Bar charts (<SvgFont data={selection.icons[142]} position={positions["100"]} />) can be used to show comparisons of data against targets and limits in either a vertical or horizontal chart. You can compare only one specific set of data, where each bar represents the data, or you can cluster sets of data so that each specific set of data has its bar, but the related sets are clustered and compared against other clustered data.
+Bar charts (<SvgFont icon="142"/>) can be used to show comparisons of data against targets and limits in either a vertical or horizontal chart. You can compare only one specific set of data, where each bar represents the data, or you can cluster sets of data so that each specific set of data has its bar, but the related sets are clustered and compared against other clustered data.
 
 Depending on the configuration by your admin, Bar Charts can be:
 
@@ -43,7 +41,7 @@ Depending on the configuration by your admin, Bar Charts can be:
 
 ### Pareto charts
 
-Pareto Charts (<SvgFont data={selection.icons[132]} position={positions["100"]} />) can help you quickly see which of your assets are most critical and know where you need to focus. A Pareto chart is a type of chart that contains both bars and a line graph, where individual values are represented in descending order by bars, and the cumulative total is represented by the line.
+Pareto Charts (<SvgFont icon="132"/>) can help you quickly see which of your assets are most critical and know where you need to focus. A Pareto chart is a type of chart that contains both bars and a line graph, where individual values are represented in descending order by bars, and the cumulative total is represented by the line.
 
 Pareto Charts show assets and values in the bars and use a line to show cumulative effect. They can be used to monitor quality control, showing where most of the problems are coming from.
 
@@ -56,7 +54,7 @@ You can even show relative data using stacked Pareto charts. Each bar can show m
 
 ### Pie chats
 
-Pie Charts (<SvgFont data={selection.icons[124]} position={positions["100"]} />) display a simple graphic that shows the relative proportions of your compared assets. However, Pie Charts has some disavantages for Visual KPI, such as its size for screen presentation and the limited ability to compare peer data. 
+Pie Charts (<SvgFont icon="124"/>) display a simple graphic that shows the relative proportions of your compared assets. However, Pie Charts has some disavantages for Visual KPI, such as its size for screen presentation and the limited ability to compare peer data. 
 
 Depending on how they are configured by your admin, Pie Charts can be:
 
@@ -89,7 +87,7 @@ Box Plots can be created by end users in Visual KPI sites, or admins can create 
 
 ### Gantt chart
 
-Gantt Charts (<SvgFont data={selection.icons[122]} position={positions["100"]} />) are great for showing time-sequenced events. They can show you all of the elements of a project along a timeline, including when each element is scheduled to be completed, any dependencies, and the status of each. Task or project elements are listed along the vertical axis of the Gantt Chart and the horizontal axis displays time intervals.
+Gantt Charts (<SvgFont icon="122"/>) are great for showing time-sequenced events. They can show you all of the elements of a project along a timeline, including when each element is scheduled to be completed, any dependencies, and the status of each. Task or project elements are listed along the vertical axis of the Gantt Chart and the horizontal axis displays time intervals.
 
 :::note Gantt Charts
 
@@ -104,7 +102,7 @@ Gantt Charts are only query-based in Visual KPI, and they must be created by you
 
 ### Gauge, dial, and speedometer charts
 
-Gauge charts (<SvgFont data={selection.icons[11]} position={positions["100"]} />), also known as Dial or Speedometer, are a meter-type visualization that shows the real-time status of a KPI, indicated by a gauge and needle, within a range that includes targets and actual values. These charts include minimum and maximum ranges, along with an indicator for an ideal target. They also can be used to show actual performance versus targets or progress toward a target for anything from temperature, weight, and speed to percentages of sales or work completed, performance, and more.
+Gauge charts (<SvgFont icon="11"/>), also known as Dial or Speedometer, are a meter-type visualization that shows the real-time status of a KPI, indicated by a gauge and needle, within a range that includes targets and actual values. These charts include minimum and maximum ranges, along with an indicator for an ideal target. They also can be used to show actual performance versus targets or progress toward a target for anything from temperature, weight, and speed to percentages of sales or work completed, performance, and more.
 
 Gauge charts are ideal for showing:
 
@@ -121,7 +119,7 @@ If configured by your administrator, you can visualize any trend as a Gauge char
 
 ### XY plots or scatter charts
 
-XY Plots (<SvgFont data={selection.icons[133]} position={positions["100"]} />), or Scatter Charts as they are sometimes called, show the relationships between two sets of data. They are great for showing correlations between one or many variables or calculations. 
+XY Plots (<SvgFont icon="133"/>), or Scatter Charts as they are sometimes called, show the relationships between two sets of data. They are great for showing correlations between one or many variables or calculations. 
 
 Based on how your admin configures XY Plots or Scatter Charts, they may be:
 
@@ -137,7 +135,7 @@ Based on how your admin configures XY Plots or Scatter Charts, they may be:
 
 Your admin can embed content from an external source in Visual KPI, such as a weather map, HMI or process graphic, live video feed, manual data entry form, and just about anything else that has a URL. These objects can be placed on your Visual KPI dashboards and can also live as first-class objects within the system.
 
-The external content you embed in Visual KPI can have attributes, geolocation, live in groups, or at any level of the hierarchy, just like any other KPI or Visual KPI object. When you embed content in Visual KPI, you'll find it organized under the charts menu, Chart Type: Embedded Content (<SvgFont data={selection.icons[121]} position={positions["100"]} />).
+The external content you embed in Visual KPI can have attributes, geolocation, live in groups, or at any level of the hierarchy, just like any other KPI or Visual KPI object. When you embed content in Visual KPI, you'll find it organized under the charts menu, Chart Type: Embedded Content (<SvgFont icon="121"/>).
 
 <StylizedImage
   imgURL="img/docs/end-user/features/visualization/charts/features-visualization-charts-embed.gif"
