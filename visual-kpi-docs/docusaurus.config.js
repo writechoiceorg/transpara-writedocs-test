@@ -22,7 +22,7 @@ const config = {
   tagline: 'Visual KPI',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
-  favicon: 'img/favicon.jpg',
+  favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-test-site.com',
