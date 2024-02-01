@@ -203,46 +203,46 @@ const sidebars = {
       // className: '',
       link: {
         type: 'doc',
-        id: 'viewers/overview',
+        id: 'end-users/overview',
       },
       items: [
-        'viewers/navigation',
+        'end-users/navigation',
         {
           type: 'category',
           label: "KPI Trends",
           // className: '',
           link: {
             type: 'doc',
-            id: 'viewers/kpi-trends/kpi-trends',
+            id: 'end-users/kpi-trends/kpi-trends',
           },
           items: [
-            'viewers/kpi-trends/view-options',
-            'viewers/kpi-trends/trend-comments',
+            'end-users/kpi-trends/view-options',
+            'end-users/kpi-trends/trend-comments',
           ],
         },
-        'viewers/charts',
-        'viewers/tables',
+        'end-users/charts',
+        'end-users/tables',
         {
           type: 'category',
           label: "Dashboard",
           // className: '',
           link: {
             type: 'doc',
-            id: 'viewers/dashboard/dashboard',
+            id: 'end-users/dashboard/dashboard',
           },
           items: [
-            'viewers/dashboard/share-dashboard',
+            'end-users/dashboard/share-dashboard',
           ],
         },
-        'viewers/groups-hierarchy',
-        'viewers/search-tool',
+        'end-users/groups-hierarchy',
+        'end-users/search-feature',
         {
           type: 'category',
           label: "Visualization options",
           // className: '',
           link: {
             type: 'doc',
-            id: 'viewers/visualization-options/visualization-options',
+            id: 'end-users/visualization-options/visualization-options',
           },
           items: [
             {
@@ -251,7 +251,7 @@ const sidebars = {
               // className: '',
               link: {
                 type: 'doc',
-                id: 'viewers/visualization-options/charts-visualizations/charts-visualizations',
+                id: 'end-users/visualization-options/charts-visualizations/charts-visualizations',
               },
               items: [
                 
@@ -263,7 +263,7 @@ const sidebars = {
               // className: '',
               link: {
                 type: 'doc',
-                id: 'viewers/visualization-options/kpi-visualizations/kpi-visualizations',
+                id: 'end-users/visualization-options/kpi-visualizations/kpi-visualizations',
               },
               items: [
                 
@@ -271,18 +271,18 @@ const sidebars = {
             },  
           ],
         },
-        'viewers/time-range',
-        'viewers/ad-hoc-view',
-        'viewers/analytics-tools',
-        'viewers/alerts',
-        'viewers/bookmarks', 
+        'end-users/time-range',
+        'end-users/ad-hoc-view',
+        'end-users/analytics-tools',
+        'end-users/alerts',
+        'end-users/bookmarks', 
         {
           type: 'category',
           label: "Use Cases",
           // className: '',
           link: {
             type: 'doc',
-            id: 'viewers/use-cases/use-cases',
+            id: 'end-users/use-cases/use-cases',
           },
           items: [
           ],
@@ -293,7 +293,7 @@ const sidebars = {
           // className: '',
           link: {
             type: 'doc',
-            id: 'viewers/best-practices/best-practices',
+            id: 'end-users/best-practices/best-practices',
           },
           items: [
           ],
