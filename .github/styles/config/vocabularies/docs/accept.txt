@@ -7,7 +7,6 @@ branch_name
 subpages
 Watchlist
 Ad Hoc
-Hoc
 Geo Maps
 Geo Map
 tooltips
@@ -22,3 +21,7 @@ timeperiod
 Pharma
 OSIsoft
 Proficy
+Sparkline
+Exton
+Gantt
+sitewide
