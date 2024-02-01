@@ -23,7 +23,7 @@ timeperiod
 Pharma
 OSIsoft
 Proficy
-Sparkline
+[Ss]Sparkline
 Exton
 Gantt
 sitewide
