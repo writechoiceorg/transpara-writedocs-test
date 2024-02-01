@@ -6,13 +6,15 @@ description: Presents how end users can use different tools to analyze KPIs and 
 tags: ['basic-navigation', 'quick-start', 'end-user', 'analytics']
 ---
 
-In this section, we will present different types of analytics you can configure in Visual KPI, as well as how you can pivot your data from different angles to get a complete view of how your operations are running. 
+import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
+
+Visual KPI provide different types of analytics you can configure and use to understand KPI patterns. In addition, on this page you find how you can pivot your data from different angles to get a complete view of how your operations are running. 
 
 ## Ad Hoc Trend View 
 
-The Ad Hoc Trend view, or simply Ad Hoc Trend, is a custom type of trend that you can build right inside your Visual KPI site. For a standard Visual KPI trend with targets and limits, you’ll see a trend of the KPI value over time, along with targets and limits and the current status. A legend will appear below the trend to indicate how to read targets and limits. 
+The Ad Hoc Trend view, or simply Ad Hoc Trend, is a custom type of trend that you can build right inside your Visual KPI. For a standard Visual KPI trend with targets and limits, you'll see a trend of the KPI value over time, along with targets and limits and the current status. A legend will appear right below the trend to help you read targets and limits. 
 
-You can save an Ad Hoc Trend and add it to the Dashboard. Like all Visual KPI objects, you create Ad Hoc Trends updates in real-time. Each definition you create in the trend is called a “pen.” The Visual KPI Server retrieves or calculates the values associated with each pen definition based on the time range specified for the Ad Hoc Trend. The default trend view will depend on how your admin has configured trends. Still, you have so many options for viewing Visual KPI trends that you’ll be able to quickly see how a KPI is performing over time. Here are some features of an Ad Hoc Trend: 
+Like all Visual KPI objects, Ad Hoc Trends updates in real-time. Each definition you create in the trend is called a “pen.” The Visual KPI Server retrieves or calculates the values associated with each pen definition based on the time range specified for the Ad Hoc Trend. The default trend view will depend on how your admin has configured trends. Still, you have so many options for viewing Visual KPI trends that you'll be able to quickly see how a KPI is performing over time. Here are some features of an Ad Hoc Trend: 
 
 - Create an Ad Hoc Trend from any KPI List View. 
 - Use up to 20 pens per trend. 
@@ -20,7 +22,10 @@ You can save an Ad Hoc Trend and add it to the Dashboard. Like all Visual KPI ob
 - Support for future data for forecasting and predictive analytics. 
 - Get the full array of trending tools, like inside any Visual KPI trend.  
 
-[add gif basicvisualization-analytics-trendview]
+<StylizedImage
+  imgURL="img/docs/end-user/basic-navigation/analytics/basicvisualization-analytics-trendview.gif"
+  alt="Analytics trend view"
+/>
 
 ### Building Ad Hoc Trends 
 
@@ -28,9 +33,12 @@ You can build an Ad Hoc Trend from scratch or build it based on an existing KPI.
 
 - To build an Ad Hoc Trend from scratch, click the cog icon under your company logo and select Ad Hoc Trend. 
 
-[add image basicvisualization-analytics-optionmenu]
+<StylizedImage
+  imgURL="img/docs/end-user/basic-navigation/analytics/basicvisualization-analytics-optionmenu.png"
+  alt="Analytics option menu"
+/>
 
-To build an Ad Hoc Trend based on an existing KPI, open the KPI, click the cog icon under your company logo, and select Ad Hoc Trend. To build an Ad Hoc Trend, you’ll define KPI attributes by adding pens. Enter the values for Actual and at least one other KPI attribute. The Ad Hoc Trend will be added to your Dashboard. 
+To build an Ad Hoc Trend based on an existing KPI, open the KPI, click the cog icon under your company logo, and select Ad Hoc Trend. To build an Ad Hoc Trend, you'll define KPI attributes by adding pens. Enter the values for Actual and at least one other KPI attribute. The Ad Hoc Trend will be added to your Dashboard. 
 
 - To specify the trend's scale, enter values for the Y-Axis. 
 - Select an Interface and add a Lookup value. The list includes all interfaces defined for the current Visual KPI Server. Or, you can select Constant Value. 
@@ -46,13 +54,26 @@ For example, you can create the trend by defining pens and assigning an Offset o
 
 When defining an Offset, use the following notations:
 
-[+/-][integer][timeperiod],
-where [timeperiod] is a member of the following set: minute, hour, h, day, d, month, year.
+\[+/-\]\[integer\]\[timeperiod\],
+where \[timeperiod\] is a member of the following set: minute, hour, h, day, d, month, year.
 
-[add gif basicvisualization-analytics-trendexample]
+<StylizedImage
+  imgURL="img/docs/end-user/basic-navigation/analytics/basicvisualization-analytics-trendexample.gif"
+  alt="Analytics trend example"
+/>
 
-Note: Select the check box associated with the pen if you want the attribute displayed on the Ad Hoc Trend. Remove the check mark if you want to keep the attribute available for future use in the Ad Hoc Trend but you do not want it to be displayed now.
+:::note Display configuration
 
-## What is Next? 
+Select the check box associated with the pen if you want the attribute displayed on the Ad Hoc Trend. Remove the check mark if you want to keep the attribute available for future use in the Ad Hoc Trend but you don't want it to be displayed now.
 
-Want to know more about Ad Hoc Trends? Access our page [Trends Visualization](end-user/basic-navigation/alerts) to learn more about building Trends and using them in your KPI analysis. You can also access our [Visual KPI End-User Training](https://www.transpara.com/course/visual-kpi-end-user/) course and watch the [Analytics](https://www.transpara.com/lesson/analytics-end-user/) class.
+:::
+
+## What's Next? 
+
+Want to know more about Ad Hoc Trends? Access our page [Trends Visualization](end-user/basic-navigation/alerts) to learn more about building Trends and using them in your KPI analysis. 
+
+:::training Video Training
+
+You can also access our [Visual KPI End-User Training](https://www.transpara.com/course/visual-kpi-end-user/) course and watch the [Analytics](https://www.transpara.com/lesson/analytics-end-user/) class.
+
+:::

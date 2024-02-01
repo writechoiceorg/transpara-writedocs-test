@@ -18,17 +18,17 @@ The timestamp display in the top bar of Visual KPI sites shows you the exact tim
 
 ## Relative Time Functions
 
-You don’t have to select data for a specific time in Visual KPI, adjust time parameters of a visualization (e.g. trend, XY plot, etc.) in your Visual KPI site to change the range of data shown. Typically, time functions are used to create chart and trend ranges. You can use a time function to tell Visual KPI a specific, or static, date and time to start and end when viewing data. You can use relative time, such as telling Visual KPI to pull a trend that starts at midnight “yesterday”, with “yesterday” as a time relative to when you ask for the data.
+You don’t have to select data for a specific time in Visual KPI, adjust time parameters of a visualization (for example trend, XY plot, etc.) in your Visual KPI site to change the range of data shown. Typically, time functions are used to create chart and trend ranges. You can use a time function to tell Visual KPI a specific, or static, date and time to start and end when viewing data. You can use relative time, such as telling Visual KPI to pull a trend that starts at midnight “yesterday”, with “yesterday” as a time relative to when you ask for the data.
 
 ### Offset Time Functions
 
-You can use offset time, which means that you call data based on specific time plus or minus another time function. Let’s say you want to know the volume of goods manufactured “in the last 24 hours” from right now. You could use the relative of “now” (represented by the '*' symbol), minus (-) 1 day. The function would look like this: '*-1day'. 
+You can use offset time, which means that you call data based on specific time plus or minus another time function. Let's say you want to know the volume of goods manufactured “in the last 24 hours” from right now. You could use the relative of “now” (represented by the '*' symbol), minus (-) 1 day. The function would look like this: '*-1day'. 
 
 [gif basicvisualization-time-offset]
 
 ### Combining Time Functions
 
-You can keep it simple or make it as sophisticated as you want when using Visual KPI’s relative time functions. Using the symbol for “now”(*) as your end time, the right edge of your trends will show the most recent value available from your data source(s) for that item. If you use the function “y” as your end time, the right edge of your trend would show the most recent value before midnight yesterday. The same is true of course for start times.
+You can keep it simple or make it as sophisticated as you want when using Visual KPI’s relative time functions. Using the symbol for “now”(*) as your end time, the right edge of your trends will show the most recent value available from your data source for that item. If you use the function “y” as your end time, the right edge of your trend would show the most recent value before midnight yesterday. The same is true of course for start times.
 
 You can also combine functions to get something crazy (or powerful, if you prefer), like a start time defined as “go back 12 days, then show the beginning of whatever month that is, and then show the what the value was at noon on that day.” Using relative time functions in Visual KPI, that would be represented as “noon(bom(*-2d)).”
 
