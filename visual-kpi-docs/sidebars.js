@@ -234,6 +234,10 @@ const sidebars = {
         'end-user/basic-navigation/visualization',
         'end-user/basic-navigation/search',
         'end-user/basic-navigation/analytics',
+        'end-user/basic-navigation/alerts',
+        'end-user/basic-navigation/dark-light-theme',
+        'end-user/basic-navigation/time',
+        
       ],
     },
 
