@@ -150,6 +150,47 @@ const second2Cards = [
   },
 ]
 
+const cardsContent = [
+  /*{
+    title: "Setup and Instalation",
+    content: "Prepare your system and intall the Visual KPI software.",
+    button: "Learn more",
+    route: "/docs/",
+    imageClass: "image1",
+  },*/
+  {
+    title: "Use Visual KPI",
+    content: "Explore all features and functionalities available on Visual KPI.",
+    route: "/docs/end-user/end-user/overview",
+    imageClass: "image1",
+  },
+  {
+    title: "Design",
+    content: "Create KPIs, charts, tables and define the hierarchy of your data.",
+    route: "/docs/visual-kpi-design/overview",
+    imageClass: "image3",
+  },
+  {
+    title: "Interfaces",
+    content: "Use existing interfaces or create new ones to connect new data sources into your system.",
+    button: "Learn more",
+    route: "/docs/setup-and-administration/interfaces",
+    imageClass: "image2",
+  },
+  {
+    title: "Setup and Instalation",
+    content: "Prepare your system and intall the Visual KPI software.",
+    route: "/docs/setup-and-administration",
+    imageClass: "image4",
+  },
+  {
+    title: "Tutorial",
+    content: "Check our free and online courses.",
+    route: "https://www.transpara.com/training/",
+    imageClass: "image5",
+  },
+]
+
 export default function Home() {
   // const {siteConfig} = useDocusaurusContext();
   return (
@@ -160,7 +201,7 @@ export default function Home() {
       <main>
         <div className="cards_container first_cards_section">
           {
-            [...first3Cards, ...second2Cards].map((card) => (
+            [...cardsContent].map((card) => (
               <Card key={card.title} card={ card } className="card"/>
             ))
           }
