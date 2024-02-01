@@ -161,7 +161,7 @@ const cardsContent = [
   {
     title: "Use Visual KPI",
     content: "Explore all features and functionalities available on Visual KPI.",
-    route: "/docs/end-user/end-user/overview",
+    route: "/docs/end-user/overview",
     imageClass: "image1",
   },
   {
