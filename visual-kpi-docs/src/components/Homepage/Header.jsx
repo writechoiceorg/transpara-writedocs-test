@@ -16,7 +16,11 @@ export default function HomepageHeader() {
           <p>Visual KPIs small hero text.</p>
         </div>
         <div className="second_column">
-          <p>Nam eu posuere risus. Fusce pellentesque mollis commodo. Phasellus molestie nec velit ac efficitur. Vestibulum volutpat euismod elit eu condimentum.</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
           <HomeBtn text={'How Visual KPI Works'} btnClass={'headerBtn'} route={'/docs/how-visual-kpi-works'}/>
         </div>
       </div>

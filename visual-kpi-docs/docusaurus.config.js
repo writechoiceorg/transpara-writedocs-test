@@ -129,7 +129,7 @@ const config = {
             sidebarId: 'docs',
             position: 'left',
             label: 'Documentation',
-            to: '/docs',
+            to: 'docs/',
           },
           {
             to: 'https://www.transpara.com/',
