@@ -20,3 +20,5 @@ KPY Maps
 lookups
 timeperiod
 Pharma
+OSIsoft
+Proficy
