@@ -203,46 +203,46 @@ const sidebars = {
       // className: '',
       link: {
         type: 'doc',
-        id: 'end-users/overview',
+        id: 'end-user/overview',
       },
       items: [
-        'end-users/navigation',
+        'end-user/navigation',
         {
           type: 'category',
           label: "KPI Trends",
           // className: '',
           link: {
             type: 'doc',
-            id: 'end-users/kpi-trends/kpi-trends',
+            id: 'end-user/kpi-trends/kpi-trends',
           },
           items: [
-            'end-users/kpi-trends/view-options',
-            'end-users/kpi-trends/trend-comments',
+            'end-user/kpi-trends/view-options',
+            'end-user/kpi-trends/trend-comments',
           ],
         },
-        'end-users/charts',
-        'end-users/tables',
+        'end-user/charts',
+        'end-user/tables',
         {
           type: 'category',
           label: "Dashboard",
           // className: '',
           link: {
             type: 'doc',
-            id: 'end-users/dashboard/dashboard',
+            id: 'end-user/dashboard/dashboard',
           },
           items: [
-            'end-users/dashboard/share-dashboard',
+            'end-user/dashboard/share-dashboard',
           ],
         },
-        'end-users/groups-hierarchy',
-        'end-users/search-feature',
+        'end-user/groups-hierarchy',
+        'end-user/search-tool',
         {
           type: 'category',
           label: "Visualization options",
           // className: '',
           link: {
             type: 'doc',
-            id: 'end-users/visualization-options/visualization-options',
+            id: 'end-user/visualization-options/visualization-options',
           },
           items: [
             {
@@ -251,7 +251,7 @@ const sidebars = {
               // className: '',
               link: {
                 type: 'doc',
-                id: 'end-users/visualization-options/charts-visualizations/charts-visualizations',
+                id: 'end-user/visualization-options/charts-visualizations/charts-visualizations',
               },
               items: [
                 
@@ -263,7 +263,7 @@ const sidebars = {
               // className: '',
               link: {
                 type: 'doc',
-                id: 'end-users/visualization-options/kpi-visualizations/kpi-visualizations',
+                id: 'end-user/visualization-options/kpi-visualizations/kpi-visualizations',
               },
               items: [
                 
@@ -271,18 +271,18 @@ const sidebars = {
             },  
           ],
         },
-        'end-users/time-range',
-        'end-users/ad-hoc-view',
-        'end-users/analytics-tools',
-        'end-users/alerts',
-        'end-users/bookmarks', 
+        'end-user/time-range',
+        'end-user/ad-hoc-view',
+        'end-user/analytics-tools',
+        'end-user/alerts',
+        'end-user/bookmarks', 
         {
           type: 'category',
           label: "Use Cases",
           // className: '',
           link: {
             type: 'doc',
-            id: 'end-users/use-cases/use-cases',
+            id: 'end-user/use-cases/use-cases',
           },
           items: [
           ],
@@ -293,7 +293,7 @@ const sidebars = {
           // className: '',
           link: {
             type: 'doc',
-            id: 'end-users/best-practices/best-practices',
+            id: 'end-user/best-practices/best-practices',
           },
           items: [
           ],
