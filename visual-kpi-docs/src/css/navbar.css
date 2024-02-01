@@ -14,12 +14,16 @@
 }
 
 .navbar__brand {
-  margin-right: 80px;
+  margin-right: 123px;
 }
 
 
 .navbar__items .navbar__link, .navbar__items--right {
   color: var(--transpara-primary-color5);
+}
+
+.navbar__item.navbar__link.navbar_link_buttons {
+  font-weight: 600;
 }
 
 .navbar__item, .navbar__link {
@@ -28,6 +32,7 @@
 
 .navbar--fixed-top {
   padding-left: 175px;
+  padding-right: 175px;
 }
 
 .navbar__toggle {
@@ -37,10 +42,6 @@
 
 .navbar__toggle svg {
   color: white;
-}
-
-.navbar__items--right {
-  margin: 0 160px 0 0;
 }
 
 .navbar__item {
@@ -71,11 +72,17 @@
   height: 12px;
 }
 
-.navbar__link:hover {
-  position: relative;
+.navbar__link {
+  transition: all 0.2s ease !important;
 }
 
-.navbar__items:not(.navbar__items--right)
+.navbar__link:hover {
+  border-radius: 6px; 
+  background: #EFF2E6;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.076);
+}
+
+/* .navbar__items:not(.navbar__items--right)
   .navbar__link:hover:not(.navbar__link--active):before {
   content: '■';
   position: absolute;
@@ -97,7 +104,7 @@
   transform: rotate(45deg);
   font-size: 4px;
   line-height: 11px;
-}
+} */
 
 .aa-DetachedSearchButton {
   border-radius: 8px !important;
@@ -138,28 +145,16 @@
 }
 
 @media (max-width: 1440px) {
-  .navbar__items--right {
-    margin: 0 135px 0 0;
-  }
-
   .navbar--fixed-top {
     padding-left: 151px;
+    padding-right: 151px;
   }
 }
 
 @media (max-width: 1285px) {
-  .navbar__items--right {
-    margin: 0 55px 0 0;
-  }
-
   .navbar--fixed-top {
     padding-left: 69px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .navbar__items--right {
-    margin: 0 50px 0 0;
+    padding-right: 69px;
   }
 }
 
