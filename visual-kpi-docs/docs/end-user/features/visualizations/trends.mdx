@@ -1,0 +1,84 @@
+---
+id: trends
+title: Trends
+slug: end-user/features/visualizations/trends
+description: Presents advanced information about Trends visualization features of Visual KPIs software for an end user.
+tags: ['features', 'quick-start', 'end-user', 'advanced', 'visualization', 'view', 'trends', 'pen', 'kpi']
+---
+
+import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
+import selection from '@site/static/font/selection.json';
+import positions from '@site/static/data/icons/iconsPosition.json';
+import SvgFont from '@site/src/components/SvgFont/SvgFont';
+
+Trends, or Ad Hoc Trends, are a custom type of trend that you can build right inside your Visual KPI site. You can save an Ad Hoc Trend and add it to the Dashboard and get it updated in real time.
+
+Click anywhere in an individual KPI to enlarge the trend and get access to options for visualizing your trend based on the parameters you choose. Trends can monitor a value or show a current status if targets and limits have been configured by your administrator. The default trend view will depend on how your admin has configured trends. Still, you have many options for viewing Visual KPI trends and quickly seeing how a KPI performs over time. 
+
+You can do many different things with Trends to see data in various ways. When visualizing a trend you have de following visualization options:
+
+1. **Trend Options** (<SvgFont data={selection.icons[263]} position={positions["100"]} />): Choose Trend Scale and Line types, turn on/off Trend live updates, and define the Pen width.
+2. **Modify Trend** (<SvgFont data={selection.icons[165]} position={positions["100"]} />): Select minimun and maximum for Y axis, add pens and customize your trend.
+3. **Raw Data** (<SvgFont data={selection.icons[182]} position={positions["100"]} />): Export data to CSV or view it in Visual KPI.
+4. **Time Ranges** (<SvgFont data={selection.icons[244]} position={positions["100"]} />): Configure a start and end time for your trend.
+5. **Revert** (<SvgFont data={selection.icons[222]} position={positions["100"]} />): Return to the default KPI view.
+6. **View Details** (<SvgFont data={selection.icons[200]} position={positions["100"]} />): See more details of the KPI, such as Contacts, Links, KPI properties, KPI stats and Parameters.
+7. **View as Gauge** (<SvgFont data={selection.icons[178]} position={positions["100"]} />): View KPI as a Gauge Chart.
+8. **View as Gauge** (<SvgFont data={selection.icons[185]} position={positions["100"]} />):
+9. **Status Background** (<SvgFont data={selection.icons[32]} position={positions["100"]} />): Turn on/off the background to see the historical status changes of a trend in full color.
+10. **Box Zoom Mode** (<SvgFont data={selection.icons[123]} position={positions["100"]} />): Select an area to zoom in.
+11. **Drag Mode** (<SvgFont data={selection.icons[180]} position={positions["100"]} />): Click and drag to change the time view. 
+12. **Cursor Mode** (<SvgFont data={selection.icons[242]} position={positions["100"]} />): Scroll over the trend chart with your mouse to see more data details associated with specific points in time along the trend. Clicking or tapping on the trend will lock the current cursor and let you add additional cursors for comparison.
+13. **Snap to** (<SvgFont data={selection.icons[228]} position={positions["100"]} />): Snap your cursor to point along the trend line where actual values exist in the data source, highlighting the difference between real values and interpolated lines drawn between values.
+14. **Legend**: You can define the limits and references for your trend, and name each of those references as you like. These names will be shown on the legend.
+15. **Timestamp** (<SvgFont data={selection.icons[148]} position={positions["100"]} />/<SvgFont data={selection.icons[149]} position={positions["100"]} />): use de paddles to change the time view. 
+
+
+{/* describe when visualizating on the kpi tab */}
+
+<StylizedImage
+  imgURL="img/docs/end-user/features/visualization/trends/features-visualization-trendtopbar.png"
+  alt="Visualization Trend Options"
+/>
+
+For a standard Visual KPI trend with targets and limits, you'll see a trend of the KPI value over time, along with targets and limits and the current status. A legend will appear below the trend to indicate how to read targets and limits. Using the Trend menu, you can change everything from the time range view to the status history. You can view raw data and details about the KPI. 
+
+## Trend view options
+
+The Trend Options icon (<SvgFont data={selection.icons[263]} position={positions["100"]} />) allows you to change how you view data and targets and limits in a trend.
+
+### Trend scale
+
+View the trend in Single Scale mode with only the Target line indicator showing, or you can view in Multi-Scale mode that shows all status indicator line parameters. This is most appropriate when viewing managed or ad hoc trends with multiple pens that have very different scales. On multi-scale trends, clicking on the pen name in the legend of the trend will adjust the Y-axis.
+
+### Trend type
+
+Change the Trend Type to view Interpolated, Step, Symbol, or a combination of views. The Default Trend Type is interpolated unless set by your admin in the Visual KPI Designer.
+
+<StylizedImage
+  imgURL="img/docs/end-user/features/visualization/trends/features-trend-scaletype.png"
+  alt="Trend View Options"
+/>
+
+## Trends in the KPI tab
+
+In the KPI tab, use the Trend Options icon (<SvgFont data={selection.icons[192]} position={positions["100"]} />) to change how you view data, targets, and limits in a trend. When you want to compare KPIs, it's as easy as selecting KPIs to create multi-KPI charts and trends. This feature allows you to select up to 20 KPIs and view them as a trend, bar chart, Pareto chart, or pie chart. 
+
+From any KPI list view, click the **Select KPI** icon (<SvgFont data={selection.icons[255]} position={positions["100"]} />) and select multiple KPIs by clicking the box to the left of any KPI in the list. From the sub-menu, select the trend icon or type of chart to view. Learn more about each view in the [Charts Visualization](end-user/features/visualization/charts) page.
+
+1. Trend
+2. Bar chart
+3. Pareto chart
+4. Pie chart
+5. Box plot
+
+<StylizedImage
+  imgURL="img/docs/end-user/features/visualization/trends/features-visualization-trendoptions-cut.png"
+  alt="Visualization Trend Options"
+/>
+
+Regardless of the trend or chart type you select and view, you can use the menu in the new view to select any of the other trends or chart types to see another visualization. When in a trend, you can add a background color to show status changes over time using the Show Status Background icon.
+
+## What's next?
+
+If you are interested in deep diving into Trends, please check our [KPI Visualization](end-user/features/visualization/kpis) page to learn about all the KPI visualization options that Visual KPI has to offer.

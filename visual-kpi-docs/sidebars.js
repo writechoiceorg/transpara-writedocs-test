@@ -236,8 +236,34 @@ const sidebars = {
         'end-user/basic-navigation/analytics',
       ],
     },
-    
-    
+
+    {
+      type: 'category',
+      label: "Features",
+      link: {
+        type: 'doc',
+        id: 'end-user/features/features',
+      },
+      items: [
+        'end-user/features/profiles',
+        'end-user/features/dashboards',
+        'end-user/features/groups',
+        {
+          type: 'category',
+          label: "Visualizations",
+          link: {
+            type: 'doc',
+            id: 'end-user/features/visualizations/visualizations',
+          },
+          items: [
+            'end-user/features/visualizations/kpi',
+            'end-user/features/visualizations/charts',
+            'end-user/features/visualizations/trends',
+          ],
+        },
+      ],
+    },
+
 
     {
       type: 'html',
