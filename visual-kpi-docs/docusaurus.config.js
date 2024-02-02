@@ -115,14 +115,17 @@ const config = {
         title: '',
         logo: {
           alt: 'Site Logo',
-          src: 'img/transpara_logo.png',
+          src: 'img/logo-new.png',
           className: 'site_logo',
+          href: 'https://www.transpara.com/',
+          // target: '_self',
         },
         items: [
           {
             to: '/',
             label: 'Home',
             position: 'left',
+            className: 'home_btn'
           },
           {
             type: 'docSidebar',
@@ -130,19 +133,20 @@ const config = {
             position: 'left',
             label: 'Documentation',
             to: 'docs/',
-          },
-          {
-            to: 'https://www.transpara.com/',
-            label: 'Learn more',
-            position: 'right',
-            className: 'navbar_link_buttons'
+            className: 'docs_btn'
           },
           {
             to: 'https://www.transpara.com/contact-us/',
-            label: 'Contact the support',
+            label: 'Support',
             position: 'right',
-            className: 'navbar_link_buttons'
+            className: 'navbar_link_buttons support_btn'
           },
+          // {
+          //   to: 'https://www.transpara.com/',
+          //   label: 'Learn more',
+          //   position: 'right',
+          //   className: 'navbar_link_buttons'
+          // },
           // {
           //   type: 'search',
           //   position: 'right',
