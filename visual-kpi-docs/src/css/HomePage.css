@@ -209,6 +209,12 @@
   color: var(--transpara-highlights-color2) !important;
 }
 
+@media (min-width: 1690px) {
+  .cards_container {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  }
+}
+
 @media (max-width: 1440px) {
   .header_container {
     margin-left: 151px;
