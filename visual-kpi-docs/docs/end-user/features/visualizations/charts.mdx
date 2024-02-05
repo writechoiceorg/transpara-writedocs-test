@@ -1,0 +1,160 @@
+---
+id: charts
+title: Charts
+slug: charts
+description: Presents advanced information about Charts visualization features of Visual KPIs software for an end user.
+tags: ['features', 'end-user', 'advanced', 'visualization', 'view', 'pareto', 'pie', 'gantt', 'bar', 'chart',]
+---
+
+import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
+import SvgFont from '@site/src/components/SvgFont/SvgFont';
+
+Charts show data as it relates to its defined limits. Visual KPI uses many chart types to visualize data using status, colors, and limits. The chart view options are:
+
+1. Bar chart
+2. Pareto chart
+3. Pie chart
+4. Box plot
+
+<StylizedImage
+  imgURL="img/docs/end-user/features/visualization/charts/features-visualization-charts-cut.png"
+  alt="Visualization Charts"
+/>
+
+### Bar charts
+
+Bar charts (<SvgFont icon="142"/>) can be used to show comparisons of data against targets and limits in either a vertical or horizontal chart. You can compare only one specific set of data, where each bar represents the data, or you can cluster sets of data so that each specific set of data has its bar, but the related sets are clustered and compared against other clustered data.
+
+Depending on the configuration by your admin, Bar Charts can be:
+
+1. Time-series or non-time-series data.
+2. Manually or query-based configured.
+3. Stacked and clustered.
+4. Horizontal or vertical.
+5. Custom colored.
+6. Color changing above and below the target.
+
+<StylizedImage
+  imgURL="img/docs/end-user/features/visualization/charts/features-barchart.png"
+  alt="Visualization Charts"
+/>
+
+### Pareto charts
+
+Pareto Charts (<SvgFont icon="132"/>) can help you quickly see which of your assets are most critical and know where you need to focus. A Pareto chart is a type of chart that contains both bars and a line graph, where individual values are represented in descending order by bars, and the cumulative total is represented by the line.
+
+Pareto Charts show assets and values in the bars and use a line to show cumulative effect. They can be used to monitor quality control, showing where most of the problems are coming from.
+
+You can even show relative data using stacked Pareto charts. Each bar can show multiple values with each displaying a different color, and as you move your cursor over each bar you'll see the actual values as tooltips.
+
+<StylizedImage
+  imgURL="img/docs/end-user/features/visualization/charts/features-pareto.png"
+  alt="Visualization Charts"
+/>
+
+### Pie chats
+
+Pie Charts (<SvgFont icon="124"/>) display a simple graphic that shows the relative proportions of your compared assets. However, Pie Charts has some disadvantages for Visual KPI, such as its size for screen presentation and the limited ability to compare peer data. 
+
+Depending on how they're configured by your admin, Pie Charts can be:
+
+1. Manually and query-based configured.
+2. Mouse over dynamic.
+
+<StylizedImage
+  imgURL="img/docs/end-user/features/visualization/charts/features-piechart.png"
+  alt="Pie Chart"
+/>
+
+### Box plots
+
+Box Plots display variation in samples without making assumptions about the underlying statistical distribution. In Visual KPI, Box Plots can be based on time-series data or non-time-series data. 
+
+Box Plots display a dataset through quartiles:
+
+1. **Minimum**: the lowest data point, excluding any outliers.
+2. **Median**: the middle value of the dataset.
+3. **Maximum**: the largest data point, excluding any outliers.
+4. **First quartile (q1)**: the median of the lower half of the dataset.
+5. **Third quartile (q3)**: the median of the upper half of the dataset.
+
+Box Plots can be created by end users in Visual KPI sites, or admins can create Box Plots in Visual KPI Designer. Box Plots can be created manually or they can be query-based.
+
+<StylizedImage
+  imgURL="img/docs/end-user/features/visualization/charts/features-boxplot.png"
+  alt="Box Plot Chart"
+/>
+
+### Gantt chart
+
+Gantt Charts (<SvgFont icon="122"/>) are great for showing time-sequenced events. They can show you all of the elements of a project along a timeline, including when each element is scheduled to be completed, any dependencies, and the status of each. Task or project elements are listed along the vertical axis of the Gantt Chart and the horizontal axis displays time intervals.
+
+:::note Gantt Charts
+
+Gantt Charts are only query-based in Visual KPI, and they must be created by your admin.
+
+:::
+
+<StylizedImage
+  imgURL="img/docs/end-user/features/visualization/charts/features-gantt.png"
+  alt="Visualization Charts"
+/>
+
+### Gauge, dial, and speedometer charts
+
+Gauge charts (<SvgFont icon="11"/>), also known as Dial or Speedometer, are a meter-type visualization that shows the real-time status of a KPI, indicated by a gauge and needle, within a range that includes targets and actual values. These charts include minimum and maximum ranges, along with an indicator for an ideal target. They also can be used to show actual performance versus targets or progress toward a target for anything from temperature, weight, and speed to percentages of sales or work completed, performance, and more.
+
+Gauge charts are ideal for showing:
+
+1. Actual status related to targets.
+2. Progress toward a goal.
+3. Percentage measurement.
+
+If configured by your administrator, you can visualize any trend as a Gauge chart. Simply click the gauge icon on any KPI trend view.
+
+<StylizedImage
+  imgURL="img/docs/end-user/features/visualization/charts/features-gauge.png"
+  alt="Gauge Charts"
+/>
+
+### XY plots or scatter charts
+
+XY Plots (<SvgFont icon="133"/>), or Scatter Charts as they're sometimes called, show the relationships between two sets of data. They're great for showing correlations between one or many variables or calculations. 
+
+Based on how your admin configures XY Plots or Scatter Charts, they may be:
+
+1. Time-series or non-time-series.
+2. Manually or query-based configured .
+
+<StylizedImage
+  imgURL="img/docs/end-user/features/visualization/charts/features-scatterchart.png"
+  alt="XY Plots / Scatter Charts"
+/>
+
+## Embedded content
+
+Your admin can embed content from an external source in Visual KPI, such as a weather map, HMI or process graphic, live video feed, manual data entry form, and just about anything else that has a URL. These objects can be placed on your Visual KPI dashboards and can also live as first-class objects within the system.
+
+The external content you embed in Visual KPI can have attributes, geolocation, live in groups, or at any level of the hierarchy, just like any other KPI or Visual KPI object. When you embed content in Visual KPI, you'll find it organized under the charts menu, Chart Type: Embedded Content (<SvgFont icon="121"/>).
+
+<StylizedImage
+  imgURL="img/docs/end-user/features/visualization/charts/features-visualization-charts-embed.gif"
+  alt="Embedded Content"
+/>
+
+### Embed Visual KPI into other applications
+
+Using a URL, you can embed any Visual KPI page or object into any portal that supports iframes.
+
+Copy the entire URL to embed the entire screen, including the top bar and side navigation menu. But when you just want an object, such as a Geo Map, or you don't want users to navigate away from the object or navigate to other parts of your Visual KPI site, you can include the embed command in the URL following the steps below:
+
+1. Navigate to the object you want to embed.
+2. Expand the object you want to embed.
+3. Copy the URL, and add **embed** before the question mark **?** in the URL.
+	- Copy the URL: http://demo.transpara.com/powergen/?pid=10&gid=c61a…
+	- Add embed: http://demo.transpara.com/powergen/embed?pid=10&gid=c61a…
+4. Paste the new URL in your external portal or application.
+
+## What's next?
+
+Check out our [Trends](/docs/end-user/features/visualizations/trends) page and start creating innovative trends to monitor your KPIs.

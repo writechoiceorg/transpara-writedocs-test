@@ -54,13 +54,13 @@ function CautionIcon() {
 
 function SupportIcon() {
   return(
-    <SvgFont data={selection.icons[108]} position={position["108"]} />
+    <SvgFont icon="108"/>
   )
 }
 
 function TrainingIcon() {
   return(
-    <SvgFont data={selection.icons[116]} position={position["116"]} />
+    <SvgFont icon="116"/>
   )
 }
 

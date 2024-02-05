@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import selection from '@site/static/font/selection.json';
+import positions from '@site/static/data/icons/iconsPosition.json';
 
-export default function SvgFont({ data, position, size }) {
+export default function SvgFont({ icon, size }) {
   const [path, setPath] = useState('');
+  const position = positions["100"];
+  const data = selection.icons[parseInt(icon)];
 
   useEffect(() => {
     const path = data.icon.paths.reduce((acc, curr) => acc + ` ${curr}`, '');

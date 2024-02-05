@@ -13,15 +13,13 @@ export default function HomepageHeader() {
       <div className="container header_container">
         <div className="first_column">
           <h1>Visual KPI Docs</h1>
-          <p>Visual KPIs small hero text.</p>
+          <p>Everything in One Place, From Any Place</p>
         </div>
         <div className="second_column">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Get one single view of operations across all of your data sources without moving anything or enduring a huge project. Visual KPI supports thousands of industrial, business and external data sources and delivers stunning visualizations, KPIs, dashboards, analytics, and alerts. 
           </p>
-          <HomeBtn text={'How Visual KPI Works'} btnClass={'headerBtn'} route={'/docs/how-visual-kpi-works'}/>
+          <HomeBtn text={'Get started'} btnClass={'headerBtn'} route={'/docs/'}/>
         </div>
       </div>
     </header>
