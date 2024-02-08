@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import '../../css/table.css';
 
 const JsonToTable = ({ jsonData }) => {
   const [filter, setFilter] = useState('');
@@ -9,11 +10,21 @@ const JsonToTable = ({ jsonData }) => {
 
   // Filtering logic
   const filteredData = useMemo(() => {
-    return jsonData.filter((row) =>
+    const filteredRows = jsonData.filter((row) =>
       Object.values(row).some((value) =>
         String(value).toLowerCase().includes(filter.toLowerCase())
       )
     );
+
+    if (filteredRows.length === 0) {
+      const naRow = Object.keys(jsonData[0]).reduce((acc, key) => {
+        acc[key] = '-';
+        return acc;
+      }, {});
+      return [naRow];
+    }
+
+    return filteredRows;
   }, [jsonData, filter]);
 
   // Sorting logic
@@ -33,10 +44,10 @@ const JsonToTable = ({ jsonData }) => {
     return filteredData;
   }, [filteredData, sortColumn, sortOrder]);
 
-   // Pagination logic
-   const totalPages = Math.ceil(sortedData.length / rowsToShow);
-   const startIndex = (currentPage - 1) * rowsToShow;
-   const endIndex = startIndex + rowsToShow;
+  // Pagination logic
+  const totalPages = Math.ceil(sortedData.length / rowsToShow);
+  const startIndex = (currentPage - 1) * rowsToShow;
+  const endIndex = startIndex + rowsToShow;
 
   // Table rows
   const rows = sortedData.slice(startIndex, endIndex).map((row, index) => (
@@ -80,47 +91,60 @@ const JsonToTable = ({ jsonData }) => {
 
   return (
     <>
-      <label htmlFor="rowsToShow">
-        Show
-        <select 
-          id="rowsToShow"
-          value={rowsToShow}
-          onChange={ (e) => setRowsToShow(Number(e.target.value)) }>
-            <option value="100"></option>
-          {[5, 10, 20, 25, 50, 100].map((value) => (
-            <option key={value} value={value}>
-              {value}
-            </option>
-          ))}
-        </select>
-        Entries
-      </label>
-      <label htmlFor="filterInput">
-        Search:
-        <input
-          id="filterInput"
-          type="text"
-          placeholder="Filter..."
-          value={filter}
-          onChange={(e) => setFilter(e.target.value)}
-        />
-      </label>
+      <div className="filters_container">
+        <label htmlFor="rowsToShow" className="filter_label">
+          Show
+          <select 
+            id="rowsToShow"
+            value={rowsToShow}
+            onChange={ (e) => setRowsToShow(Number(e.target.value)) }>
+              <option value={sortedData.length}>All</option>
+            {[5, 10, 20, 25, 50, 100].map((value) => (
+              <option key={value} value={value}>
+                {value}
+              </option>
+            ))}
+          </select>
+          Entries
+        </label>
+        <div className="search_container">
+          <label htmlFor="filterInput" className="filter_label">
+            Search
+          </label>
+          <div className="search_input_container">
+            <div className="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+                <path d="M4.99991 8.99983C7.209 8.99983 8.99983 7.209 8.99983 4.99991C8.99983 2.79082 7.209 1 4.99991 1C2.79082 1 1 2.79082 1 4.99991C1 7.209 2.79082 8.99983 4.99991 8.99983Z" stroke="#494949" stroke-width="0.999978" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10.0001 9.99978L7.8252 7.82483" stroke="#494949" stroke-width="0.999978" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <input
+              id="filterInput"
+              type="text"
+              value={filter}
+              onChange={(e) => setFilter(e.target.value)}
+            />
+          </div>
+        </div>
+      </div>
       <table>
         <thead>
           <tr>{headers}</tr>
         </thead>
         <tbody>{rows}</tbody>
       </table>
-      <div>
-        <span>
+      <div className="filters_container">
+        <span className="filter_label">
           Showing {startIndex + 1} to {Math.min(endIndex, sortedData.length)} of {sortedData.length} entries
         </span>
-        <button onClick={handlePreviousPage} disabled={currentPage === 1}>
-          Previous
-        </button>
-        <button onClick={handleNextPage} disabled={currentPage === totalPages}>
-          Next
-        </button>
+        <div>
+          <button className="table_pagination_btn" onClick={handlePreviousPage} disabled={currentPage === 1}>
+            Previous
+          </button>
+          <button className="table_pagination_btn" onClick={handleNextPage} disabled={currentPage === totalPages}>
+            Next
+          </button>
+        </div>
       </div>
     </>
   );

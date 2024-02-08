@@ -69,6 +69,7 @@ main {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .pagination-nav__link {
@@ -146,7 +147,7 @@ main {
 
 /*-------------------------------- Tables configuration ------------------------------  */
 
-table {
+/* table {
   width: fit-content;
   margin: auto;
   margin-bottom: var(--ifm-spacing-vertical);
@@ -178,4 +179,4 @@ table thead tr {
 
 table {
   font-size: small;
-}
+} */

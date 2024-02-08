@@ -1,0 +1,149 @@
+.filters_container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.filters_container .filter_label {
+  color: #690;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filters_container #rowsToShow {
+  border-radius: 5px;
+  background: #607C0D;
+  color: #FFF;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  margin: 0 3px;
+}
+
+.filters_container #rowsToShow:hover {
+  cursor: pointer;
+}
+
+.search_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.search_input_container {
+  border: 2px solid #690;
+  display: inline-block;
+  position: relative;
+  border-radius: 8px;
+}
+
+.icon {
+  position: absolute;
+  top: 35%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+}
+
+.icon svg {
+  width: 14px;
+  height: auto;
+  margin-left: 3px;
+}
+
+.filters_container #filterInput {
+  /* width: 200px;
+  height: 19px; */
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 1px solid #690;
+  margin-left: 18px;
+  border: none;
+  outline: none;
+}
+
+.filters_container #filterInput {
+  width: fit-content;
+}
+
+.table_pagination_btn {
+  width: 74px;
+  height: 19px;
+  border-radius: 5px;
+  border: 0;
+  background: #607C0D;
+  color: #FFF;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  margin: 0 2px;
+}
+
+.table_pagination_btn:disabled {
+  background: #607c0d3c;
+}
+
+.table_pagination_btn:not(:disabled):hover {
+  background: #43550b;
+  cursor: pointer;
+}
+
+table {
+  width: 100% !important;
+  margin-bottom: var(--ifm-spacing-vertical);
+}
+
+table thead th {
+  border: none;
+  text-align: left;
+  background: #690 !important;
+  color: #FFF;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+table tr {
+  width: 100%;
+  align-items: flex-start;
+}
+
+table tr td {
+  background-color: #ffffff;
+  border: 1px solid #E7EAEE;
+  color: #8E8E8E;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  padding: 20px;
+  text-align: start;
+  vertical-align: top;
+}
+
+table thead,
+table tbody {
+  border: 1px solid #ddd7e9;
+}
+
+table thead tr {
+  border: 0 !important;
+}
