@@ -1,14 +1,12 @@
-{
-  "Fields": [
-    {
-      "Field": "End Time",
-      "Type": "Text",
-      "Limit": 50
-    },
-    {
-      "Field": "Start Time",
-      "Type": "Text",
-      "Limit": 50
-    }
-  ]
-}
+[
+  {
+    "Field": "End Time",
+    "Type": "Text",
+    "Limit": 50
+  },
+  {
+    "Field": "Start Time",
+    "Type": "Text",
+    "Limit": 50
+  }
+]    
