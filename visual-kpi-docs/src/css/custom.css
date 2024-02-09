@@ -72,6 +72,35 @@ main {
   background-attachment: fixed;
 }
 
+@media (min-width: 1440px) {
+  .main-wrapper {
+    align-self: center;
+    max-width: 1440px;
+    width: 1440px;
+  }
+
+  .navbar {
+    margin: 0 auto;
+    width: 1440px;
+  }
+  
+  .navbar--fixed-top {
+    height: 70px;
+  }
+  .navbar__link,
+  .navbar__link:hover {
+    color: #fff;
+  }
+  .navbar__logo {
+    flex: 0 0 auto;
+    height: 3rem;
+    margin-top: 0.5rem;
+  }
+  .navbar__logo {
+    height: 45px;
+  }
+}
+
 .pagination-nav__link {
   display: flex;
   flex-direction: column;
