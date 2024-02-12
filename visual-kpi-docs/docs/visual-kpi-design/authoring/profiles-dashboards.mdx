@@ -1,0 +1,70 @@
+---
+id: profiles-dashboards
+title: Profiles & Dashboards
+slug: profiles-dashboards
+description: ''
+tags: []
+---
+
+import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
+import selection from '@site/static/font/selection.json';
+import positions from '@site/static/data/icons/iconsPosition.json';
+import SvgFont from '@site/src/components/SvgFont/SvgFont';
+
+Visual KPI site users can configure custom profiles, profile groups and dashboards in the user interface, or admins can configure profiles and dashboards sitewide using Visual KPI Designer. Admins can either lock down default profiles and dashboards, or allow site users to customize both. 
+
+There are three layers to profiles and dashboards settings:
+
+- **Profile Groups**: profiles belong to profile groups, which gives you the ability to lock down, show/hide and manage multiple profiles as a group
+- **Profiles**: a collection of multiple dashboards, a single watchlist, and a bookmark bar. Profiles can be associated with anything, such as a person, role, site, asset, etc.
+- **Dashboards**: always a member of one or more profiles, dashboards are a custom layout of visualizations, KPIs, links, trends, tables, embedded content and any other object supported by Visual KPI.
+
+For each Profile Group, Profile or Dashboard, add a Name. The names you choose will appear in your Visual KPI site under the appropriate icon. Each has various attribute you can configure sitewide, including the option to show or hide on your Visual KPI site.
+
+### Profile Groups
+
+The default settings for profile groups are set to show (TRUE), the group is not private (FALSE), and it is not locked (FALSE). Make a group private and specify the appropriate user (domain\user) if you only want certain users to have access (hidden from all other users). Lock a profile group if you don't want users with access to customize or edit the group.
+
+<StylizedImage
+  imgURL="img/site-settings/profilegroups-worksheet.png"
+  alt="Profile Groups Worksheet"
+/>
+
+:::note Private Groups
+
+This is usually done for you when creating private profile groups in the web browser, so there is rarely a need to edit these fields in Visual KPI Designer.
+
+:::
+
+### Profiles
+
+Assign each profile to a Profile Group (will be given a default when created). You can change the default behavior to Lock a profile (FALSE) so it can not be deleted/edited. For each site and profile group, you must configure one profile as default. If multiple profiles are listed as default, the one that appears first in the list will always be considered the default.
+
+<StylizedImage
+  imgURL="img/site-settings/profiles-worksheet.png"
+  alt="Profiles Worksheet"
+/>
+
+### Dashboards
+
+You can change the default behavior to Lock a dashboard (TRUE/FALSE) so it can not be deleted or customized by end users. Set a start and end time if you want the entire dashboard to conform to a specific time range (or relative time function) for all KPIs on the dashboard. The default is blank (meaning each object can have its own independent range) and users can adjust this for themselves on their device/browser individually.
+
+Assign each dashboard to one or multiple profiles. To specify more than one profile, enter them separated by semicolons in the Profile field. For each profile, you should configure one (and only one) dashboard as the default, otherwise, new users will see an empty dashboard and they'll have to choose one. If you want every new user (or new device that is accessing the site for the first time) to go to a certain dashboard, set it as default.
+
+<StylizedImage
+  imgURL="img/site-settings/dashboards-worksheet.png"
+  alt="Dashboards Worksheet"
+/>
+
+If you want to make a copy of a dashboard, there are two ways:
+
+- Designer: copy the row in the worksheet and paste it into another a new row. Then you can edit the attributes for the duplicate dashboard. This will create the new dashboard, but will not change the contents of it, which is done in the browser.
+- Browser: In the dashboard selection dropdown, choose New Dashboard and when creating the new dashboard be sure to check the box labeled Copy Existing Dashboard. This will make a copy of the current dashboard which you can then edit in the browser on your device.
+
+:::unique
+
+You can add automated dashboards coming from SQL or other sources via the Visual KPI Remote Context Service. When you have hundreds of sites or assets, this is a good way to automatically generate dashboards following the same pattern, rather than creating them manually.
+
+If you would like to explore automating dashboards, contact us.
+
+:::

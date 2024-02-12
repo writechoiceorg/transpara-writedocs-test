@@ -145,12 +145,13 @@ const sidebars = {
       // className: '',
       link: {
         type: 'doc',
-        id: 'visual-kpi-design/installation-and-setup/installation',
+        id: 'visual-kpi-design/installation-and-setup/installation-and-setup',
       },
       items: [
-        'visual-kpi-design/installation-and-setup/installation',
-        'visual-kpi-design/installation-and-setup/setup-and-connection',
+        
+        'visual-kpi-design/installation-and-setup/designer-installation',
         'visual-kpi-design/installation-and-setup/visual-kpi-designer-ui',
+        
       ],
     },
     {
@@ -162,8 +163,11 @@ const sidebars = {
         id: 'visual-kpi-design/authoring/authoring',
       },
       items: [
-        'visual-kpi-design/authoring/default-settings',
-        'visual-kpi-design/authoring/manage-objects',
+        'visual-kpi-design/authoring/site-settings',
+        'visual-kpi-design/authoring/profiles-dashboards',
+        'visual-kpi-design/authoring/contacts-alerts',
+        'visual-kpi-design/authoring/features-config',
+        'visual-kpi-design/authoring/advanced',
       ],
     },
     {
@@ -175,14 +179,77 @@ const sidebars = {
         id: 'visual-kpi-design/design/design',
       },
       items: [
-        'visual-kpi-design/design/create-a-kpi',
-        'visual-kpi-design/design/create-an-spc',
-        'visual-kpi-design/design/create-a-chart',
-        'visual-kpi-design/design/create-a-trend',
-        'visual-kpi-design/design/create-a-table',
-        'visual-kpi-design/design/create-a-group',
-        'visual-kpi-design/design/create-navbar-links',
-        'visual-kpi-design/design/target-and-limit-generator',
+
+        {
+          type: 'category',
+          label: "Groups",
+           //className: '',
+          link: {
+            type: 'doc',
+            id: 'visual-kpi-design/design/groups',
+          },
+          items: [
+            'visual-kpi-design/design/query-builder',
+            'visual-kpi-design/design/group-maps',
+          ],
+        },
+
+          {
+            type: 'category',
+            label: "KPIs",
+             //className: '',
+            link: {
+              type: 'doc',
+              id: 'visual-kpi-design/design/kpis',
+            },
+            items: [
+              'visual-kpi-design/design/kpis-sources',
+              'visual-kpi-design/design/spc-kpis',
+            ],
+          },
+
+          {
+            type: 'category',
+            label: "Charts",
+             //className: '',
+            link: {
+              type: 'doc',
+              id: 'visual-kpi-design/design/charts',
+            },
+            items: [
+              'visual-kpi-design/design/bar-chart',
+              'visual-kpi-design/design/gantt-chart',
+              'visual-kpi-design/design/pareto-chart',
+              'visual-kpi-design/design/pie-chart',
+              'visual-kpi-design/design/xy-chart',
+            ],
+          },
+
+          'visual-kpi-design/design/tables',
+          'visual-kpi-design/design/trends',
+
+      ],
+    },
+    {
+      type: 'category',
+      label: "Reference Tables",
+      // className: '',
+      link: {
+        type: 'doc',
+        id: 'visual-kpi-design/reference-tables/reference-tables',
+      },
+      items: [
+        'visual-kpi-design/reference-tables/website-reference',
+        'visual-kpi-design/reference-tables/profiles-dashboards-reference',
+        'visual-kpi-design/reference-tables/ranges-dates-reference',
+        'visual-kpi-design/reference-tables/contacts-alerts-reference',
+        'visual-kpi-design/reference-tables/features-configuration-reference',
+        'visual-kpi-design/reference-tables/advanced-reference',
+        'visual-kpi-design/reference-tables/groups-reference',
+        'visual-kpi-design/reference-tables/kpis-reference',
+        'visual-kpi-design/reference-tables/charts-reference',
+        'visual-kpi-design/reference-tables/tables-reference',
+        'visual-kpi-design/reference-tables/functions-reference',
       ],
     },
     {

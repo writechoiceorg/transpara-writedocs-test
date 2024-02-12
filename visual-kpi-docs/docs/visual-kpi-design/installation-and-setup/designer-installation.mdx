@@ -1,0 +1,65 @@
+---
+id: designer-installation
+title: Visual KPI Designer Installation
+slug: designer-installation
+description: Presents the steps to install the designer on the customer machine.
+tags: []
+---
+
+import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
+import selection from '@site/static/font/selection.json';
+import positions from '@site/static/data/icons/iconsPosition.json';
+import SvgFont from '@site/src/components/SvgFont/SvgFont';
+
+First of all, it is essential to ensure that your system meets the necessary prerequisites. Confirm that Microsoft Excel is installed on your computer, preferably a recent version for optimal compatibility. Additionally, verify that you possess local administrator rights on the machine, a requirement for installing new software. If uncertain, consult with your IT administrator. Lastly, ensure that Microsoft Excel is closed to facilitate a smooth installation process. Check the [System Prerequisites](/docs/visual-kpi-design/overview) page for more information about the system requirements.
+
+Installing Visual KPI Designer, start to finish, takes only 3 easy steps and you can do it in about 5 minutes. If you are upgrading your existing Visual KPI Designer to a newer version, the steps are the same and the new installation will replace your older version automatically, so you don/t need to uninstall it. 
+
+{/* Also, you should only upgrade your Designer to match the version of the **Visual KPI Server** you are running. */}
+
+Make sure you have Microsoft Excel version or newer installed before you begin. You must also have local administrator rights for installing software on this machine.
+
+:::note Close Microsoft Excel
+
+The install should work just fine with Excel open, but it/s always a good idea to close it first.
+
+:::
+
+## Visual Designer installation
+
+To quickly install Visual KPI Designer, follow the steps below:
+
+1. **Download the Visual KPI Designer**: 
+- Go to the [Download page](www.google.com)
+- Register or log in.
+- Click the **Download** button for **Visual KPI Designer**.
+
+<StylizedImage
+  imgURL="img/getting-started/installation-downloadbutton.png"
+  alt="Installation Download Button"
+/>
+
+2. **Run the Installer**:
+- When the download completes, click the **.exe file** to run the installer.
+- Agree to the terms and conditions, and click **Install**.
+
+<StylizedImage
+  imgURL="img/getting-started/installation-executefile.png"
+  alt="Installation File Executed"
+/>
+
+3. **Finish Installation**:
+- When the install is complete, click **Finish**.
+
+### Connecting Visual KPI Designer to your site
+
+Start by opening the Visual KPI Designer in Excel. Look for the Instance Connections icon (add icon) to manage your site connections. Here, you can add a new connection by entering details like a name for the connection (for your reference) and the URL of your Visual KPI site's web service. The View Site icon (add icon) allows you to open the Visual KPI site to which you are currently connected and you'll see your server connection just to the right of the View Site icon.
+
+The example below shows how to configure [Transpara's Demo](https://demo.transpara.com/powergen) page as your site, so you can test your application immediately. 
+
+<StylizedImage
+  imgURL="img/getting-started/connecting-visualdesigner.png"
+  alt="Connecting Visual Designer"
+/>
+
+Within the Visual KPI Designer, you have the flexibility to manage multiple Visual KPI site connections. This is useful if you're overseeing several projects or environments. To add another site, simply follow the initial steps to create a new connection, providing a unique name and the specific URL for each additional site. You can also delete sites to clean up your workspace. Security is crucial, especially when dealing with sensitive data. The Visual KPI Designer allows for security settings to be configured for each site connection, so you can cconfigure a username and password request for log in. 
