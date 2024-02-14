@@ -103,6 +103,67 @@ const sidebars = {
         id: 'setup-and-administration/interfaces/interfaces',
       },
       items: [
+        'setup-and-administration/interfaces/interfaces-prerequisites',
+        {
+          type: 'category',
+          label: "Historian Interfaces",
+          link: {
+            type: 'doc',
+            id: 'setup-and-administration/interfaces/historian/historian',
+          },
+          items: [
+          ],
+        },
+        {
+          type: 'category',
+          label: "SQL Based Interfaces",
+          link: {
+            type: 'doc',
+            id: 'setup-and-administration/interfaces/sql-based/sql-based',
+          },
+          items: [
+          ],
+        },
+        {
+          type: 'category',
+          label: "JSON XML Interfaces",
+          link: {
+            type: 'doc',
+            id: 'setup-and-administration/interfaces/json-xml/json-xml',
+          },
+          items: [
+          ],
+        },
+        {
+          type: 'category',
+          label: "Microsoft Excel Interfaces",
+          link: {
+            type: 'doc',
+            id: 'setup-and-administration/interfaces/excel/excel',
+          },
+          items: [
+          ],
+        },
+        {
+          type: 'category',
+          label: "Manual Entry Interfaces",
+          link: {
+            type: 'doc',
+            id: 'setup-and-administration/interfaces/manual-entry/manual-entry',
+          },
+          items: [
+          ],
+        },
+        {
+          type: 'category',
+          label: "Specialized Data Sources Interfaces",
+          link: {
+            type: 'doc',
+            id: 'setup-and-administration/interfaces/specialized-data-sources/specialized-data-sources',
+          },
+          items: [
+          ],
+        },
       ],
     },
     {
