@@ -135,6 +135,7 @@ const sidebars = {
             id: 'setup-and-administration/interfaces/json-xml/json-xml',
           },
           items: [
+            'setup-and-administration/interfaces/json-xml/how-to-use-json-interfaces',
           ],
         },
         {

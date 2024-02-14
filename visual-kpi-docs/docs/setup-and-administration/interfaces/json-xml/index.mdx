@@ -5,3 +5,17 @@ slug: /setup-and-administration/interfaces/json-xml
 description: ''
 tags: []
 ---
+
+To gather data, you can either use an Internet source or in-house applications that may have limited access to data via a JSON or XML interface. Both of these interfaces utilize the HTTP protocol, which involves establishing a connection using a base address, performing authentication, and then requesting the data.
+
+## JSON
+
+JSON (JavaScript Object Notation) is a format for exchanging data that is lightweight and easy to use. JSON interfaces typically have an HTTP base address for the data set and an API key. The base address can be customized using parameters. To retrieve specific information, such as current value, trend data, and historical value, a request URI is needed. The request URI specifies the date, order of returned values, number of values, and the data set. Additionally, a result base path, value field, and timestamp field are required to accurately retrieve the desired data.
+
+## XML
+
+JSON interfaces are used for XML data sources with an XML type in the Result Data Format.
+
+## How to use JSON interfaces
+
+To learn how to use JSON interfaces in **Visual KPI Server Manager** refer to the [instructions guide](/docs/setup-and-administration/interfaces/json-xml/how-to-use-json-interfaces).
