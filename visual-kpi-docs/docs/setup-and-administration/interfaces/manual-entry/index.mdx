@@ -5,3 +5,33 @@ slug: /setup-and-administration/interfaces/manual-entry
 description: ''
 tags: []
 ---
+
+
+
+Data can be collected from sources where the data is entered manually. Generally, this includes spreadsheets and forms. These are not technically interfaces, but the data can be read and displayed visually by Visual KPI.
+
+Three possible sources for manual data entry include:
+
+- Visual KPI Designer (Microsoft Excel with Visual KPI addin)
+- Microsoft Excel spreadsheet updates
+- Forms data entry stored in another location
+
+:::note
+Visual KPI Designer manages the interface for all manual data entry options.
+:::
+
+## Visual KPI Designer (Microsoft Excel with Visual KPI addin)
+
+You have the option to create KPIs that allow manual data entry via the web interface. To do this, you can design the KPI in Visual KPI Designer and configure it for manual data entry instead of connecting it to an interface. This feature is useful for KPIs that are not frequently accessed or require observation, such as data that needs to be entered once daily or data that requires a person to observe some instrumentation that is not connected to modern data collection software.
+
+To learn how to use **Visual KPI Designer** refer to [this guide](/docs/visual-kpi-design/overview).
+
+## Microsoft Excel
+
+It is possible to use a Microsoft Excel spreadsheet as a data source by installing the Access Database Engine for the correct driver (2007, 2010, and 2013, 32 or 64 bit). However, using Excel files as databases can be challenging as they are prone to breaking. Even minor changes such as altering the file name, format, column names, or worksheet name, or moving the file can cause interface errors.
+
+To learn how to use Microsoft Excel spreadsheet as data source refer to [this guide](/docs/setup-and-administration/interfaces/excel).
+
+## Forms Applications
+
+An interface can be used to connect to any data storage system that is utilized for online form completion. It is important to note that the interface is not a direct connection to the form URL, but rather it connects to the underlying database or data structure. For instance, Microsoft InfoPath makes use of XML, and therefore an interface can be established to the XML files that are utilized to record various things such as inspection reports.
