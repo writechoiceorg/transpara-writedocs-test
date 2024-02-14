@@ -5,3 +5,55 @@ slug: /setup-and-administration/interfaces/excel
 description: ''
 tags: []
 ---
+
+Visual KPI allows you to use Microsoft Excel as a data source. You can create interfaces to existing Excel worksheets or workbooks and effectively use them as a Microsoft Excel interface.
+
+:::danger Not recommended
+  It is not recommended to use Microsoft Excel as a production data source for several reasons.
+:::
+
+## Tips for using Excel interface 
+
+If you choose to use an Excel interface, we have some best practices and tips to share with you.
+
+The Microsoft Excel interface consists of a web service and three Excel scripts: Get Current Value, Get Trend Data, and Get Historical Value.
+
+The SQL scripts use four fields, two of which are used in your KPIs:
+
+- LookUp (this is the tag name)  
+- Value (this is the value associated with the tag name)
+
+The other two fields are used to find the correct value:
+
+- Sheet1$ (the table name)  
+- date (the date/time the row was last updated)
+
+:::note
+These are generic field names.
+:::
+
+## How Visual KPI reads data from Excel
+
+To display KPI values from Excel as a data source, Visual KPI follows a process:
+
+1. It reads the tag name associated with a specific KPI column, like Value, Target, Low, etc.
+2. Searches the Sheet1$ table for a row that has the same name in the LookUp column.
+3. Once the interface finds the correct row, it retrieves the Value in the same row and returns that value to Visual KPI.
+
+When you view the trend of a Key Performance Indicator (KPI) using the Microsoft Excel interface, Visual KPI reads the name of the tag that is associated with a particular KPI column, such as Value, Target, Low, etc. Then it searches for each row that has the same name in the `LookUp` column of the `Sheet1$` table, where the date (`timestamp`) falls within the specified time range denoted by `STARTDATE` and `ENDDATE`. The time range is based on the current Trend Range in Visual KPI. Once the search is complete, the interface retrieves the Value and date (`timestamp`) from the same row and sends them back to Visual KPI, which draws the trend graph.
+
+## Using Visual KPI Server Manager with a Microsoft Excel Interface
+
+To use the Microsoft Excel interface with Visual KPI, you must specify connection parameters for your database and modify queries to reference field names for:
+
+- SampleData
+- LookUp
+- Value
+- date
+
+During the installation of the Microsoft Excel Interface, Visual KPI Server Manager enables you to make any necessary changes. If you need to modify the connection parameters after the interface has been installed, you can still use Visual KPI Server Manager to make the changes.
+
+
+:::tip
+If you want to try out the Microsoft Excel interface without connecting it to your actual Excel data, you can create and work with the Excel Demo file.
+:::
