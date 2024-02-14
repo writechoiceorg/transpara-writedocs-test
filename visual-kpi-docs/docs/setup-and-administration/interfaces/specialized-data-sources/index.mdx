@@ -5,3 +5,11 @@ slug: /setup-and-administration/interfaces/specialized-data-sources
 description: ''
 tags: []
 ---
+
+It is common for custodians of specialized data sources to restrict direct access to ERPs or vertical industry applications due to concerns over system performance, potential data changes, or the cost of creating specialized reports.
+
+Rather than dealing with the politics of the data system, it may be easier to simply gain read access, and do the following:
+
+1. Connect to the application’s database directly (ODBC, OLAP, JSON, or XML).
+2. Connect to reports.
+3. Connect to or create staged tables or views. This can be used in a complex SQL environment to get the data across many tables and to avoid building complex queries. You may be able to get a data extract from data tables/cubes that the business owner does not want to risk having changed.
