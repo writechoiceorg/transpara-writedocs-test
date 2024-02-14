@@ -112,6 +112,8 @@ const sidebars = {
             id: 'setup-and-administration/interfaces/historian/historian',
           },
           items: [
+            'setup-and-administration/interfaces/historian/osisoft-pi',
+            'setup-and-administration/interfaces/historian/ge-proficy',
           ],
         },
         {
@@ -122,6 +124,7 @@ const sidebars = {
             id: 'setup-and-administration/interfaces/sql-based/sql-based',
           },
           items: [
+            'setup-and-administration/interfaces/sql-based/how-to-use-sql-interfaces',
           ],
         },
         {
