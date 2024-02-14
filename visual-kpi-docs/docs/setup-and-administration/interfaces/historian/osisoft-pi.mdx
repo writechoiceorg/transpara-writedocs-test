@@ -5,3 +5,78 @@ slug: /setup-and-administration/interfaces/historian/osisoft-pi
 description: ''
 tags: []
 ---
+
+import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
+
+The Visual KPI PI interface is a web service that communicates with OSIsoft's PI-SDK to retrieve data from a PI Server. To use this interface, you need to install the PI interface on a machine that already has OSIsoft's PI-SDK installed. 
+
+:::tip
+See [Prerequisites and Software Downloads](/docs/setup-and-administration/prerequisites-downloads) for a link to the PI-SDK.
+:::
+
+To install and configure the PI interface, make use of the **Visual KPI Server Manager**. You can install the interface on the Visual KPI Server or any machine that is accessible to the Visual KPI Server via HTTP. In case you want to install the interface on a machine other than Visual KPI Server, you should first install the Visual KPI Server Manager.
+
+## Installing a PI Interface
+
+To add a PI interface in the Visual KPI Server Manager, follow these steps:
+
+1. Open Visual KPI Server Manager
+2. Expand the Sites folder and select the specific site where interfaces will be installed.
+3. Keep expanding the site's hierarchy until you find the _Interfaces_ option.
+4. Right-click _Interfaces_ and select _Install New Visual KPI Interface/PI Interface_. The Interface Setup Wizard will open.
+5. Click _Next_ to continue.
+6. Select the _I accept the terms of the license agreement_ option and click _Next_ to continue.
+7. Enter the _Visual KPI PI Interface Name_. This name is used to set the defaults for the Installation Path and Virtual Directory Name during this installation.
+8. Click _Next_ to continue.
+9. Choose your desired installation path and click _Next_ to continue.
+10. In the _ PI Server Settings_ page:
+    - Enter the _PI Server Name_.
+    - In the _Security_ area, select the appropriate security option: PI Trust, PI Login, or Windows Security.
+    - if you want the security credentials to be verified before moving through the install select the _Verify connection before proceeding_ check box.
+11. Click _Next_ to continue.
+12. The _Ready to Install_ page is displayed confirming the current settings you selected. click _Next_ to install the interface.
+
+Once it finishes the newly installed interface will appear in the Interfaces folder.
+
+## Configuring a PI Interface
+
+If you need to change any configuration of your created PI interface, you can. Just select the interface you need to configure. You can modify any configuration settings that are not grayed out.
+
+:::note
+PI servers are databases that store historical data, and the PI interface recognizes this. Therefore, there is no need to modify any query settings when requesting current, trending, or historical values.
+:::
+
+After making changes, remember to click _Apply_ to save changes. And ensure the connection is working correctly.
+
+## Verifying a Pi Interface Connection
+
+After installing and configuring the PI Interface, you should verify the connection by using Visual KPI Server Manager.
+
+To do so, you need to Right-click the PI interface and select _Verify Connection_. A message will display indicating if the connection was successful or if it failed.
+
+## Testing a PI Interface Connection
+
+After verifying the connection to the PI interface, you should test it to ensure access to the database. Use Visual KPI Server Manager for testing by following these steps:
+
+1. Right-click the desired interface and select the _Browse_ option.
+2. The browser will open displaying the PI Interface’s Web Service page.
+
+<StylizedImage
+  imgURL="img/setup-adm/interfaces\historian\test-pi-1.png"
+  alt="KPI Dashboard"
+/>
+
+3. Select any of the Test links available.
+4. In the Lookup field, enter a valid lookup name (example: sinusoid) and click the _Invoke_ button. A new instance of your browser will open.
+
+<StylizedImage
+  imgURL="img/setup-adm/interfaces\historian\test-pi-2.png"
+  alt="KPI Dashboard"
+/>
+
+5. Search for the entry `< NewDataSet xmlns="" >`. Test results are found inside this entry. If the connection and security settings are valid, a value will be returned; otherwise, an error message will be displayed.
+
+<StylizedImage
+  imgURL="img/setup-adm/interfaces\historian\test-pi-3.png"
+  alt="KPI Dashboard"
+/>

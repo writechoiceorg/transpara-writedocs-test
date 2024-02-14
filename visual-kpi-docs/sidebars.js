@@ -80,6 +80,11 @@ const sidebars = {
       // label: 'How to Use the Documentation',
       // className: '',
     },
+    { 
+      type: 'doc',
+      label: 'Prerequisites and Downloads',
+      id: 'setup-and-administration/prerequisites-downloads', 
+    },
     {
       type: 'category',
       label: "Installation",
@@ -103,7 +108,6 @@ const sidebars = {
         id: 'setup-and-administration/interfaces/interfaces',
       },
       items: [
-        'setup-and-administration/interfaces/interfaces-prerequisites',
         {
           type: 'category',
           label: "Historian Interfaces",
