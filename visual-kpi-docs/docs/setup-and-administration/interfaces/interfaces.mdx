@@ -6,4 +6,34 @@ description: 'Describes how the user will create or using existing interfaces to
 tags: []
 ---
 
-Describes how the user will create or using existing interfaces to perform the connection to their data sources. Depending on the complexity, we can have a group of pages.
+Visual KPI interfaces enable the Visual KPI Server to connect with and retrieve data from various external data sources. These sources may include OSIsoft PI Server or other industrial historians, relational databases, data warehouses or data lakes, manual data entry, spreadsheets, vertical industry applications, REST APIs, and other web services.
+
+Visual KPI supports thousands of data sources, and to access them, you can either install and configure one of our included interfaces or create a new interface using the Visual KPI Server Manager. To access these systems, or create the interface you need to:
+
+1. Use the Visual KPI Server Manager to install the appropriate interface. The interface should define how to connect to a data source along with credentials and parameters (if required).
+2. After setting up an interface, you can utilize the Visual KPI Designer or automate through our Remote Context Service to create KPIs and visualizations that extract data from these sources.
+
+
+## Steps for Installing Visual KPI Interfaces
+
+Regardless of the data source, the process of setting up a Visual KPI interface involves these common procedures:
+
+1. Make sure to install the native client tools of the data source on the **Visual KPI Server**. You can find links to the vendor drivers and other necessary software in [Prerequisites and Downloads](/docs/setup-and-administration/prerequisites-and-downloads).
+2. Using **Visual KPI Server Manager**, install the interface.
+3. Use the **Visual KPI Server Manager** to configure the connection.
+4. Verify the connection.
+5. Test the connection.
+6. Use **[Visual KPI Designer](/docs/setup-and-administration/interfaces)** to define an interface for a KPI.
+
+## Supported Data Sources
+
+Visual KPI can connect to a multitude of data sources, with each source requiring its own interface and method for reading data. There are several categories in which data sources can be broadly classified:
+
+- Historian (Time series data), including commercial historians and open-source or cloud time-series sources
+- SQL-based, including RDBMS and OLAP (Microsoft MDX) 
+- JSON/XML/Odata
+- Microsoft Excel
+- IT, cloud, and security monitoring tools (e.g., Cloudwatch, Splunk, VMware, Zabbix, etc.)
+- Manual Entry
+- Specialized Data Sources
+
