@@ -205,6 +205,7 @@ const sidebars = {
             items: [
               'visual-kpi-design/design/kpis-sources',
               'visual-kpi-design/design/spc-kpis',
+              'visual-kpi-design/design/kpis-trends',
             ],
           },
 
@@ -221,7 +222,9 @@ const sidebars = {
               'visual-kpi-design/design/gantt-chart',
               'visual-kpi-design/design/pareto-chart',
               'visual-kpi-design/design/pie-chart',
-              'visual-kpi-design/design/xy-chart',
+              'visual-kpi-design/design/xy-plots',
+              'visual-kpi-design/design/query-based-chart',
+              'visual-kpi-design/design/box-plots',
             ],
           },
 
@@ -230,28 +233,28 @@ const sidebars = {
 
       ],
     },
-    {
-      type: 'category',
-      label: "Reference Tables",
-      // className: '',
-      link: {
-        type: 'doc',
-        id: 'visual-kpi-design/reference-tables/reference-tables',
-      },
-      items: [
-        'visual-kpi-design/reference-tables/website-reference',
-        'visual-kpi-design/reference-tables/profiles-dashboards-reference',
-        'visual-kpi-design/reference-tables/ranges-dates-reference',
-        'visual-kpi-design/reference-tables/contacts-alerts-reference',
-        'visual-kpi-design/reference-tables/features-configuration-reference',
-        'visual-kpi-design/reference-tables/advanced-reference',
-        'visual-kpi-design/reference-tables/groups-reference',
-        'visual-kpi-design/reference-tables/kpis-reference',
-        'visual-kpi-design/reference-tables/charts-reference',
-        'visual-kpi-design/reference-tables/tables-reference',
-        'visual-kpi-design/reference-tables/functions-reference',
-      ],
-    },
+    // {
+    //   type: 'category',
+    //   label: "Reference Tables",
+    //   // className: '',
+    //   link: {
+    //     type: 'doc',
+    //     id: 'visual-kpi-design/reference-tables',
+    //   },
+    //   items: [
+    //     'visual-kpi-design/reference-tables/website-reference',
+    //     'visual-kpi-design/reference-tables/profiles-dashboards-reference',
+    //     'visual-kpi-design/reference-tables/ranges-dates-reference',
+    //     'visual-kpi-design/reference-tables/contacts-alerts-reference',
+    //     'visual-kpi-design/reference-tables/features-configuration-reference',
+    //     'visual-kpi-design/reference-tables/advanced-reference',
+    //     'visual-kpi-design/reference-tables/groups-reference',
+    //     'visual-kpi-design/reference-tables/kpis-reference',
+    //     'visual-kpi-design/reference-tables/charts-reference',
+    //     'visual-kpi-design/reference-tables/tables-reference',
+    //     'visual-kpi-design/reference-tables/functions-reference',
+    //   ],
+    // },
     {
       type: 'doc',
       id: 'visual-kpi-design/best-practices',
