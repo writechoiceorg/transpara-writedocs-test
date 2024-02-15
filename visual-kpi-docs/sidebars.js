@@ -113,11 +113,15 @@ const sidebars = {
         {
           type: 'category',
           label: "Working with Interfaces",
-          link: {
-            type: 'doc',
-            id: 'setup-and-administration/interfaces/working-with-interfaces/working-with-interfaces',
-          },
+          // link: {
+          //   type: 'doc',
+          //   id: 'setup-and-administration/interfaces/working-with-interfaces/working-with-interfaces',
+          // },
           items: [
+            'setup-and-administration/interfaces/working-with-interfaces/odbc',
+            'setup-and-administration/interfaces/working-with-interfaces/json',
+            'setup-and-administration/interfaces/working-with-interfaces/python',
+            'setup-and-administration/interfaces/working-with-interfaces/t-store',
           ],
         },
       ],
