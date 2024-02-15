@@ -55,7 +55,7 @@ This part of the interface allows for up to four data queries to be specified fo
 
 An interface must be configured with security credentials to access databases. Follow best practices to ensure the interface remains viable and data access is maintained:
 
-- **Avoid using workgroups**: Instead, use Windows domain authentication whenever possible, especially in a corporate scenario. Using workgroups adds to the number of identities that need to be managed, which can lead to complications. It is recommended to set up Local groups in Active Directory or in a security group on the Web server for better management.
+- **Avoid using work groups**: Instead, use Windows domain authentication whenever possible, especially in a corporate scenario. Using work groups adds to the number of identities that need to be managed, which can lead to complications. It's recommended to set up Local groups in Active Directory or in a security group on the Web server for better management.
 - **Avoid using IP addresses**: Whenever possible, use DNS or FQDN names. IP addresses are prone to change, while domain names can be altered easily without affecting each interface.
 - **Never use an individual user account for authentication**:If an individual leaves the organization, their account removal will disable the interface. Additionally, changing passwords every few months can be a maintenance burden.
 - **Use a service account with network service**: This requires permission on the remote server as domain\\webservername$. A custom service account will also require permissions and service rights.
@@ -64,7 +64,7 @@ An interface must be configured with security credentials to access databases. F
 
 ## From Data to KPI Visualizations
 
-Visual KPI's interfaces component enables you to establish a data connection for each KPI to various data sources. With the interface, you can specify the data you want without worrying about how it is presented. Visual KPI takes care of the data expression through visualizations.
+Visual KPI's interfaces component enables you to establish a data connection for each KPI to various data sources. With the interface, you can specify the data you want without worrying about how it's presented. Visual KPI takes care of the data expression through visualizations.
 
 With the help of the [Visual KPI Designer](/docs/visual-kpi-design/overview), an administrator can determine how the data will appear on the Visual KPI website. This feature enables you to establish data connections to several different database types, such as SQL, OLDB, Oracle, or database locations like Facility 1, Facility 2, or both. You can present them with the same visualizations, which allows you to combine data from various databases without having to create more complex data extracts or dumps.
 
