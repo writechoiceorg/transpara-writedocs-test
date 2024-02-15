@@ -108,66 +108,14 @@ const sidebars = {
         id: 'setup-and-administration/interfaces/interfaces',
       },
       items: [
+        'setup-and-administration/interfaces/interfaces-core-concepts',
+        'setup-and-administration/interfaces/available-interfaces',
         {
           type: 'category',
-          label: "Historian Interfaces",
+          label: "Working with Interfaces",
           link: {
             type: 'doc',
-            id: 'setup-and-administration/interfaces/historian/historian',
-          },
-          items: [
-            'setup-and-administration/interfaces/historian/osisoft-pi',
-            'setup-and-administration/interfaces/historian/ge-proficy',
-          ],
-        },
-        {
-          type: 'category',
-          label: "SQL Based Interfaces",
-          link: {
-            type: 'doc',
-            id: 'setup-and-administration/interfaces/sql-based/sql-based',
-          },
-          items: [
-            'setup-and-administration/interfaces/sql-based/how-to-use-sql-interfaces',
-          ],
-        },
-        {
-          type: 'category',
-          label: "JSON XML Interfaces",
-          link: {
-            type: 'doc',
-            id: 'setup-and-administration/interfaces/json-xml/json-xml',
-          },
-          items: [
-            'setup-and-administration/interfaces/json-xml/how-to-use-json-interfaces',
-          ],
-        },
-        {
-          type: 'category',
-          label: "Microsoft Excel Interfaces",
-          link: {
-            type: 'doc',
-            id: 'setup-and-administration/interfaces/excel/excel',
-          },
-          items: [
-          ],
-        },
-        {
-          type: 'category',
-          label: "Manual Entry Interfaces",
-          link: {
-            type: 'doc',
-            id: 'setup-and-administration/interfaces/manual-entry/manual-entry',
-          },
-          items: [
-          ],
-        },
-        {
-          type: 'category',
-          label: "Specialized Data Sources Interfaces",
-          link: {
-            type: 'doc',
-            id: 'setup-and-administration/interfaces/specialized-data-sources/specialized-data-sources',
+            id: 'setup-and-administration/interfaces/working-with-interfaces/working-with-interfaces',
           },
           items: [
           ],
