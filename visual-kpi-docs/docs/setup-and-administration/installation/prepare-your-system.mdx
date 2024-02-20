@@ -6,4 +6,82 @@ description: 'Describes the actions the administrator needs to take to prepare t
 tags: []
 ---
 
-Describes the actions the administrator needs to take to prepare their server or cloud before installing the Visual KPI software.
+import IframeComponent from '@site/src/components/Video/IframeComponent';
+
+This guide describes all needed steps to be ready to install Visual KPI Server Manager. You need to start by configuring the operating system and installing necessary software.
+
+| Prerequisite              | Details                                      |
+| ------------------------- | -------------------------------------------- |
+| OS Version                | Windows Server 2008 R2 or newer               |
+| User Rights               | Local Admin                                   |
+| .NET Framework            | .Net 4.5.2 or newer                           |
+| Windows Server Roles      | IIS 7, 7.5 or 8 Enabled<br></br>ASP.NET 4.0 Allowed (in ISAPI and CGI Restrictions) |
+
+## Step 1: Windows Server Manager
+
+The first step consists of installing the correct roles in your OS's Server Manager. To  do this, follow these steps:
+
+1. Open your **Server Manager**.
+2. Click on Manage on the top-right corner.
+3. Select the **Add Roles and Features** option.
+4. Advance to the **Server Selection** step of the configuration, selecting the default configuration for the previous steps.
+5. Select the correct server in **Server Selection**, and click **Next**.
+6. In the Server Roles you need to add the **Web Server (IIS)** role, and opening it, you need to select the following:
+    - Dynamic Content Compression
+    - Basic Authentication
+    - Windows Authentication
+    - .NET Extensibility 4.5 (or higher)
+    - ASP.NET 4.5 (or higher)
+    - ISS Management Console
+7. With these selected, you can **Install** and finish this wizard.
+
+## Step 2: .NET Framework
+
+Your system needs to have .NET 4.5.2 or newer installed. To check your current version you can do the following:
+
+1. Access your Control Panel
+2. Go to **Programs > Programs and Features**
+3. Validate your current version.
+
+:::note
+If your OS is Windows Server 2012 or newer, it will already have this version of .NET Framework preinstalled.
+:::
+
+If your system doesn't meet the needed requirement, you can download the .NET Framework directly from Windows:
+
+- **[Microsoft .NET Framework 4.5.2 Standalone Installer](https://www.microsoft.com/en-us/download/details.aspx?id=42642)**
+
+## Step 3: SQL Server Management Studio
+
+Visual KPI needs a SQL service to operate properly. Your login needs to have sufficient rights to the SQL Server. This rights needs to be security admin or higher. To check this configuration, and give it the proper rights if needed, you can do these steps:
+
+1. Download and install **[Microsoft SQL Server Management Studio](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16&redirectedfrom=MSDN)**.
+2. Open the software.
+3. **Connect** to the server.
+4. In the sidebar, open **Security > Login**.
+5. Find your own Login and double click it. A window will open.
+6. Select **Server Roles** and verify if you have one of the following roles (If you don't have any of these roles, add one):
+    - securityadmin
+    - serveradmin
+    - setupadmin
+    - sysadmin
+
+## Step 4: IIS Manager
+
+You need to allow ISAPI and CGI extensions to run on the web server. This step consist of acessing the IIS Manager to allow ASP.NET to run. To perform this, do these steps:
+
+1. Open the **Internet Information Services (IIS) Manager**.
+2. Select your system on the sidebar.
+3. Open the **ISAPI and CGI Restrictions** option.
+4. Allow all the ASP.NET to run by right-clicking each and selecting the **Allow** option.
+
+## Visual KPI Server Manager
+
+After performing all steps above, your system is ready to have Visual KPI Server Manager installed. To learn how to install our system, refer to the [Install Visual KPI](/docs/setup-and-administration/install-visual-kpi) page.
+
+
+## Video Guide
+
+<IframeComponent 
+  src="https://www.youtube.com/embed/qjLk-N7fkqU"
+/>
