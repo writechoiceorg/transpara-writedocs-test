@@ -10,6 +10,46 @@ This page provides a comprehensive overview of all the available interfaces in t
 
 In addition to listing all the available interfaces, we've included step-by-step instructions for installing them in **Visual KPI Server Manager**. These instructions are easy to follow and will help you get up and running with your chosen interfaces in no time.
 
+## Installing an Interface
+
+To install a new interface, follow these steps:
+
+1. In **Visual KPI Server Manager**, select the site you desire to install a new interface.
+2. Right-click in the **Interfaces** tab, and select the **Install New Visual KPI Interface** option.
+3. Select the interface you want to install from [all available interfaces](#interfaces) presented.
+4. A install wizard will open.
+5. Follow the installation process, adding the necessary information as requested.
+
+After these steps, you will have your new interface ready. Most interfaces in Visual KPI are pre-packaged interfaces that include all components and are configured along the installation wizard without the need for queries.
+
+:::tip
+For Interfaces that need further configurations, refer to the [Working with Interfaces](/docs/setup-and-administration/interfaces/odbc) page.
+:::
+
+### Verifying an Interface Connection
+
+After installing and configuring the interface, use Visual KPI Server Manager to verify the interface's database connection.
+
+Click **Verify Connection** after right-clicking the interface. A message appears indicating success or failure.
+
+:::warning
+If there were any errors, make the required changes to the Connect String and/or Queries and repeat the verification.
+:::
+
+### Testing an Interface Connection
+
+You can use Visual KPI Server Manager to test the interface connection and access the database. To test it, follow the steps below:
+
+1. Right-click the ODBC interface and select **Browse**. Your browser will open and display the Interface’s Web Service page.
+2. Click any of the Test links.
+3. In the _LookupValue_ field, enter a valid lookup name and click the **Invoke** button. A new instance of your browser will open.
+
+Search for the test results within the `<NewDataSet xmlns=””>` entry. The results of the test are within this entry. If the connection and security settings are valid, a value is returned. 
+
+:::warning
+If there are any errors, make the required changes to the Connect String and/or Queries and repeat the test.
+:::
+
 ## Interfaces
 
 The Visual KPI Server Manager offers various interfaces to connect to different data sources. Below you find a list with all of them:
@@ -58,19 +98,3 @@ _**NEED TO UNDERSTAND WHAT NATIVE CLIENT TOOL MAY BE REQUIRED FOR EACH INTERFACE
     - Wonderware Historian ODBC
 - Xompass
 - Zabbix
-
-## Installing an Interface
-
-To install a new interface, follow these steps:
-
-1. In **Visual KPI Server Manager**, select the site you desire to install a new interface.
-2. Right-click in the **Interfaces** tab, and select the **Install New Visual KPI Interface** option.
-3. Select the interface you want to install from [all available interfaces](#interfaces) presented.
-4. A install wizard will open.
-5. Follow the installation process, adding the necessary information as requested.
-
-After these steps, you will have your new interface ready. Most interfaces in Visual KPI are pre-packaged interfaces that include all components and are configured along the installation wizard without the need for queries.
-
-:::tip
-For Interfaces that need further configurations, refer to the [Working with Interfaces](/docs/setup-and-administration/interfaces/odbc) page.
-:::

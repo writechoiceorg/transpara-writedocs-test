@@ -122,6 +122,7 @@ const sidebars = {
             'setup-and-administration/interfaces/working-with-interfaces/json',
             'setup-and-administration/interfaces/working-with-interfaces/python',
             'setup-and-administration/interfaces/working-with-interfaces/t-store',
+            'setup-and-administration/interfaces/working-with-interfaces/parameterizing',
           ],
         },
       ],

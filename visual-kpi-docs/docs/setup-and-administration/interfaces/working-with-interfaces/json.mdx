@@ -8,7 +8,7 @@ tags: []
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import IframeComponent from '../../../../src/components/Video/IframeComponent'
+import IframeComponent from '@site/src/components/Video/IframeComponent';
 
 A JSON Interface will be used when you need to connect to restFUL databases. This guide aims to explain how you can configure your new JSON interface when needed.
 
@@ -56,7 +56,7 @@ Within the interface settings, you find the JSON Base Settings, that allows you 
 - **Result Data Format**: Inform the type of data returned by the API (JSON or XML).
 
 :::tip
-The Base Address can be [parameterized](#parameterizing).
+The Base Address can be [parameterized](/docs/setup-and-administration/interfaces/parameterizing).
 :::
 
 ### JSON Query Settings
@@ -95,7 +95,7 @@ To reach the needed data, you would use the dot notation as `response.data.CPU`,
 | **Timestamp field** | `timestamp`        |
 
 :::tip
-These fields can be [parameterized](#parameterizing).
+These fields can be [parameterized](/docs/setup-and-administration/interfaces/parameterizing).
 :::
 
 #### Current Value
@@ -122,7 +122,7 @@ In the request URI you need to add a start date and an end date. Like the follow
 ```
 
 :::tip
-The **start** and **end** values can be [parameterized](#parameterizing) using `STARTDATE` and `ENDDATE`.
+The **start** and **end** values can be [parameterized](/docs/setup-and-administration/interfaces/parameterizing) using `STARTDATE` and `ENDDATE`.
 :::
 
 #### Historical Value
@@ -141,56 +141,21 @@ The request URI needs a date parameter to be added, like the following example:
 ```
 
 :::tip
-The **date** value can be [parameterized](#parameterizing) using `TIMESTAMP`.
+The **date** value can be [parameterized](/docs/setup-and-administration/interfaces/parameterizing) using `TIMESTAMP`.
 :::
 
-## Parameterizing
 
-As mentioned above in various tips, you can parameterize almost anything in the interface configurations.  This is done by adding `{0}` within your configuration string. And for each new parameter you add, you will also change the number, as `{1}` being the next parameter.
-
-You can add parameters to:
-
-- Base Address: `http://demo.transpara.com/apitest/api/training?machine={0}`
-- Result base path: `{1}`
-- Value field: `{2}`
-- Timestamp field: `{3}`
-
-When testing this, you will need to separate each field using pipes when asked for the lookup, like this:
-
-```
-server1|data.|CPU|timestamp
-```
-And the request would become:
-
-- Base Address: `http://demo.transpara.com/apitest/api/training?machine=server1`
-- Result base path: `data.`
-- Value field: `CPU`
-- Timestamp field: `timestamp`
-
-### Parameterizing dates
-
-You can use the following parameters in the request URI to parameterize the date fields:
-
-- `STARTDATE`
-- `ENDDATE`
-- `DATE`
+## Video Guides
 
 <Tabs>
-  <TabItem value="STARTDATE and ENDDATE" label="STARTDATE and ENDDATE" default>
-    ```
-    &start={STARTDATE}&end={ENDDATE}
-    ```
+  <TabItem value="Creating JSON Interfaces" label="Creating JSON Interfaces" default>
+    <IframeComponent 
+      src="https://www.youtube.com/embed/K0RT_m3XoTk"
+    />
   </TabItem>
-  <TabItem value="DATE" label="DATE">
-    ```
-    &date={date}
-    ```
+  <TabItem value="Demonstration" label="Demonstration">
+   <IframeComponent 
+      src="https://www.youtube.com/embed/Ppv5yoZAUHw"
+    />
   </TabItem>
 </Tabs>
-
-
-## Video example
-
-<IframeComponent 
-  src="https://www.youtube.com/embed/Ppv5yoZAUHw"
-/>
