@@ -10,14 +10,83 @@ import IframeComponent from '@site/src/components/Video/IframeComponent';
 
 This guide describes all needed steps to be ready to install Visual KPI Server Manager. You need to start by configuring the operating system and installing necessary software.
 
-| Prerequisite              | Details                                      |
-| ------------------------- | -------------------------------------------- |
-| OS Version                | Windows Server 2008 R2 or newer               |
-| User Rights               | Local Admin                                   |
-| .NET Framework            | .Net 4.5.2 or newer                           |
-| Windows Server Roles      | IIS 7, 7.5 or 8 Enabled<br></br>ASP.NET 4.0 Allowed (in ISAPI and CGI Restrictions) |
+The following table presents the main requirements you need to use Visual KPI Server Manager:
 
-## Step 1: Windows Server Manager
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Prerequisite</strong></th>
+      <th><strong>Details</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>OS Version</strong></td>
+      <td>Windows Server 2008 R2 or newer</td>
+    </tr>
+    <tr>
+      <td><strong>User Rights</strong></td>
+      <td>Local Admin</td>
+    </tr>
+    <tr>
+      <td><strong>.NET Framework</strong></td>
+      <td>.Net 4.5.2 or newer<br></br><a href="#step-1-net-framework"><b>Refer to Step 1: .NET Framework</b></a></td>
+    </tr>
+    <tr>
+      <td><strong>Windows Server Roles</strong></td>
+      <td>IIS 7, 7.5 or 8 Enabled<br></br>ASP.NET 4.0 Allowed (in ISAPI and CGI Restrictions)<br></br><a href="#step-2-iis-manager"><b>Refer to Step 2: IIS Manager</b></a></td>
+    </tr>
+    <tr>
+      <td><strong>Windows Server Features</strong></td>
+      <td><a href="#step-3-windows-server-manager"><b>Refer to Step 3: Windows Server Manager</b></a></td>
+    </tr>
+    <tr>
+      <td><strong>Microsoft SQL Server</strong></td>
+      <td>SQL 2005 or newer installed, or LAN access to one of them</td>
+    </tr>
+    <tr>
+      <td><strong>SQL Server Tools</strong></td>
+      <td><a href="#step-4-sql-server-management-studio"><b>Refer to Step 4: SQL Server Management Studio</b></a></td>
+    </tr>
+    <tr>
+      <td><strong>SQL Server Network Configuration</strong></td>
+      <td>Protocols enabled: Named Pipes; TCP/IP</td>
+    </tr>
+    <tr>
+      <td><strong>Database Rights</strong></td>
+      <td>Rights to create a database<br></br>
+      Rights to create a user</td>
+    </tr>
+  </tbody>
+</table>
+
+## Step 1: .NET Framework
+
+Your system needs to have .NET 4.5.2 or newer installed. To check your current version you can do the following:
+
+1. Access your Control Panel.
+2. Go to **Programs > Programs and Features**.
+3. Validate your current version.
+
+:::note
+If your OS is Windows Server 2012 or newer, it will already have this version of .NET Framework preinstalled.
+:::
+
+If your system doesn't meet the needed requirement, you can download the .NET Framework directly from Windows:
+
+- **[Microsoft .NET Framework 4.5.2 Standalone Installer](https://www.microsoft.com/en-us/download/details.aspx?id=42642)**
+
+## Step 2: IIS Manager
+
+You need to allow ISAPI and CGI extensions to run on the web server. This step consist of acessing the IIS Manager to allow ASP.NET to run. To perform this, do these steps:
+
+1. Open the **Internet Information Services (IIS) Manager**.
+2. Select your system on the sidebar.
+3. Open the **ISAPI and CGI Restrictions** option.
+4. Allow all the ASP.NET to run by right-clicking each and selecting the **Allow** option.
+
+## Step 3: Windows Server Manager
 
 The first step consists of installing the correct roles in your OS's Server Manager. To  do this, follow these steps:
 
@@ -35,23 +104,7 @@ The first step consists of installing the correct roles in your OS's Server Mana
     - ISS Management Console
 7. With these selected, you can **Install** and finish this wizard.
 
-## Step 2: .NET Framework
-
-Your system needs to have .NET 4.5.2 or newer installed. To check your current version you can do the following:
-
-1. Access your Control Panel
-2. Go to **Programs > Programs and Features**
-3. Validate your current version.
-
-:::note
-If your OS is Windows Server 2012 or newer, it will already have this version of .NET Framework preinstalled.
-:::
-
-If your system doesn't meet the needed requirement, you can download the .NET Framework directly from Windows:
-
-- **[Microsoft .NET Framework 4.5.2 Standalone Installer](https://www.microsoft.com/en-us/download/details.aspx?id=42642)**
-
-## Step 3: SQL Server Management Studio
+## Step 4: SQL Server Management Studio
 
 Visual KPI needs a SQL service to operate properly. Your login needs to have sufficient rights to the SQL Server. This rights needs to be security admin or higher. To check this configuration, and give it the proper rights if needed, you can do these steps:
 
@@ -65,15 +118,6 @@ Visual KPI needs a SQL service to operate properly. Your login needs to have suf
     - serveradmin
     - setupadmin
     - sysadmin
-
-## Step 4: IIS Manager
-
-You need to allow ISAPI and CGI extensions to run on the web server. This step consist of acessing the IIS Manager to allow ASP.NET to run. To perform this, do these steps:
-
-1. Open the **Internet Information Services (IIS) Manager**.
-2. Select your system on the sidebar.
-3. Open the **ISAPI and CGI Restrictions** option.
-4. Allow all the ASP.NET to run by right-clicking each and selecting the **Allow** option.
 
 ## Visual KPI Server Manager
 
