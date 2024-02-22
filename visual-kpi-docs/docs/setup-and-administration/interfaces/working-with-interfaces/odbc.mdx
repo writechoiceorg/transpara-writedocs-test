@@ -8,7 +8,6 @@ tags: []
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import IframeComponent from '@site/src/components/Video/IframeComponent';
 import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
 
 You’ll use ODBC interfaces for connecting to a SQL database. Install and configure ODBC interfaces using Visual KPI Server Manager.
@@ -43,6 +42,10 @@ This way, the interface ensures that the KPI values displayed are accurate and r
 ## Configuration
 
 The ODBC interface comes with three queries, including an optional one, that require configuration. Upon installation of an ODBC interface, an example queries are automatically added. You'll need to edit these queries to fit your requirements. 
+
+:::training
+Refer to **[Visual KPI training](https://www.transpara.com/lesson/creating-odbc-interfaces-sql-2/)** to learn all about how Visual KPI interfaces with and reads from thousands of data sources and how to create your own interfaces.
+:::
 
 After installing a new ODBC interface following these [instructions](/docs/setup-and-administration/interfaces/available-interfaces#installing-an-interface), you are ready to configure your interface by adding the following queries:
 
@@ -135,18 +138,3 @@ You can use stored procedures (sprocs) and reference them in Visual KPI Server M
 - **Get Historical Value**: `exec MyHistoricalValueSproc {0}, {TIMESTAMP}`
 
 - **Get Trend Data**: `exec MyTrendDataSproc {0}, {STARTDATE}, {ENDDATE}`
-
-## Video Guides
-
-<Tabs>
-  <TabItem value="Creating ODBC Interfaces" label="Creating ODBC Interfaces" default>
-    <IframeComponent 
-      src="https://www.youtube.com/embed/fx2aTOPBcFw"
-    />
-  </TabItem>
-  <TabItem value="Demonstration" label="Demonstration">
-   <IframeComponent 
-      src="https://www.youtube.com/embed/ZnKQ3LbqDGw"
-    />
-  </TabItem>
-</Tabs>

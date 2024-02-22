@@ -8,7 +8,6 @@ tags: []
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import IframeComponent from '@site/src/components/Video/IframeComponent';
 
 A JSON Interface will be used when you need to connect to restFUL databases. This guide aims to explain how you can configure your new JSON interface when needed.
 
@@ -21,6 +20,10 @@ If the result is XML, it will be automatically converted to JSON.
 ## Configuration
 
 After installing a new JSON interface following these [instructions](/docs/setup-and-administration/interfaces/available-interfaces#installing-an-interface), you are ready to configure your interface.
+
+:::training
+Refer to **[Visual KPI training](https://www.transpara.com/lesson/creating-json-interfaces-rest-2/)** to learn all about how Visual KPI interfaces with and reads from thousands of data sources and how to create your own interfaces.
+:::
 
 Any REST-based interface have some components in common that needs to be set:
 
@@ -143,19 +146,3 @@ The request URI needs a date parameter to be added, like the following example:
 :::tip
 The **date** value can be [parameterized](/docs/setup-and-administration/interfaces/parameterizing) using `TIMESTAMP`.
 :::
-
-
-## Video Guides
-
-<Tabs>
-  <TabItem value="Creating JSON Interfaces" label="Creating JSON Interfaces" default>
-    <IframeComponent 
-      src="https://www.youtube.com/embed/K0RT_m3XoTk"
-    />
-  </TabItem>
-  <TabItem value="Demonstration" label="Demonstration">
-   <IframeComponent 
-      src="https://www.youtube.com/embed/Ppv5yoZAUHw"
-    />
-  </TabItem>
-</Tabs>
