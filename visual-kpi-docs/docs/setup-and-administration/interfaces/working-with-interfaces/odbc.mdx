@@ -9,6 +9,7 @@ tags: []
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import IframeComponent from '@site/src/components/Video/IframeComponent';
+import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
 
 You’ll use ODBC interfaces for connecting to a SQL database. Install and configure ODBC interfaces using Visual KPI Server Manager.
 
@@ -102,6 +103,28 @@ In the query above, `STARTDATE` and `ENDDATE` are [parameters](/docs/setup-and-a
 :::caution
 When calculating a sum, it's important to determine whether it's daily, hourly, or weekly. To handle this logic using a start and end date, you should create a query that takes these factors into account. For instance, if you request a year's worth of data, your query should sum the data on a daily basis, resulting in 365 values, one for each day. To accomplish this, you could create a parameter that allows you to choose between Daily, Hourly, and Weekly, and then use SQL logic to perform the calculation accurately.
 :::
+
+## Aggregate Raw Data with ODBC Interface
+
+ODBC Aggregation Settings can be used in conjunction with an ODBC interface to perform mathematical operations on the data returned by the interface. Instead of delivering raw data, Visual KPI can aggregate the queried data based on the parameters specified by you. The raw data is first queried via the interface, then aggregated according to your settings, and finally returned to your Visual KPI site.
+
+This feature can be useful if you prefer not to write queries in Visual KPI Designer. Aggregation Settings enables Visual KPI to perform calculations on the server side. However, you can still write queries in Visual KPI Designer and customize them to your liking.
+
+### Aggregation Setting
+
+Aggregation Setting has three entities:
+
+- **Aggregation Type**: Tells Visual KPI what type of function to perform on the returned data.
+- **Bucket Duration**: Sets the time duration of the data returned.
+- **Bucket Duration Unit**: Set the unit of time for the duration.
+
+You can opt for an aggregation type of average with a duration of 30 minutes, for example. By doing so, Visual KPI will return one value that averages all the raw data collected over a 30-minute period. This way, instead of receiving raw data every few seconds, you receive a single value every 30 minutes that represents the data gathered during that duration.
+
+<StylizedImage
+  imgURL="img/setup-adm/interfaces/odbc/aggregation-odbc.png"
+  alt="Visual-KPI-Server-Manager"
+  wSize="90%"
+/>
 
 ## Stored Procedures
 
