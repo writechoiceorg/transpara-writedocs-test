@@ -110,7 +110,9 @@ const sidebars = {
       },
       items: [
         'setup-and-administration/interfaces/interfaces-core-concepts',
+        'setup-and-administration/interfaces/configuration',
         'setup-and-administration/interfaces/available-interfaces',
+        'setup-and-administration/interfaces/data-sources',
         {
           type: 'category',
           label: "Working with Interfaces",
