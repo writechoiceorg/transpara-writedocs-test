@@ -96,6 +96,7 @@ const sidebars = {
       items: [
         'setup-and-administration/installation/prepare-your-system',
         'setup-and-administration/installation/install-visual-kpi',
+        'setup-and-administration/installation/website-and-virtual-directory-structure',
         'setup-and-administration/installation/system-update',
       ],
     },
