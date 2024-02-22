@@ -6,81 +6,14 @@ description: 'Describes how the user will create or using existing interfaces to
 tags: []
 ---
 
-Visual KPI interfaces enable the Visual KPI Server to connect with and retrieve data from various external data sources. These sources may include OSIsoft PI Server or other industrial historians, relational databases, data warehouses or data lakes, manual data entry, spreadsheets, vertical industry applications, REST API, and other web services.
+Visual KPI interfaces enable the Visual KPI Server to connect with and retrieve data from various external data sources. These sources may include industrial historians, relational databases, data warehouses or data lakes, manual data entry, spreadsheets, vertical industry applications, REST API, and other web services.
 
-Visual KPI supports thousands of data sources, and to access them, you can either install and configure one of our included interfaces or create a new interface using the Visual KPI Server Manager. To access these systems, or create the interface you need to:
+Visual KPI supports thousands of data sources, and to access them, you can either install and configure one of our included interfaces or create a new interface using the Visual KPI Server Manager. To learn everything about Visual KPI Interfaces check the following links:
 
-1. Use the Visual KPI Server Manager to install the appropriate interface. The interface should define how to connect to a data source along with credentials and parameters (if required).
-2. After setting up an interface, you can utilize the Visual KPI Designer or automate through our Remote Context Service to create KPIs and visualizations that extract data from these sources.
+- **[Core Concepts](/docs/setup-and-administration/interfaces/core-concepts)**
+- **[Configuring Interfaces](/docs/setup-and-administration/interfaces/configuration)**
+- **[Available Interfaces](/docs/setup-and-administration/interfaces/available-interfaces)**
+- **[Supported Data Sources](/docs/setup-and-administration/interfaces/data-sources)**
+- **[Working with Interfaces](/docs/setup-and-administration/interfaces/odbc)**
 
-
-## Steps for Installing Visual KPI Interfaces
-
-Regardless of the data source, the process of setting up a Visual KPI interface involves these common procedures:
-
-1. Make sure to install the native client tools of the data source on the **Visual KPI Server**. You can find links to the vendor drivers and other necessary software in [Prerequisites and Downloads](/docs/setup-and-administration/prerequisites-downloads).
-2. Using **Visual KPI Server Manager**, install the interface.
-3. Use the **Visual KPI Server Manager** to configure the connection.
-4. Verify the connection.
-5. Test the connection.
-6. Use **[Visual KPI Designer](/docs/visual-kpi-design/overview)** to define an interface for a KPI.
-
-:::info
-For more information about installing an interface and testing it, refer to the [Available Interfaces](/docs/setup-and-administration/interfaces/available-interfaces#installing-an-interface) page.
-:::
-
-## Prerequisites
-
-Before connecting interfaces to Visual KPI, make sure you meet the following prerequisites:
-
-- Install Visual KPI Server and Server Manager.  
-- You need to have the data source client tools installed on the **Visual KPI Server**. For example, SQL Server Management Studio, proper Oracle drivers (and a client to test them, such as Toad), PI SDK for OSIsoft, etc.  
-- You need to have the necessary rights and knowledge to access the database, test the connection, and query the desired data.  
-- It's also important to have the client tools mentioned above for testing the interfaces.
-
-## Supported Data Sources
-
-Visual KPI can connect to a multitude of data sources, with each source requiring its own interface and method for reading data. Data sources can be classified by category as follows:
-
-<table>
-    <thead>
-        <tr>
-            <th>Data Sources</th>
-            <th>Examples</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Industrial or Enterprise Historians</td>
-            <td>OSIsoft PI<br></br>GE Proficy<br></br>Rockwell<br></br>Honeywell<br></br>etc.</td>
-            <td>Managing time series data for industrial or enterprise purposes.</td>
-        </tr>
-        <tr>
-            <td>Relational Databases</td>
-            <td>Microsoft SQL Server<br></br>Oracle<br></br>MySQL<br></br>Access<br></br>etc.</td>
-            <td>Utilizing relational databases for data storage and retrieval.</td>
-        </tr>
-        <tr>
-            <td>External Web Services</td>
-            <td>Weather<br></br>Market pricing<br></br>Supplier data</td>
-            <td>Integrating data from external web services, such as weather, market pricing, and supplier data.</td>
-        </tr>
-        <tr>
-            <td>Manually Entered Data</td>
-            <td>Excel<br></br>Forms applications<br></br>direct in Visual KPI</td>
-            <td>Entering data manually through tools like Excel, forms applications, and direct input in Visual KPI.</td>
-        </tr>
-        <tr>
-            <td>Business Applications</td>
-            <td>ERP<br></br>CRM<br></br>Vertical industry applications</td>
-            <td>Utilizing data from business applications like Enterprise Resource Planning (ERP), Customer Relationship Management (CRM), and vertical industry applications.</td>
-        </tr>
-        <tr>
-            <td>Devices</td>
-            <td>Sensors<br></br>IoT<br></br>IIoT<br></br>Control systems (DCS/PLC)</td>
-            <td>Collecting data from various devices such as sensors, Internet of Things (IoT), Industrial Internet of Things (IIoT), and control systems (DCS/PLC).</td>
-        </tr>
-    </tbody>
-</table>
 
