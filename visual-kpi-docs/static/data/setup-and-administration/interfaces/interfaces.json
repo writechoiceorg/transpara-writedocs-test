@@ -1,0 +1,167 @@
+[
+  {
+    "name": "AnyLog",
+    "imageSrc": "anylog",
+    "description": ""
+  },
+  {
+    "name": "Cumulocity",
+    "imageSrc": "cumulocity",
+    "description": ""
+  },
+  {
+    "name": "eGauge",
+    "imageSrc": "egauge",
+    "description": ""
+  },
+  {
+    "name": "Evoqua",
+    "imageSrc": "evoqua",
+    "description": ""
+  },
+  {
+    "name": "Excel",
+    "imageSrc": "excel",
+    "description": ""
+  },
+  {
+    "name": "GE Proficy Historian",
+    "imageSrc": "ge",
+    "description": ""
+  },
+  {
+    "name": "GE Proficy Historian OLEDB",
+    "imageSrc": "ge",
+    "description": ""
+  },
+  {
+    "name": "Influx",
+    "imageSrc": "influx",
+    "description": ""
+  },
+  {
+    "name": "Inmation",
+    "imageSrc": "inmation",
+    "description": ""
+  },
+  {
+    "name": "JSON",
+    "imageSrc": "json",
+    "description": ""
+  },
+  {
+    "name": "MorningStar",
+    "imageSrc": "morningstar",
+    "description": ""
+  },
+  {
+    "name": "Quandl",
+    "imageSrc": "quandl",
+    "description": ""
+  },
+  {
+    "name": "MarketView",
+    "imageSrc": "marketview",
+    "description": ""
+  },
+  {
+    "name": "NIWNAS",
+    "imageSrc": "niwnas",
+    "description": ""
+  },
+  {
+    "name": "OLAP",
+    "imageSrc": "olap",
+    "description": ""
+  },
+  {
+    "name": "OSIsoft AF",
+    "imageSrc": "osisoft",
+    "description": ""
+  },
+  {
+    "name": "OSIsoft PI",
+    "imageSrc": "osisoft",
+    "description": ""
+  },
+  {
+    "name": "Performance Monitor",
+    "imageSrc": "performance-monitor",
+    "description": ""
+  },
+  {
+    "name": "PJM Data Miner 2",
+    "imageSrc": "pjm",
+    "description": ""
+  },
+  {
+    "name": "Python",
+    "imageSrc": "python",
+    "description": ""
+  },
+  {
+    "name": "ODBC",
+    "imageSrc": "odbc",
+    "description": ""
+  },
+  {
+    "name": "OLEDB",
+    "imageSrc": "oledb",
+    "description": ""
+  },
+  {
+    "name": "SmartSignal",
+    "imageSrc": "smartsignal",
+    "description": ""
+  },
+  {
+    "name": "Splunk",
+    "imageSrc": "splunk",
+    "description": ""
+  },
+  {
+    "name": "TempolQ",
+    "imageSrc": "tempolq",
+    "description": ""
+  },
+  {
+    "name": "Transpara tStore",
+    "imageSrc": "tstore",
+    "description": ""
+  },
+  {
+    "name": "Tomorrow.io",
+    "imageSrc": "tomorrow.io",
+    "description": ""
+  },
+  {
+    "name": "vROps",
+    "imageSrc": "vrops",
+    "description": ""
+  },
+  {
+    "name": "Windy",
+    "imageSrc": "windy",
+    "description": ""
+  },
+  {
+    "name": "Wonderware Historian",
+    "imageSrc": "wonderware",
+    "description": ""
+  },
+  {
+    "name": "Wonderware Historian ODBC",
+    "imageSrc": "wonderware",
+    "description": ""
+  },
+  {
+    "name": "Xompass",
+    "imageSrc": "xompass",
+    "description": ""
+  },
+  {
+    "name": "Zabbix",
+    "imageSrc": "zabbix",
+    "description": ""
+  }
+]
