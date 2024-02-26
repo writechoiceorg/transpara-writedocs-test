@@ -5,3 +5,56 @@ slug: /setup-and-administration/interfaces/t-store
 description: ''
 tags: []
 ---
+
+## Configuration
+
+The Template interface can receive up to four parameter, with only the first one being required. The four parameters are described below:
+
+- **Metric**: The value which needs to be recovered.
+- **Filter** (Optional): Conditions applied to the data source to selectively include or exclude specific elements. You can add multiple filters, separating them with commas.
+- **AggregationFunction** (Optional): Operation applied to a set of values or data points to produce a single, summarized result. The available options for this are:
+    - [ raw, avg, sum, count, min, max, range, stddev, median, twavg ]
+- **AggregationBucket** (Optional): Grouping of data points based on certain criteria.
+
+### Lookup format
+
+To use these parameters as lookups you will need to separe them with pipes, as presented below:
+
+```
+Metric|Filter|AggregationFunction|AggregationBucket
+```
+
+Below you find examples of use:
+
+#### Metric only
+
+To get `wavelength` as metric use:
+```
+wavelength
+```
+
+#### Adding a filter to lookup
+
+To add a filter or multiple filters to the lookup, use:
+```
+wavelength|asset=sn1051_kalkallo,fiber=1,sensor=1
+```
+Where filters are equal to `asset=sn1051_kalkallo,fiber=1,sensor=1`.
+
+#### Using all parameters
+
+To add AggregationFunction and AggregationBucket to the lookup you would use this:
+```
+wavelength|asset=sn1051_kalkallo,fiber=1,sensor=1|avg|5 mins
+```
+Where:
+- AggregationFunction = `avg`
+- AggregationBucket = `5 mins`
+
+#### Skipping a parameter
+
+You may need to add AggregationFunction and AggregationBucket but without any filters. To do this you need to leave the space between the two pipes empty, like:
+
+```
+wavelength||avg|5 mins
+```
