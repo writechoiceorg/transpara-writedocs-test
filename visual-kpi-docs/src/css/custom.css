@@ -145,6 +145,15 @@ main {
   --ifm-h3-font-size: 1.375rem !important;
 }
 
+.accordion_python_title {
+  display: flex;
+  align-items: center;
+}
+
+.python-interface-logo {
+  cursor: pointer !important;
+}
+
 /*-------------------------------- Tables configuration ------------------------------  */
 
 table {
