@@ -1,167 +1,167 @@
 [
   {
     "name": "AnyLog",
-    "imageSrc": "anylog",
+    "logo": "anylog",
     "description": ""
   },
   {
     "name": "Cumulocity",
-    "imageSrc": "cumulocity",
+    "logo": "cumulocity",
     "description": ""
   },
   {
     "name": "eGauge",
-    "imageSrc": "egauge",
+    "logo": "egauge",
     "description": ""
   },
   {
     "name": "Evoqua",
-    "imageSrc": "evoqua",
+    "logo": "evoqua",
     "description": ""
   },
   {
     "name": "Excel",
-    "imageSrc": "excel",
+    "logo": "excel",
     "description": ""
   },
   {
     "name": "GE Proficy Historian",
-    "imageSrc": "ge",
+    "logo": "ge",
     "description": ""
   },
   {
     "name": "GE Proficy Historian OLEDB",
-    "imageSrc": "ge",
+    "logo": "ge",
     "description": ""
   },
   {
     "name": "Influx",
-    "imageSrc": "influx",
+    "logo": "influx",
     "description": ""
   },
   {
     "name": "Inmation",
-    "imageSrc": "inmation",
+    "logo": "inmation",
     "description": ""
   },
   {
     "name": "JSON",
-    "imageSrc": "json",
+    "logo": "json",
     "description": ""
   },
   {
     "name": "MorningStar",
-    "imageSrc": "morningstar",
+    "logo": "morningstar",
     "description": ""
   },
   {
     "name": "Quandl",
-    "imageSrc": "quandl",
+    "logo": "quandl",
     "description": ""
   },
   {
     "name": "MarketView",
-    "imageSrc": "marketview",
+    "logo": "marketview",
     "description": ""
   },
   {
     "name": "NIWNAS",
-    "imageSrc": "niwnas",
+    "logo": "niwnas",
     "description": ""
   },
   {
     "name": "OLAP",
-    "imageSrc": "olap",
+    "logo": "olap",
     "description": ""
   },
   {
     "name": "OSIsoft AF",
-    "imageSrc": "osisoft",
+    "logo": "osisoft",
     "description": ""
   },
   {
     "name": "OSIsoft PI",
-    "imageSrc": "osisoft",
+    "logo": "osisoft",
     "description": ""
   },
   {
     "name": "Performance Monitor",
-    "imageSrc": "performance-monitor",
+    "logo": "performance-monitor",
     "description": ""
   },
   {
     "name": "PJM Data Miner 2",
-    "imageSrc": "pjm",
+    "logo": "pjm",
     "description": ""
   },
   {
     "name": "Python",
-    "imageSrc": "python",
+    "logo": "python",
     "description": ""
   },
   {
     "name": "ODBC",
-    "imageSrc": "odbc",
+    "logo": "odbc",
     "description": ""
   },
   {
     "name": "OLEDB",
-    "imageSrc": "oledb",
+    "logo": "oledb",
     "description": ""
   },
   {
     "name": "SmartSignal",
-    "imageSrc": "smartsignal",
+    "logo": "smartsignal",
     "description": ""
   },
   {
     "name": "Splunk",
-    "imageSrc": "splunk",
+    "logo": "splunk",
     "description": ""
   },
   {
     "name": "TempolQ",
-    "imageSrc": "tempolq",
+    "logo": "tempolq",
     "description": ""
   },
   {
     "name": "Transpara tStore",
-    "imageSrc": "tstore",
+    "logo": "tstore",
     "description": ""
   },
   {
     "name": "Tomorrow.io",
-    "imageSrc": "tomorrow.io",
+    "logo": "tomorrow",
     "description": ""
   },
   {
     "name": "vROps",
-    "imageSrc": "vrops",
+    "logo": "vrops",
     "description": ""
   },
   {
     "name": "Windy",
-    "imageSrc": "windy",
+    "logo": "windy",
     "description": ""
   },
   {
     "name": "Wonderware Historian",
-    "imageSrc": "wonderware",
+    "logo": "wonderware",
     "description": ""
   },
   {
     "name": "Wonderware Historian ODBC",
-    "imageSrc": "wonderware",
+    "logo": "wonderware",
     "description": ""
   },
   {
     "name": "Xompass",
-    "imageSrc": "xompass",
+    "logo": "xompass",
     "description": ""
   },
   {
     "name": "Zabbix",
-    "imageSrc": "zabbix",
+    "logo": "zabbix",
     "description": ""
   }
 ]
