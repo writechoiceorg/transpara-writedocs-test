@@ -16,7 +16,7 @@ const IconTable = () => {
             <td>
               <div style={{ display: 'flex', alignItems: 'center' }}>
                 <img
-                  src={`../../../img/setup-adm/interfaces/icons/${item.imageSrc}.png`}
+                  src={`../../../img/setup-adm/interfaces/icons/${item.logo}.png`}
                   alt={item.name}
                   style={{ width: '20px', height: '20px', marginRight: '10px', cursor: 'default' }}
                 />
