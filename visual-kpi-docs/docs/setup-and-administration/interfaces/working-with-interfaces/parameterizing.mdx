@@ -24,7 +24,7 @@ ODBC interfaces may have parameters for any data that you want to query. For exa
       SomeTimeColumn AS Date
       FROM YOURTABLE
       WHERE Identifier = 'ENP001005' AND Beam = 'Beam2'
-      AND Date BETWEEN '2023–02–19T00:00:00Z' and '2024–02–19T00:00:00Z'
+      AND Date BETWEEN '2023—02—19T00:00:00Z' and '2024—02—19T00:00:00Z'
       ORDER BY Date;
     ```
   </TabItem>
@@ -58,7 +58,7 @@ JSON interfaces can have parameters almost anywhere in the interface configurati
   </TabItem>
   <TabItem value="Parameterized" label="Parameterized">
     - Base Address: `http://demo.example.com/apitest/api/training?machine={0}`
-    - Request URI: `&start=2024–02–17T12:30:00&end=2024–02–19T12:30:00` or `&date=2024–02–17T12:30:00`
+    - Request URI: `&start=2024—02—17T12:30:00&end=2024—02—19T12:30:00` or `&date=2024—02—17T12:30:00`
     - Result base path: `{1}`
     - Value field: `{2}`
     - Timestamp field: `{3}`
