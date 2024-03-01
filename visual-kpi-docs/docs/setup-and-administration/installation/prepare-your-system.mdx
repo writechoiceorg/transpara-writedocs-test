@@ -6,6 +6,7 @@ description: 'Describes the actions the administrator needs to take to prepare t
 tags: []
 ---
 
+import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
 import IframeComponent from '@site/src/components/Video/IframeComponent';
 
 This guide describes all needed steps to be ready to install Visual KPI Server Manager. You need to start by configuring the operating system and installing necessary software.
@@ -86,6 +87,15 @@ You need to allow ISAPI and CGI extensions to run on the web server. This step c
 3. Open the **ISAPI and CGI Restrictions** option.
 4. Allow all the ASP.NET to run by right-clicking each and selecting the **Allow** option.
 
+
+Below you find this steps exemplified:
+
+<StylizedImage
+  imgURL="img/setup-adm/installation/prepare-your-system/iis-gif.gif"
+  alt="iss setup"
+/>
+
+
 ## Step 3: Windows Server Manager
 
 The first step consists of installing the correct roles in your OS's Server Manager. To  do this, follow these steps:
@@ -104,6 +114,13 @@ The first step consists of installing the correct roles in your OS's Server Mana
     - ISS Management Console
 7. With these selected, you can **Install** and finish this wizard.
 
+Below you find this steps exemplified:
+
+<StylizedImage
+  imgURL="img/setup-adm/installation/prepare-your-system/server-manager-gif.gif"
+  alt="server-manager setup"
+/>
+
 ## Step 4: SQL Server Management Studio
 
 Visual KPI needs a SQL service to operate properly. Your login needs to have sufficient rights to the SQL Server. This rights needs to be security admin or higher. To check this configuration, and give it the proper rights if needed, you can do these steps:
@@ -118,6 +135,13 @@ Visual KPI needs a SQL service to operate properly. Your login needs to have suf
     - serveradmin
     - setupadmin
     - sysadmin
+
+Below you find this steps exemplified:
+
+<StylizedImage
+  imgURL="img/setup-adm/installation/prepare-your-system/sql-manager-gif.gif"
+  alt="sql-manager setup"
+/>
 
 ## Visual KPI Server Manager
 

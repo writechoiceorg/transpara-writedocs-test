@@ -8,6 +8,8 @@ tags: []
 
 import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
 import IframeComponent from '@site/src/components/Video/IframeComponent';
+import Video from '@site/src/components/Video/Video';
+import video from '../../../static/video/setup-adm/installation/instance-install.mp4'
 
 This guide outlines the steps to install and use Visual KPI Server Manager. After correctly installing our system, you will be ready to create your [**Interfaces**](/docs/setup-and-administration/interfaces) and take full advantage of Visual KPI.
 
@@ -29,7 +31,6 @@ As Visual KPI Server Manager opens, it will look like the picture below:
 <StylizedImage
   imgURL="img/setup-adm/installation/server-manager-home.png"
   alt="Visual-KPI-Server-Manager"
-  wSize="80%"
 />
 
 ## Installing a Visual KPI Instance
@@ -57,11 +58,12 @@ This is the Database Visual KPI uses for all it's configuration information, not
 
 Below you find a step-by-step of the process above:
 
-<StylizedImage
+{/* <StylizedImage
   imgURL="img/setup-adm/installation/instance-install-gif.gif"
-  alt="Visual-KPI-Server-Manager"
-  wSize="80%"
-/>
+  alt="Visual-KPI-instance-install"
+/> */}
+
+<Video src={video} />
 
 ### Validate if everything is OK
 
@@ -75,7 +77,6 @@ Your browser will open with a Visual KPI Website similar to this:
 <StylizedImage
   imgURL="img/setup-adm/installation/website.png"
   alt="website-example"
-  wSize="80%"
 />
 
 ## Video guide
