@@ -6,19 +6,49 @@ description: ''
 tags: []
 ---
 
+import LinkCards from '@site/src/components/Cards/LinkCards';
+
 In Visual KPI, there are interfaces that require further configuration after installed. These are customizable interfaces that allow you to connect to data sources such as a restful API, any SQL database, and others. Also you can learn, in this section, how to parameterize your queries for these interfaces to make them even more flexible.
 
 ## Interfaces
 
 Learn how to configure each of the following interfaces:
 
-- [ODBC Interface](/docs/setup-and-administration/interfaces/odbc)
-- [JSON Interface](/docs/setup-and-administration/interfaces/json)
-- [Python Interface](/docs/setup-and-administration/interfaces/python)
-- [tStore Interface](/docs/setup-and-administration/interfaces/t-store)
+<LinkCards data={
+  [
+    {
+      logo: 'odbc',
+      name: 'ODBC Interface',
+      linkTo: '/docs/setup-and-administration/interfaces/odbc'
+    },
+    {
+      logo: 'json',
+      name: 'JSON Interface',
+      linkTo: '/docs/setup-and-administration/interfaces/json'
+    },
+    {
+      logo: 'python',
+      name: 'Python Interface',
+      linkTo: '/docs/setup-and-administration/interfaces/python'
+    },
+    {
+      logo: 'tstore',
+      name: 'tStore Interface',
+      linkTo: '/docs/setup-and-administration/interfaces/t-store'
+    }
+  ]
+}/>
 
 ## Parameterizing
 
 To learn how to parameterize your queries while configuring your interfaces, refer to the following page:
 
-- [Parameterizing](/docs/setup-and-administration/interfaces/parameterizing)
+<LinkCards data={
+  [
+    {
+      name: 'Parameterizing',
+      linkTo: '/docs/setup-and-administration/interfaces/parameterizing'
+    }
+  ]
+}/>
+

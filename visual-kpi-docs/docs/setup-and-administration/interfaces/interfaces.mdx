@@ -6,14 +6,33 @@ description: 'Describes how the user will create or using existing interfaces to
 tags: []
 ---
 
+import LinkCards from '@site/src/components/Cards/LinkCards';
+
 Visual KPI interfaces enable the Visual KPI Server to connect with and retrieve data from various external data sources. These sources may include industrial historians, relational databases, data warehouses or data lakes, manual data entry, spreadsheets, vertical industry applications, REST API, and other web services.
 
 Visual KPI supports thousands of data sources, and to access them, you can either install and configure one of our included interfaces or create a new interface using the Visual KPI Server Manager. To learn everything about Visual KPI Interfaces check the following links:
 
-- **[Core Concepts](/docs/setup-and-administration/interfaces/core-concepts)**
-- **[Configuring Interfaces](/docs/setup-and-administration/interfaces/configuration)**
-- **[Available Interfaces](/docs/setup-and-administration/interfaces/available-interfaces)**
-- **[Supported Data Sources](/docs/setup-and-administration/interfaces/data-sources)**
-- **[Working with Interfaces](/docs/setup-and-administration/interfaces/odbc)**
-
-
+<LinkCards data={
+  [
+    {
+      name: 'Core Concepts',
+      linkTo: '/docs/setup-and-administration/interfaces/core-concepts'
+    },
+    {
+      name: 'Configuration',
+      linkTo: '/docs/setup-and-administration/interfaces/configuration'
+    },
+    {
+      name: 'Available Interfaces',
+      linkTo: '/docs/setup-and-administration/interfaces/available-interfaces'
+    },
+    {
+      name: 'Supported Data Sources',
+      linkTo: '/docs/setup-and-administration/interfaces/data-sources'
+    },
+    {
+      name: 'Working with Interfaces',
+      linkTo: '/docs/setup-and-administration/interfaces/working-with-interfaces'
+    }
+  ]
+}/>
