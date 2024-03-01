@@ -42,3 +42,8 @@ PIServer
 SQLServer
 serveradmin
 setupadmin
+interfacePrerequisites
+designerPrerequisites
+serverPrerequisites
+Interop
+linkTo

@@ -46,3 +46,4 @@ interfacePrerequisites
 designerPrerequisites
 serverPrerequisites
 Interop
+linkTo
