@@ -1,15 +1,6 @@
 import React from 'react';
 import data from '@site/static/data/setup-and-administration/interfaces/interfaces.json';
-
-const CardList = ({ data }) => {
-  return (
-    <div className="icon_cards_container">
-      {data.map((item, index) => (
-        <Card key={index} logo={item.logo} name={item.name} />
-      ))}
-    </div>
-  );
-};
+import CardList from './CardList';
 
 const Card = ({ logo, name }) => {
   return (
@@ -21,7 +12,7 @@ const Card = ({ logo, name }) => {
 };
 
 const IconCards = () => {
-  return <CardList data={data} />;
+  return <CardList data={data} Card={Card} className={"icon_cards_container"} />;
 };
 
 export default IconCards;
