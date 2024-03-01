@@ -80,11 +80,6 @@ const sidebars = {
       // label: 'How to Use the Documentation',
       // className: '',
     },
-    { 
-      type: 'doc',
-      label: 'Prerequisites and Downloads',
-      id: 'setup-and-administration/prerequisites-downloads', 
-    },
     {
       type: 'category',
       label: "Installation",
