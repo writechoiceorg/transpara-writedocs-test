@@ -145,22 +145,22 @@ const sidebars = {
       // className: '',
       link: {
         type: 'doc',
-        id: 'visual-kpi-design/installation-and-setup/installation-and-setup',
+        id: 'visual-kpi-design/installation-and-setup/overview',
       },
       items: [
-        
-        'visual-kpi-design/installation-and-setup/designer-installation',
-        'visual-kpi-design/installation-and-setup/visual-kpi-designer-ui',
-        
+        'visual-kpi-design/installation-and-setup/connecting',
+        'visual-kpi-design/installation-and-setup/ui-tour',
+        'visual-kpi-design/installation-and-setup/basic-setup',
       ],
     },
+    
     {
       type: 'category',
       label: "Authoring",
       // className: '',
       link: {
         type: 'doc',
-        id: 'visual-kpi-design/authoring/authoring',
+        id: 'visual-kpi-design/authoring/overview',
       },
       items: [
         'visual-kpi-design/authoring/site-settings',
@@ -176,7 +176,7 @@ const sidebars = {
       // className: '',
       link: {
         type: 'doc',
-        id: 'visual-kpi-design/design/design',
+        id: 'visual-kpi-design/design/overview',
       },
       items: [
 
