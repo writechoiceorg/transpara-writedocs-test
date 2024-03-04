@@ -5,7 +5,7 @@ const JsonToTable = ({ jsonData }) => {
   const [filter, setFilter] = useState('');
   const [sortColumn, setSortColumn] = useState(null);
   const [sortOrder, setSortOrder] = useState('asc');
-  const [rowsToShow, setRowsToShow] = useState(jsonData.length);
+  const [rowsToShow, setRowsToShow] = useState(5);
   const [currentPage, setCurrentPage] = useState(1);
 
   // Filtering logic
@@ -98,8 +98,7 @@ const JsonToTable = ({ jsonData }) => {
             id="rowsToShow"
             value={rowsToShow}
             onChange={ (e) => setRowsToShow(Number(e.target.value)) }>
-              <option value={sortedData.length}>All</option>
-            {[5, 10, 20, 25, 50, 100].map((value) => (
+            {[5, 10, 20, 25, 50, 100, sortedData.length].map((value) => (
               <option key={value} value={value}>
                 {value}
               </option>
