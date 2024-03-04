@@ -115,7 +115,19 @@ const sidebars = {
       },
       items: [
         'setup-and-administration/automation/rcs',
-        'setup-and-administration/automation/how-to-use-the-rcs',
+        
+        {
+          type: 'category',
+          label: "How to use the RCS",
+          // className: '',
+          link: {
+            type: 'doc',
+            id: 'setup-and-administration/automation/how-to-use/how-to-use-the-rcs',
+          },
+          items: [
+            'setup-and-administration/automation/how-to-use/rcs-with-af-databases',
+          ],
+        },
         'setup-and-administration/automation/rsc-and-visual-kpi-design',
         'setup-and-administration/automation/use-cases'
       ],
