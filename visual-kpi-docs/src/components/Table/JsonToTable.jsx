@@ -7,7 +7,7 @@ const JsonToTable = ({ jsonData }) => {
   const [sortOrder, setSortOrder] = useState('asc');
   const [rowsToShow, setRowsToShow] = useState(5);
   const [currentPage, setCurrentPage] = useState(1);
-
+  
   // Filtering logic
   const filteredData = useMemo(() => {
     const filteredRows = jsonData.filter((row) =>
@@ -44,7 +44,22 @@ const JsonToTable = ({ jsonData }) => {
     return filteredData;
   }, [filteredData, sortColumn, sortOrder]);
 
-  // Pagination logic
+  const generateArray = (length) => {
+    let result = [5, 10, 25, 50, 100];
+  
+    result = result.reduce((acc, curr) => {
+      if (curr < length) {
+        acc.push(curr);
+      }
+      return acc;
+    }, []);
+  
+    result.push(length);
+  
+    return result;
+  }
+
+  // Pagination logic  
   const totalPages = Math.ceil(sortedData.length / rowsToShow);
   const startIndex = (currentPage - 1) * rowsToShow;
   const endIndex = startIndex + rowsToShow;
@@ -98,7 +113,7 @@ const JsonToTable = ({ jsonData }) => {
             id="rowsToShow"
             value={rowsToShow}
             onChange={ (e) => setRowsToShow(Number(e.target.value)) }>
-            {[5, 10, 20, 25, 50, 100, sortedData.length].map((value) => (
+            {generateArray(sortedData.length).map((value) => (
               <option key={value} value={value}>
                 {value}
               </option>
