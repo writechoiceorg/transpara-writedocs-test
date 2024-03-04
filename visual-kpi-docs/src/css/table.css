@@ -47,7 +47,7 @@
   border-radius: 8px;
 }
 
-.icon {
+.search_container .icon {
   position: absolute;
   top: 35%;
   transform: translateY(-50%);
@@ -55,7 +55,7 @@
   border: none;
 }
 
-.icon svg {
+.search_container .icon svg {
   width: 14px;
   height: auto;
   margin-left: 3px;
