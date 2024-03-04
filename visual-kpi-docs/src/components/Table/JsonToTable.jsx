@@ -5,7 +5,7 @@ const JsonToTable = ({ jsonData }) => {
   const [filter, setFilter] = useState('');
   const [sortColumn, setSortColumn] = useState(null);
   const [sortOrder, setSortOrder] = useState('asc');
-  const [rowsToShow, setRowsToShow] = useState(5);
+  const [rowsToShow, setRowsToShow] = useState(jsonData.length <= 10 ? jsonData.length : 5);
   const [currentPage, setCurrentPage] = useState(1);
   
   // Filtering logic
