@@ -75,7 +75,7 @@ const JsonToTable = ({ jsonData }) => {
 
   // Table header for sorting
   const headers = Object.keys(jsonData[0]).map((key) => (
-    <th key={key} onClick={() => handleSort(key)}>
+    <th key={key} onClick={() => handleSort(key)} style={{ width: `${100 / Object.keys(jsonData[0]).length}%` }}>
       {key}
       {sortColumn === key && (
         <span>{sortOrder === 'asc' ? ' 🠽' : ' 🠿'}</span>
