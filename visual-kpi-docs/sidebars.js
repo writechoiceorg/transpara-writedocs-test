@@ -129,7 +129,24 @@ const sidebars = {
           ],
         },
         'setup-and-administration/automation/rsc-and-visual-kpi-design',
-        'setup-and-administration/automation/use-cases'
+        'setup-and-administration/automation/use-cases',
+        {
+          type: 'category',
+          label: "Reference",
+          items: [
+            {
+              type: 'category',
+              label: "Keywords",
+              items: [
+                'setup-and-administration/automation/reference/keywords/kpi-keywords',
+                'setup-and-administration/automation/reference/keywords/trend-keywords',
+                'setup-and-administration/automation/reference/keywords/table-keywords',
+                'setup-and-administration/automation/reference/keywords/group-keywords',
+                'setup-and-administration/automation/reference/keywords/value-keywords',
+              ],
+            },
+          ],
+        },
       ],
     },
     {

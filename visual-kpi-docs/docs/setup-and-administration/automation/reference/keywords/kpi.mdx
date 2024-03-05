@@ -1,0 +1,19 @@
+---
+id: kpi-keywords
+title: KPI Keywords
+slug: /setup-and-administration/kpi-keywords
+description: ''
+tags: []
+---
+
+import table from '@site/static/data/tables/setup-adm/automation/keywords/kpi.json';
+import JsonToTable from '@site/src/components/Table/JsonToTable';
+
+The Visual KPI Remote Context Service will automatically create a KPI if it finds one of more of the following keywords, or sub-attributes:
+
+:::note Notes
+- If the parent attribute has a Unit of Measure (UOM), that UOM will be used as the KPI's UOM and by default the Display Format of Number + UOM will be set.
+- If the parent attribute has a description, that description will be used as the KPI's description.
+:::
+
+<JsonToTable jsonData={table} />
