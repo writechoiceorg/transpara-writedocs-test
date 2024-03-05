@@ -15,17 +15,6 @@ The Visual KPI Remote Context Server can create Visual KPI groups and values by 
 
 Visual KPI RCS can be used to automate Visual KPI configuration using any AF database. This page is a guide on what you need to know and do to use RCS with your AF database.
 
-## Mapping
-
-Each detail in your AF database will be mapped, becoming Visual KPI mapped keys. 
-
-- AF elements will become Visual KPI groups.
-- AF attributes will be read by the RCS and mapped as a Visual KPI attribute.
-
-:::info
-By default, your AF attributes will be mapped to a Visual KPI value. However, if the AF attribute name maps to a keyword within the general properties section of the group section, those attributes will become properties of the Visual KPI group. If the AF attribute has child attributes and those attribute names map to keywords for a KPI, trend or table, they will become Visual KPI objects (KPIs, trends, charts, tables, and links). All other attributes will become Visual KPI values.
-:::
-
 ## AF RCS Best Practices
 
 When using the Visual KPI RCS for OSIsoft AF, you should have attributes for each Visual KPI object (excluding Groups) with a specific label for each Object Type.
@@ -40,6 +29,25 @@ Use the following table to name Object Types and Values:
 
 
 <JsonToTable jsonData={table} />
+
+## Attributes mapping
+
+Each information in your AF database will be mapped, becoming Visual KPI keys. 
+
+- AF elements will become Visual KPI groups.
+- AF attributes will be read by the RCS and mapped as a Visual KPI attribute.
+
+:::info
+By default, your AF attributes will be mapped to a Visual KPI value. However, if the AF attribute name maps to a keyword within the general properties section of the group section, those attributes will become properties of the Visual KPI group. If the AF attribute has child attributes and those attribute names map to keywords for a KPI, trend or table, they will become Visual KPI objects (KPIs, trends, charts, tables, and links). All other attributes will become Visual KPI values.
+:::
+
+Below you find all lists of keywords and Visual KPI mapping information for each attribute:
+
+- [KPI keywords](/docs/setup-and-administration/kpi-keywords)
+- [Trend keywords](/docs/setup-and-administration/trend-keywords)
+- [Table keywords](/docs/setup-and-administration/table-keywords)
+- [Group keywords](/docs/setup-and-administration/group-keywords)
+- [Value keywords](/docs/setup-and-administration/value-keywords)
 
 ## Use example
 
