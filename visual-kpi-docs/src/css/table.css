@@ -105,6 +105,7 @@ table {
   width: 100% !important;
   margin-bottom: var(--ifm-spacing-vertical);
   border-radius: 7px 7px 0 0;
+  table-layout: fixed;
 }
 
 table thead, table tbody {

@@ -56,18 +56,19 @@
   font-family: 'Open Sans' !important;
 }
 
-main {
+.row .col:first-child {
   background-color: white !important;
+  padding-right: auto;
 }
 
 .hero {
   background-color: transparent !important;
 }
 
-.main-wrapper {
+#__docusaurus {
   background-image: url('../../static/img/circles-background-opaque.png');
   background-size: cover;
-  background-position: center;
+  background-position: left;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
