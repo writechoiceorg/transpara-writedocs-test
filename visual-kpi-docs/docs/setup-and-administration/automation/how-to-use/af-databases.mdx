@@ -43,7 +43,7 @@ Use the following table to name Object Types and Values:
 
 ## Use example
 
-Here you find an example of an AF databse model to exemplify how the data will be automatically imported by the RCS.
+Here you find an example of an AF database model to exemplify how the data will be automatically imported by the RCS.
 
 By default, the Remote Context Server will create two Visual KPI groups out of the two AF elements  (Plant 1 and Unit 1) found in the image representation below:
 
@@ -67,28 +67,28 @@ If you add specific child attributes to these AF attributes, they will then beco
   alt=""
 />
 
-Adding attributes to Unit 1 with names that match keywords for group properties will decorate the Visual KPI group with more information. In the following figure, we have added some sparkline duration properties.
+Adding attributes to Unit 1 with names that match keywords for group properties will decorate the Visual KPI group with more information. In the following figure, we've added some sparkline duration properties.
 
 ### Using Child Elements as AF Attributes
 
 The Visual KPI Remote Context Server can read Child Elements as AF attributes. You can place all of your Visual KPI keywords under Child Elements.
 
-As you build out your AF Model to include Visual KPI keywords you may find that your AF model becomes quite busy, or even cluttered, with attributes that only Visual KPI cares about. For instance, it is unlikely that users viewing your AF model will care about attributes such as "Sparkline Start Time".
+As you build out your AF Model to include Visual KPI keywords you may find that your AF model becomes quite busy, or even cluttered, with attributes that only Visual KPI cares about. For instance, it's unlikely that users viewing your AF model will care about attributes such as "Sparkline Start Time".
 
-To keep your model as clean as possible, you can place all of these keyword attributes under the Child Elements attribute using the name "Visual KPI Properties". This can be seen exemplified in the image below:
+To keep your model as clean as possible, you can place all of these keyword attributes under the Child Elements attribute using the name "Visual KPI Properties." This can be seen exemplified in the image below:
 
 <StylizedImage
   imgURL="img/setup-adm/automation/how-to-use/af_visual_kpi_properties.png"
   alt=""
 />
 
-The Child Elements attribute is not required by default. It is simply a way to tidy up your model. You can specify some or all of your attributes as Child Elements of the Visual KPI Properties attribute. The RCS will first check for this Child Elements property and then read the attributes nested below it, then it will check for attributes outside Child Elements.
+The Child Elements attribute isn't required by default. It's simply a way to tidy up your model. You can specify some or all of your attributes as Child Elements of the Visual KPI Properties attribute. The RCS will first check for this Child Elements property and then read the attributes nested below it, then it will check for attributes outside Child Elements.
 
 #### Ignoring attributes
 
 The Child Elements attribute can also be used to mark an element or attribute that you want to be ignored by Visual KPI Remote Context Server. To do this, you need to set the Visual KPI Properties Child Element to **False**, **0** or **Omit**.
 
-In the following example image, we have added a Level attribute to Unit 1 and set the Visual KPI Properties attribute to **False**, which indicates RCS should ignore this attribute and not create it as a Visual KPI value.
+In the following example image, we've added a Level attribute to Unit 1 and set the Visual KPI Properties attribute to **False**, which indicates RCS should ignore this attribute and not create it as a Visual KPI value.
 
 <StylizedImage
   imgURL="img/setup-adm/automation/how-to-use/af_ignore.jpg"
@@ -103,7 +103,7 @@ If the Visual KPI Properties attribute is set to be ignored on an AF element, th
 
 Visual KPI Remote Context Server has a setting called **Require Visual KPI Properties Attributes**, which is set to False by default. If set to True, this attribute be will be required in order to process the AF elements and attributes.
 
-If this value is set to True and the Visual KPI Properties attribute is not found on either an AF Element or an AF Attribute, then that AF Element or AF Attribute will be ignored. This functionality toggles the logic requiring the Visual KPI Properties attribute to act as an "Opt In" rather than the default "Opt Out".
+If this value is set to True and the Visual KPI Properties attribute isn't found on either an AF Element or an AF Attribute, then that AF Element or AF Attribute will be ignored. This functionality toggles the logic requiring the Visual KPI Properties attribute to act as an "Opt In" rather than the default "Opt Out."
 
 
 <StylizedImage
