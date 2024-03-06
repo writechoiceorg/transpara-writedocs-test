@@ -1,0 +1,24 @@
+---
+id: rcs-configuration
+title: RCS Configuration
+slug: /setup-and-administration/automation/rcs-configuration
+description: 'Describe how to use the RCS.'
+tags: []
+---
+
+import LinkCards from '@site/src/components/Cards/LinkCards';
+
+Visual KPI RCS can integrate with both OSIsoft PI AF, or any SQL data source. For  each integration type there are specific configurations that need to be done. While OSIsoft configurations mostly happens on their side of the integration, SQL will require you to configure a few queries, as Visual KPI will need to know what attributes to look for.
+
+<LinkCards data={
+  [
+    {
+      name: 'AF Databases',
+      linkTo: '/docs/setup-and-administration/automation/rcs-with-af-databases'
+    },
+    {
+      name: 'SQL Databases',
+      linkTo: '/docs/setup-and-administration/automation/rcs-with-sql-databases'
+    },
+  ]
+}/>
