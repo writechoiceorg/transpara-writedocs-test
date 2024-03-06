@@ -126,6 +126,7 @@ const sidebars = {
           },
           items: [
             'setup-and-administration/automation/how-to-use/rcs-with-af-databases',
+            'setup-and-administration/automation/how-to-use/rcs-with-sql-databases',
           ],
         },
         'setup-and-administration/automation/rsc-and-visual-kpi-design',
@@ -136,13 +137,23 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: "Keywords",
+              label: "AF Database Keywords",
               items: [
-                'setup-and-administration/automation/reference/keywords/kpi-keywords',
-                'setup-and-administration/automation/reference/keywords/trend-keywords',
-                'setup-and-administration/automation/reference/keywords/table-keywords',
-                'setup-and-administration/automation/reference/keywords/group-keywords',
-                'setup-and-administration/automation/reference/keywords/value-keywords',
+                'setup-and-administration/automation/reference/af-database-keywords/kpi-keywords',
+                'setup-and-administration/automation/reference/af-database-keywords/trend-keywords',
+                'setup-and-administration/automation/reference/af-database-keywords/table-keywords',
+                'setup-and-administration/automation/reference/af-database-keywords/group-keywords',
+                'setup-and-administration/automation/reference/af-database-keywords/value-keywords',
+              ],
+            },
+            {
+              type: 'category',
+              label: "SQL Database Keywords",
+              items: [
+                'setup-and-administration/automation/reference/sql-database-keywords/kpi-keywords',
+                'setup-and-administration/automation/reference/sql-database-keywords/table-keywords',
+                'setup-and-administration/automation/reference/sql-database-keywords/group-keywords',
+                'setup-and-administration/automation/reference/sql-database-keywords/charts-keywords',
               ],
             },
           ],
