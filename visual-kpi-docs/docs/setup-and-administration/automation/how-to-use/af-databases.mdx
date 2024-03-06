@@ -122,7 +122,7 @@ If this value is set to True and the Visual KPI Properties attribute isn't found
 
 ### Using Keywords and Grouping AF Attributes
 
-Visual KPI Remote Context Service has the ability to read groups of attributes. When you organize your AF model, you can group AF attributes using Visual KPI keywords. This will give your model more readability and flexibility. You can group attributes such as pen information on trends, info properties, and custom attributes.
+Visual KPI Remote Context Service has the ability to read groups of attributes. When you organize your AF model, you can group AF attributes using Visual KPI keywords. This approach will enhance the readability and flexibility of your model. You can group different attributes like pen information on trends, info properties, and custom attributes.
 
 As an example, let's examine the Info settings, which can be applied to any Visual KPI object. Within these settings, you will find the following properties:
 
@@ -144,11 +144,10 @@ The image below shows both options:
 />
 
 :::note
-If you nest these properties, the "Info" portion of the nested keywords is not needed. In this example, Info Display Format has become Display Format as a child attribute of Info.
+If you nest these properties, the "Info" portion of the nested keywords isn't needed. In this example, Info Display Format has become Display Format as a child attribute of Info.
 :::
 
-Grouping AF attributes can be particularly useful when modeling Visual KPI Trends. Each Trend Pen can have many properties. The example image below shows the difference between the flat and nested approaches.
-
+When modeling Visual KPI Trends, it can be useful to group AF attributes. Each Trend Pen has many properties. The image below shows the difference between flat and nested approaches.
 
 <StylizedImage
   imgURL="img/setup-adm/automation/how-to-use/af-database/af_Attribute_Flat_and_Nested_Approches.png"
@@ -157,9 +156,9 @@ Grouping AF attributes can be particularly useful when modeling Visual KPI Trend
 
 #### Custom Visual KPI attributes
 
-You can create up to 20 custom attributes in Visual KPI to help you group your objects.
+Visual KPI lets you create up to 20 custom attributes in Visual KPI to help you group your objects.
 
-You can create custom attributes such as Plant, Unit, Region, Country, Operation Type, Department, Product Line, and so on. You can then place these custom attributes under an 'Attributes' attribute in your model to help keep the model clean and easy to read. This is shown in the image below:
+Custom attributes such as Plant, Unit, Region, Country, Operation Type, Department, Product Line, etc. can be created to help keep your model clean and easy to read. These custom attributes can be placed under an 'Attributes' attribute. The image below demonstrates this:
 
 <StylizedImage
   imgURL="img/setup-adm/automation/how-to-use/af-database/af_Custom_Attributes.png"
@@ -167,5 +166,5 @@ You can create custom attributes such as Plant, Unit, Region, Country, Operation
 />
 
 :::tip
-to discover which attributes the Visual KPI Remote Context Service looks for to determine which Visual KPI object to create from an AF attribute, refer to the [Attribute mapping keyword tables](#attributes-mapping) pages.
+To discover which attributes the Visual KPI Remote Context Service looks for to determine which Visual KPI object to create from an AF attribute, refer to the [Attribute mapping keyword tables](#attributes-mapping) pages.
 :::
