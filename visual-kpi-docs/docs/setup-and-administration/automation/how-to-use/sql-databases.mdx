@@ -1,0 +1,41 @@
+---
+id: rcs-with-sql-databases
+title: RCS with SQL databases
+slug: /setup-and-administration/automation/rcs-with-sql-databases
+description: 'Describe RCS with SQL databases.'
+tags: []
+---
+
+import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
+
+import table from '@site/static/data/tables/setup-adm/automation/how-to-use/AFObjectTypesAndValues.json';
+import JsonToTable from '@site/src/components/Table/JsonToTable';
+
+The Visual KPI Remote Context Server can connect to any SQL data source. All required is ODBC access with appropriate read-level permissions.
+
+For effective mapping between foreign systems and Visual KPI, it's crucial to assign a unique and consistent identifier to each object in the system such as KPI, Group, Trend, etc. This identifier can be in the form of a string, GUID or an integer, and it should be specific to the object type. By doing so, Visual KPI can ensure that there is no confusion in the mapping process. 
+
+:::note
+If the ID changes in the foreign system, a new object will be created in Visual KPI and the old object will be deleted.
+:::
+
+Every definition query (KPI, Group, Chart) must include a column called **METAID** with a unique value.
+
+For your reference, please see the links to the reference tables below:
+
+- **[Groups Attributes & Keywords Reference Table](/docs/setup-and-administration/sql-databases/groups-keywords)**
+- **[KPIs Attributes & Keywords Reference Table](/docs/setup-and-administration/sql-databases/kpi-keywords)**
+- **[Charts Attributes & Keywords Reference Table](/docs/setup-and-administration/sql-databases/charts-keywords)**
+- **[Tables Attributes & Keywords Reference Table](/docs/setup-and-administration/sql-databases/tables-keywords)**
+
+## SQL RCS Best Practices
+
+For all interfaced fields, Visual KPI supports the recommended _interface_ name or _interface ID_ if used with the correct field name.
+
+### Example
+
+If you have an interface named _ODBC-Localhost_ with an ID of _4e432114-499c-44e1-994d-7690de272b74_, you can use _Latitude_ as the lookup value and set _LatitudeInterface_ to _ODBC-Localhost_.
+
+#### Or
+
+You can use _Latitude_ and _LatitudeInterfaceID_ where _Latitude_ is the lookup value and _LatitudeInterfaceID_ is _4e432114-499c-44e1-994d-7690de272b74_.
