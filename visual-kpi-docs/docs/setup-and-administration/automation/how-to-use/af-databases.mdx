@@ -15,7 +15,7 @@ The Visual KPI Remote Context Server can create Visual KPI groups and values by 
 
 Visual KPI RCS can be used to automate Visual KPI configuration using any AF database. This page is a guide on what you need to know and do to use RCS with your AF database.
 
-## AF RCS Best Practices
+## AF RCS best practices
 
 When using the Visual KPI RCS for OSIsoft AF, you should have attributes for each Visual KPI object (excluding Groups) with a specific label for each Object Type.
 
@@ -30,7 +30,7 @@ Use the following table to name Object Types and Values:
 
 <JsonToTable jsonData={table} />
 
-## Attributes mapping
+## Attribute mapping
 
 Each information in your AF database will be mapped, becoming Visual KPI keys. 
 
@@ -43,11 +43,11 @@ By default, your AF attributes will be mapped to a Visual KPI value. However, if
 
 Below you find all lists of keywords and Visual KPI mapping information for each attribute:
 
-- [KPI keywords](/docs/setup-and-administration/kpi-keywords)
-- [Trend keywords](/docs/setup-and-administration/trend-keywords)
-- [Table keywords](/docs/setup-and-administration/table-keywords)
-- [Group keywords](/docs/setup-and-administration/group-keywords)
-- [Value keywords](/docs/setup-and-administration/value-keywords)
+- **[KPI keywords](/docs/setup-and-administration/af-databases/kpi-keywords)**
+- **[Trend keywords](/docs/setup-and-administration/af-databases/trend-keywords)**
+- **[Table keywords](/docs/setup-and-administration/af-databases/table-keywords)**
+- **[Group keywords](/docs/setup-and-administration/af-databases/group-keywords)**
+- **[Value keywords](/docs/setup-and-administration/af-databases/value-keywords)**
 
 ## Use example
 
@@ -56,7 +56,7 @@ Here you find an example of an AF database model to exemplify how the data will 
 By default, the Remote Context Server will create two Visual KPI groups out of the two AF elements  (Plant 1 and Unit 1) found in the image representation below:
 
 <StylizedImage
-  imgURL="img/setup-adm/automation/how-to-use/af_model.png"
+  imgURL="img/setup-adm/automation/how-to-use/af-database/af_model.png"
   alt=""
 />
 
@@ -71,7 +71,7 @@ These will be mapped as Visual KPI attributes.
 If you add specific child attributes to these AF attributes, they will then become KPIs in Visual KPI. The next image illustrates this concept:
 
 <StylizedImage
-  imgURL="img/setup-adm/automation/how-to-use/af_attributes.png"
+  imgURL="img/setup-adm/automation/how-to-use/af-database/af_attributes.png"
   alt=""
 />
 
@@ -86,7 +86,7 @@ As you build out your AF Model to include Visual KPI keywords you may find that 
 To keep your model as clean as possible, you can place all of these keyword attributes under the Child Elements attribute using the name "Visual KPI Properties." This can be seen exemplified in the image below:
 
 <StylizedImage
-  imgURL="img/setup-adm/automation/how-to-use/af_visual_kpi_properties.png"
+  imgURL="img/setup-adm/automation/how-to-use/af-database/af_visual_kpi_properties.png"
   alt=""
 />
 
@@ -99,7 +99,7 @@ The Child Elements attribute can also be used to mark an element or attribute th
 In the following example image, we've added a Level attribute to Unit 1 and set the Visual KPI Properties attribute to **False**, which indicates RCS should ignore this attribute and not create it as a Visual KPI value.
 
 <StylizedImage
-  imgURL="img/setup-adm/automation/how-to-use/af_ignore.jpg"
+  imgURL="img/setup-adm/automation/how-to-use/af-database/af_ignore.jpg"
   alt=""
 />
 
@@ -115,6 +115,57 @@ If this value is set to True and the Visual KPI Properties attribute isn't found
 
 
 <StylizedImage
-  imgURL="img/setup-adm/automation/how-to-use/af_Opt_In_Property.png"
+  imgURL="img/setup-adm/automation/how-to-use/af-database/af_Opt_In_Property.png"
   alt=""
 />
+
+
+### Using Keywords and Grouping AF Attributes
+
+Visual KPI Remote Context Service has the ability to read groups of attributes. When you organize your AF model, you can group AF attributes using Visual KPI keywords. This will give your model more readability and flexibility. You can group attributes such as pen information on trends, info properties, and custom attributes.
+
+As an example, let's examine the Info settings, which can be applied to any Visual KPI object. Within these settings, you will find the following properties:
+
+- Info
+- Info Numeric Format
+- Info Display Format
+- Info URL
+
+You can model them in two different approaches:
+
+- **Flat list** (exemplified by Power A).
+- **Child attributes** (exemplified by Power B).
+
+The image below shows both options:
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/af-database/af_Info_Child_Attributes.png"
+  alt=""
+/>
+
+:::note
+If you nest these properties, the "Info" portion of the nested keywords is not needed. In this example, Info Display Format has become Display Format as a child attribute of Info.
+:::
+
+Grouping AF attributes can be particularly useful when modeling Visual KPI Trends. Each Trend Pen can have many properties. The example image below shows the difference between the flat and nested approaches.
+
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/af-database/af_Attribute_Flat_and_Nested_Approches.png"
+  alt=""
+/>
+
+#### Custom Visual KPI attributes
+
+You can create up to 20 custom attributes in Visual KPI to help you group your objects.
+
+You can create custom attributes such as Plant, Unit, Region, Country, Operation Type, Department, Product Line, and so on. You can then place these custom attributes under an 'Attributes' attribute in your model to help keep the model clean and easy to read. This is shown in the image below:
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/af-database/af_Custom_Attributes.png"
+  alt=""
+/>
+
+:::tip
+to discover which attributes the Visual KPI Remote Context Service looks for to determine which Visual KPI object to create from an AF attribute, refer to the [Attribute mapping keyword tables](#attributes-mapping) pages.
+:::
