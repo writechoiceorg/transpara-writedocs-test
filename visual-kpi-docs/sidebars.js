@@ -118,18 +118,18 @@ const sidebars = {
         
         {
           type: 'category',
-          label: "How to use the RCS",
+          label: "RCS Configuration",
           // className: '',
           link: {
             type: 'doc',
-            id: 'setup-and-administration/automation/how-to-use/how-to-use-the-rcs',
+            id: 'setup-and-administration/automation/configuration/rcs-configuration',
           },
           items: [
-            'setup-and-administration/automation/how-to-use/rcs-with-af-databases',
-            'setup-and-administration/automation/how-to-use/rcs-with-sql-databases',
+            'setup-and-administration/automation/configuration/rcs-with-af-databases',
+            'setup-and-administration/automation/configuration/rcs-with-sql-databases',
           ],
         },
-        'setup-and-administration/automation/rsc-and-visual-kpi-design',
+        'setup-and-administration/automation/rcs-and-visual-kpi-design',
         'setup-and-administration/automation/use-cases',
         {
           type: 'category',
