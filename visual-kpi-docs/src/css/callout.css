@@ -51,7 +51,7 @@
   height: 20px;
 }
 
-.admonitionHeading_src-theme-Admonition-styles-module {
+.theme-admonition [class^="admonitionHeading"] {
   font-feature-settings: 'clig' off, 'liga' off;
   font-family: Raleway;
   font-size: 17.5px;
@@ -61,7 +61,7 @@
   text-transform: capitalize;
 }
 
-.admonitionContent_src-theme-Admonition-styles-module p {
+.theme-admonition p {
   font-feature-settings: 'clig' off, 'liga' off;
   font-family: Raleway;
   font-size: 14px;
@@ -80,7 +80,7 @@
   border: 1px solid #F4982B !important;
 }
 
-.alert--support .admonitionHeading_src-theme-Admonition-styles-module {
+.alert--support [class^="admonitionHeading"] {
   color: #F4982B;
 }
 
@@ -102,7 +102,7 @@ html[data-theme='dark'] .alert--support {
   border: 1px solid #ACACAC !important;
 }
 
-.alert--training .admonitionHeading_src-theme-Admonition-styles-module {
+.alert--training [class^="admonitionHeading"] {
   color: var(--transpara-primary-color7);
 }
 
@@ -124,7 +124,7 @@ html[data-theme='dark'] .alert--training {
   border: 1px solid #669900 !important;
 }
 
-.alert--unique .admonitionHeading_src-theme-Admonition-styles-module {
+.alert--unique [class^="admonitionHeading"] {
   color: #669900;
 }
 
@@ -145,7 +145,7 @@ html[data-theme='dark'] .alert--unique {
   border: 1px solid #F4982B !important;
 }
 
-.alert--warning .admonitionHeading_src-theme-Admonition-styles-module {
+.alert--warning [class^="admonitionHeading"] {
   color: #F4982B;
 }
 
@@ -158,7 +158,7 @@ html[data-theme='dark'] .alert--unique {
   border: 1px solid #FC365E !important;
 }
 
-.alert--danger .admonitionHeading_src-theme-Admonition-styles-module {
+.alert--danger [class^="admonitionHeading"] {
   color: #FC365E;
 }
 
@@ -171,7 +171,7 @@ html[data-theme='dark'] .alert--unique {
   border: 1px solid #9DABFF !important;
 }
 
-.alert--info .admonitionHeading_src-theme-Admonition-styles-module {
+.alert--info [class^="admonitionHeading"] {
   color: #9DABFF;
 }
 
@@ -184,7 +184,7 @@ html[data-theme='dark'] .alert--unique {
   border: 1px solid #99CC00 !important;
 }
 
-.alert--success .admonitionHeading_src-theme-Admonition-styles-module {
+.alert--success [class^="admonitionHeading"] {
   color: #99CC00;
 }
 
@@ -197,6 +197,6 @@ html[data-theme='dark'] .alert--unique {
   border: 1px solid #ACACAC !important;
 }
 
-.alert--secondary .admonitionHeading_src-theme-Admonition-styles-module {
+.alert--secondary [class^="admonitionHeading"] {
   color: var(--transpara-primary-color7);
 }
