@@ -11,6 +11,8 @@ import '../css/sidebar.css';
 import '../css/navbar.css';
 import '../css/svg.css';
 import '../css/callout.css';
+import '../css/iconCards.css';
+import '../css/linkCards.css';
 import HomepageHeader from '../components/Homepage/Header';
 import Card from '../components/Homepage/Card';
 
