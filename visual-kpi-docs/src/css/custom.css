@@ -56,7 +56,7 @@
   font-family: 'Open Sans' !important;
 }
 
-.row .col:first-child {
+.row .col:first-child:not(.footer__col) {
   background-color: white !important;
   padding-right: auto;
 }
