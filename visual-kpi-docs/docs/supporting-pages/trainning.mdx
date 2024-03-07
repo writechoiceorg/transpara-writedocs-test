@@ -5,5 +5,7 @@ slug: /training
 description: 'On this page we should list all existing video training.'
 tags: []
 ---
+import table from '../../static/data/tables/charts-attributes-keywords-reference/XYPlots.json';
+import JsonToTable from '@site/src/components/Table/JsonToTable';
 
-On this page we should list all existing video training.
+<JsonToTable jsonData={table} />
