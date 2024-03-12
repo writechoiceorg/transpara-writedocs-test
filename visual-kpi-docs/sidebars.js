@@ -127,6 +127,7 @@ const sidebars = {
           items: [
             'setup-and-administration/automation/configuration/rcs-with-af-databases',
             'setup-and-administration/automation/configuration/rcs-with-sql-databases',
+            'setup-and-administration/automation/configuration/rcs-sql-tutorial',
           ],
         },
         'setup-and-administration/automation/rcs-and-visual-kpi-design',
