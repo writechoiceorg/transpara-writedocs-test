@@ -1,0 +1,329 @@
+---
+id: rcs-sql-tutorial
+title: SQL Tutorial
+slug: /setup-and-administration/automation/rcs-sql-tutorial
+description: 'RCS with SQL tutorial.'
+tags: []
+---
+
+import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
+import SvgFont from '@site/src/components/SvgFont/SvgFont';
+
+import table from '@site/static/data/tables/setup-adm/automation/how-to-use/AFObjectTypesAndValues.json';
+import JsonToTable from '@site/src/components/Table/JsonToTable';
+
+In this tutorial, you will build a Visual KPI site to visualize data from a fictitious mining company, and you will do it using a custom SQL remote context server. The Visual KPI RCS will automate the creation of groups, KPIs, trends, bar charts and dashboards.
+
+The next steps walk you through creating a working SQL remote context server and installing the sample data. Before all is done, you will get to add more data, more visualizations and dashboards. Then yoi will be able to take a look at your data live in a Visual KPI site.
+
+## Prerequisites
+
+What you will need before starting the tutorial:
+
+- An installed version of Visual KPI Server Manager on a machine with all the prerequisites (like IIS) and required permissions.
+- An installed version of Visual KPI Designer.
+- Access (admin) to a SQL Server on which we will create a couple of databases (one installed by the Server Manager for Visual KPI and one created manually and populated via a SQL script).
+- [SQLRCSTutorialScripts.zip](https://www.transpara.com/wp-content/uploads/SQLRCSTutorialScripts.zip),  which contains the two scripts required for this tutorial.
+
+:::info
+To install the most recent versions of Visual KPI software components, go to [Transpara's download](http://transpara.com/dl) page.
+:::
+
+## Step 1: Install a new Visual KPI Instance
+
+In this step we will install a new Visual KPI instance, then we will configure it and use it for our SQL remote context server demo.
+
+To install a new instance, refer to the [Install Visual KPI](/docs/setup-and-administration/installation/install-visual-kpi#installing-a-visual-kpi-instance) guide.
+
+:::caution Important
+During installation, please uncheck Manufacturing Demo under Install prebuilt demos and sample data. We do not want other demo data cluttering our Mining demo.
+:::
+
+### SQL security
+
+SQL Security needs to be set in order for the web server to communicate with the SQL Server.
+- If this is a single-box install (SQL and IIS on the same server), then you will have to grant permissions in order for Network Service (our default security context) to read and write to SQL.
+
+- If this is a two-box deployment (separate IIS and SQL), then you will have to grant these permissions to `<IISSERVER>$ where <IISServer>` is the name of the IIS Server.For example: ComputerA is our SQL Server and ComputerB is the name of our IIS server. We would need to grant privileges to ComputerB$, which is how Network Service is viewed across the network.
+
+:::tip Demo option
+This demo has a single-box deployment, therefore you need to grant `db_owner` rights on the MiningDemo database (created by the Visual KPI Installation) to NT Authority\Network Service via SQL Server Management Studio.
+:::
+
+## Step 2: Configure Visual KPI Designer
+
+Now, you need to configure Visual KPI Designer to work with SQL remote context server. Once Visual KPI Designer is installed, you can add a new connection via the **Instance Connection** dialog.
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/sql-database/sql-remote-context-server-1.png"
+  alt=""
+/>
+
+With all installed and connected you will need to create attributes, and disable the stale age default setting. These processes are described below.
+
+### Create attributes
+
+First, you need to create a list of attributes to use in our SQL remote context server demo. Attributes are used for many things, including relationships of objects to groups, but for our demo we will be using them to view data by attributes (by Mine Type or Truck Model, etc).
+
+For this tutorial, we will add custom attributes using Visual KPI designer, but then we can populate the data for these attributes using the RCS. to add attributes in Visual KPI Designer follow these steps:
+
+1. Click on the <SvgFont icon={188} /> **gear icon** in the right panel of Visual KPI Designer.
+2. Navigate to **Advanced > Attributes**.
+3. Add the following attributes:
+    - Asset Type
+    - Make
+    - Model
+    - Capacity
+    - Mine
+    - Ore Type
+    - Mine Type
+
+4. Ensure the **"x"** is entered in the first column to select each attribute. This **x** signifies selection, as Visual KPI Designer actions such as Save and Delete are based on selected lines.
+5. Click the <SvgFont icon={8} /> Save icon to save these attributes back to the Visual KPI database.
+
+The image below exemplifies how this should look like in the Designer:
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/sql-database/sql-remote-context-server-2.png"
+  alt=""
+/>
+
+### Disable the stale age default setting
+
+Finally, you need to change the default setting for **KPI Stale Age**. This is set as 60 minutes by default, which means when any data retrieved via an Interface (think Truck or Mine metrics) is more than 1 hour old (timestamp), the KPI status will be overridden to display Stale.
+
+In this demo, data be either per hour or per day. Based on this, it needs to ignore the concept of **Stale**.
+
+:::tip
+This setting can also be set as an override per individual KPI, but for our exercise it is simpler to change the global setting.
+:::
+
+To Disable the default setting, do the following:
+
+1. Click on the <SvgFont icon={188} /> **gear icon** in the right panel of Visual KPI Designer.
+2. Navigate to **Features & Config > Website**.
+3. Set the Value of **KPI Stale Age** to 0 (zero).
+4. Click the <SvgFont icon={8} /> Save icon to save your changes.
+
+This will turn off the feature. 
+
+:::note
+Items under the gear icon are not modifiable via the RCS at the time of this document's creation. We do plan to address this in a future build.
+:::
+
+
+## Step 3: Create a database for mining sample data
+
+In this step we recommend using SQL Server Management studio to create a database for our mining data that contains both metadata (what mines do we own, what trucks do we own, what mines are the trucks in, etc.) and metric or process data (how much are we mining per hour, truck utilization, etc).
+
+### Create the Database
+
+First, we need to create a database to hold this data. Follow the steps below:
+
+1. Open **Microsoft SQL Server Management Studio**.
+2. Right-click on the Databases folder and select New Database.
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/sql-database/sql-remote-context-server-3.png"
+  alt=""
+/>
+
+3. Give the database a name. For example: `MiningData`.
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/sql-database/sql-remote-context-server-4.png"
+  alt=""
+/>
+
+4. Just like in our Visual KPI database (MiningDemo), we need to allow Visual KPI access to the database. As described in Step 1, give Network Service or Boxname$ access to the database.
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/sql-database/sql-remote-context-server-5.png"
+  alt=""
+/>
+
+### Execute the script to add data
+
+Once the database is created, you need to add data to it. Here you will use the **demoscript1.sql** script [downloaded earlier](https://www.transpara.com/wp-content/uploads/SQLRCSTutorialScripts.zip).
+
+1. Before running the script, make sure you are connected to the correct database, named **MiningData**.
+2. Open the **demoscript1.sql** script and execute the SQL. This script will create a year of fake data, so it will take about 20 seconds to complete.
+
+When the scripts is done, you will find three tables, Metrics, Mines and Trucks, along with a handful of stored procedures.
+
+## Step 4: Install an ODBC Interface
+
+Now, you will create a working interface to the Metric table. This will be done before creating the RCS as the RCS will refer to the interface when creating KPIs. KPIs will need to get their data from somewhere, and you will need to reference the interface name in order to properly define a live KPI (moving data behind them).
+
+To learn how to install a new ODBC Interface, refer to the [Interfaces guide](/docs/setup-and-administration/interfaces/configuration) of this documentation.
+
+:::tip Tutorial purpose only!
+To follow this tutorial properly, remember to:
+
+- Give your ODBC interface the name **ODBC-Metrics**. 
+- Update the Connect String to point to the MiningData database.
+:::
+
+:::support 
+If you fail to verify and the Connect String is not correct, then there is problems with security on the database. Step 2 talks about this, but if you are still stuck then please [contact our Support](https://www.transpara.com/contact-us/) and we will help you out.
+:::
+
+### Verify and test the ODBC connection
+
+Once you have installed and configured the ODBC interface, you should verify the interface is able to connect to the database. Use Visual KPI Server Manager to verify the connection.
+
+:::tip Verifying
+To verify that everything is set up correctly, refer to the [Interfaces guide](/docs/setup-and-administration/interfaces/configuration#verifying-an-interface-connection) of this documentation.
+:::
+
+### Write queries to access data
+
+With an installed interface that points and connects to the MiningData database, you need to write three queries that will access the data needed for the KPIs.
+
+For this tutorial, we will provide you the three queries. Copy and paste the following queries into the appropriate fields for the ODBC-Metrics interface:
+
+- **Get Current Value query**: Given an input or set of input parameters return a single value and timestamp (most current value not in the future)
+```SQL
+select top 1 {0} as Value, Timestamp as Date from Metrics 
+where Timestamp <= GetDate() and {0} is not null 
+order by Timestamp desc;
+```
+- **Get Historical Value Query**: Given an input or set of input parameters and a timestamp, return a single value and timestamp (historical value closest and not after the timestamp)
+```SQL
+select top 1 {0} as Value, Timestamp as Date from Metrics
+where Timestamp <= {TIMESTAMP} and {0} is not null
+order by Timestamp desc;
+```
+- **Get Trend Data Query**: Given an input or set of input parameters along with a start and end timestamp return a set of values and timestamps that fall between these values. It is also best practice to return the previous and following value/timestamp pair to avoid white space at the start and end of the trend.
+```SQL
+select {0} as Value, Timestamp as Date from Metrics 
+where Timestamp BETWEEN {STARTDATE} AND {ENDDATE} and {0} is not null 
+union
+select Value, Timestamp 
+as Date from 
+(select top 1 {0} as value, timestamp from Metrics
+where Timestamp < {STARTDATE} and {0} is not null order by Timestamp desc) 
+as First union
+select Value, Timestamp as Date from 
+(select top 1 {0} as value, timestamp from Metrics
+where Timestamp > {ENDDATE} and {0} is not null order by Timestamp asc) 
+as Last 
+order by Timestamp asc;
+```
+
+### Verify the Interface
+
+You can test to ensure you are getting data from the interface. To do this for the current value, do the following:
+
+1. Select the ODBC-Metrics interface in the left panel.
+2. Select Get Current Value Query in the right panel.
+3. Click the more icon (…) after the Get Current Value Query string at the far right side. The following window will open:
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/sql-database/sql-remote-context-server-6.png"
+  alt=""
+/>
+
+4. Click on the **Test** button.
+5. Enter a column name, such as `T01_HourlyTons`, which will show the most recent hourly tonnage for Truck01.
+6. Execute the query.
+
+This will return a value and a timestamp. Showing you have a working and tested ODBC interface to the Metrics table.
+
+## Step 5: Install the RCS
+
+Now you will install a SQL Remote Context Server and dig in and understand the queries needed. Don't worry, we have provided these queries for you.
+
+### Start the RCS Install 
+
+Install a  new Remote Context Server (RCS). To learn how, refer to the [Installation guide](/docs/setup-and-administration/automation/rcs-configuration#installing-visual-kpi-rcs).
+
+:::tip remember
+When installing, select **SQL RC Service** option.
+:::
+
+### Connect to the database
+
+You need to configure the source connect string to connect to our **MiningData** database. Remember the interface interacts with the Metrics table and the RCS will interact with the Mines and Trucks tables. Follow these steps:
+
+1. In Visual KPI Server Manager, select **Remote Context Services > Visual KPI SQL RCS Server (MiningDemo)**.
+2. In the right panel, select **Source Database Configuration > Source ConnectString**.
+3. Select the **MiningData** database.
+4. **Apply** the changes.
+
+### Configure RCS properties
+
+Consider the settings for each section of properties for the SQL remote context service just installed.
+
+- **Logging Settings**: By default, only errors that occur during RCS execution will be logged to the Windows Event Log. However, if you're working on RCS query development and need to understand why certain objects are not showing up, you can set the logging level to Full and keep an eye on the event log. This will help you to track down the issue and gain a better understanding of what's happening.
+
+- **SQL Remote Context Service Settings**: The RCS is scheduled to run at regular intervals, with a default interval of one minute. This means that after each run, the RCS will wait for one minute before running again. It's important to note that remote context services only analyze metadata and not process data. Since metadata is slow-moving data (like 'what trucks do I own' and 'what mines do I own'), it should not change rapidly. Therefore, there is no need to run the RCS too frequently. During development, it is recommended to keep the interval at one minute, but once it's operational, you can adjust it to be hourly or even daily.
+
+    In this section, there are two options - Enabled and Allow Updates. The Enabled option determines whether the RCS will run or not. The Allow Updates option controls whether the RCS will update the objects it has already created. For instance, if a mine named Mine 01 with an ID of M01 changes, the RCS will only update its objects if Allow Updates is set to True. If it's set to False, the RCS will only create new objects and not update the existing ones. We can leave this option as True to allow the RCS to update objects whenever necessary.
+
+- **Definition Queries**: This is where we provide queries to extract definitions for creating Groups, KPIs, charts, and tables from metadata (more on this later).
+
+- **Relationships Queries**: In this section, you can provide queries to establish the relationships between Groups and other objects. The definition queries are used to create objects, while the relationship queries are used to build the hierarchy (more on this later). These two types of queries work together because you cannot position an object in a hierarchy (relationship query) if the object has not been defined (definition query).
+
+- **Profile & Dashboard Queries**: These queries are utilized to create dashboards, including profile groups, profiles, widgets, and bookmarks.
+
+- **Pre & Post Process Queries**: These queries can be helpful for manipulating metadata. They can be run before or after other queries to process data or perform ETL tasks. They are useful for handling any data manipulation required on the metadata.
+
+
+- **Error Handling**: This section explains how the RCS handles queries that don't return any data. Whenever the RCS is executed, a MetaID is used to map the objects in the foreign system (i.e., the data stored in the MiningData database) to the objects in Visual KPI (such as Groups, KPIs, Charts, etc.).
+
+    The RCS will either:
+    - Create Visual KPI objects (we detect an unknown MetaID).
+    - Update Visual KPI objects (we detect a known MetaID).
+    - Delete Visual KPI objects (we have a MetaID stored that is no longer being passed to use via a definition query).
+
+    If you have set one of these to True and the query provided returns nothing, it will throw an error in the Event Log and stop processing. For instance, if you created 20 KPIs in the first run, and the next time the query ran, you got no KPIs, it will either delete the existing 20 KPIs, which is often not preferred, or it will throw an error and stop the process until the next round.
+
+
+## Step 6: Start the RCS
+
+You can now look at the fruits of your labor. Your progress so far includes installing and configuring various components such as data, a Visual KPI Instance, an ODBC interface, and a SQL RCS that generates Groups and KPIs. Let's test it out to see if everything is working properly.
+
+Right-click on the **SQL RCS** in the Server Manager and select **Start**.
+
+After being initiated, the RCS will execute the queries and create, update, or delete data as instructed by the queries. Once the execution is complete, and a cache cycle has been run to gather the actual process data, you can view the results on the Groups tab of the Visual KPI site.
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/sql-database/sql-remote-context-server-7.png"
+  alt=""
+/>
+
+Since location data was also added, you will also be able to view Geo Maps.
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/sql-database/sql-remote-context-server-8.png"
+  alt=""
+/>
+
+Because you created and referenced the ODBC interface, you can also see historical data on trends. All of that from a few lines of SQL.
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/sql-database/sql-remote-context-server-9.png"
+  alt=""
+/>
+
+You can also see that everything that was created in Visual KPI Designer has been updated. Go ahead and pull up the Groups and KPIs. It should be similar to this:
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/sql-database/sql-remote-context-server-10.png"
+  alt=""
+/>
+
+By default, the RCS updates constantly. As a result, any modifications you make in Visual KPI Designer will be lost when the SQL RCS runs next time. Keep in mind that the MiningData database is now the master, and we are simply following its lead.
+
+## Step 7: Add More Data
+
+Run `demoscript2.sql` against our MiningData database in SSMS.
+
+This script will add more Mines and Trucks along with hourly/daily metric data for all the new equipment, and should take about 20 seconds to run.
+
+If you have not stopped the RCS and it has been running continuously, then please take a moment to check your website. As you may have guessed, new groups have been created for the mines and trucks, along with new KPIs, using the same definition and relationship queries that we used before. 
+
+The best part is, no code changes are required, and you still have the same level of insight into the operations with 10 mines and 20 trucks as you did with just two mines and four trucks.
+
+## Step 8: Add Visualizations
