@@ -1,0 +1,148 @@
+---
+id: json
+title: JSON Interface
+slug: /setup-and-administration/interfaces/json
+description: ''
+tags: []
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+A JSON Interface will be used when you need to connect to restFUL databases. This guide aims to explain how you can configure your new JSON interface when needed.
+
+The JSON interface is made up of a base address and a request URI that return a JSON or XML result.
+
+:::note XML to JSON
+If the result is XML, it will be automatically converted to JSON.
+:::
+
+## Configuration
+
+After installing a new JSON interface following these [instructions](/docs/setup-and-administration/interfaces/configuration), you are ready to configure your interface.
+
+:::training
+Refer to **[Visual KPI training](https://www.transpara.com/lesson/creating-json-interfaces-rest-2/)** to learn all about how Visual KPI interfaces reads from thousands of data sources and how to create your own interfaces.
+:::
+
+Any REST-based interface have some components in common that needs to be set:
+
+- **Base address**:  The URL to the database API.
+- **Request URI**: Specifies the Base Address and Date Time Format to traverse the JSON object and retrieve values and timestamps.
+- **Result base path**: The path to the data you need inside the JSON.
+- **Value field**: The value field name in the JSON.
+- **Timestamp field**: The timestamp field in the JSON.
+
+:::info
+The base address together with the request URI will form a URL that returns the JSON data.
+:::
+
+### JSON Security Settings
+
+Most restFUL databases have some sort of security  implemented on them. These are usually handled by an authentication method. You will need to configure this into your Interface. To do so, do the following:
+
+1. Click on your newly created interface.
+2. Find the JSON security settings section and configure the needed fields:
+    - **Authentication type**: Select the type of authentication needed for this API.
+    - **User credentials**: Click the "..." button and add the credentials needed to access the API.
+
+:::note Public APIs
+If the API doesn't require authentication, ignore this step.
+:::
+
+### JSON Base Settings
+
+Within the interface settings, you find the JSON Base Settings, that allows you to configure:
+
+- **Base Address**: Configure the APIs base address.
+- **Date Time Format**: Set the datetime format of the API.
+- **Result Data Format**: Inform the type of data returned by the API (JSON or XML).
+
+:::tip
+The Base Address can be [parameterized](/docs/setup-and-administration/interfaces/parameterizing).
+:::
+
+### JSON Query Settings
+
+Under the JSON Query Settings section, you will need to configure the following fields:
+
+- **[Current Value](#current-value)**
+- **[Trend Data](#trend-data)**
+- **[Historical Value](#historical-value)**
+
+#### How to access JSON data
+
+To complete the result base path, value field and timestamp field, you need to understand how to access information in a JSON. Using the JSON below as example:
+
+```json
+  {
+    "message": "Transpara LLC Training",
+    "data": {
+      "ip_address": "192.168.1.100",
+      "CPU": 45.6,
+      "memory": 65.2,
+      "temperature": 38.5,
+      "timestamp": "2024-02-19T12:30:00Z"
+    }
+  }
+```
+
+For the purpose of this example, let's define that the CPU is needed as the **Value field**, and the timestamp is used for the **Timestamp field**. 
+
+To reach the needed data, you would use the dot notation as `response.data.CPU`, and `response.data.timestamp`. Similar to this, you will do the following inside the each field configuration:
+
+| Field               | Value              |
+|---------------------|--------------------|
+| **Result base path**| `data.`            |
+| **Value field**     | `CPU`              |
+| **Timestamp field** | `timestamp`        |
+
+:::tip
+These fields can be [parameterized](/docs/setup-and-administration/interfaces/parameterizing).
+:::
+
+#### Current Value
+
+The current value requires you to configure:
+
+- Result base path
+- Value field
+- Timestamp field
+
+#### Trend Data
+
+The trend data requires you to configure:
+
+- Result base path
+- Value field
+- Timestamp field
+- Request URI
+
+In the request URI you need to add a start date and an end date. Like the following example:
+
+```
+&start=2024-02-17T12:30:00&end=2024-02-19T12:30:00
+```
+
+:::tip
+The **start** and **end** values can be [parameterized](/docs/setup-and-administration/interfaces/parameterizing) using `STARTDATE` and `ENDDATE`.
+:::
+
+#### Historical Value
+
+The historical value requires you to configure:
+
+- Result base path
+- Value field
+- Timestamp field
+- Request URI
+
+The request URI needs a date parameter to be added, like the following example:
+
+```
+&date=2024-02-17T12:30:00
+```
+
+:::tip
+The **date** value can be [parameterized](/docs/setup-and-administration/interfaces/parameterizing) using `TIMESTAMP`.
+:::

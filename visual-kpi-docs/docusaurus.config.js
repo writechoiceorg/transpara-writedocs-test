@@ -180,7 +180,7 @@ const config = {
             ],
           },
           {
-            title: 'Trasnpara',
+            title: 'Transpara',
             items: [
               {
                 label: 'Learn more',
