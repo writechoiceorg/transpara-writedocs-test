@@ -56,3 +56,12 @@ unchecked
 Config
 Pre
 pre
+odbc
+VMWare
+vmware
+Xompass
+xompass
+Zabbix
+zabbix
+RCSs
+osisoft

@@ -92,7 +92,7 @@ The image below exemplifies how this should look like in Visual KPI Designer:
 
 ### Disable the stale age default setting
 
-To ensure accurate data representation on the KPI dashboard, it is recommended to modify the default setting for **KPI Stale Age**. The default setting is 60 minutes, which implies that when data retrieved via an Interface (such as truck or mine metrics) is older than an hour (timestamp), the KPI status will change to Stale. Therefore, it is advisable to adjust this setting to better suit your data requirements and ensure that the KPIs reflect the latest data.
+To ensure accurate data representation on the KPI dashboard, it's recommended to modify the default setting for **KPI Stale Age**. The default setting is 60 minutes, which implies that when data retrieved via an Interface (such as truck or mine metrics) is older than an hour (timestamp), the KPI status will change to Stale. Therefore, it's advisable to adjust this setting to better suit your data requirements and ensure that the KPIs reflect the latest data.
 
 In this demo, data can be either hourly or daily, and the concept of Stale should be ignored accordingly.
 
@@ -115,7 +115,7 @@ Items under the gear icon aren't modifiable via the RCS at the time of this docu
 
 ## Step 3: Create a database for mining sample data
 
-In this step, it is recommended to use SQL Server Management Studio to create a database for the mining demo data. The database should contain both metadata, such as information about the mines, trucks, and their locations, as well as metric or process data, such as the amount mined per hour and truck utilization.
+In this step, it's recommended to use SQL Server Management Studio to create a database for the mining demo data. The database should contain both metadata, such as information about the mines, trucks, and their locations, as well as metric or process data, such as the amount mined per hour and truck utilization.
 
 ### Create the Database
 
@@ -195,7 +195,7 @@ select top 1 {0} as Value, Timestamp as Date from Metrics
 where Timestamp <= {TIMESTAMP} and {0} is not null
 order by Timestamp desc;
 ```
-- **Get Trend Data Query**: Given a specific range of input parameters, including a start and end timestamp,returns a set of values and timestamps that fall within this range. To ensure that there is no empty space at the beginning or end of the trend, it is recommended to also return the previous and following value/timestamp pair.
+- **Get Trend Data Query**: Given a specific range of input parameters, including a start and end timestamp,returns a set of values and timestamps that fall within this range. To ensure that there is no empty space at the beginning or end of the trend, it's recommended to also return the previous and following value/timestamp pair.
 ```SQL
 select {0} as Value, Timestamp as Date from Metrics 
 where Timestamp BETWEEN {STARTDATE} AND {ENDDATE} and {0} is not null 
@@ -380,7 +380,7 @@ The scripts ran earlier in this tutorial provided you with the following stored 
 - `GetProfileGroups`: Returns a single profile group called Mines.
 - `GetProfiles`: This query is similar to the `GetProfileGroups` query. However, it refers to the MetaID of the recently created profile group. The purpose of this query is to create a profile named "Mines" and add it as a member of the profile group with the MetaID, which is also known as the ProfileGroupMetaID, of the Mines profile group.
 - `GetDashboards`: Returns 10 dashboards (1 per mine) belonging to the profile called Mines with the MetaID (ProfileMetaID): ProfileMines.
-- `GetWidgets`: When creating a widget, it is important to specify its position and size. Additionally, the widget should be linked to a specific item. For instance, if we want to create a KPI block, we need to provide the ObjectMetaID of the KPI that we want to display. Some widget types offer a variety of options. For example, KPI Blocks can be configured to hide their sparklines. Conversely, some widget types do not offer any options at all.
+- `GetWidgets`: When creating a widget, it's important to specify its position and size. Additionally, the widget should be linked to a specific item. For instance, if we want to create a KPI block, we need to provide the ObjectMetaID of the KPI that we want to display. Some widget types offer a variety of options. For example, KPI Blocks can be configured to hide their sparklines. Conversely, some widget types don't offer any options at all.
 
     The GetWidgets query will return seven widgets per dashboard (70 rows). Each widget has the following elements:
 
@@ -388,7 +388,7 @@ The scripts ran earlier in this tutorial provided you with the following stored 
     - DashboardMetaID (MetaID of the dashboard it will belong to)
     - Positioning data (RowStart, ColumnStart)
     - Sizing data (Height and Weight)
-    - WidgetType (a KPI Block, a trend, KPI map, Geo map, etc)
+    - WidgetType (a KPI Block, a trend, KPI map, Geo Map, etc)
     - ObjectMetaID (type of object)
     - Options (such as Expand)
 
@@ -408,7 +408,7 @@ The image below can be used as an example of this process:
 />
 
 :::tip Default profiles
-You can also set default profiles, lock them, and assign default ranges to dashboards–all via the RCS.  Simply include the necessary columns as shown in Visual KPI Designer. You can view Profile Groups, Profiles, and Dashboards in Visual KPI Designer for reference. If you want to lock your dashboards, you can do so by adding a column (attribute) called "Locked" to your dashboard query and assigning it a value of 1 or True.
+You can also set default profiles, lock them, and assign default ranges to dashboards, all via the RCS.  Simply include the necessary columns as shown in Visual KPI Designer. You can view Profile Groups, Profiles, and Dashboards in Visual KPI Designer for reference. If you want to lock your dashboards, you can do so by adding a column (attribute) called "Locked" to your dashboard query and assigning it a value of 1 or True.
 :::
 
 ### View Profiles and Dashboards
