@@ -267,9 +267,9 @@ Consider the settings for each section of properties for the SQL remote context 
 - **Relationships Queries**: In this section, you can provide queries to establish the relationships between Groups and other objects. The definition queries are used to create objects, while the relationship queries are used to build the hierarchy (more on this later). These two types of queries work together because you can't position an object in a hierarchy (relationship query) if the object hasn't been defined (definition query).
 
 - **Profile & Dashboard Queries**: These queries are utilized to create dashboards, including profile groups, profiles, widgets, and bookmarks.
-
+<!-- vale off -->
 - **Pre & Post Process Queries**: These queries can be helpful for manipulating metadata. They can be run before or after other queries to process data or perform ETL tasks. They're useful for handling any data manipulation required on the metadata.
-
+<!-- vale on -->
 
 - **Error Handling**: This section explains how the RCS handles queries that don't return any data. Whenever the RCS is executed, a MetaID is used to map the objects in the foreign system (for example, the data stored in the MiningData database) to the objects in Visual KPI (such as Groups, KPIs, Charts, etc.).
 
