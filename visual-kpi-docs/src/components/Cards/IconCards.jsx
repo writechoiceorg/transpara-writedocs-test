@@ -11,8 +11,8 @@ const Card = ({ logo, name }) => {
   );
 };
 
-const IconCards = () => {
-  return <CardList data={data} Card={Card} className={"icon_cards_container"} />;
+const IconCards = ({ info }) => {
+  return <CardList data={info || data} Card={Card} className={"icon_cards_container"} />;
 };
 
 export default IconCards;
