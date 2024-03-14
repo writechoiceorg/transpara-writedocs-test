@@ -168,6 +168,7 @@ const sidebars = {
         id: 'visual-kpi-design/installation-and-setup/overview',
       },
       items: [
+        'visual-kpi-design/installation-and-setup/installation',
         'visual-kpi-design/installation-and-setup/connecting',
         'visual-kpi-design/installation-and-setup/ui-tour',
         'visual-kpi-design/installation-and-setup/basic-setup',
