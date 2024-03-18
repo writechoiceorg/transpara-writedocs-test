@@ -184,7 +184,6 @@ const sidebars = {
         id: 'visual-kpi-design/authoring/overview',
       },
       items: [
-        'visual-kpi-design/authoring/site-settings',
         'visual-kpi-design/authoring/profiles-dashboards',
         'visual-kpi-design/authoring/contacts-alerts',
         'visual-kpi-design/authoring/features-config',
