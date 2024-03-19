@@ -283,7 +283,7 @@
 @media screen and (max-width: 822px) {
   .header_container .first_column h1 {
     font-size: 60px !important;
-    margin: 0;
+    line-height: 70px;
   }
 }
 
@@ -353,6 +353,12 @@
 
   .header_container .first_column p {
     font-size: 16px !important;
+  }
+}
+
+@media screen and (max-width: 341px) {
+  .header_container .first_column h1 {
+    line-height: 50px;
   }
 }
 
