@@ -23,32 +23,5 @@ module.exports = {
     'setup-and-administration/automation/configuration/rcs-sql-tutorial',
     // 'setup-and-administration/automation/rcs-and-visual-kpi-design',
     // 'setup-and-administration/automation/use-cases',
-    {
-      type: 'category',
-      label: "Reference",
-      items: [
-        {
-          type: 'category',
-          label: "AF Database Keywords",
-          items: [
-            'setup-and-administration/automation/reference/af-database-keywords/kpi-keywords',
-            'setup-and-administration/automation/reference/af-database-keywords/trend-keywords',
-            'setup-and-administration/automation/reference/af-database-keywords/table-keywords',
-            'setup-and-administration/automation/reference/af-database-keywords/group-keywords',
-            'setup-and-administration/automation/reference/af-database-keywords/value-keywords',
-          ],
-        },
-        {
-          type: 'category',
-          label: "SQL Database Keywords",
-          items: [
-            'setup-and-administration/automation/reference/sql-database-keywords/kpi-keywords',
-            'setup-and-administration/automation/reference/sql-database-keywords/table-keywords',
-            'setup-and-administration/automation/reference/sql-database-keywords/group-keywords',
-            'setup-and-administration/automation/reference/sql-database-keywords/charts-keywords',
-          ],
-        },
-      ],
-    },
   ],
 };
