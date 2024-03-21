@@ -48,3 +48,14 @@ serverPrerequisites
 Interop
 linkTo
 tStore
+XYPlots
+inmation
+7690d
+994d
+unchecked
+Config
+pre
+VMware
+Xompass
+Zabbix
+RCSs
