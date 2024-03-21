@@ -22,7 +22,7 @@ const config = {
   tagline: 'Visual KPI',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
-  favicon: 'img/favicon.jpg',
+  favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-test-site.com',
@@ -115,34 +115,38 @@ const config = {
         title: '',
         logo: {
           alt: 'Site Logo',
-          src: 'img/transpara_logo.png',
+          src: 'img/logo-new.png',
           className: 'site_logo',
+          href: 'https://www.transpara.com/',
+          // target: '_self',
         },
         items: [
           {
             to: '/',
             label: 'Home',
             position: 'left',
+            className: 'home_btn'
           },
           {
             type: 'docSidebar',
             sidebarId: 'docs',
             position: 'left',
             label: 'Documentation',
-            to: '/docs',
-          },
-          {
-            to: 'https://www.transpara.com/',
-            label: 'Learn more',
-            position: 'right',
-            className: 'navbar_link_buttons'
+            to: 'docs/',
+            className: 'docs_btn'
           },
           {
             to: 'https://www.transpara.com/contact-us/',
-            label: 'Contact the support',
+            label: 'Support',
             position: 'right',
-            className: 'navbar_link_buttons'
+            className: 'navbar_link_buttons support_btn'
           },
+          // {
+          //   to: 'https://www.transpara.com/',
+          //   label: 'Learn more',
+          //   position: 'right',
+          //   className: 'navbar_link_buttons'
+          // },
           // {
           //   type: 'search',
           //   position: 'right',
@@ -176,7 +180,7 @@ const config = {
             ],
           },
           {
-            title: 'Trasnpara',
+            title: 'Transpara',
             items: [
               {
                 label: 'Learn more',
