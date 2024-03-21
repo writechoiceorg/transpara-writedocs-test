@@ -21,7 +21,7 @@
       "description": ""
     },
     {
-      "name": "Unkown State",
+      "name": "Unknown State",
       "description": "When the actual value of a KPI exceeds the logical range defined by the minimum and maximum limits, the KPI enters an unknown state. If you analyze a percentage-based KPI and its value exceeds 100 or becomes negative, it enters the unknown state, for example."
     },
     {
@@ -82,7 +82,7 @@
     },
     {
       "name": "Interface",
-      "description": ""
+      "description": "A Visual KPI interface is an essential component that functions as a data connector between external databases and the Visual KPI server. Interfaces retrieve data from external systems in a read-only and lightweight manner, ensuring the original data remains intact."
     },
     {
       "name": "KPI Context",
@@ -94,7 +94,7 @@
     },
     {
       "name": "Remote Context Server (RCS)",
-      "description": ""
+      "description": "RCS comprises of a set of interfaces and queries that enable the reading of metadata or configuration information from various business applications or sources of contextual information. This information is then used by Visual KPI to create and configure objects in the system."
     },
     {
       "name": "Data decoration",
@@ -102,7 +102,7 @@
     },
     {
       "name": "ODBC",
-      "description": ""
+      "description": "Open Database Connectivity. It is a standard programming interface for accessing and managing databases. ODBC allows applications to interact with various database management systems (DBMS) using a common method, regardless of the specific DBMS being used. "
     }
   ]
 }

@@ -6,4 +6,13 @@ description: 'This pages could be used to list the existing reference pages. In 
 tags: []
 ---
 
-This pages could be used to list the existing reference pages. In the future, we could move from the knowladge base to the documentation.
+import LinkCards from '@site/src/components/Cards/LinkCards';
+
+<LinkCards data={
+  [
+    {
+      name: 'Setup and Administration',
+      linkTo: '/docs/reference/setup-and-administration-reference'
+    },
+  ]
+}/>
