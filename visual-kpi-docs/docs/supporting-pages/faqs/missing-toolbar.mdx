@@ -1,9 +1,66 @@
 ---
 id: missing-toolbar
-title: missing-toolbar
+title: Why is part of Visual KPI Designer toolbar missing in the Document Actions pane?
 slug: /faq/missing-toolbar
 description: 'no description'
 tags: []
 ---
 
-This is the content for missing-toolbar.
+import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
+
+Certain combinations of Microsoft Windows, Microsoft Office, and VSTO Runtime may cause the Visual KPI Designer toolbar to disappear from the Document Actions pane.
+
+Here are some possible solutions to fix the issue you're experiencing with Visual KPI Designer. We recommend starting with [Solution 1](#solution-1-optimize-microsoft-excel) and after applying each fix, restart your computer and reopen the program. If one solution works, then you're good to go. However, if the issue still persists, then try the next solution.
+
+## Solution 1: Optimize Microsoft Excel
+
+To optimize Microsoft Excel, follow these steps:
+
+1. Open Microsof Excel.
+2. Click **File > Options**.
+
+<StylizedImage
+  imgURL="img/faqs/missing-toolbar1.png"
+  alt="excel options"
+/>
+
+3. In the General tab, select the radio button for **Optimize for compatibility**.
+
+<StylizedImage
+  imgURL="img/faqs/missing-toolbar2.png"
+  alt="radio button selection"
+/>
+
+:::note 
+If the radio button is not visible in the User Interface options, you may have an outdated version of Microsoft Office.
+:::
+
+## Solution 2: Optimize Windows Display Settings
+
+To optimize Microsoft Windows Display Settings, follow these steps:
+
+1. In Windows, right-click on the desktop, and select Display Settings.
+
+<StylizedImage
+  imgURL="img/faqs/missing-toolbar3.png"
+  alt="radio button selection"
+/>
+
+2. Change the size of text, apps, and other items from the default (120%) to 150%.
+
+<StylizedImage
+  imgURL="img/faqs/missing-toolbar4.png"
+  alt="radio button selection"
+/>
+
+## Solution 3: Update to the latest version of Microsoft Office
+
+Once you update Microsoft Office, try restarting your computer. If this resolves the issue, that's great. But you may need to also Optimize Microsoft Excel ([Solution 1](#solution-1-optimize-microsoft-excel)).
+
+## Solution 4: Update to the latest VSTO Runtime
+
+Download the latest version of Visual Studio 2010 Tools for Office Runtime: [aka.ms/vstoruntime](http://aka.ms/vstoruntime)
+
+:::info Microsoft
+For more information on the cause and possible fixes for this issue, refer to this [Microsoft support](https://support.microsoft.com/en-gb/topic/windows-scaling-issues-for-high-dpi-devices-508483cd-7c59-0d08-12b0-960b99aa347d) page.
+:::
