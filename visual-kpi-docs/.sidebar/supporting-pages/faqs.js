@@ -23,7 +23,7 @@ module.exports = {
     'supporting-pages/faqs/send-alerts-office365',
     'supporting-pages/faqs/set-asset-status',
     'supporting-pages/faqs/share-dashboard',
-    'supporting-pages/faqs/share-dashboard',
+    'supporting-pages/faqs/share-link-dashboard',
     'supporting-pages/faqs/use-olap-interface',
     'supporting-pages/faqs/why-license-key-error'
   ],
