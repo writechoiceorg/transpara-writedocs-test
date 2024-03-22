@@ -61,14 +61,14 @@
   },
   {
       "link": "set-asset-status",
-      "q": "How Do I Set an Asset Status to ‘Not in Service’ and Stop Alerts?"
+      "q": "How Do I Set an Asset Status to 'Not in Service' and Stop Alerts?"
   },
   {
       "link": "share-dashboard",
       "q": "Can I share, open or link to a specific dashboard, regardless of what profile is currently selected?"
   },
   {
-      "link": "share-dashboard",
+      "link": "share-link-dashboard",
       "q": "How to share or link to a specific Dashboard?"
   },
   {
