@@ -1,9 +1,14 @@
 ---
 id: delete-interface
-title: delete-interface
+title: How do I delete an Interface from Visual KPI Server Manager?
 slug: /faq/delete-interface
 description: 'no description'
 tags: []
 ---
 
-This is the content for delete-interface.
+Visual KPI will not allow you to delete an interface when you have associated data. If you're trying to delete an interface via Visual KPI Server Manager, you may get a message that looks like this:
+```
+  Interface [interface name] is referenced and cannot be deleted.
+```
+
+Deleting an interface in Visual KPI requires removing all associated data, including KPIs, Charts, and Trends, before using Visual KPI Server Manager.
