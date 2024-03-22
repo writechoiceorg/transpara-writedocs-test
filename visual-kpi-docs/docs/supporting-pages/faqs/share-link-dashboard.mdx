@@ -1,8 +1,70 @@
 ---
 id: share-link-dashboard
-title: share-link-dashboard
+title: How to share or link to a specific Dashboard?
 slug: /faq/share-link-dashboard
 description: ''
 tags: []
 ---
 
+import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
+
+Sometimes you need to quickly share a specific dashboard with a colleague or create a link to a dashboard for the bookmark bar or another dashboard. For most objects in Visual KPI, the URL address in your browser will work, but dashboards are a bit different:
+
+- Dashboards have a specific URL in your browser that looks something like this: http://demo.transpara.com/tandd/?pid=0, where “?pid-0” means “the dashboard” but not a specific dashboard. This is because Visual KPI remembers what dashboard the user was last using, or goes to the default dashboard if this is the first visit from a browser.
+- Because of the above, if you want to share a specific dashboard or get its exact URL you need to use the share button (for users) or get the dashboard ID in the Visual KPI Designer (for admins).
+- A specific dashboard link will include the ID and look like this: http://demo.transpara.com/tandd/?pid=0&dashid=de1bfb47-efa3-4f1a-b9f6-eae566317ff1
+
+You can find the URL link to a specific dashboard, KPI, or any page you are viewing via the Share button. If you are an administrator, you can also get the link to a specific dashboard from the GUID in Visual KPI Designer.
+
+## Link to a specific dashboard via Share
+
+To link to a specific dashboard via Share, follow the steps below:
+
+1. Click the **Share button** on the Visual KPI navigation bar to get the URL of any page you are viewing.
+
+<StylizedImage
+  imgURL="img/faqs/share-link-dashboard1.png"
+  alt=""
+/>
+
+2. Use **Copy to Clipboard** to copy and then paste the dashboard link into any application.
+
+:::note
+The Email option opens your email account with a pre-populated message that automatically includes the specific URL to the fashboard or page you are currently viewing.
+
+<StylizedImage
+  imgURL="img/faqs/share-link-dashboard2.png"
+  alt=""
+/>
+:::
+
+## Link to a specific dashboard via Visual KPI Designer
+
+In Visual KPI Designer, you can link to a specific dashboard by doing the following:
+
+1. Navigate to the Dashboard or KPI you want to link to.
+
+<StylizedImage
+  imgURL="img/faqs/share-link-dashboard3.png"
+  alt=""
+/>
+
+2. Find the **Dashboard ID**.
+
+<StylizedImage
+  imgURL="img/faqs/share-link-dashboard4.png"
+  alt=""
+/>
+
+3. To link to the Dashboard, use "dashboard: GUID". it will look like this:
+```
+dashboard:3d411284-32c7-4c17-9dea-51a8961f2a4d
+```
+
+## Learn more
+
+To learn more about this feature, follow the links below:
+
+- [Add Visual KPI Nav Bar Links](//docs/visual-kpi-design/installation-and-setup/setup-and-connection)
+- [Pin Other Dashboard Links to the Bookmark Bar](/docs/end-user/features/profiles)
+- [Link to Dashboards using a Link Widget](/missing)
