@@ -8,7 +8,9 @@ tags: [FAQ]
 
 import Accordion from '@site/src/components/accordion/Accordion';
 import AccordionGroup from '@site/src/components/accordion/AccordionGroup';
+import SearchWrapper from '@site/src/components/accordion/SearchWrapper';
 
+<SearchWrapper>
 <AccordionGroup>
   <Accordion title="1. Is this a SaaS application or can we host it ourselves (on-premise or our own cloud)?">
     Transpara is not a SaaS application, so you are never sending your data to us or relying on us to manage security, privacy, users or your intellectual property. The software can live on-premise or in your own private or public cloud environment, under your control and following your own IT and security policies. It is cloud-friendly (containers, scale-out, etc) but equally at home on servers or virtual machines inside your own local environments or data centers.
@@ -50,4 +52,5 @@ import AccordionGroup from '@site/src/components/accordion/AccordionGroup';
     For customers that need to execute simple or advanced analytics outside of their historian, or when spanning multiple data sources with their calculations or algorithms, Transpara time-series database serves as an analytics cache. For customers without an existing historian who are in need of a modern and cost-effective solution, Transpara's TSDB can serve as an alternative to traditional historians.
   </Accordion>
 </AccordionGroup>
+</SearchWrapper>
 
