@@ -1,9 +1,9 @@
-const faqs = require('./faqs');
-const faqsPdf = require('./faqs-pdf');
-
 module.exports = [
-  faqs,
-  faqsPdf,
+  {
+    type: 'doc',
+    id: 'supporting-pages/faqs',
+    label: 'FAQs',
+  },
   {
     type: 'doc',
     id: 'supporting-pages/troubleshooting',
