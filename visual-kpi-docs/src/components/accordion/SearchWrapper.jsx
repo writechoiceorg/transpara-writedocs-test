@@ -44,11 +44,11 @@ const SearchWrapper = ({ children }) => {
             ))}
         </AccordionGroup>
       </div>
-      <div className="filters_container">
+      {/* <div className="filters_container">
         <span className="filter_label">
           {filteredData.length ? `Showing ${filteredData.length} entries` : "No entries found"}
         </span>
-      </div>
+      </div> */}
     </>
   );
 };
