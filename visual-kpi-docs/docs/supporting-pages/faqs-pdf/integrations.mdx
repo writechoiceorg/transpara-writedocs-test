@@ -5,3 +5,44 @@ slug: /faq/integrations
 description: ''
 tags: [FAQ]
 ---
+
+import Accordion from '@site/src/components/accordion/Accordion';
+import AccordionGroup from '@site/src/components/accordion/AccordionGroup';
+import SearchWrapper from '@site/src/components/accordion/SearchWrapper';
+
+<SearchWrapper>
+<AccordionGroup>
+  <Accordion title="1. Is there a limit to how many data sources you can integrate to?">
+    We have support for thousands of sources and even have one customer interfacing with over 100 sources against a single Transpara system. You can mix and match data from various sources, combine data from multiple sources using calculations, and even get various attributes dynamically from source (e.g. get location data for a group or KPI for a moving object from one source while the data comes from other sources).
+  </Accordion>
+  <Accordion title="2. Are we required to ingest or copy data into Transpara?">
+    No. One of the most unique aspects of Transpara's approach is that you can leave data in your existing systems and put it to use on-the-fly, leveraging your existing investments and eliminating the most costly, time-consuming and painful part of any data project. If or when required, data can be stored in Transpara time-series analytics cache for the purpose of time-based calculations, analytics that span multiple data sources, or when you don't already have existing sources.
+  </Accordion>
+  <Accordion title="3. What are the most common data sources you integrate with?">
+    Transpara can interface with thousands (probably millions) of data sources and applications, including industrial systems that many other applications have less experience with, such as historians/time-series databases, SCADA, OPC, IoT/IIoT, control systems, MQTT and others. We like to put data sources into a few large categories as follows:
+    <ul>
+      <li>Proprietary historians (those that require the use of an SDK), such as AVEVA OSIsoft PI and AF, Aspentech (IP.21 and inmation), GE and many others.</li>
+      <li>Other time-series databases, including historians, open source (TimescaleDB, InfluxDB, etc), and cloud time-series databases (AWS Timestream, Azure ADX or TSI, Timescale Cloud, etc).</li>
+      <li>Relational databases (SQL Server, Oracle, MySQL, PostgreSQL, etc) and any applications built on relational databases (vertical industry applications, ERP, CRM, LIMS, etc).</li>
+      <li>Data lakes, data warehouses, OLAP and big data sources.</li>
+      <li>Web services, including both internal (any application with a REST API) or external (like weather, commodity pricing, traffic, etc). This includes JSON, XML, Python, etc.</li>
+      <li>IoT/IIoT and other sensor data. This includes OPC, Modbus, MQTT, SNMP and many other protocols.</li>
+      <li>Slow moving or manually entered data, including manual data entry features in Transpara along with Excel, CSV, web form applications and more.</li>
+      <li>IT, Cloud and Security data, including applications like VMware, Zabbix, Splunk and many others.</li>
+    </ul>
+    Even if we have never encountered a particular data source, there are usually no technical limitations stopping us from interfacing with it. Usually the only thing that gets in our way is politics.
+  </Accordion>
+  <Accordion title="4. Can I integrate my advanced data science tools with Transpara?">
+    Yes! Transpara believes you should leverage all of the tools and applications that provide value to you. We support integrations with data science tools like Jupyter Notebooks, R, Python and specialized or cloud-based analytics platforms (machine learning, AI, etc). If you are curious about integration with a specific tool or application, just reach out and we can discuss it [link].
+  </Accordion>
+  <Accordion title="5. Can you integrate with our business intelligence tools?">
+    Yes. Transpara easily integrates with applications like Power BI, Tableau and others, either as a source of data for Transpara or as a client tool for analysis and reporting.
+  </Accordion>
+  <Accordion title="6. We use Excel for many things. How does Transpara work with Excel?">
+    Transpara works with Excel in several ways: 
+    1. As a data source with our native Excel interface, 
+    2. With the native ability to export data to Excel/CSV for further analysis and charting, and 
+    3. Our native authoring client (Transpara Designer) is based on Excel so it is already familiar to new users. Excel is widely known as the most popular developer language and analytics tool on the planet, so we integrate deeply wherever possible.
+  </Accordion>
+</AccordionGroup>
+</SearchWrapper>

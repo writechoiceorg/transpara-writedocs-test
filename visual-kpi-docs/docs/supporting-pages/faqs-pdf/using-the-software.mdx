@@ -5,3 +5,34 @@ slug: /faq/using-the-software
 description: ''
 tags: [FAQ]
 ---
+
+import Accordion from '@site/src/components/accordion/Accordion';
+import AccordionGroup from '@site/src/components/accordion/AccordionGroup';
+import SearchWrapper from '@site/src/components/accordion/SearchWrapper';
+
+<SearchWrapper>
+  <AccordionGroup>
+    <Accordion title="1. What is Transpara's definition of a KPI?">
+      There are a lot of academic definitions out there, but ours is crazy simple, we define a KPI as anything you care enough to track that has some form of expected behavior.
+    </Accordion>
+    <Accordion title="2. Why is how Transpara defines a KPI so important?">
+      In our approach, a KPI is what gives everything color or status and ability to alert. When a KPI crosses a threshold in Transpara, it can raise its hand to alert or engage a user and automatically build visualizations.
+    </Accordion>
+    <Accordion title="3. How does this compare to how other applications like BI tools and reporting software to visualize information?">
+      In a BI solution, you have to say 'I want a pie chart there.' There's no forced consistency around the concept of 'status.' 
+
+      And while BI lets you make KPIs, you might make two right next to each other that could never be summarized. With BI, there's no way for the solution to look at everything and assess— it doesn't become a system, and you're left with only pieces and parts assembled. 
+
+      With Transpara, the solution works without us (or our software) having to know what data is in there at all or where it comes from. Transpara's unique approach relies on a consistent pattern in how KPIs are defined, regardless of where the data comes from, how fast it moves, or how seemingly unrelated it is. KPIs are organized for end-user navigation with automatic roll-ups that show what's happening at any level of your hierarchy. These exception-based, at-a-glance views increase the speed of identifying problems or opportunities, while requiring less cognitive load from your users to find what they need. When compared to a BI tool or reporting software, Transpara allows you to much more easily visualize large volumes of data and KPIs at-a-glance and quickly find what needs your attention with intuitive filtering, sorting, grouping, and search – functioning more like the commercial apps you use every day such as Amazon, Zillow, and others.
+    </Accordion>
+    <Accordion title="4. Is Transpara self-service?">
+      Yes. Transpara is so simple to use that most customers do not need any assistance at all once they are set up. First off, most apps in our space design their UIs based on other apps in the space— we go out of our way to base our UI on the consumer apps users are already familiar with. We work for power users and regular end users alike, too. If you're a power user, great, create your own KPIs. If you're a more traditional end user, think of Transapara as 'non-destructive.' We have visualizations already in place so you can choose and refine as needed without changing the system or the view.
+    </Accordion>
+    <Accordion title="5. Do I need a full-time person to manage/administer Visual KPI?">
+      None of our customers has a full-time manager or admin in place. We may spend some initial time with you setting things up— after that, there are typically just small maintenance bits that may come up. You will have direct access to Transpara's support experts from initial deployment through to ongoing, proactive support. 
+    </Accordion>
+    <Accordion title="6. Can anyone create their own dashboards? Their own visualizations?">
+      Yes, anyone can make dashboards. Admin can also lock them down, too, so that users can view but not edit dashboards, or secure them against specific users. If a user does want to edit one, they can make a copy and run edits.And, yes, you can take on visualizations, too, then filter, group, or sort those visualizations by different attributes. Again, Transapara is non-destructive, so you can do all of that without "breaking" the system or view.
+    </Accordion>
+  </AccordionGroup>
+</SearchWrapper>
