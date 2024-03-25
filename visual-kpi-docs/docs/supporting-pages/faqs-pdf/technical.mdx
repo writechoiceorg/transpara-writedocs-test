@@ -1,7 +1,53 @@
 ---
 id: technical
-title: Technical
+title: Technical Questions
 slug: /faq/technical
 description: ''
 tags: [FAQ]
 ---
+
+import Accordion from '@site/src/components/accordion/Accordion';
+import AccordionGroup from '@site/src/components/accordion/AccordionGroup';
+
+<AccordionGroup>
+  <Accordion title="1. Is this a SaaS application or can we host it ourselves (on-premise or our own cloud)?">
+    Transpara is not a SaaS application, so you are never sending your data to us or relying on us to manage security, privacy, users or your intellectual property. The software can live on-premise or in your own private or public cloud environment, under your control and following your own IT and security policies. It is cloud-friendly (containers, scale-out, etc) but equally at home on servers or virtual machines inside your own local environments or data centers.
+  </Accordion>
+  <Accordion title="2. Is Transpara just a data visualization application?">
+    No. While Transpara is well-known for its visualization capabilities and user experience, it is an entire operational intelligence, monitoring, alerting, and analytics platform that includes interfaces to thousands of sources (read and/or extract), a high-scale contextual layer with limitless attributes and templates (knowledge graph), an advanced high-scale advanced analytics engine, a powerful time-series data store and more. It can even be used with other visualization software (even though we are quite proud of ours).
+  </Accordion>
+  <Accordion title="3. Is the view actually real-time, and is that sustainable at scale?">
+    The view is technically “near real-time” which means the visualizations on the screen update automatically in just seconds when data changes, and moving around in time or drilling in for more detail doesn't slow things down. For the data frequency itself, we support just about any frequency including data that changes thousands of times per second or more. And yes, due to our unique approach to interacting with data across many sources without the requirement to migrate or copy data, we can do this at virtually any scale. We have customers with over 100 data sources running against a single Transpara system, others with hundreds of thousands of KPIs moving in real-time, and still more with data that changes hundreds or thousands of times per second.
+  </Accordion>
+  <Accordion title="4. What is meant by “near real-time?">
+    Near real-time, sometimes summarized as NRT, is a technical term used to define the exact parameters of “real-time” in the context of data processing. While Transpara is all about speed, we are not a control system and we are not flying fighter jets. Regardless of the frequency of the data itself, Transpara users are not looking for their screens to update more than every few seconds. In fact, updating faster than NRT would be a distraction and annoying when it comes to visualization. Outside of that, we are also normally working with data in different locations (cloud and on-premise, internal or external, different physical sites around the world, etc) so physics always plays a role in how fast data can logically travel to the platform and out to users. Summary: It's really fast, but not hard real-time.
+  </Accordion>
+  <Accordion title="5. How fast of data can you support (frequency)?">
+    Transpara can support data resolution up to thousands of samples per second (and even demonstrated picosecond resolution once). While few operational environments require such high-frequency data, we have architected our system to support whatever might be thrown at it.
+  </Accordion>
+  <Accordion title="6. How much data can you store, and for how long?">
+    First, there is no requirement to store your data in Transpara, as we easily leverage your existing data sources and applications without the need to migrate or copy data. That said, Transpar includes a high-scale, high-frequency time-series and relational database that can be used as a cache for analytics or as a primary data store, and there is no architectural limit to the amount of data that can be stored (at full resolution). Most of our customers store all of their data forever (decades) with commodity infrastructure and without the need for separate archiving, lossy compression or cold storage.
+  </Accordion>
+  <Accordion title="7. Is there a limit to the number of metrics I can implement?">
+    No, there is no limit to the number of metrics you can implement. We have existing customers with hundreds of thousands of KPIs and extensive hierarchies in production for years, and internally we test everything to millions of metrics, KPIs, groups and more. If you have a larger environment, we would love to work with it!
+  </Accordion>
+  <Accordion title="8. How do you handle security? What if I have extreme or unique requirements?">
+    Transpara slots into your existing security requirements using our “security inheritance” model. This means that your existing security model and/or requirements are respected without imposing new methods or disrupting your existing environment. This applies not only to authentication (support for almost all auth mechanisms including VPN, SSO, 2FA, etc), rights assignment (native integration with your existing directory and groups/users), and encryption choices (SSL, at-rest, in-transit, etc).
+  </Accordion>
+  <Accordion title="9. Do you support extreme environments (high-safety, high-security, high-frequency, high-reliability, etc)?">
+    Yes! Transpara has hard-core industrial roots and is used daily in high-security, high-safety, high-frequency and high-reliability environments like nuclear power, oil refining, satellites, manufacturing, telecommunications, and more. Even though that is our expertise, we also are happy with slower-moving data or less-than-mission-critical environments too.
+  </Accordion>
+  <Accordion title="10. Is this platform a Historian?">
+    Transpara is not a competitor to traditional historians, but does include a high-scale, high-speed time-series database. For most of our customers, Transpara interfaces directly with existing historians (and many other sources) to read historical, current and future data, including: 
+    - AVEVA OSIsoft PI (and AF) 
+    - GE Proficy 
+    - Aspentech inmation and IP.21 
+    - Rockwell, Honeywell, Yokogawa, Siemens, OAS, Ignition, Cognite, Canary and others 
+    - Relational historians (based on SQL Server or other platforms) 
+    - Open source time-series databases (InfluxDB, TimescaleDB, etc) 
+    - Cloud time-series databases (AWS Timestream, Azure ADX and TSI, Timescale Cloud, etc) 
+    
+    For customers that need to execute simple or advanced analytics outside of their historian, or when spanning multiple data sources with their calculations or algorithms, Transpara time-series database serves as an analytics cache. For customers without an existing historian who are in need of a modern and cost-effective solution, Transpara's TSDB can serve as an alternative to traditional historians.
+  </Accordion>
+</AccordionGroup>
+
