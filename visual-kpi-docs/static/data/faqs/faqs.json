@@ -73,7 +73,7 @@
   },
   {
       "link": "use-olap-interface",
-      "q": "Can I use the OLAP Interface for data that has both a time and date field in the cube?"
+      "q": "Can the OLAP Interface be used for data which has both a time and date field in the cube?"
   },
   {
       "link": "why-license-key-error",
