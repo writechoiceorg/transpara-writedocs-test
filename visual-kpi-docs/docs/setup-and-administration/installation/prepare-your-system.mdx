@@ -143,6 +143,39 @@ Below you find this steps exemplified:
   alt="sql-manager setup"
 />
 
+### Confirm SQL Installation and Permissions
+
+To install the Visual KPI Server and ensure that it operates as expected, you’ll need SQL Server with admin or better permissions enabled.
+
+:::info
+This refers to the SQL Server database that is used by Visual KPI for all configuration information. This database is essential for Visual KPI to function correctly. It should be noted that this does not apply to using SQL Server as a source of data at runtime as an interface, which is also possible.
+:::
+
+Make sure you have access to SQL Server somewhere on the network or locally. You are not required to install it locally, but Visual KPI does require that SQL Management Studio client tools be stored locally so that changes can be made or permissions can be managed.
+
+Before you start the Visual KPI installation, check your privileges on the SQL Server. The logged-in user must have certain privileges on the SQL Server as the Visual KPI Server is being installed. Because the Visual KPI database needs read and write permissions to the SQL Server, you’ll need the following privileges, depending on the task:
+
+- **Installation of Visual KPI**: Local admin on the Windows Server machine for the installing user. For SQL Server, you must have rights to create and delete databases, execute stored procedures, add tables/views and drop tables/views.
+- **Upgrading and maintaining Visual KPI**: Local admin on the Windows Server machine for the user. For SQL Server, you must have rights to execute stored procedures, add tables/views and drop tables/views.
+- **Runtime requirements**: For the Visual KPI Server to communicate with the SQL Server database, there needs to be an account which has read and write permissions on the Visual KPI database. This account can be one of the following types:
+    - Local SQL Server account: **SQLuser**.
+    - Local machine account: **NT AUTHORITY\NETWORK SERVICE**.
+    - Domain service account: **YOUR_DOMAIN\svc_vkpi**.
+
+By default, Visual KPI uses **NT AUTHORITY\NETWORK SERVICE** as the account for accessing SQL Server, running IIS application pools and executing Windows Services. The is a “least privileges” account and is the preferred choice for the runtime user account with the following characteristics based on single-machine or separate machine deployment:
+
+- **Single-machine**: When the Visual KPI Server and SQL Server coexist on the same Windows Server, IIS connects to SQL Server as NT AUTHORITY\NETWORK SERVICE.
+- **Separate machine**: When the Visual KPI Server and SQL Server are installed on separate Windows Servers, IIS connects to SQL Server as `[YOUR_DOMAIN]\[your Visual KPI server name]$` (for example, `TRANSPARA\VKPI_1$` where Transpara is the domain name and VKPI_1 is the Windows Server name).
+
+#### To confirm SQL Server permissions
+
+To confirm SQL Server permissions you need to do the following:
+
+1. Open Microsoft SQL Server Management Studio client tools.
+2. Expand Security and then expand Logins and make sure your account has sufficient rights for installing Visual KPI Server.
+3. Click on your login and check Server Roles by clicking in the Login Properties panel that opens.
+4. Make sure security admin or higher is checked, or that you meet the requirement as specified above.
+
 ## Visual KPI Server Manager
 
 After performing all steps above, your system is ready to have Visual KPI Server Manager installed. To learn how to install our system, refer to the [Install Visual KPI](/docs/setup-and-administration/installation/install-visual-kpi) page.
