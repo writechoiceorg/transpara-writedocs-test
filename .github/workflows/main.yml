@@ -22,7 +22,7 @@ jobs:
         id: lastversion
         uses: dvershinin/lastversion-action@main
         with:
-          repository: errata-ai/vale
+          repository: errata-ai/vale-action
 
       - name: Install Vale
         run: |
