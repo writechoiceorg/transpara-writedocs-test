@@ -9,7 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      # - uses: errata-ai/vale-action@reviewdog
+      # - run: ./vale ./visual-kpi-docs/docs
+      - uses: errata-ai/vale-action@reviewdog
+        with:
+          files: ./visual-kpi-docs/docs
     # name: runner-vale
     # runs-on: ubuntu-latest
     # steps:
@@ -38,5 +41,5 @@ jobs:
     #   #- name: Validate the syntax
     #   #  run: ./vale --config=.vale.ini *.md
 
-      - name: Validate the syntax
-        run: ./vale ./visual-kpi-docs/docs
+      # - name: Validate the syntax
+      #   run: ./vale ./visual-kpi-docs/docs
