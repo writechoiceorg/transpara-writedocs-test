@@ -20,7 +20,7 @@ jobs:
       # filter_mode: nofilter
       - name: Get latest version of Vale
         id: lastversion
-        uses: dvershinin/lastversion-action@v0.0.3
+        uses: dvershinin/lastversion-action@latest
         with:
           repository: errata-ai/vale
 
