@@ -145,15 +145,15 @@ Below you find this steps exemplified:
 
 ### Confirm SQL Installation and Permissions
 
-To install the Visual KPI Server and ensure that it operates as expected, you’ll need SQL Server with admin or better permissions enabled.
+To install the Visual KPI Server and ensure that it operates as expected, you'll need SQL Server with admin or better permissions enabled.
 
 :::info
-This refers to the SQL Server database that is used by Visual KPI for all configuration information. This database is essential for Visual KPI to function correctly. It should be noted that this does not apply to using SQL Server as a source of data at runtime as an interface, which is also possible.
+This refers to the SQL Server database that's used by Visual KPI for all configuration information. This database is essential for Visual KPI to function correctly. It should be noted that this doesn't apply to using SQL Server as a source of data at runtime as an interface, which is also possible.
 :::
 
-Make sure you have access to SQL Server somewhere on the network or locally. You are not required to install it locally, but Visual KPI does require that SQL Management Studio client tools be stored locally so that changes can be made or permissions can be managed.
+Make sure you have access to SQL Server somewhere on the network or locally. You aren't required to install it locally, but Visual KPI does require that SQL Management Studio client tools be stored locally so that changes can be made or permissions can be managed.
 
-Before you start the Visual KPI installation, check your privileges on the SQL Server. The logged-in user must have certain privileges on the SQL Server as the Visual KPI Server is being installed. Because the Visual KPI database needs read and write permissions to the SQL Server, you’ll need the following privileges, depending on the task:
+Before you start the Visual KPI installation, check your privileges on the SQL Server. The logged-in user must have certain privileges on the SQL Server as the Visual KPI Server is being installed. Because the Visual KPI database needs read and write permissions to the SQL Server, you'll need the following privileges, depending on the task:
 
 - **Installation of Visual KPI**: Local admin on the Windows Server machine for the installing user. For SQL Server, you must have rights to create and delete databases, execute stored procedures, add tables/views and drop tables/views.
 - **Upgrading and maintaining Visual KPI**: Local admin on the Windows Server machine for the user. For SQL Server, you must have rights to execute stored procedures, add tables/views and drop tables/views.
