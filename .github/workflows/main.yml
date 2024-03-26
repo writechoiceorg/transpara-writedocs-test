@@ -6,8 +6,6 @@ on:
 jobs:
   vale:
     name: runner / vale
-    env:
-      REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.VALE_TOKEN }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -15,7 +13,26 @@ jobs:
       - uses: errata-ai/vale-action@reviewdog
         with:
           files: ./visual-kpi-docs/docs
-          reporter: github-pr-check
+      - uses: reviewdog/action-setup@v1
+        with:
+          reviewdog_version: latest
+      - name: Run reviewdog
+        env:
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.VALE_TOKEN }}
+        run: |
+          reviewdog -reporter=github-pr-check -runners=golint,govet
+  # reviewdog:
+  #   name: reviewdog
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: reviewdog/action-setup@v1
+  #       with:
+  #         reviewdog_version: latest
+  #     - name: Run reviewdog
+  #       env:
+  #         REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.VALE_TOKEN }}
+  #       run: |
+  #         reviewdog -reporter=github-pr-check -runners=golint,govet
     # name: runner-vale
     # runs-on: ubuntu-latest
     # steps:
