@@ -13,6 +13,7 @@ jobs:
       - uses: errata-ai/vale-action@reviewdog
         with:
           files: ./visual-kpi-docs/docs
+          reporter: github-pr-check
     # name: runner-vale
     # runs-on: ubuntu-latest
     # steps:
