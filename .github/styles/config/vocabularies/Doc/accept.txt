@@ -74,3 +74,6 @@ architected
 Yokogawa
 Cognite
 SQLuser
+projectware
+picosecond
+lossy
