@@ -1,8 +1,8 @@
 module.exports = [
   {
     type: 'doc',
-    id: 'supporting-pages/faq',
-    label: 'FAQ',
+    id: 'supporting-pages/faqs',
+    label: 'FAQs',
   },
   {
     type: 'doc',
