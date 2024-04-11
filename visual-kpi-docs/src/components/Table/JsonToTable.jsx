@@ -5,9 +5,9 @@ const JsonToTable = ({ jsonData }) => {
   const [filter, setFilter] = useState('');
   const [sortColumn, setSortColumn] = useState(null);
   const [sortOrder, setSortOrder] = useState('asc');
-  const [rowsToShow, setRowsToShow] = useState(jsonData.length);
+  const [rowsToShow, setRowsToShow] = useState(jsonData.length <= 10 ? jsonData.length : 5);
   const [currentPage, setCurrentPage] = useState(1);
-
+  
   // Filtering logic
   const filteredData = useMemo(() => {
     const filteredRows = jsonData.filter((row) =>
@@ -44,7 +44,22 @@ const JsonToTable = ({ jsonData }) => {
     return filteredData;
   }, [filteredData, sortColumn, sortOrder]);
 
-  // Pagination logic
+  const generateArray = (length) => {
+    let result = [5, 10, 25, 50, 100];
+  
+    result = result.reduce((acc, curr) => {
+      if (curr < length) {
+        acc.push(curr);
+      }
+      return acc;
+    }, []);
+  
+    result.push(length);
+  
+    return result;
+  }
+
+  // Pagination logic  
   const totalPages = Math.ceil(sortedData.length / rowsToShow);
   const startIndex = (currentPage - 1) * rowsToShow;
   const endIndex = startIndex + rowsToShow;
@@ -60,7 +75,7 @@ const JsonToTable = ({ jsonData }) => {
 
   // Table header for sorting
   const headers = Object.keys(jsonData[0]).map((key) => (
-    <th key={key} onClick={() => handleSort(key)}>
+    <th key={key} onClick={() => handleSort(key)} style={{ width: `${100 / Object.keys(jsonData[0]).length}%` }}>
       {key}
       {sortColumn === key && (
         <span>{sortOrder === 'asc' ? ' 🠽' : ' 🠿'}</span>
@@ -98,8 +113,7 @@ const JsonToTable = ({ jsonData }) => {
             id="rowsToShow"
             value={rowsToShow}
             onChange={ (e) => setRowsToShow(Number(e.target.value)) }>
-              <option value={sortedData.length}>All</option>
-            {[5, 10, 20, 25, 50, 100].map((value) => (
+            {generateArray(sortedData.length).map((value) => (
               <option key={value} value={value}>
                 {value}
               </option>

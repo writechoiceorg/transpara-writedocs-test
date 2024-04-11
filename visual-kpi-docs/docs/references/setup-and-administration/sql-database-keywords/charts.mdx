@@ -1,0 +1,56 @@
+---
+id: charts-keywords
+title: Charts Attributes
+slug: /reference/setup-and-administration/sql-databases/charts-keywords
+description: ''
+tags: []
+---
+
+import BarCharts from '@site/static/data/tables/charts-attributes-keywords-reference/BarCharts.json';
+import GanttCharts from '@site/static/data/tables/charts-attributes-keywords-reference/GanttCharts.json';
+import ParetoCharts from '@site/static/data/tables/charts-attributes-keywords-reference/ParetoCharts.json';
+import PieCharts from '@site/static/data/tables/charts-attributes-keywords-reference/PieCharts.json';
+import XYPlots from '@site/static/data/tables/charts-attributes-keywords-reference/XYPlots.json';
+import ManagedTrends from '@site/static/data/tables/charts-attributes-keywords-reference/ManagedTrends.json';
+import EmbeddedContent from '@site/static/data/tables/charts-attributes-keywords-reference/EmbeddedContent.json';
+import JsonToTable from '@site/src/components/Table/JsonToTable';
+
+# Charts Attributes & Keywords Reference
+
+Use this table to reference valid attributes and keywords for mapping all chart types, including managed trends, metadata from AF, SQL, and inmation databases to Visual KPI Remote Context Service (RCS).
+
+- **First column**: Represents the Visual KPI Attribute to which you can map your external elements. Use the Value column to get more information about specific attribute values.
+- **Last three columns**: Tell you if such a mapping is possible in either AF, SQL or inmation databases.
+
+### Visual KPI Designer, AF, SQL and inmation Attributes
+
+You find the following tables below:
+
+- **[Bar Chart](#bar-chart)**
+- **[Gantt Charts](#gantt-charts)**
+- **[Pareto Charts](#pareto-charts)**
+- **[Pie Charts](#pie-charts)**
+- **[XY Plots](#xy-plots)**
+- **[Managed Trends](#managed-trends)**
+- **[Embedded Content](#embedded-content)**
+
+## Bar Chart
+<JsonToTable jsonData={BarCharts} />
+
+## Gantt Charts
+<JsonToTable jsonData={GanttCharts} />
+
+## Pareto Charts
+<JsonToTable jsonData={ParetoCharts} />
+
+## Pie Charts
+<JsonToTable jsonData={PieCharts} />
+
+## XY Plots
+<JsonToTable jsonData={XYPlots} />
+
+## Managed Trends
+<JsonToTable jsonData={ManagedTrends} />
+
+## Embedded Content
+<JsonToTable jsonData={EmbeddedContent} />
