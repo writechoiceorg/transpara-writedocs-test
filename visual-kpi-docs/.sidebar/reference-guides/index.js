@@ -35,4 +35,29 @@ module.exports = [
       },
     ],
   },
+  {
+    type: 'category',
+    label: "Visual KPI Designer",
+    link: {
+      type: 'doc',
+      id: 'references/visual-kpi-designer/visual-kpi-designer-references',
+    },
+    items: [
+      {
+        type: 'category',
+        label: "Data Limits",
+        items: [
+          'references/visual-kpi-designer/data-limits/data-limits-for-attributes',
+          'references/visual-kpi-designer/data-limits/data-limits-for-default-ranges',
+          'references/visual-kpi-designer/data-limits/data-limits-for-groups',
+          'references/visual-kpi-designer/data-limits/data-limits-for-interfaces',
+          'references/visual-kpi-designer/data-limits/data-limits-for-kpis',
+          'references/visual-kpi-designer/data-limits/data-limits-for-links',
+          'references/visual-kpi-designer/data-limits/data-limits-for-trend-ranges',
+          'references/visual-kpi-designer/data-limits/data-limits-for-trends',
+          'references/visual-kpi-designer/data-limits/data-limits-for-website-configuration'
+        ],
+      },
+    ],
+  },
 ]
