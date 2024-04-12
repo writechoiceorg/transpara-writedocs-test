@@ -123,7 +123,7 @@ table thead th {
   font-style: normal;
   font-weight: 700;
   line-height: 18px;
-  width: 50%;
+  /* width: 50%; */
 }
 
 table tr td {
