@@ -108,7 +108,7 @@
 .pagination-nav__link {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   flex-shrink: 0;
   border-radius: 13px;
   border: 1px solid #acacac;
@@ -148,21 +148,28 @@
   color: #fff !important;
 }
 
+.pagination-nav__link--next .pagination-nav__label {
+  text-align: start;
+}
+
+.pagination-nav__link--prev .pagination-nav__label {
+  text-align: end;
+}
+
 .pagination-nav__link--next .pagination-nav__label:after {
   content: '🡢' !important;
   position: absolute;
   right: 16px;
-  top: 35%;
+  top: 12px;
 }
 
 .pagination-nav__link--prev .pagination-nav__label:before {
   content: '🡠' !important;
   position: absolute;
   left: 16px;
-  top: 35%;
+  top: 12px;
 }
 
-/* pagination-nav__link--next */
 /*-------------------------------- Markdown Header sizes ------------------------------  */
 
 .markdown h1 {
