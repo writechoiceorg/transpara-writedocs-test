@@ -141,12 +141,14 @@ const JsonToTable = ({ jsonData }) => {
           </div>
         </div>
       </div>
-      <table>
-        <thead>
-          <tr>{headers}</tr>
-        </thead>
-        <tbody>{rows}</tbody>
-      </table>
+      <div className="table_container">
+        <table>
+          <thead>
+            <tr>{headers}</tr>
+          </thead>
+          <tbody>{rows}</tbody>
+        </table>
+      </div>
       <div className="filters_container">
         <span className="filter_label">
           Showing {startIndex + 1} to {Math.min(endIndex, sortedData.length)} of {sortedData.length} entries
