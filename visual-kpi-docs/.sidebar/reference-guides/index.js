@@ -58,6 +58,27 @@ module.exports = [
           'references/visual-kpi-designer/data-limits/data-limits-for-website-configuration'
         ],
       },
+      { 
+        type: 'doc',
+        id: 'references/visual-kpi-designer/groups-attributes-keywords/groups-attributes-keywords',
+      },
+      {
+        type: 'category',
+        label: "Attributes & Keywords",
+        items: [
+          'references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-bar-charts',
+          'references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-embedded-content',
+          'references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-gantt-charts',
+          'references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-groups',
+          'references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-kpis',
+          'references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-managed-trends',
+          'references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-pareto-charts',
+          'references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-pie-charts',
+          'references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-tables',
+          'references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-xy-plots'
+        ],
+      },
     ],
   },
+  
 ]
