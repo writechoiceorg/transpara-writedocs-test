@@ -27,6 +27,7 @@
   font-style: normal;
   font-weight: 700;
   margin: 0 3px;
+  min-width: 50px;
 }
 
 .filters_container #rowsToShow:hover {
@@ -108,7 +109,8 @@ table {
   display: table;
 }
 
-table thead, table tbody {
+table thead,
+table tbody {
   width: 100% !important;
 }
 
