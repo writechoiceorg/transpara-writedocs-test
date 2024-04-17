@@ -78,6 +78,35 @@ module.exports = [
           'references/visual-kpi-designer/attributes-and-keywords/attributes-and-keywords-xy-plots'
         ],
       },
+      {
+        type: 'category',
+        label: "Attributes & Keywords",
+        items: [
+          'references/visual-kpi-designer/advanced-site-settings/advanced-site-settings-attributes',
+          'references/visual-kpi-designer/advanced-site-settings/advanced-site-settings-interfaces',
+          'references/visual-kpi-designer/advanced-site-settings/advanced-site-settings-nav-bar-links',
+          'references/visual-kpi-designer/advanced-site-settings/advanced-site-settings-site-rollups'
+        ],
+      },
+      {
+        type: 'category',
+        label: "Site Settings",
+        items: [
+          'references/visual-kpi-designer/site-settings/site-settings-alerts',
+          'references/visual-kpi-designer/site-settings/site-settings-chart-color-configuration',
+          'references/visual-kpi-designer/site-settings/site-settings-chart-dates',
+          'references/visual-kpi-designer/site-settings/site-settings-chart-ranges',
+          'references/visual-kpi-designer/site-settings/site-settings-contacts',
+          'references/visual-kpi-designer/site-settings/site-settings-dashboards',
+          'references/visual-kpi-designer/site-settings/site-settings-default-ranges',
+          'references/visual-kpi-designer/site-settings/site-settings-event-ranges',
+          'references/visual-kpi-designer/site-settings/site-settings-features',
+          'references/visual-kpi-designer/site-settings/site-settings-kpi-status',
+          'references/visual-kpi-designer/site-settings/site-settings-profile-groups',
+          'references/visual-kpi-designer/site-settings/site-settings-profiles',
+          'references/visual-kpi-designer/site-settings/site-settings-visual-kpi-website',
+        ],
+      },
     ],
   },
   
