@@ -13,7 +13,7 @@
   },
   {
     "Attribute": "Private",
-    "Description": "Controls if this Profile Group is accessible to the user in the Private User column or if it is a Public Profile Group (accessible by all). Only applicable if ISS security is enabled on the site."
+    "Description": "Controls if this Profile Group is accessible to the user in the Private User column or if it's a Public Profile Group (accessible by all). Only applicable if ISS security is enabled on the site."
   },
   {
     "Attribute": "Private User",
