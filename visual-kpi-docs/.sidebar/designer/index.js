@@ -121,10 +121,10 @@ module.exports = [
   //     'visual-kpi-design/reference-tables/functions-reference',
   //   ],
   // },
-  {
+  /*{
     type: 'doc',
     id: 'visual-kpi-design/best-practices',
     // label: 'How to Use the Documentation',
     // className: '',
-  },
+  },*/
 ]

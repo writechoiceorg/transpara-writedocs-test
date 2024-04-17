@@ -10,8 +10,8 @@ module.exports = [
   installation,
   interfaces,
   automation,
-  {
+  /*{
     type: 'doc',
     id: 'setup-and-administration/best-practices',
-  },
+  },*/
 ];
