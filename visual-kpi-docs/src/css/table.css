@@ -148,7 +148,7 @@ table tr td {
   line-height: 18px;
   padding: 20px;
   text-align: start;
-  /* vertical-align: top; */
+  vertical-align: top;
 }
 
 table thead tr {
