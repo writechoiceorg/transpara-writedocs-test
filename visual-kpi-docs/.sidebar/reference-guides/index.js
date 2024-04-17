@@ -1,9 +1,9 @@
 module.exports = [
-  {
+  /*{
     type: 'doc',
     id: 'references/references',
     label: 'References',
-  },
+  },*/
   {
     type: 'category',
     label: "Setup and Administration",
@@ -58,10 +58,10 @@ module.exports = [
           'references/visual-kpi-designer/data-limits/data-limits-for-website-configuration'
         ],
       },
-      { 
+      /*{ 
         type: 'doc',
         id: 'references/visual-kpi-designer/groups-attributes-keywords/groups-attributes-keywords',
-      },
+      },*/
       {
         type: 'category',
         label: "Attributes & Keywords",
@@ -80,20 +80,10 @@ module.exports = [
       },
       {
         type: 'category',
-        label: "Attributes & Keywords",
-        items: [
-          'references/visual-kpi-designer/advanced-site-settings/advanced-site-settings-attributes',
-          'references/visual-kpi-designer/advanced-site-settings/advanced-site-settings-interfaces',
-          'references/visual-kpi-designer/advanced-site-settings/advanced-site-settings-nav-bar-links',
-          'references/visual-kpi-designer/advanced-site-settings/advanced-site-settings-site-rollups'
-        ],
-      },
-      {
-        type: 'category',
         label: "Site Settings",
         items: [
           'references/visual-kpi-designer/site-settings/site-settings-alerts',
-          'references/visual-kpi-designer/site-settings/site-settings-chart-color-configuration',
+          'references/visual-kpi-designer/site-settings/site-settings-chart-color',
           'references/visual-kpi-designer/site-settings/site-settings-chart-dates',
           'references/visual-kpi-designer/site-settings/site-settings-chart-ranges',
           'references/visual-kpi-designer/site-settings/site-settings-contacts',
@@ -107,6 +97,17 @@ module.exports = [
           'references/visual-kpi-designer/site-settings/site-settings-visual-kpi-website',
         ],
       },
+      {
+        type: 'category',
+        label: "Advanced Site Settings",
+        items: [
+          'references/visual-kpi-designer/advanced-site-settings/advanced-site-settings-attributes',
+          'references/visual-kpi-designer/advanced-site-settings/advanced-site-settings-interfaces',
+          'references/visual-kpi-designer/advanced-site-settings/advanced-site-settings-nav-bar-links',
+          'references/visual-kpi-designer/advanced-site-settings/advanced-site-settings-site-rollups'
+        ],
+      },
+      
     ],
   },
   
