@@ -3,9 +3,7 @@ import React from 'react';
 const CardList = ({ data, Card, className, numColumns }) => {
 
   const setGridColumns = (numColumns) => {
-    const isSmallScreen = window.innerWidth < 400;
-
-      if (numColumns && !isSmallScreen) {
+      if (numColumns) {
         const columnWidths = Array(numColumns).fill('minmax(200px, 1fr)').join(' ');
         return columnWidths;
       }
