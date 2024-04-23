@@ -1,7 +1,7 @@
 import React from 'react';
 import CardList from './CardList';
 
-const Card = ({ logo, name, linkTo }) => {
+const Card = ({ logo, name, linkTo, externalLink }) => {
   return (
     <a className="link_card" target={externalLink && '_blank'} href={linkTo}>
       {logo && <img src={`../../../img/setup-adm/interfaces/icons/${logo}.png`} className="icon_img" alt={name} /> }
