@@ -2,8 +2,8 @@
 id: charts
 title: Charts
 slug: charts
-description: Presents advanced information about Charts visualization features of Visual KPIs software for an end user.
-tags: ['features', 'end-user', 'advanced', 'visualization', 'view', 'pareto', 'pie', 'gantt', 'bar', 'chart',]
+description: Presents advanced information about charts visualization features of Visual KPIs software for an end user.
+tags: ['features', 'end-user', 'advanced', 'visualization', 'view', 'pareto', 'pie', 'gantt', 'bar', 'chart', histogram,]
 ---
 
 import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
@@ -11,24 +11,79 @@ import SvgFont from '@site/src/components/SvgFont/SvgFont';
 
 Charts show data as it relates to its defined limits. Visual KPI uses many chart types to visualize data using status, colors, and limits. The chart view options are:
 
-1. [Bar charts](/docs/end-user/features/visualizations/charts#bar-charts)
-2. [Pareto charts](/docs/end-user/features/visualizations/charts#pareto-charts)
-3. [Pie charts](/docs/end-user/features/visualizations/charts#pie-chats)
-4. [Box plots](/docs/end-user/features/visualizations/charts#box-plots)
-5. [Gantt charts](/docs/end-user/features/visualizations/charts#gantt-charts)
-6. [Gauge charts](/docs/end-user/features/visualizations/charts#gauge-charts)
-7. [XY plots](/docs/end-user/features/visualizations/charts#xy-plots)
+1. [XY plots](/docs/end-user/features/visualizations/charts#xy-plots) (<SvgFont icon="133"/>)
+2. [Histogram](/docs/end-user/features/visualizations/charts#histogram-charts)
+3. [Bar charts](/docs/end-user/features/visualizations/charts#bar-charts) (<SvgFont icon="142"/>)
+4. [Pareto charts](/docs/end-user/features/visualizations/charts#pareto-charts) (<SvgFont icon="132"/>)
+5. [Pie charts](/docs/end-user/features/visualizations/charts#pie-chats) (<SvgFont icon="124"/>)
+6. [Box plots](/docs/end-user/features/visualizations/charts#box-plots) (<SvgFont icon="23"/>)
+7. [Gantt charts](/docs/end-user/features/visualizations/charts#gantt-charts) (<SvgFont icon="122"/>)
+8. [Gauge charts](/docs/end-user/features/visualizations/charts#gauge-charts) (<SvgFont icon="11"/>)
+
 
 <StylizedImage
   imgURL="img/docs/end-user/features/visualization/charts/features-visualization-charts-cut.png"
-  alt="Visualization Charts"
+  alt="Visualization charts"
 />
 
-### Bar charts
+:::note Charts availability
+Not all charts are available everywhere. Depending on the object you select, different options can be available. Take the above image as an example. Only 6 of 8 chart visualizations are available when you access the **KPIs** menu and click **Select KPIs** (<SvgFont icon="153"/>).
+
+Note also that to use some chart options, you need to fulfill some requirements. For example, to make the XY plot visualization available, you need to select at least two KPIs.
+:::
+
+## XY plots
+
+XY plots (<SvgFont icon="133"/>), or Scatter charts as they're sometimes called, show the relationships between two data sets. They're great for showing correlations between one or many variables or calculations. 
+
+Based on how your admin configures XY plots or Scatter charts, they may be:
+
+- Time-series or non-time-series.
+- Manually or query-based configured.
+
+<StylizedImage
+  imgURL="img/docs/end-user/features/visualization/charts/features-scatterchart.png"
+  alt="XY plots / Scatter charts"
+/>
+
+## Histogram charts
+
+Histogram charts in Visual KPI provide a way to visualize the frequency distribution of range values for your KPIs over time. A histogram is a type of bar chart that represents the distribution of numerical data by dividing it into intervals, often called bins, and counting the number of data points that fall into each bin. The height of each bar reflects the frequency of data points within that interval. The histograms help you identify concentrations and patterns that inform decision-making. 
+
+To define the number of bins for each KPI Histogram chart, Visual KPI uses the following formula based on the number of data points (*n*):
+
+```
+Number of Bins = 3 + log2(n) * log(n)
+```
+
+The Visual KPI Histogram chart contains bars and a line graph, where bars are related to the count of data points within a range, and the line represents the cumulative total. The left Y-axis represents the total count of data points, while the right Y-axis presents the percentage of data points. The X-axis will always show the value range of the KPI.
+
+To better understand how to analyze the histogram information, let's use the example of the image below from pressure measurements. When you select a bar from the Histogram charts, information for that value range will appear. For the one selected and displayed in the image below, you can see that:
+
+- The considered pressure interval ranges from 10.22 to 10.24
+- From the total data points available for the 4 hours time range, 21 are within the considered pressure interval.
+- 61.57% of the data points have values in or below the pressure range of the selected bar. The black line displays the percentage information.
+
+<StylizedImage
+  imgURL="img/docs/end-user/features/visualization/charts/features-histogram.png"
+  alt="Histogram charts"
+/>
+
+:::tip Compare KPIs with Histogram
+
+You can use Histogram charts to visualize data from multiple KPIs simultaneously, comparing their distribution. However, the Histogram chart may present irrelevant or hard-to-read information if you use KPIs of different magnitudes, such as pressure and temperature.
+
+:::
+
+:::tip 
+
+Histogram charts are useful for KPIs that aren't regularly sampled. They help spot problems that might be missed when analyzing trends with varying sample sizes. A Histogram can show if the data that shows your KPI in a bad state has a relevant amount of samples or if it may be associated with a possible measurement error. 
+
+## Bar charts
 
 Bar charts (<SvgFont icon="142"/>) can be used to show comparisons of data against targets and limits in either a vertical or horizontal chart. You can compare only one specific set of data, where each bar represents the data, or you can cluster data sets so that each specific set has its bar. Still, the related sets are clustered and compared against other clustered data.
 
-Depending on the configuration by your admin, Bar Charts can be:
+Depending on the configuration by your admin, Bar charts can be:
 
 - Time-series or non-time-series data.
 - Manually or query-based configured.
@@ -39,27 +94,30 @@ Depending on the configuration by your admin, Bar Charts can be:
 
 <StylizedImage
   imgURL="img/docs/end-user/features/visualization/charts/features-barchart.png"
-  alt="Visualization Charts"
+  alt="Visualization charts"
 />
 
-### Pareto charts
+## Pareto charts
 
-Pareto Charts (<SvgFont icon="132"/>) can help you quickly see which of your assets are most critical and know where you need to focus. A Pareto chart contains both bars and a line graph, where individual values are represented in descending order by bars, and the line represents the cumulative total.
+Pareto charts (<SvgFont icon="132"/>) can help you quickly see which of your assets are most critical and know where you need to focus. Thus, you can use them to monitor quality control, identifying where most problems come from. 
 
-Pareto Charts show assets and values in the bars and use a line to show cumulative effect. They can be used to monitor quality control, showing where most problems come from.
+A Pareto chart contains bars and a line graph:
 
-You can even show relative data using stacked Pareto charts. Each bar can show multiple values, each displaying a different color, and as you move your cursor over each bar, you'll see the actual values as tooltips.
+- **Bars graph**: Displays variables in descending order of magnitude, with the most critical factor appearing first. Each bar represents a unique element or issue.
+- **Line graph**: Shows the cumulative percentage of the total impact each element contributes. This line helps visualize how adding one factor to another cumulatively accounts for most of the effect.
 
 <StylizedImage
   imgURL="img/docs/end-user/features/visualization/charts/features-pareto.png"
-  alt="Visualization Charts"
+  alt="Visualization charts"
 />
 
-### Pie chats
+In Visual KPI, you can show relative data using stacked Pareto charts. Each bar can show multiple values, each displaying a different color, and as you move your cursor over each bar, you'll see the actual values as tooltips.
 
-Pie Charts (<SvgFont icon="124"/>) display a simple graphic that shows the relative proportions of your compared assets. However, Pie Charts have some disadvantages for Visual KPI, such as their size for screen presentation and the limited ability to compare peer data. 
+## Pie chats
 
-Depending on how they're configured by your admin, Pie Charts can be:
+Pie charts (<SvgFont icon="124"/>) display a simple graphic that shows the relative proportions of your compared assets. However, Pie charts have some disadvantages for Visual KPI, such as their size for screen presentation and the limited ability to compare peer data. 
+
+Depending on how they're configured by your admin, Pie charts can be:
 
 - Manually and query-based configured.
 - Mouse over dynamic.
@@ -69,11 +127,11 @@ Depending on how they're configured by your admin, Pie Charts can be:
   alt="Pie Chart"
 />
 
-### Box plots
+## Box plots
 
-Box Plots display variation in samples without making assumptions about the underlying statistical distribution. In Visual KPI, Box Plots can be based on time-series data, or non-time-series data. 
+Box plots (<SvgFont icon="23"/>) display variation in samples without making assumptions about the underlying statistical distribution. In Visual KPI, Box plots can be based on time-series data or non-time-series data. 
 
-Box Plots display a dataset through quartiles:
+Box plots display a dataset through quartiles:
 
 - **Minimum**: the lowest data point, excluding any outliers.
 - **Median**: the middle value of the dataset.
@@ -81,29 +139,29 @@ Box Plots display a dataset through quartiles:
 - **First quartile (q1)**: the median of the lower half of the dataset.
 - **Third quartile (q3)**: the median of the upper half of the dataset.
 
-Box Plots can be created by end users in Visual KPI sites, or admins can create Box Plots in Visual KPI Designer. Box Plots can be created manually or they can be query-based.
+End users in Visual KPI sites can create box plots, or admins can create Box plots in Visual KPI Designer. In addition, Box plots can be created manually, or they can be query-based.
 
 <StylizedImage
   imgURL="img/docs/end-user/features/visualization/charts/features-boxplot.png"
   alt="Box Plot Chart"
 />
 
-### Gantt chart
+## Gantt chart
 
-Gantt Charts (<SvgFont icon="122"/>) are great for showing time-sequenced events. They can show you all of the elements of a project along a timeline, including when each element is scheduled to be completed, any dependencies, and the status of each. Task or project elements are listed along the vertical axis of the Gantt Chart and the horizontal axis displays time intervals.
-
-:::note Gantt Charts
-
-Gantt Charts are only query-based in Visual KPI, and they must be created by your admin.
-
-:::
+Gantt charts (<SvgFont icon="122"/>) are great for showing time-sequenced events. They can show you all of the elements of a project along a timeline, including when each element is scheduled to be completed, any dependencies, and the status of each. Task or project elements are listed along the vertical axis of the Gantt Chart and the horizontal axis displays time intervals.
 
 <StylizedImage
   imgURL="img/docs/end-user/features/visualization/charts/features-gantt.png"
-  alt="Visualization Charts"
+  alt="Visualization charts"
 />
 
-### Gauge charts
+:::note Gantt charts
+
+Gantt charts are only query-based in Visual KPI. Your admin must create them.
+
+:::
+
+## Gauge charts
 
 Gauge charts (<SvgFont icon="11"/>), also known as Dial or Speedometer, are a meter-type visualization that shows the real-time status of a KPI, indicated by a gauge and needle, within a range that includes targets and actual values. These charts include minimum and maximum ranges, along with an indicator for an ideal target. They also can be used to show actual performance versus targets or progress toward a target for anything from temperature, weight, and speed to percentages of sales or work completed, performance, and more.
 
@@ -117,21 +175,7 @@ If configured by your admin, you can visualize any trend as a Gauge chart. Simpl
 
 <StylizedImage
   imgURL="img/docs/end-user/features/visualization/charts/features-gauge.png"
-  alt="Gauge Charts"
-/>
-
-### XY plots
-
-XY plots (<SvgFont icon="133"/>), or Scatter Charts as they're sometimes called, show the relationships between two data sets. They're great for showing correlations between one or many variables or calculations. 
-
-Based on how your admin configures XY Plots or Scatter Charts, they may be:
-
-- Time-series or non-time-series.
-- Manually or query-based configured.
-
-<StylizedImage
-  imgURL="img/docs/end-user/features/visualization/charts/features-scatterchart.png"
-  alt="XY Plots / Scatter Charts"
+  alt="Gauge charts"
 />
 
 ## What's next?
