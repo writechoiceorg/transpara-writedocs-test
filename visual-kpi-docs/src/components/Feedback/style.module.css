@@ -1,3 +1,15 @@
+.dialog-background {
+  /* Your existing styles */
+  opacity: 1; /* Start with opacity 0 */
+  transform: translateX(100%); /* Move the dialog off the screen to the right */
+  transition: opacity 0.5s, transform 0.5s; /* Apply transitions for opacity and transform */
+}
+
+.dialog-background.visible {
+  opacity: 1; /* Show the dialog with full opacity */
+  transform: translateX(0%); /* Move the dialog to its normal position */
+}
+
 /* Apply this CSS to the main container of your form */
 .dialog-background {
   background: #ffffff;
@@ -18,9 +30,11 @@
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  background-color: #ededed;
+  border: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 15px 20px 15px 20px;
 }
 
 /* Style adjustments for the textarea */
@@ -30,18 +44,20 @@
 
 /* Style for the submit button */
 .dialog button[type='submit'] {
-  background-color: #4caf50; /* Green background */
+  background-color: #669900; /* Green background */
   color: white;
-  padding: 15px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  margin: auto;
+  width: 100%;
+  padding: 15px 20px 15px 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .dialog button[type='submit']:hover {
-  background-color: #45a049; /* Darker green on hover */
+  background-color: #5c8900;
 }
 
 /* Style for the close button */
@@ -51,17 +67,25 @@
   background: none;
   cursor: pointer;
   font-size: 20px;
+  font-weight: 600;
+  transition: transform 0.5s;
+}
+
+.close-button:hover {
+  color: #5c8900;
+  transform: rotate(-90deg);
 }
 
 .feedback-button {
   /* Style according to your design needs */
-  background-color: #007bff; /* Example blue color */
+  background-color: #669900; /* Example blue color */
   color: white;
-  padding: 10px 20px;
+  padding: 16px;
   border: none;
-  border-radius: 5px 5px 0 0;
+  border-radius: 10px 10px 0 0;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 600;
   position: fixed; /* Fixed position relative to the viewport */
   right: 0; /* Align to the right edge of the viewport */
   top: 50%; /* Position at half the height of the viewport */
@@ -69,5 +93,5 @@
 }
 
 .feedback-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #5c8900;
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import styles from './style.module.css';
+import SvgFont from '@site/src/components/SvgFont/SvgFont';
 
 export default function Feedback() {
     const [isOpen, setIsOpen] = useState(false);
@@ -21,15 +22,19 @@ export default function Feedback() {
 
     return (
         <div>
+            
             <button className={styles['feedback-button']} onClick={toggleDialog}>
                 Feedback
             </button>
 
-            {isOpen && (
-                <div className={styles['dialog-background']}>
+            
+                <div className={
+                  `${styles['dialog-background']} 
+                  ${isOpen ? styles['visible'] : ''}`
+                }>
                     <div className={styles['dialog']}>
-                        <button className={styles["close-button"]} onClick={toggleDialog}>×</button>
-                        <h2>Feedback</h2>
+                        <button className={styles["close-button"]} onClick={toggleDialog}><SvgFont icon="248"/></button>
+                        <h3>Feedback</h3>
                         <form onSubmit={sendEmail}>
                             <input name="name" type="text" placeholder="Your name" required />
                             <input name="company" type="text" placeholder="Your company" />
@@ -39,7 +44,7 @@ export default function Feedback() {
                         </form>
                     </div>
                 </div>
-            )}
+            
         </div>
     );
 }
