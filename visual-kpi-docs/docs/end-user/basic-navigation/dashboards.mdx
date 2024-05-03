@@ -26,11 +26,10 @@ You can have as many dashboards as you want, belonging to one or more profiles. 
 
 You can create a new dashboard from scratch or copy an existing one. For instance, copying an existing dashboard can be helpful when you want to edit a locked dashboard or compile dashboards from different profiles in your profile. To create a new dashboard, follow the steps below:
 
-1. Click on the **Dashboard** icon (<SvgFont icon="10"/>).
+1. Click on the dropdown **Dashboard** icon (<SvgFont icon="10"/>), on the top right corner.
 2. Select **New Dashboard**.
 3. Type a dashboard name and description.
-4. If you want to copy an existing dashboard, check the **Copy Existing Dashboard** option.
-    1. Use the pull-down menu to choose the existing dashboard you want to copy.
+4. If you want to copy an existing dashboard, check the **Copy Existing Dashboard** option. Use the pull-down menu to choose the existing dashboard you want to copy.
 5. Click **Save**.
 
 You'll be automatically redirected to the new dashboard page.
@@ -50,8 +49,6 @@ In the dashboard, the Options menu (<SvgFont icon="188"/>) offers different ways
 
 3. **Ad Hoc Trend** (<SvgFont icon="165"/>): Create an Ad Hoc Trend, a custom type of trend that you can build inside your Visual KPI site and add to your Dashboard.
 
-[add link end-user/features/visualization/Ad Hoc] 
-
 4. **Pin to Bookmark Bar** (<SvgFont icon="120"/>): You can pin almost anything in Visual KPI to the bookmark bar, such as a KPI, chart, table, or external links. When you choose this option, Visual KPI creates a shortcut to the page you're accessing at that moment. Use the pins at the top to navigate to important pages quickly.
 
 5. **Hide Bookmark Bar** (<SvgFont icon="109"/>): Use this option to hide the Bookmark Bar. 
@@ -61,7 +58,7 @@ In the dashboard, the Options menu (<SvgFont icon="188"/>) offers different ways
 7. **View in Server/Client Time** (<SvgFont icon="52"/>): Change between Server and Client Time, regardless of time zones. 
 
 <StylizedImage
-  imgURL="img/docs/end-user/basic-navigation/dashboards/menu-options.png"
+  imgURL="img/docs/end-user/basic-navigation/dashboards/menu-options-2.png"
   alt="Menu options"
 />
 
@@ -76,9 +73,15 @@ In addition to creating Dashboards based on existing models, you can arrange you
 - Adding new objects.
 - Defining custom time ranges.
 
+:::info Access to the Dashboard Customization
+
+The **Customize Dashboard** (<SvgFont icon="260"/>) option is only available in the **Dashboards** tab.
+
+:::
+
 :::note Save your changes
 
-After customizing the dashboard, don't forget to click **Save** at the bottom of the Customize Dashboard panel or click on the green checkmark (<SvgFont icon="190"/>) at the top once you have customized your Dashboard.
+After customizing the dashboard, don't forget to click **Save** at the bottom of the Customize Dashboard panel or click on the green checkmark (<SvgFont icon="190"/>) at the top once you have customized your Dashboard. Otherwise, you'll lose your changes.
 
 :::
 
@@ -144,14 +147,20 @@ If you change a visualization or information selection and don't click **Apply**
 
 ### Add new objects to your Dashboard 
 
-You can add any object to your dashboard. To add a new visualization:
+You can add any object to your dashboard or even use an object, such as a KPI, to create a new dashboard with just that object. To add a new object to an existing or new dashboard, follow the steps:
 
 1. Access the KPI, object, or any visualization you want to add to the dashboard.
 2. Click in the **Options** menu (<SvgFont icon="188"/>).
 3. Select one of the three options available:
     - **Add to *Dashboard*** (<SvgFont icon="115"/>): The current dashboard name will be in the *Dashboard* place. This option adds the current view directly to the dashboard you're currently using.
-    - **Add to New Dashboard** (<SvgFont icon="115"/>): This enables you to use the current visualization in a new dashboard that you will create.
-    **Add to Existing Dashboard** (<SvgFont icon="115"/>): Use this option to add the current visualization to another dashboard other than the one you are currently using. 
+    - **Add to New Dashboard** (<SvgFont icon="115"/>): This enables you to use the current visualization in a new dashboard. If you choose this option, you'll need to provide the new dashboard name and description, which will contain only the selected object. However, you can add new objects in the future.
+    - **Add to Existing Dashboard** (<SvgFont icon="115"/>): Use this option to add the current visualization to another dashboard other than the one you are currently using. 
+
+:::tip Add to New Dashboard
+
+Consider creating a new dashboard when making a data story or analyzing a project. With this approach, you can easily share the insights. As you continue the analyses, you can add new objects to the dashboard, enabling you to build a complete snapshot of the analysis task.
+
+:::
 
 The current object will be available in the selected dashboard. You can use the [resize and move objects](dashboards#resize-and-move-objects) to position them in the desired place.
 
