@@ -39,38 +39,48 @@ Actual is the current, real-time value of the KPI, and Target is where you want 
 
 ## Grouping
 
-Click the Grouping icon (<SvgFont icon="114"/>) to group your KPIs by Standard or Custom Attributes such as Status, Group, or any other that makes sense for your organization since your admin can configure Custom Attributes. You can also select the Bullet Chart Type (default, actual EU, deviation EU or deviation %) for the Bullet Chart view (<SvgFont icon="171"/>).
+Click the **Grouping** icon (<SvgFont icon="114"/>) to group your KPIs. You can group your KPIs by Standard attributes, such as Status or Group, or any other that makes sense for your organization through Custom attributes. The Custom Attributes are configured by your organization's admin. 
 
-## View as bullet chart
-
-The KPI Bullet Chart view (<SvgFont icon="171"/>) is similar to the KPI List View (<SvgFont icon="206"/>) and Status History view (<SvgFont icon="138"/>), but the KPI Bullet Chart view focuses on the current status of the KPI relative to targets and limits. The KPI Bullet Chart view is optimized for mobile, so comparing peer KPIs at a glance is easy.
-
-For the KPI Bullet Chart, you have multiple view options. Use the Grouping icon to select from the Default view, Actual EU (engineering units), Deviation %, and Deviation EU. 
-
-Each KPI requires a minimum amount of information to be included in its configuration for this view. For example, you need a minimum of one limit, and even then, it will be very limited. A minimum and maximum value is one of the most important attributes to add to each KPI. These are the limits of what you expect to be possible and where any value outside of this is most likely incorrect data (for example, a KPI measuring available disk space should never be able to show a negative number or a number larger than the size of your disk).
-
-In all cases, the leftmost edge is defined by the first non-empty low side value (min, LLL, LL, L, Actual), while the rightmost edge is defined by the last non-empty high side value (max, HHH, HH, H, Actual).
-
-The example below shows the Deviation % view, which centers on the target and shows which KPIs are deviating by a great % from their target.
+The example below presents the KPIs grouped by status, which allows KPIs with equal status to be displayed together. This option is valuable if you want to quickly check all the KPIs with similar characteristics, such as all KPIs with HighHighHigh status.
 
 <StylizedImage
-  imgURL="img/docs/end-user/features/visualization/kpi/features-visualization-bulletchart2.png"
-  alt="Bullet Chart"
+  imgURL="img/docs/end-user/features/visualization/kpi/features-visualization-group.gif"
+  alt="Grouping KPIs"
 />
 
-Below is an example Bullet Chart list starting with its associated limit information from the Visual KPI Designer and followed by the resulting view in the Visual KPI client view. 
+## View as a Bullet Chart
+
+The KPI **Bullet Chart** view (<SvgFont icon="171"/>) is similar to the KPI **List** view (<SvgFont icon="206"/>) and **Status History** view (<SvgFont icon="138"/>). However, the KPI Bullet Chart view focuses on the current status of the KPI relative to targets and limits. The KPI Bullet Chart view is optimized for mobile, so comparing peer KPIs at a glance is easy.
+
+When you select the Bullet Chart, new options are available if you use the **Grouping** (<SvgFont icon="114"/>) function. For the Bullet Chart view, you can group using the Standard and Custom Attributes, but you also can choose to group by Bullet Chart type:
+
+- Default
+- Actual EU (engineering units)
+- Deviation %
+- Deviation EU
+
+Each KPI in the Bullet Chart View requires specific configuration details to ensure accurate representation. At a minimum, each KPI must have at least one defined limit. However, to fully utilize the capabilities of the view, you should define both minimum and maximum values. These values represent the expected range of the KPI and help identify anomalies. For example, a KPI measuring available disk space should never be able to show a negative number or a number larger than the size of your disk.
+
+The example below presents how to read the bullet chart using the default view.
 
 <StylizedImage
-  imgURL="img/docs/end-user/features/visualization/kpi/features-bulletchart-designexample2.png"
-  alt="Bullet Chart Example"
+  imgURL="img/docs/end-user/features/visualization/kpi/features-bulletchart-detail.webp"
+  alt="Bullet Chart Detail"
 />
 
-Note below an example presenting additional details to read the Bullet Charts.
+In contrast, the example below shows Bullet Charts using the Deviation % view, which centers on the target and shows which KPIs are deviating by a great percentage from their target. The bigger the black bar, the more the KPI deviates from the target.
 
 <StylizedImage
-  imgURL="img/docs/end-user/features/visualization/kpi/features-bulletchart-detail.webp"
-  alt="Bullet Chart Detail"
+  imgURL="img/docs/end-user/features/visualization/kpi/features-visualization-bulletchart2.png"
+  alt="Bullet Chart"
 />
+
+The Bullet Chart visualization aligns KPI values between two extremes:
+
+- **Leftmost Edge**: Defined by the first significant low-side value (min, LLL, LL, L, Actual).
+- **Rightmost Edge**: Defined by the last significant high-side value (max, HHH, HH, H, Actual).
+
+The admin must define the values related to each of these limits thought the Visual KPI Designer
 
 ## View as trend list
 
@@ -121,11 +131,11 @@ For Status Summary (<SvgFont icon="136"/>) and Status History (<SvgFont icon="13
 First, select the Status Summary icon, or the Status History icon, then use:
 
 1. **Alert Count or Status Count icons** (<SvgFont icon="151"/>):
-  - for Status Summary, to see how many times the KPIs have been in an alert state over the defined period, or have reached a particular status over time.
-  - for Status History, to see how many times a KPI has reached a particular status over time.
+    - For Status Summary, to see how many times the KPIs have been in an alert state over the defined period, or have reached a particular status over time.
+    - For Status History, to see how many times a KPI has reached a particular status over time.
 2. **Time-in-State icon** (<SvgFont icon="287"/>):
-  - for Status Summary, to see how much time a KPI spent in an alert state.
-  - for Status History, in a status state.
+    - For Status Summary, to see how much time a KPI spent in an alert state.
+    - For Status History, in a status state.
 
 Click any KPI in the Pareto chart to see a trend over time and a list view below the trend.
 

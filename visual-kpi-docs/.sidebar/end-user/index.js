@@ -65,6 +65,7 @@ module.exports = [
           'end-user/features/visualizations/kpi',
           'end-user/features/visualizations/charts',
           'end-user/features/visualizations/trends',
+          'end-user/features/visualizations/embedded-content',
         ],
       },
     ],

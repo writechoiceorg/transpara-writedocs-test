@@ -4,8 +4,6 @@ import {ThemeClassNames} from '@docusaurus/theme-common';
 import Translate from '@docusaurus/Translate';
 import styles from './styles.module.css';
 import SvgFont from '../../components/SvgFont/SvgFont';
-import selection from '../../../static/font/selection.json';
-import position from '../../../static/data/icons/iconsPosition.json';
 
 function NoteIcon() {
   return (
@@ -78,7 +76,7 @@ const AdmonitionConfigs = {
       <Translate
         id="theme.admonition.support"
         description="The default label used for the support admonition (:::security)">
-        support
+        Support
       </Translate>
     )
   },
@@ -89,7 +87,7 @@ const AdmonitionConfigs = {
       <Translate
         id="theme.admonition.training"
         description="The default label used for the training admonition (:::training)">
-        training
+        Training
       </Translate>
     )
   },
@@ -100,7 +98,7 @@ const AdmonitionConfigs = {
       <Translate
         id="theme.admonition.unique"
         description="The default label used for the unique admonition (:::unique)">
-        unique
+        Unique
       </Translate>
     )
   },
@@ -111,7 +109,7 @@ const AdmonitionConfigs = {
       <Translate
         id="theme.admonition.note"
         description="The default label used for the Note admonition (:::note)">
-        note
+        Note
       </Translate>
     ),
   },
@@ -122,7 +120,7 @@ const AdmonitionConfigs = {
       <Translate
         id="theme.admonition.tip"
         description="The default label used for the Tip admonition (:::tip)">
-        tip
+        Tip
       </Translate>
     ),
   },
@@ -133,7 +131,7 @@ const AdmonitionConfigs = {
       <Translate
         id="theme.admonition.danger"
         description="The default label used for the Danger admonition (:::danger)">
-        danger
+        Danger
       </Translate>
     ),
   },
@@ -144,7 +142,7 @@ const AdmonitionConfigs = {
       <Translate
         id="theme.admonition.info"
         description="The default label used for the Info admonition (:::info)">
-        info
+        Info
       </Translate>
     ),
   },
@@ -155,7 +153,7 @@ const AdmonitionConfigs = {
       <Translate
         id="theme.admonition.caution"
         description="The default label used for the Caution admonition (:::caution)">
-        caution
+        Caution
       </Translate>
     ),
   },

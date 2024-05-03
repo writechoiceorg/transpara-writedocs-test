@@ -39,3 +39,30 @@
 .link_cards_container .link_card .icon_img:hover {
   cursor: default !important;
 }
+
+/* Default grid styles for medium to large screens */
+.grid-columns-auto {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.grid-columns-2 {
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+}
+
+.grid-columns-3 {
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+}
+
+.grid-columns-4 {
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+}
+
+/* Adjustments for screens smaller than 400px */
+@media (max-width: 399px) {
+  .grid-columns-auto,
+  .grid-columns-2,
+  .grid-columns-3,
+  .grid-columns-4 {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
