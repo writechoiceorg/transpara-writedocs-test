@@ -1,17 +1,17 @@
 .dialog-background {
   /* Your existing styles */
-  opacity: 1; /* Start with opacity 0 */
+
   transform: translateX(100%); /* Move the dialog off the screen to the right */
-  transition: opacity 0.5s, transform 0.5s; /* Apply transitions for opacity and transform */
+  transition: transform 0.5s; /* Apply transitions for opacity and transform */
 }
 
 .dialog-background.visible {
-  opacity: 1; /* Show the dialog with full opacity */
   transform: translateX(0%); /* Move the dialog to its normal position */
 }
 
 /* Apply this CSS to the main container of your form */
 .dialog-background {
+  z-index: 2;
   background: #ffffff;
   padding: 20px;
   border-radius: 8px;
