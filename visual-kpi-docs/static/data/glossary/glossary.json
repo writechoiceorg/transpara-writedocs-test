@@ -26,7 +26,7 @@
     },
     {
       "name": "Object",
-      "description": ""
+      "description": "Objects are all the components that can compose the graphical interface of Visual KPI, including graphs, links, groups, etc."
     },
     {
       "name": "Trends",
