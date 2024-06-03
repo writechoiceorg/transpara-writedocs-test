@@ -20,6 +20,12 @@ This guide is intended for users looking to experiment with or test Visual KPI S
 
 ## Step 1: Enable virtualization on Windows
 
+:::info BIOS Configuration
+Many Windows 10 PCs and all PCs with Windows 11 preinstalled already have virtualization enabled. If that is your case, you can skip this step.
+
+In some cases, changes in the UEFI (or BIOS) are required to enable virtualization on Windows. Access this [Windows support](https://support.microsoft.com/en-us/windows/enable-virtualization-on-windows-11-pcs-c5578302-6e43-4b4b-a449-8ced115f58e1) page for guidance.
+:::
+
 To enable virtualization, you need to make sure that your system supports it and has the necessary drivers installed. Access the following links for each Windows version and follow the steps to enable Hyper-V:
 
 <LinkCards numColumns={2} data={
@@ -36,12 +42,6 @@ To enable virtualization, you need to make sure that your system supports it and
     },
   ]
 }/>
-
-:::info BIOS Configuration
-In some cases, changes in the UEFI (or BIOS) are required to enable virtualization on Windows. Access this [Windows support](https://support.microsoft.com/en-us/windows/enable-virtualization-on-windows-11-pcs-c5578302-6e43-4b4b-a449-8ced115f58e1) page for guidance.
-
-Many Windows 10 PCs and all PCs with Windows 11 preinstalled already have virtualization enabled. If that is your case, you can skip this step.
-:::
 
 ## Step 2: Install a new Windows Server VM
 
