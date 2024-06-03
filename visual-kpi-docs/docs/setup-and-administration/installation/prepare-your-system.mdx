@@ -91,7 +91,7 @@ Next, you need to allow ISAPI and CGI extensions to run on the web server. To ac
 3. Open the **ISAPI and CGI Restrictions** option.
 4. Allow all the ASP.NET to run by right-clicking each and selecting the **Allow** option.
 
-Below you can see an example of how to do this:
+Below, you will find a visual guide to these steps:
 
 <StylizedImage
   imgURL="img/setup-adm/installation/prepare-your-system/iis-gif.gif"
@@ -116,7 +116,7 @@ Now, you must install the correct roles in your OS's Server Manager. You can do 
     - ISS Management Console
 7. With these selected, you can **Install** and finish this wizard.
 
-Below you find these steps exemplified:
+Below, you will find a visual guide to these steps:
 
 <StylizedImage
   imgURL="img/setup-adm/installation/prepare-your-system/server-manager-gif.gif"
@@ -138,7 +138,7 @@ Visual KPI needs an SQL service to operate properly. Your SQL Server login needs
     - setupadmin
     - sysadmin
 
-Below you find this steps exemplified:
+Below, you will find a visual guide to these steps:
 
 <StylizedImage
   imgURL="img/setup-adm/installation/prepare-your-system/sql-manager-gif.gif"
@@ -160,13 +160,13 @@ Before you start the Visual KPI installation, check your privileges on the SQL S
 - **Installing Visual KPI**: On the Windows Server machine, the installing user must be a local admin. For the SQL Server, you must have the right to create and delete databases, execute stored procedures, add tables/views, and drop tables/views.
 - **Upgrading and maintaining Visual KPI**: On the Windows Server machine, the user must be a local admin. For SQL Server, you must have the right to execute stored procedures, add tables/views, and drop tables/views.
 - **Running Visual KPI**: For the Visual KPI Server to communicate with the SQL Server database, the account needs to have read and write permissions on the Visual KPI database. This account can be one of the following types:
- - Local SQL Server account: **SQLuser**.
- - Local machine account: **NT AUTHORITY\NETWORK SERVICE**.
- - Domain service account: **YOUR_DOMAIN\svc_vkpi**.
+   - Local SQL Server account: **SQLuser**.
+   - Local machine account: **NT AUTHORITY\NETWORK SERVICE**.
+   - Domain service account: **YOUR_DOMAIN\svc_vkpi**.
 
 By default, Visual KPI uses **NT AUTHORITY\NETWORK SERVICE** as the account for accessing SQL Server, running IIS application pools and executing Windows Services. This is a “least privileges” account and is the preferred choice for the runtime user account with the following characteristics based on single-machine or separate machine deployment:
 
-- **Single-machine**: When the Visual KPI Server and SQL Server coexist on the same Windows Server, IIS connects to SQL Server as NT AUTHORITY\NETWORK SERVICE.
+- **Single-machine**: When the Visual KPI Server and SQL Server coexist on the same Windows Server, IIS connects to SQL Server as `NT AUTHORITY\NETWORK SERVICE`.
 - **Separate machine**: When the Visual KPI Server and SQL Server are installed on separate Windows Servers, IIS connects to SQL Server as `[YOUR_DOMAIN]\[your Visual KPI server name]$` (for example, `TRANSPARA\VKPI_1$` where Transpara is the domain name and VKPI_1 is the Windows Server name).
 
 #### Confirm SQL Server permissions
