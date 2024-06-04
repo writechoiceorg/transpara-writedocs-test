@@ -376,12 +376,12 @@ Dashboards are collections of widgets that belong to profiles and profile groups
 The scripts ran earlier in this tutorial provided you with the following stored procedures:
 
 - `GetProfileGroups`: Returns a single profile group called Mines.
+
 - `GetProfiles`: This query is similar to the `GetProfileGroups` query. However, it refers to the MetaID of the recently created profile group. The purpose of this query is to create a profile named "Mines" and add it as a member of the profile group with the MetaID, which is also known as the ProfileGroupMetaID, of the Mines profile group.
-- `GetDashboards`: Returns 10 dashboards (1 per mine) belonging to the profile called Mines with the MetaID (ProfileMetaID): ProfileMines.
-- `GetWidgets`: When creating a widget, it's important to specify its position and size. Additionally, the widget should be linked to a specific item. For instance, if we want to create a KPI block, we need to provide the ObjectMetaID of the KPI that we want to display. Some widget types offer a variety of options. For example, KPI Blocks can be configured to hide their sparklines. Conversely, some widget types don't offer any options at all.
 
-    The GetWidgets query will return seven widgets per dashboard (70 rows). Each widget has the following elements:
+- `GetDashboards`: Returns 10 dashboards (1 per mine) belonging to the profile called Mines with the MetaID (ProfileMetaID) ProfileMines.
 
+- `GetWidgets`: When creating a widget, it is important to specify its position and size. Additionally, the widget should be linked to a specific item. For instance, if we want to create a KPI block, we need to provide the ObjectMetaID of the KPI that we want to display. Some widget types offer a variety of options. For example, KPI Blocks can be configured to hide their sparklines. Conversely, some widget types don't offer any options at all. The GetWidgets query will return seven widgets per dashboard (70 rows). Each widget has the following elements:
     - MetaID
     - DashboardMetaID (MetaID of the dashboard it will belong to)
     - Positioning data (RowStart, ColumnStart)
