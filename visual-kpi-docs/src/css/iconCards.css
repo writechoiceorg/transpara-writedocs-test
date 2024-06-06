@@ -51,28 +51,28 @@
 }
 
 /* Default grid styles for medium to large screens */
-.icon_cards_container .grid-columns-auto {
+.icon_cards_container.grid-columns-auto {
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
 
-.icon_cards_container .grid-columns-2 {
+.icon_cards_container.grid-columns-2 {
   grid-template-columns: repeat(2, minmax(200px, 1fr));
 }
 
-.icon_cards_container .grid-columns-3 {
+.icon_cards_container.grid-columns-3 {
   grid-template-columns: repeat(3, minmax(200px, 1fr));
 }
 
-.icon_cards_container .grid-columns-4 {
+.icon_cards_container.grid-columns-4 {
   grid-template-columns: repeat(4, minmax(150px, 1fr));
 }
 
 /* Adjustments for screens smaller than 400px */
 @media (max-width: 399px) {
-  .icon_cards_container .grid-columns-auto,
-  .icon_cards_container .grid-columns-2,
-  .icon_cards_container .grid-columns-3,
-  .icon_cards_container .grid-columns-4 {
+  .icon_cards_container.grid-columns-auto,
+  .icon_cards_container.grid-columns-2,
+  .icon_cards_container.grid-columns-3,
+  .icon_cards_container.grid-columns-4 {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
 }
