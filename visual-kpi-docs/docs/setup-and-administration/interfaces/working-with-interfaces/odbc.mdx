@@ -9,6 +9,7 @@ tags: ['documentation']
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
+import LinkCards from '@site/src/components/Cards/LinkCards';
 
 You can use ODBC interfaces to connect to an SQL database. In this section, you will learn how to configure ODBC interfaces using Visual KPI Server Manager.
 
@@ -38,10 +39,26 @@ After installing a new ODBC interface following these [instructions](/docs/setup
 
 The links below show you how to create your own queries:
 
-- [Get Current Value](#get-current-value-query)
-- [Get Trend Data](#get-trend-data-query)
-- [Get Historical Value](#get-historical-value-query)
-- [Get Historical Data](#get-historical-data-query)
+<LinkCards numColumns={4} data={
+  [
+    {
+      name: 'Get Current Value',
+      linkTo: '#get-current-value-query'
+    },
+    {
+      name: 'Get Trend Data',
+      linkTo: '#get-trend-data-query'
+    },
+    {
+      name: 'Get Historical Value',
+      linkTo: '#get-historical-value-query'
+    },
+    {
+      name: 'Get Historical Data',
+      linkTo: '#get-historical-data-query'
+    }
+  ]
+}/>
 
 :::info Parameterizing your queries
 Visual KPI gives you the power to parameterize most data allowing you to create one interface to query for different data. To learn more about it, refer to the [Parameterizing Interfaces](/docs/setup-and-administration/interfaces/parameterizing) page.
