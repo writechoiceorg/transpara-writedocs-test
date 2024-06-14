@@ -69,7 +69,7 @@ Visual KPI gives you the power to parameterize most data allowing you to create 
 
 To retrieve the current value of what you're looking for, you need to run a specific query that returns one row with two columns named `Value` and `Date`. Any additional columns or rows will be disregarded.
 
-For instance, if you want to select a KPI value called `distance_traveled` for a specific truck, you can use this method:
+For instance, if you want to select a KPI value called `distance_traveled` for a specific truck, you can use this query:
 
 <Tabs>
   <TabItem value="Hard coded" label="Hard coded">
@@ -212,17 +212,6 @@ Using `3` as **lookup**, and `2024-06-09` as **TIMESTAMP**, the query will retur
 |-------|------------|
 | 80    | 2024-06-01 |
 | 110   | 2024-06-09 |
-
-## How Visual KPI Reads Data with ODBC Interfaces
-
-To display KPI values, the Visual KPI ODBC interface follows a simple process:
-
-1. Read the tag name associated with a specific KPI column (such as _Value_, _Target_, _Low_, etc.).
-2. Search the _SampleData_ table for a row that has the same name in the _LookUp_ column. 
-3. Retrieve the value in the same row.
-4. Return the retrieved value to Visual KPI.
-
-This way, the interface ensures that the KPI values displayed are accurate and reliable.
 
 ## Aggregate Raw Data with ODBC Interface
 
