@@ -30,7 +30,8 @@ After installing a new ODBC interface following these [instructions](/docs/setup
 | id  | cost   | timestamp  | truck_id   | distance_traveled      | tons_transported |
 |-----|--------|------------|------------|------------------------|------------------|
 | 1   | 100.50 | 2024-06-01 | 1          | 150                    | 200              |
-| 2   | 250.75 | 2024-06-09 | 3          | 300                    | 400              |
+| 1   | 100.50 | 2024-06-01 | 3          | 80                     | 95               |
+| 2   | 250.75 | 2024-06-09 | 3          | 110                    | 400              |
 | 3   | 175.00 | 2024-06-09 | 2          | 250                    | 350              |
 | 4   | 300.25 | 2024-06-13 | 3          | 100                    | 450              |
 | 5   | 220.40 | 2024-06-13 | 2          | 350                    | 300              |
@@ -53,10 +54,10 @@ The links below show you how to create your own queries:
       name: 'Get Historical Value',
       linkTo: '#get-historical-value-query'
     },
-    {/* {
+    {
       name: 'Get Historical Data',
       linkTo: '#get-historical-data-query'
-    } */}
+    }
   ]
 }/>
 
@@ -75,7 +76,7 @@ For instance, if you want to select a KPI value called `distance_traveled` for a
   ```sql
     SELECT SUM(distance_traveled) AS Value,
     GETDATE() AS Date
-    FROM YOURTABLE
+    FROM SampleData
     WHERE truck_id = '3'
     AND tons_transported >= '400';
   ```
@@ -84,14 +85,18 @@ For instance, if you want to select a KPI value called `distance_traveled` for a
   ```sql
     SELECT SUM(distance_traveled) AS Value,
     GETDATE() AS Date
-    FROM YOURTABLE
+    FROM SampleData
     WHERE truck_id = {0}
     AND tons_transported >= {1};
   ```
-
-  Where the lookup would be: `3|400`, making `{0} = 3` and `{1} = 400`.
   </TabItem>
 </Tabs>
+
+Using `3|400` as **lookup**, this query will use `truck_id = 3` and `tons_transported >= 400`, returning the following data:
+
+| Value | Date       |
+|-------|------------|
+| 210   | 2024-06-14 |
 
 :::tip
 If this table or query has an actual timestamp column, you can also return that instead of GetDate.
@@ -104,9 +109,9 @@ To display the trend of a KPI, the ODBC interface of Visual KPI reads the tag na
 <Tabs>
   <TabItem value="Hard coded" label="Hard coded">
   ```sql
-  SELECT SUM(distance_traveled) AS Value,
+  SELECT distance_traveled AS Value,
   timestamp AS Date
-  FROM YOURTABLE
+  FROM SampleData
   WHERE truck_id = '3'
   AND Date BETWEEN '2024-06-01' and '2024-06-13'
   ORDER BY Date;
@@ -114,9 +119,9 @@ To display the trend of a KPI, the ODBC interface of Visual KPI reads the tag na
   </TabItem>
   <TabItem value="Parameterized" label="Parameterized" default>
   ```sql
-  SELECT SUM(distance_traveled) AS Value,
+  SELECT distance_traveled AS Value,
   timestamp AS Date
-  FROM YOURTABLE
+  FROM SampleData
   WHERE truck_id = {0}
   AND Date BETWEEN {STARTDATE} and {ENDDATE}
   ORDER BY Date;
@@ -125,6 +130,16 @@ To display the trend of a KPI, the ODBC interface of Visual KPI reads the tag na
 </Tabs>
 
 In the query above, `STARTDATE` and `ENDDATE` are [parameters](/docs/setup-and-administration/interfaces/parameterizing) that will be replaced with actual timestamps when configuring in Visual KPI Designer to create a time range for the trend data.
+
+Using `3` as **lookup**, `2024-06-01` as **STARTDATE**, and `2024-06-13` as **ENDDATE**, the query will return the following data:
+
+| Value | Date       |
+|-------|------------|
+| 80    | 2024-06-01 |
+| 110   | 2024-06-09 |
+| 100   | 2024-06-13 |
+| 125   | 2024-06-13 |
+
 
 :::caution Using the correct data type
 When calculating a sum, it is important to determine whether to use daily, hourly, or weekly data. To handle this logic using a start and end date, you should create a query that considers these factors. For instance, if you request a year's worth of data, your query should sum the daily data, resulting in 365 values, one for each day. To accomplish this, you could create a parameter that allows you to choose between Daily, Hourly, and Weekly and then use SQL logic to perform the calculation accurately.
@@ -139,7 +154,7 @@ The Get Historical Value Query is similar to the Get Current Value Query, howeve
   ```sql
     SELECT SUM(distance_traveled) AS Value,
     timestamp AS Date
-    FROM YOURTABLE
+    FROM SampleData
     WHERE truck_id = '3' AND tons_transported >= '400'
     AND timestamp='2024-06-09';
   ```
@@ -148,7 +163,7 @@ The Get Historical Value Query is similar to the Get Current Value Query, howeve
   ```sql
     SELECT SUM(distance_traveled) AS Value,
     timestamp AS Date
-    FROM YOURTABLE
+    FROM SampleData
     WHERE truck_id = {0} AND tons_transported >= {1}
     AND timestamp={TIMESTAMP};
   ```
@@ -157,20 +172,46 @@ The Get Historical Value Query is similar to the Get Current Value Query, howeve
 
 Where `TIMESTAMP` is a [parameter](/docs/setup-and-administration/interfaces/parameterizing) that will be replaced with an actual timestamp when configuring in Visual KPI Designer to use this query.
 
-{/* ### Get Historical Data Query
+Using `3|400` as **lookup**, and `2024-06-09` as **TIMESTAMP**, the query will return the following data:
+
+| Value | Date       |
+|-------|------------|
+| 110   | 2024-06-09 |
+
+
+### Get Historical Data Query
+
+The Historial Data, similarly to the trend data, will return multiple rows, allowing Visual KPI to display a historical graph out of the returned data. It will search the `SampleData` table for each row that fits the filters and that the timestamp is previous to the informed date.
 
 <Tabs>
   <TabItem value="Hard coded" label="Hard coded">
   ```sql
-
+  SELECT distance_traveled AS Value,
+  timestamp AS Date
+  FROM SampleData
+  WHERE truck_id = '3'
+  AND timestamp <= '2024-06-09'
+  ORDER BY Date;
   ```
   </TabItem>
   <TabItem value="Parameterized" label="Parameterized" default>
   ```sql
-
+  SELECT distance_traveled AS Value,
+  timestamp AS Date
+  FROM SampleData
+  WHERE truck_id = {0}
+  AND timestamp <= {TIMESTAMP}
+  ORDER BY Date;
   ```
   </TabItem>
-</Tabs> */}
+</Tabs>
+
+Using `3` as **lookup**, and `2024-06-09` as **TIMESTAMP**, the query will return the following data:
+
+| Value | Date       |
+|-------|------------|
+| 80    | 2024-06-01 |
+| 110   | 2024-06-09 |
 
 ## How Visual KPI Reads Data with ODBC Interfaces
 
