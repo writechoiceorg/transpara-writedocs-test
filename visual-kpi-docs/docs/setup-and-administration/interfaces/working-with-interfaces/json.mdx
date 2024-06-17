@@ -66,6 +66,8 @@ Using the example below as base address, you can see how you can parameterize it
   </TabItem>
   <TabItem value="Parameterized" label="Parameterized">
     - Base Address: `http://demo.example.com/apitest/api/training?machine={0}`
+
+    Where, in Visual KPI Designer, you would add `server1` as the lookup.
   </TabItem>
 </Tabs>
 
@@ -126,7 +128,7 @@ The current value requires you to configure:
     - Value field: `{2}`
     - Timestamp field: `{3}`
 
-    Where, in Visual KPI Designer, you would use `data.|CPU|timestamp` as the lookup.
+    Where, in Visual KPI Designer, you would use `server1|data.|CPU|timestamp` as the lookup.
   </TabItem>
 </Tabs>
 
@@ -147,7 +149,7 @@ Trend Data requires a start and end date to display the trend of a KPI. These ca
     - Timestamp field: `{3}`
     - Request URI: `&start={STARTDATE}&end={ENDDATE}`
 
-    Where, in Visual KPI Designer, you would use `data.|CPU|timestamp` as the lookup, `2024-02-17T12:30:00` as **STARTDATE**, and `2024-06-15T12:30:00` as **ENDDATE**.
+    Where, in Visual KPI Designer, you would use `server1|data.|CPU|timestamp` as the lookup, `2024-02-17T12:30:00` as **STARTDATE**, and `2024-06-15T12:30:00` as **ENDDATE**.
   </TabItem>
 </Tabs>
 
@@ -172,7 +174,7 @@ The historical value requires a specific date, as it needs to retrieve a value a
     - Timestamp field: `{3}`
     - Request URI: `&date={TIMESTAMP}`
 
-    Where, in Visual KPI Designer, you would use `data.|CPU|timestamp` as the lookup, and `2024-06-15T12:30:00` as **TIMESTAMP**.
+    Where, in Visual KPI Designer, you would use `server1|data.|CPU|timestamp` as the lookup, and `2024-06-15T12:30:00` as **TIMESTAMP**.
   </TabItem>
 </Tabs>
 
@@ -197,7 +199,7 @@ The historical data requires a specific date, as it will gather all data until t
     - Timestamp field: `{3}`
     - Request URI: `&date={TIMESTAMP}`
 
-    Where, in Visual KPI Designer, you would use `data.|CPU|timestamp` as the lookup, and `2024-02-17T00:30:00` as **TIMESTAMP**.
+    Where, in Visual KPI Designer, you would use `server1|data.|CPU|timestamp` as the lookup, and `2024-02-17T00:30:00` as **TIMESTAMP**.
   </TabItem>
 </Tabs>
 
