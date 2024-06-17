@@ -18,7 +18,7 @@ When creating a query, you can pass parameters into it using index placeholders 
 ODBC interfaces may have parameters for any data that you want to query. For example, below you will find a SQL query for trend data without any parameters and another with them as a comparison:
 
 <Tabs>
-  <TabItem value="Without Parameters" label="Without Parameters" default>
+  <TabItem value="Hard Coded" label="Hard Coded" default>
     ```sql
       SELECT sum(DownloadPIR) AS Value,
       SomeTimeColumn AS Date
@@ -49,16 +49,16 @@ In Visual KPI Designer, you would use an _Actual Value_ separated by a pipe for 
 JSON interfaces can have parameters almost anywhere in the interface configurations. You can add parameters to:
 
 <Tabs>
-  <TabItem value="Without Parameters" label="Without Parameters" default>
+  <TabItem value="Hard Coded" label="Hard Coded" default>
     - Base Address: `http://demo.example.com/apitest/api/training?machine=server1`
-    - Request URI: `&start={STARTDATE}&end={ENDDATE}` or `&date={TIMESTAMP}`
+    - Request URI: `&start=2024—02—17T12:30:00&end=2024—02—19T12:30:00` or `&date=2024—02—17T12:30:00`
     - Result base path: `data.`
     - Value field: `CPU`
     - Timestamp field: `timestamp`
   </TabItem>
   <TabItem value="Parameterized" label="Parameterized">
     - Base Address: `http://demo.example.com/apitest/api/training?machine={0}`
-    - Request URI: `&start=2024—02—17T12:30:00&end=2024—02—19T12:30:00` or `&date=2024—02—17T12:30:00`
+    - Request URI: `&start={STARTDATE}&end={ENDDATE}` or `&date={TIMESTAMP}`
     - Result base path: `{1}`
     - Value field: `{2}`
     - Timestamp field: `{3}`
@@ -68,3 +68,4 @@ JSON interfaces can have parameters almost anywhere in the interface configurati
 :::tip
 In Visual KPI Designer, you would use an _Actual Value_ separated by a pipe, like: **server1|data.|CPU|timestamp**
 :::
+
