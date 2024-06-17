@@ -37,20 +37,20 @@ All REST-based interfaces have some components in common that need to be set:
 The base address together with the request URI will form a URL that returns the JSON data.
 :::
 
-### JSON Security Settings
+## JSON Security Settings
 
 Most restFUL databases have some sort of security  implemented on them. These are usually handled by an authentication method. You will need to configure this into your Interface. To do so, do the following:
 
 1. Click on your newly created interface.
-2. Find the JSON security settings section and configure the needed fields:
+2. Navigate to **JSON security settings** and configure the needed fields:
     - **Authentication type**: Select the type of authentication needed for this API.
-    - **User credentials**: Click the "..." button and add the credentials needed to access the API.
+    - **User credentials**: Click the **"..."** button and add the credentials needed to access the API.
 
 :::note Public APIs
-If the API doesn't require authentication, ignore this step.
+If the API doesn't require authentication, you can skip this process.
 :::
 
-### JSON Base Settings
+## JSON Base Settings
 
 In the interface settings, you can find the JSON Base Settings, which allows you to configure:
 
@@ -58,19 +58,18 @@ In the interface settings, you can find the JSON Base Settings, which allows you
 - **Date Time Format**: Set the DateTime format of the API.
 - **Result Data Format**: Inform the type of data the API returns (JSON or XML).
 
-:::note
-The Base Address can be [parameterized](/docs/setup-and-administration/interfaces/parameterizing).
-:::
+Using the example below as base address, you can see how you can parameterize it:
 
-### JSON Query Settings
+<Tabs>
+  <TabItem value="Hard Coded" label="Hard Coded" default>
+    - Base Address: `http://demo.example.com/apitest/api/training?machine=server1`
+  </TabItem>
+  <TabItem value="Parameterized" label="Parameterized">
+    - Base Address: `http://demo.example.com/apitest/api/training?machine={0}`
+  </TabItem>
+</Tabs>
 
-Under the JSON Query Settings section, you will need to configure the following fields:
-
-- **[Current Value](#current-value)**
-- **[Trend Data](#trend-data)**
-- **[Historical Value](#historical-value)**
-
-#### How to access JSON data
+## How to access JSON data
 
 To complete the result base path, value field and timestamp field, you need to understand how to access information in a JSON. Using the JSON below as example:
 
@@ -87,62 +86,113 @@ To complete the result base path, value field and timestamp field, you need to u
   }
 ```
 
-For the purpose of this example, let's define that the CPU is needed as the **Value field**, and the timestamp is used for the **Timestamp field**. 
+To use `CPU` as the **Value field**, and `timestamp` as the **Timestamp field**, you need to use [dot notation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#dot_notation) to reach the required data:
 
-To reach the needed data, you would use the dot notation as `response.data.CPU`, and `response.data.timestamp`. Similar to this, you will do the following inside the each field configuration:
+- **Value field**: `response.data.CPU`
+- **Timestamp field**: `response.data.timestamp`
 
-| Field               | Value              |
-|---------------------|--------------------|
-| **Result base path**| `data.`            |
-| **Value field**     | `CPU`              |
-| **Timestamp field** | `timestamp`        |
+In Visual KPI Server Manager, you need to add the following for each configuration field:
 
-:::note
+| Field               | Value              | Parameterized |
+|---------------------|--------------------|---------------|
+| **Result base path**| `data.`            | `{1}`         |
+| **Value field**     | `CPU`              | `{2}`         |
+| **Timestamp field** | `timestamp`        | `{3}`         |
+
+:::tip Parameterizing
 These fields can be [parameterized](/docs/setup-and-administration/interfaces/parameterizing).
 :::
 
-#### Current Value
+## JSON Query Settings
+
+Under the JSON Query Settings section, you will need to configure the following fields:
+
+- **[Current Value](#current-value)**
+- **[Trend Data](#trend-data)**
+- **[Historical Value](#historical-value)**
+
+### Current Value
 
 The current value requires you to configure:
 
-- Result base path
-- Value field
-- Timestamp field
+<Tabs>
+  <TabItem value="Hard Coded" label="Hard Coded">
+    - Result base path: `data.`
+    - Value field: `CPU`
+    - Timestamp field: `timestamp`
+  </TabItem>
+  <TabItem value="Parameterized" label="Parameterized" default>
+    - Result base path: `{1}`
+    - Value field: `{2}`
+    - Timestamp field: `{3}`
+  </TabItem>
+</Tabs>
 
-#### Trend Data
+### Trend Data
 
-The trend data requires you to configure:
+Trend Data requires a start and end date to display the trend of a KPI. These can be added in the Request URI, as exemplified below:
 
-- Result base path
-- Value field
-- Timestamp field
-- Request URI
+<Tabs>
+  <TabItem value="Hard Coded" label="Hard Coded" default>
+    - Result base path: `data.`
+    - Value field: `CPU`
+    - Timestamp field: `timestamp`
+    - Request URI: `&start=2024-02-17T12:30:00&end=2024-06-15T12:30:00`
+  </TabItem>
+  <TabItem value="Parameterized" label="Parameterized">
+    - Result base path: `{1}`
+    - Value field: `{2}`
+    - Timestamp field: `{3}`
+    - Request URI: `&start={STARTDATE}&end={ENDDATE}`
+  </TabItem>
+</Tabs>
 
-In the request URI you need to add a start date and an end date. Like the following example:
-
-```
-&start=2024-02-17T12:30:00&end=2024-02-19T12:30:00
-```
-
-:::tip
+:::tip Parameterizing
 The **start** and **end** values can be [parameterized](/docs/setup-and-administration/interfaces/parameterizing) using `STARTDATE` and `ENDDATE`.
 :::
 
-#### Historical Value
+### Historical Value
 
-The historical value requires you to configure:
+The historical value requires a specific date, as it needs to retrieve a value at or before a given date. For this, a timestamp parameter needs to be added in the request URI:
 
-- Result base path
-- Value field
-- Timestamp field
-- Request URI
+<Tabs>
+  <TabItem value="Hard Coded" label="Hard Coded" default>
+    - Result base path: `data.`
+    - Value field: `CPU`
+    - Timestamp field: `timestamp`
+    - Request URI: `&date=2024-06-15T12:30:00`
+  </TabItem>
+  <TabItem value="Parameterized" label="Parameterized">
+    - Result base path: `{1}`
+    - Value field: `{2}`
+    - Timestamp field: `{3}`
+    - Request URI: `&date={TIMESTAMP}`
+  </TabItem>
+</Tabs>
 
-The request URI needs a date parameter to be added, like the following example:
+:::tip Parameterizing
+The **date** value can be [parameterized](/docs/setup-and-administration/interfaces/parameterizing) using `TIMESTAMP`.
+:::
 
-```
-&date=2024-02-17T12:30:00
-```
+### Historical Data
 
-:::tip
+The historical data requires a specific date, as it will gather all data until the set date. For this, a timestamp parameter needs to be added in the request URI:
+
+<Tabs>
+  <TabItem value="Hard Coded" label="Hard Coded" default>
+    - Result base path: `data.`
+    - Value field: `CPU`
+    - Timestamp field: `timestamp`
+    - Request URI: `&date=2024-02-17T12:30:00`
+  </TabItem>
+  <TabItem value="Parameterized" label="Parameterized">
+    - Result base path: `{1}`
+    - Value field: `{2}`
+    - Timestamp field: `{3}`
+    - Request URI: `&date={TIMESTAMP}`
+  </TabItem>
+</Tabs>
+
+:::tip Parameterizing
 The **date** value can be [parameterized](/docs/setup-and-administration/interfaces/parameterizing) using `TIMESTAMP`.
 :::
