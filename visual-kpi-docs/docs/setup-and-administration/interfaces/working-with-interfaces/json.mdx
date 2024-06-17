@@ -125,6 +125,8 @@ The current value requires you to configure:
     - Result base path: `{1}`
     - Value field: `{2}`
     - Timestamp field: `{3}`
+
+    Where, in Visual KPI Designer, you would use `data.|CPU|timestamp` as the lookup.
   </TabItem>
 </Tabs>
 
@@ -144,6 +146,8 @@ Trend Data requires a start and end date to display the trend of a KPI. These ca
     - Value field: `{2}`
     - Timestamp field: `{3}`
     - Request URI: `&start={STARTDATE}&end={ENDDATE}`
+
+    Where, in Visual KPI Designer, you would use `data.|CPU|timestamp` as the lookup, `2024-02-17T12:30:00` as **STARTDATE**, and `2024-06-15T12:30:00` as **ENDDATE**.
   </TabItem>
 </Tabs>
 
@@ -167,6 +171,8 @@ The historical value requires a specific date, as it needs to retrieve a value a
     - Value field: `{2}`
     - Timestamp field: `{3}`
     - Request URI: `&date={TIMESTAMP}`
+
+    Where, in Visual KPI Designer, you would use `data.|CPU|timestamp` as the lookup, and `2024-06-15T12:30:00` as **TIMESTAMP**.
   </TabItem>
 </Tabs>
 
@@ -183,13 +189,15 @@ The historical data requires a specific date, as it will gather all data until t
     - Result base path: `data.`
     - Value field: `CPU`
     - Timestamp field: `timestamp`
-    - Request URI: `&date=2024-02-17T12:30:00`
+    - Request URI: `&date=2024-02-17T00:30:00`
   </TabItem>
   <TabItem value="Parameterized" label="Parameterized">
     - Result base path: `{1}`
     - Value field: `{2}`
     - Timestamp field: `{3}`
     - Request URI: `&date={TIMESTAMP}`
+
+    Where, in Visual KPI Designer, you would use `data.|CPU|timestamp` as the lookup, and `2024-02-17T00:30:00` as **TIMESTAMP**.
   </TabItem>
 </Tabs>
 
