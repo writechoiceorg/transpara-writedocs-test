@@ -104,6 +104,7 @@
 
 .table_container {
   overflow-y: auto;
+  overflow-x: auto;
   max-height: 600px;
   position: relative;
 }
@@ -113,6 +114,8 @@ table {
   margin-bottom: var(--ifm-spacing-vertical);
   border-radius: 7px !important;
   display: table;
+  word-break: break-all !important;
+  word-wrap: break-word !important;
 }
 
 table thead,
@@ -149,6 +152,8 @@ table tr td {
   padding: 20px;
   text-align: start;
   vertical-align: top;
+  word-break: break-all !important;
+  word-wrap: break-word !important;
 }
 
 table thead tr {

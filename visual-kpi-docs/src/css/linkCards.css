@@ -72,6 +72,10 @@
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
+.link_cards_container.grid-columns-1 {
+  grid-template-columns: repeat(1, minmax(200px, 1fr));
+}
+
 .link_cards_container.grid-columns-2 {
   grid-template-columns: repeat(2, minmax(200px, 1fr));
 }
@@ -87,6 +91,7 @@
 /* Adjustments for screens smaller than 400px */
 @media (max-width: 399px) {
   .link_cards_container.grid-columns-auto,
+  .link_cards_container.grid-columns-1
   .link_cards_container.grid-columns-2,
   .link_cards_container.grid-columns-3,
   .link_cards_container.grid-columns-4 {
