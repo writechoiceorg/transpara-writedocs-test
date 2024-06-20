@@ -1,0 +1,133 @@
+---
+id: object-types
+title: Object Types
+slug: /reference/setup-and-administration/af-rcs-dashboard/object-types
+description: ''
+tags: ['documentation']
+---
+
+import tables from '@site/static/data/tables/af-rcs/tables.json';
+import JsonToTable from '@site/src/components/Table/JsonToTable';
+import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
+
+This page lists the Attributes and values (both required and optional) to fully automate Dashboard creation from within OSIsoft’s PI System Explorer. Each component (Profile Groups, Profiles, Dashboards, Widgets and Bookmarks) will have section listing all supported attributes.
+
+## Profile Groups
+
+<JsonToTable jsonData={tables.profileGroups} />
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/af-database/new/af-8.png"
+  alt=""
+/>
+
+## Profiles
+
+<JsonToTable jsonData={tables.profiles} />
+
+:::note
+Name and Description would be overrides for the parent’s attribute name and description.  Profile Group ID is only needed if the Profile is not nested under a Profile Group Attribute
+:::
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/af-database/new/af-9.png"
+  alt=""
+/>
+
+## Dashboards
+
+<JsonToTable jsonData={tables.dashboards} />
+
+:::note
+Name and Description would be overrides for the parent’s attribute name and description.  Profile ID is only needed if the Dashboard is not nested under a Profile Attribute
+:::
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/af-database/new/af-10.png"
+  alt=""
+/>
+
+## Widgets
+
+All widgets require the following six AF Attributes along with the optional Dashboard ID (if not nested under a Dashboard Attribute):
+
+<JsonToTable jsonData={tables.widgets} />
+
+:::note
+Valid Height and Widths are based on Widget Type however the complete list is as follows:
+:::
+
+### Widgets Types
+
+- Group List
+- Group Geo
+- Group Block
+- KPI List
+- KPI Geo
+- KPI Bullet
+- KPI Map
+- Group Map
+- KPI Summary History
+- KPI Status History
+- KPI Notification History
+- KPI Block
+- KPI Trend
+- Gauge Chart
+- Chart List
+- Chart Geo
+- Bar Chart
+- Box Plot                  
+- Embedded Content
+- Gantt Chart                 
+- Pareto Chart
+- Pie Chart
+- Trend
+- XY Plot
+- Table List
+- Table Geo
+- Table
+- Generic Link
+- Dashboard Link
+- Text Block
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/af-database/new/af-11.png"
+  alt=""
+/>
+
+## Bookmarks
+
+All bookmarks require the following two AF Attributes along with the several optional AF Attributes (including Profile ID if not nested under a Profile Attribute):
+
+<JsonToTable jsonData={tables.bookmarks} />
+
+### Bookmarks Types
+
+- Group List
+- Group Geo
+- KPI List
+- KPI Geo
+- KPI Bullet
+- KPI Map
+- Group Map
+- KPI Summary History
+- KPI Status History
+- KPI Notification History
+- KPI Trend
+- Gauge Chart
+- Chart List
+- Chart Geo
+- Bar Chart
+- Box Plot                  
+- Embedded Content
+- Gantt Chart                 
+- Pareto Chart
+- Pie Chart
+- Trend
+- XY Plot
+- Table List
+- Table Geo
+- Table
+- Generic Link
+- System Link
+- Dashboard
