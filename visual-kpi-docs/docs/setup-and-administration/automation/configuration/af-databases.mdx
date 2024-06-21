@@ -7,32 +7,113 @@ tags: ['documentation']
 ---
 
 import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
-
+import Accordion from '@site/src/components/accordion/Accordion';
 import table from '@site/static/data/tables/setup-adm/automation/how-to-use/AFObjectTypesAndValues.json';
 import JsonToTable from '@site/src/components/Table/JsonToTable';
+import LinkCards from '@site/src/components/Cards/LinkCards';
 
-Visual KPI gives you the power to automate the configuration of Visual KPI sites based on external applications or systems. Using a Visual KPI Remote Context Service (RCS), you can integrate with applications like OSIsoft PI System (AF). This document is meant to be a guide for how to leverage the power of the Visual KPI AF Remote Context Service to automate the creation of Visual KPI Profile Groups, Profiles, Dashboards and Bookmarks.
+Visual KPI allows you to automatically set up Visual KPI sites using external applications or systems. By using a Visual KPI Remote Context Service (RCS), you can connect with applications such as OSIsoft PI System (AF). This page guides you on how to use the Visual KPI AF Remote Context Service to automate the creation of Visual KPI Profile Groups, Profiles, Dashboards, and Bookmarks.
 
 ## Terminology
 
-While the term dashboards is frequently used when talking about the end visualization in Visual KPI there are actually a few more terms you need to understand.
+While the term **dashboards** is often used to describe the final visualizations in Visual KPI, there are several other important terms you should be familiar with:
 
-1. **Profile Groups**: Think of these as a place to hold one or more Profiles.  This is simply a way to help organize Profiles (which will contain dashboards) in a way that makes sense to the end user.  You could have Profiles Groups such as Executive Profiles, Engineer Profiles, Region A Profiles etc.
-2. **Profiles**: Profiles contain bookmarks, watchlists and of course Dashboards. 
-3. **Dashboards**: A dashboard is a collection of widgets plus some other properties such as default time spans. 
-4. **Widget**: An object visualization contained in the dashboard.  Examples are KPI Block, Trend, List of groups, Table, Embedded Content, etc.  Widgets each have a visualization or a Visual KPI object along with its size and position on the dashboard.
-5. **Bookmarks**: Quick links that navigate to a particular page or visualization withing Visual KPI.
+1. **Profile Groups**:A place to hold one or more profiles. This helps organize profiles (which contain dashboards) in a way that makes sense to the end user. You can have profile groups such as Executive Profiles, Engineer Profiles, Region A Profiles, and so on.
+2. **Profiles**: Profiles contain bookmarks, watchlists and Dashboards. 
+3. **Dashboards**: A dashboard is a collection of widgets along with other properties such as default time spans.
+4. **Widget**: A widget is an object visualization contained in the dashboard. Examples include KPI Block, Trend, List of Groups, Table, Embedded Content. Each widget has a visualization or a Visual KPI object, along with its size and position on the dashboard.
+5. **Bookmarks**: Quick links that navigate to a particular page or visualization within Visual KPI.
 
 
 ## Hierarchical vs Parent ID
 
-There are two options to choose from when defining the relationships between Profile Groups and Profiles, Profiles and Dashboards, and Dashboards to Widgets.  One is based on hierarchical positioning or nesting and the other requires an attribute defining the parent id (Profile Group ID, Profile ID, Dashboard ID).
+There are two options to define the relationships between Profile Groups and Profiles, Profiles and Dashboards, and Dashboards to Widgets. One option is based on hierarchical positioning or nesting, and the other requires an attribute defining the parent ID (Profile Group ID, Profile ID, Dashboard ID).
 
 Most customers choose to use a combination of specifying the parent ID and leveraging the inherent hierarchy. For example, placing all Widgets under the Dashboard Attribute but specifying the Profile ID in the dashboard properties.  Specifying the parent ID will override any implicit relationship defined based on its hierarchical position.  When in doubt specify!
 
+Most customers use a combination of specifying the parent ID and leveraging the inherent hierarchy. For example, they place all widgets under the dashboard attribute but specify the Profile ID in the dashboard properties. Specifying the parent ID will override any implicit relationship defined by its hierarchical position.
+
 ### Hierarchical
 
-For the hierarchical approach you can nest widgets under a dashboard, dashboards under a profile and profiles under profile groups.
+For the hierarchical approach, you can nest widgets under a dashboard, dashboards under a profile, and profiles under profile groups. The representation below shows the hierarchy clearly, with each level nested under the appropriate parent level:
+
+<Accordion title="Nesting Representation">
+```
+Profile Groups
+│
+├── Profile Group 1
+│   ├── Profile 1
+│   │   ├── Dashboard 1
+│   │   │   ├── Widget 1
+│   │   │   ├── Widget 2
+│   │   │   └── Widget 3
+│   │   ├── Dashboard 2
+│   │   │   ├── Widget 1
+│   │   │   └── Widget 2
+│   │   └── Dashboard 3
+│   │       ├── Widget 1
+│   │       ├── Widget 2
+│   │       └── Widget 3
+│   ├── Profile 2
+│   │   ├── Dashboard 1
+│   │   │   ├── Widget 1
+│   │   │   ├── Widget 2
+│   │   │   └── Widget 3
+│   │   └── Dashboard 2
+│   │       ├── Widget 1
+│   │       ├── Widget 2
+│   │       └── Widget 3
+│   └── Profile 3
+│       ├── Dashboard 1
+│       │   ├── Widget 1
+│       │   ├── Widget 2
+│       │   └── Widget 3
+│       ├── Dashboard 2
+│       │   ├── Widget 1
+│       │   ├── Widget 2
+│       │   └── Widget 3
+│       └── Dashboard 3
+│           ├── Widget 1
+│           ├── Widget 2
+│           └── Widget 3
+│
+└── Profile Group 2
+    ├── Profile 1
+    │   ├── Dashboard 1
+    │   │   ├── Widget 1
+    │   │   ├── Widget 2
+    │   │   └── Widget 3
+    │   └── Dashboard 2
+    │       ├── Widget 1
+    │       ├── Widget 2
+    │       └── Widget 3
+    ├── Profile 2
+    │   ├── Dashboard 1
+    │   │   ├── Widget 1
+    │   │   ├── Widget 2
+    │   │   └── Widget 3
+    │   └── Dashboard 2
+    │       ├── Widget 1
+    │       ├── Widget 2
+    │       └── Widget 3
+    └── Profile 3
+        ├── Dashboard 1
+        │   ├── Widget 1
+        │   ├── Widget 2
+        │   └── Widget 3
+        ├── Dashboard 2
+        │   ├── Widget 1
+        │   ├── Widget 2
+        │   └── Widget 3
+        └── Dashboard 3
+            ├── Widget 1
+            ├── Widget 2
+            └── Widget 3
+
+```
+</Accordion>
+
+This is also exemplified in the image below:
 
 <StylizedImage
   imgURL="img/setup-adm/automation/how-to-use/af-database/new/af-1.png"
@@ -41,7 +122,9 @@ For the hierarchical approach you can nest widgets under a dashboard, dashboards
 
 ### Parent ID
 
-The second approach is to explicitly state the parent ID.  To specify the Profile Group for which profile belong to you would create an attribute called Profile Group ID a value of the ID (GUID) of the Profile Group.  This approach can be used to define the Profile for which a Dashboard belongs to using an attribute named Profile ID as well as what dashboard a widget belongs to using an attribute name Dashboard ID.  Here is an example of a Profile with explicit reference to a Profile Group (Profile Group ID of 559b8359-9b39-4e26-8977-4abf260d59cf).
+The second approach is to explicitly state the parent ID. To specify the Profile Group to which a profile belongs, you create an attribute called Profile Group ID with the value being the ID (GUID) of the Profile Group. This approach can also be used to define the Profile to which a Dashboard belongs using an attribute named Profile ID, as well as to specify the Dashboard to which a widget belongs using an attribute named Dashboard ID.
+
+The image below showcases this approach:
 
 <StylizedImage
   imgURL="img/setup-adm/automation/how-to-use/af-database/new/af-2.png"
@@ -50,72 +133,61 @@ The second approach is to explicitly state the parent ID.  To specify the Profil
 
 ## Accessing AF Object IDs
 
-In addition to Profile Group ID, Profile ID and Dashboard ID, most widgets will also reference an AF Object ID.  Getting these IDs is a simple task, but it does require the option to be enabled in the PI System Explorer.  A right-click in the bottom right corner of the PI System Explorer will display a menu allowing you to enable (or disable) the display of the Unique AF Object IDs (GUIDs).
+In addition to Profile Group ID, Profile ID, and Dashboard ID, most widgets will also reference an AF Object ID. Getting these IDs is a simple task, but it requires enabling the option in the PI System Explorer. To do this, right-click in the bottom right corner of the PI System Explorer to display a menu that allows you to enable (or disable) the display of the Unique AF Object IDs (GUIDs).
 
 <StylizedImage
   imgURL="img/setup-adm/automation/how-to-use/af-database/new/af-3.png"
   alt=""
 />
 
-Once enabled you can both view and copy the ID.  The following shows how the value for Profile Group ID was obtained.  Selected the Attribute called AF Profile Group shows me the ID of 559b8359-9b39-4e26-8977-4abf260d59cf which I can then paste into my Profile Group ID attribute.
+Once enabled, you can both view and copy the ID. The following example shows how the value for Profile Group ID was obtained. By selecting the attribute called AF Profile Group, the ID `559b8359-9b39-4e26-8977-4abf260d59cf` is displayed. This ID can then be pasted into the Profile Group ID attribute.
 
 <StylizedImage
   imgURL="img/setup-adm/automation/how-to-use/af-database/new/af-4.png"
   alt=""
 />
 
-If you wish to reference an object not created via the AF RCS you can replace AF Object ID with Visual KPI Object ID and use the ID value (found in the Visual KPI Designer).
+:::info
+If you wish to reference an object not created via the AF RCS, you can replace **AF Object ID** with **Visual KPI Object ID** and use the ID value found in the Visual KPI Designer.
+:::
 
 ## Object Type
 
-Using an attribute called Object Type is the preferred method of identifying the mapping of AF Attributes to Visual KPI Objects.  This is required when using the Visual KPI AF RCS to automate the creation of Dashboards.  All objects in the document will require an Attribute called Object Type with a value of one of the following:
+Using an attribute called **Object Type** is the preferred method of identifying AF Attributes' mapping to Visual KPI Objects. This is required when using the Visual KPI AF RCS to automate the creation of dashboards. All objects in the document will require an attribute called Object Type. The available values for it can be found in the link below:
 
-- Profile Group
-- Profile
-- Dashboard
-- Widget
-- Bookmark
+<LinkCards numColumns={1} data={
+  [
+    {
+      name: 'Object Types',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/object-types'
+    },
+  ]
+}/>
 
-While best practices for leveraging the Visual KPI AF RCS are beyond the scope of this document we do recommend always nested Visual KPI Attributes under another Attribute called Visual KPI Properties.  You will see this throughout this document.
+:::note
+Transpara recommends to always nest Visual KPI Attributes under another Attribute called Visual KPI Properties.
+:::
 
 ## Widget Type
 
-In addition to Object Type there is also another important Attribute named Widget Type.  When you defined a widget, you will need both an Object Type = Widget Attribute along with a Widget Type Attribute which will define what type of widget we want to create. Possible Widget Type values are:
+In addition to Object Type, there is another important attribute named **Widget Type**. When defining a widget, you will need both an Object Type set to `Widget Attribute` and a Widget Type attribute, which specifies the type of widget to create. Possible Widget Type values are presented in the link below:
 
-- Group List
-- Group Geo
-- Group Block
-- KPI List
-- KPI Geo
-- KPI Bullet
-- KPI Map
-- Group Map
-- KPI Summary History
-- KPI Status History
-- KPI Notification History
-- KPI Block
-- KPI Trend
-- Gauge Chart
-- Chart List
-- Chart Geo
-- Bar Chart
-- Box Plot                  
-- Embedded Content
-- Gantt Chart                 
-- Pareto Chart
-- Pie Chart
-- Trend
-- XY Plot
-- Table List
-- Table Geo
-- Table
-- Generic Link
-- Dashboard Link
-- Text Block
+<LinkCards numColumns={1} data={
+  [
+    {
+      name: 'Widget Types',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets'
+    },
+  ]
+}/>
 
 ## Configuration
 
-While you can create the required attributes anywhere in your AF Model that define Profile Groups, Profiles, Dashboards and Widgets you can also create a special AF Element just for this purpose.  To create this Configuration placeholder simply create an AF Element with an Attribute called Object Type and a value of Configuration.  Normally the Visual KPI AF RCS will map AF Elements to Visual KPI Groups.  If the AF Element has a child Object Type Attribute with a value of Configuration, then this AF Element is not mapped to a Visual KPI Group but instead the child attributes are iterated looking for objects such as Profile Groups, Profiles, Dashboard, Widgets and Bookmarks.  Examples in this document leverage this approach to isolate Visual KPI objects from the core AF Model.  Here you can see we have Group 01, Group 02 and Sub Group 01 Elements in addition to a Configuration element.  The Visual KPI AF RCS will create Visual KPI Groups for Group 01, Group 02 and Sub Group 01 but not for Configuration.
+While you can create the required attributes anywhere in your AF Model to define Profile Groups, Profiles, Dashboards, and Widgets, you can also create a special AF Element specifically for this purpose. To create this configuration placeholder, create an AF Element with an attribute called Object Type and set its value to Configuration.
+
+Typically, the Visual KPI AF RCS maps AF Elements to Visual KPI Groups. However, if an AF Element has a child attribute Object Type with a value of Configuration, the AF Element is not mapped to a Visual KPI Group. Instead, the child attributes are iterated through to find objects such as Profile Groups, Profiles, Dashboards, Widgets, and Bookmarks.
+
+The example below uses this approach to isolate Visual KPI objects from the core AF Model. For instance, we have Group 01, Group 02, and Sub Group 01 elements in addition to a Configuration element. The Visual KPI AF RCS will create Visual KPI Groups for Group 01, Group 02, and Sub Group 01, but not for Configuration.
 
 <StylizedImage
   imgURL="img/setup-adm/automation/how-to-use/af-database/new/af-5.png"
@@ -124,20 +196,39 @@ While you can create the required attributes anywhere in your AF Model that defi
 
 ## Design First
 
-When building a dashboard programmatically by defining AF Attributes it is best to first construct one manually to better understand size and position attributes.  For example, if you wanted a Dashboard with a Group List, a Group Geo and 3 Group Block widgets it would be a good practice to first create one in Visual KPI and then use the “Customize Dashboard” display to inspect the widget properties. 
+When building a dashboard programmatically by defining AF Attributes, it is best to first build one manually to better understand the size and position attributes. 
+
+For example, if you want a dashboard with a Group List, a Group Geo, and three Group Block widgets, it is a good practice to first create it in Visual KPI. 
 
 <StylizedImage
   imgURL="img/setup-adm/automation/how-to-use/af-database/new/af-6.png"
   alt=""
 />
 
+Then, use the **Customize Dashboard** display to inspect the widget properties. Here information such as Type (which will map directly to Widget Type) along with Row Start, Column Start, Height and Width can be seen:
+
 <StylizedImage
   imgURL="img/setup-adm/automation/how-to-use/af-database/new/af-7.png"
   alt=""
 />
 
-Here information such as Type (which will map directly to Widget Type) along with Row Start, Column Start, Height and Width can be seen.
-
 ## Reference
 
-Attributes and values (both required and optional) can fully automate Dashboard creation from within OSIsoft's PI System Explorer. Each component (Profile Groups, Profiles, Dashboards, Widgets and Bookmarks) will have section listing all supported attributes. Find detailed reference about each at [Setup and Administration Reference](/docs/reference/setup-and-administration-reference#af-rcs-dashboard) page.
+Attributes and values (both required and optional) can fully automate Dashboard creation from within OSIsoft's PI System Explorer. Each component (Profile Groups, Profiles, Dashboards, Widgets and Bookmarks) will have section listing all supported attributes. Find detailed reference about each with the links below:
+
+<LinkCards numColumns={3} data={
+  [
+    {
+      name: 'Object Types',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/object-types'
+    },
+    {
+      name: 'Widget Types',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets'
+    },
+    {
+      name: 'Bookmark Types',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/bookmarks'
+    },
+  ]
+}/>
