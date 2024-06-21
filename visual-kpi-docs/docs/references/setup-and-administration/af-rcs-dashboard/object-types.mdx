@@ -1,0 +1,325 @@
+---
+id: object-types
+title: Object Types
+slug: /reference/setup-and-administration/af-rcs-dashboard/object-types
+description: ''
+tags: ['documentation']
+---
+
+import tables from '@site/static/data/tables/af-rcs/tables.json';
+import JsonToTable from '@site/src/components/Table/JsonToTable';
+import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
+import LinkCards from '@site/src/components/Cards/LinkCards';
+
+This page lists the Attributes and values (both required and optional) to fully automate Dashboard creation from within OSIsoft’s PI System Explorer. Each component (Profile Groups, Profiles, Dashboards, Widgets and Bookmarks) will have section listing all supported attributes.
+
+## Profile Groups
+
+<JsonToTable jsonData={tables.profileGroups} />
+
+:::info
+Name and Description would be overrides for the parent’s attribute name and description.
+:::
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/af-database/new/af-8.png"
+  alt=""
+/>
+
+## Profiles
+
+<JsonToTable jsonData={tables.profiles} />
+
+:::info
+Name and Description would be overrides for the parent’s attribute name and description.  Profile Group ID is only needed if the Profile is not nested under a Profile Group Attribute
+:::
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/af-database/new/af-9.png"
+  alt=""
+/>
+
+## Dashboards
+
+<JsonToTable jsonData={tables.dashboards} />
+
+:::info
+Name and Description would be overrides for the parent’s attribute name and description.  Profile ID is only needed if the Dashboard is not nested under a Profile Attribute
+:::
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/af-database/new/af-10.png"
+  alt=""
+/>
+
+## Widgets
+
+All widgets require the following six AF Attributes along with the optional Dashboard ID (if not nested under a Dashboard Attribute):
+
+<JsonToTable jsonData={tables.widgets} />
+
+:::info
+Valid Height and Widths are based on Widget Type however the complete list is as follows:
+
+- **Height**: 1x, 2x, 4x, 8x, 16x, 32x
+- **Width**: : 25%, 50%, 100%
+:::
+
+Each individual widget will also use other Attributes, some required and some optional, based on the widget type.   Below is an example of what an AF Model (Attributes) might look like when completed.  Note that in this example Dashboard ID is not specified in any of the Widgets as they all fall under the AF KPI Dashboard Attribute.  The names of the Widgets are not important and in this example the convention of [Row Start].[Column Start] [Widget Type] has been used but certainly is not required.
+
+<StylizedImage
+  imgURL="img/setup-adm/automation/how-to-use/af-database/new/af-11.png"
+  alt=""
+/>
+
+### Widgets Types
+
+<LinkCards numColumns={4} data={
+  [
+    {
+      name: 'Group List',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets#group-list'
+    },
+    {
+      name: 'Group Geo',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets#group-geo'
+    },
+    {
+      name: 'Group Block',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets#group-block'
+    },
+    {
+      name: 'KPI List',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets#kpi-list'
+    },
+    {
+      name: 'KPI Geo',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets#kpi-geo'
+    },
+    {
+      name: 'KPI Bullet',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets#kpi-bullet'
+    },
+    {
+      name: 'KPI Map',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets#kpi-map'
+    },
+    {
+      name: 'Group Map',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets#group-map'
+    },
+    {
+      name: 'KPI Summary History',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets#kpi-summary-history'
+    },
+    {
+      name: 'KPI Status History',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets#kpi-status-history'
+    },
+    {
+      name: 'KPI Notification History',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets#kpi-notification-history'
+    },
+    {
+      name: 'KPI Block',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets#kpi-block'
+    },
+    {
+      name: 'KPI Trend',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets#kpi-trend'
+    },
+    {
+      name: 'Gauge Chart',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets#gauge-chart'
+    },
+    {
+      name: 'Chart List',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets#chart-list'
+    },
+    {
+      name: 'Chart Geo',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets#chart-geo'
+    },
+    {
+      name: 'Bar Chart',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets#bar-chart'
+    },
+    {
+      name: 'Box Plot',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets#box-plot'
+    },
+    {
+      name: 'Embedded Content',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets#embedded-content'
+    },
+    {
+      name: 'Gantt Chart',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets#gantt-chart'
+    },
+    {
+      name: 'Pareto Chart',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets#pareto-chart'
+    },
+    {
+      name: 'Pie Chart',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets#pie-chart'
+    },
+    {
+      name: 'Trend',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets#trend'
+    },
+    {
+      name: 'XY Plot',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets#xy-plot'
+    },
+    {
+      name: 'Table List',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets#table-list'
+    },
+    {
+      name: 'Table Geo',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets#table-geo'
+    },
+    {
+      name: 'Table',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets#table'
+    },
+    {
+      name: 'Generic Link',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets#generic-link'
+    },
+    {
+      name: 'Dashboard Link',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets#dashboard-link'
+    },
+    {
+      name: 'Text Block',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/widgets#text-block'
+    },
+  ]
+}/>
+
+## Bookmarks
+
+All bookmarks require the following two AF Attributes along with the several optional AF Attributes (including Profile ID if not nested under a Profile Attribute):
+
+<JsonToTable jsonData={tables.bookmarks} />
+
+### Bookmarks Types
+
+<LinkCards numColumns={4} data={
+  [
+    {
+      name: 'Group List',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/bookmarks#group-list'
+    },
+    {
+      name: 'Group Geo',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/bookmarks#group-geo'
+    },
+    {
+      name: 'KPI List',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/bookmarks#kpi-list'
+    },
+    {
+      name: 'KPI Geo',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/bookmarks#kpi-geo'
+    },
+    {
+      name: 'KPI Bullet',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/bookmarks#kpi-bullet'
+    },
+    {
+      name: 'KPI Map',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/bookmarks#kpi-map'
+    },
+    {
+      name: 'Group Map',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/bookmarks#group-map'
+    },
+    {
+      name: 'KPI Summary History',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/bookmarks#kpi-summary-history'
+    },
+    {
+      name: 'KPI Status History',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/bookmarks#kpi-status-history'
+    },
+    {
+      name: 'KPI Notification History',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/bookmarks#kpi-notification-history'
+    },
+    {
+      name: 'KPI Trend',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/bookmarks#kpi-trend'
+    },
+    {
+      name: 'Gauge Chart',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/bookmarks#gauge-chart'
+    },
+    {
+      name: 'Chart List',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/bookmarks#chart-list'
+    },
+    {
+      name: 'Chart Geo',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/bookmarks#chart-geo'
+    },
+    {
+      name: 'Bar Chart',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/bookmarks#bar-chart'
+    },
+    {
+      name: 'Box Plot',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/bookmarks#box-plot'
+    },
+    {
+      name: 'Embedded Content',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/bookmarks#embedded-content'
+    },
+    {
+      name: 'Gantt Chart',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/bookmarks#gantt-chart'
+    },
+    {
+      name: 'Pareto Chart',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/bookmarks#pareto-chart'
+    },
+    {
+      name: 'Pie Chart',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/bookmarks#pie-chart'
+    },
+    {
+      name: 'Trend',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/bookmarks#trend'
+    },
+    {
+      name: 'XY Plot',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/bookmarks#xy-plot'
+    },
+    {
+      name: 'Table List',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/bookmarks#table-list'
+    },
+    {
+      name: 'Table Geo',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/bookmarks#table-geo'
+    },
+    {
+      name: 'Table',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/bookmarks#table'
+    },
+    {
+      name: 'Generic Link',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/bookmarks#generic-link'
+    },
+    {
+      name: 'Dashboard',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/bookmarks#dashboard'
+    },
+    {
+      name: 'System Link',
+      linkTo: '/docs/reference/setup-and-administration/af-rcs-dashboard/bookmarks#system-link'
+    },
+  ]
+}/>

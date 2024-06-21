@@ -1,0 +1,311 @@
+---
+id: widgets
+title: Widgets
+slug: /reference/setup-and-administration/af-rcs-dashboard/widgets
+description: ''
+tags: ['documentation']
+---
+
+import tables from '@site/static/data/tables/af-rcs/tables.json';
+import JsonToTable from '@site/src/components/Table/JsonToTable';
+import LinkCards from '@site/src/components/Cards/LinkCards';
+
+<LinkCards data={
+  [
+    {
+      name: 'Group Widgets',
+      linkTo: '#group-widgets'
+    },
+    {
+      name: 'KPI Widgets',
+      linkTo: '#kpi-widgets'
+    },
+    {
+      name: 'Chart Widgets',
+      linkTo: '#chart-widgets'
+    },
+    {
+      name: 'Table Widgets',
+      linkTo: '#table-widgets'
+    },
+    {
+      name: 'Link & Text Widgets',
+      linkTo: '#link--text-widgets'
+    },
+  ]
+}/>
+
+## Group Widgets
+
+<LinkCards data={
+  [
+    {
+      name: 'Group List',
+      linkTo: '#group-list'
+    },
+    {
+      name: 'Group Geo',
+      linkTo: '#Group-geo'
+    },
+    {
+      name: 'Group Block',
+      linkTo: '#Group-block'
+    },
+  ]
+}/>
+
+### Group List
+
+<JsonToTable jsonData={tables.groupWidgets.groupList} />
+
+### Group Geo
+
+<JsonToTable jsonData={tables.groupWidgets.groupGeo} />
+
+### Group Block
+
+<JsonToTable jsonData={tables.groupWidgets.groupBlock} />
+
+## KPI Widgets
+
+<LinkCards data={
+  [
+    {
+      name: 'KPI List',
+      linkTo: '#kpi-list'
+    },
+    {
+      name: 'KPI Geo',
+      linkTo: '#kpi-geo'
+    },
+    {
+      name: 'KPI Bullet',
+      linkTo: '#kpi-bullet'
+    },
+    {
+      name: 'KPI Map',
+      linkTo: '#kpi-map'
+    },
+    {
+      name: 'Group Map',
+      linkTo: '#group-map'
+    },
+    {
+      name: 'KPI Summary History',
+      linkTo: '#kpi-summary-history'
+    },
+    {
+      name: 'KPI Status History',
+      linkTo: '#kpi-status-history'
+    },
+    {
+      name: 'KPI Notification History',
+      linkTo: '#kpi-notification-history'
+    },
+    {
+      name: 'KPI Block',
+      linkTo: '#kpi-block'
+    },
+    {
+      name: 'KPI Trend',
+      linkTo: '#kpi-trend'
+    },
+    {
+      name: 'Gauge Chart',
+      linkTo: '#gauge-chart-kpi-gauge'
+    },
+  ]
+}/>
+
+### KPI List
+
+<JsonToTable jsonData={tables.kpiWidgets.kpiList} />
+
+### KPI Geo
+
+<JsonToTable jsonData={tables.kpiWidgets.kpiGeo} />
+
+### KPI Bullet
+
+<JsonToTable jsonData={tables.kpiWidgets.kpiBullet} />
+
+### KPI Map
+
+<JsonToTable jsonData={tables.kpiWidgets.kpiMap} />
+
+### Group Map
+
+<JsonToTable jsonData={tables.kpiWidgets.groupMap} />
+
+### KPI Summary History
+
+<JsonToTable jsonData={tables.kpiWidgets.kpiSummaryHistory} />
+
+### KPI Status History
+
+<JsonToTable jsonData={tables.kpiWidgets.kpiStatusHistory} />
+
+### KPI Notification History
+
+<JsonToTable jsonData={tables.kpiWidgets.kpiNotificationHistory} />
+
+### KPI Block
+
+<JsonToTable jsonData={tables.kpiWidgets.kpiBlock} />
+
+### KPI Trend
+
+<JsonToTable jsonData={tables.kpiWidgets.kpiTrend} />
+
+### Gauge Chart (KPI Gauge)
+
+<JsonToTable jsonData={tables.kpiWidgets.gaugeChart} />
+
+## Chart Widgets
+
+<LinkCards data={
+  [
+    {
+      name: 'Chart List',
+      linkTo: '#chart-list'
+    },
+    {
+      name: 'Chart Geo',
+      linkTo: '#chart-geo'
+    },
+    {
+      name: 'Bar Chart',
+      linkTo: '#bar-chart'
+    },
+    {
+      name: 'Box Plot',
+      linkTo: '#box-plot'
+    },
+    {
+      name: 'Embedded Content',
+      linkTo: '#embedded-content'
+    },
+    {
+      name: 'Gantt Chart',
+      linkTo: '#gantt-chart'
+    },
+    {
+      name: 'Pareto Chart',
+      linkTo: '#pareto-chart'
+    },
+    {
+      name: 'Pie Chart',
+      linkTo: '#pie-chart'
+    },
+    {
+      name: 'Trend',
+      linkTo: '#trend'
+    },
+    {
+      name: 'XY Plot',
+      linkTo: '#xy-plot'
+    },
+  ]
+}/>
+
+### Chart List
+
+<JsonToTable jsonData={tables.chartWidgets.chartList} />
+
+### Chart Geo
+
+<JsonToTable jsonData={tables.chartWidgets.chartGeo} />
+
+### Bar Chart
+
+<JsonToTable jsonData={tables.chartWidgets.barChart} />
+
+### Box Plot
+
+<JsonToTable jsonData={tables.chartWidgets.boxPlot} />
+
+### Embedded Content
+
+<JsonToTable jsonData={tables.chartWidgets.embeddedContent} />
+
+### Gantt Chart
+
+<JsonToTable jsonData={tables.chartWidgets.ganttChart} />
+
+### Pareto Chart
+
+<JsonToTable jsonData={tables.chartWidgets.paretoChart} />
+
+### Pie Chart
+
+<JsonToTable jsonData={tables.chartWidgets.pieChart} />
+
+### Trend
+
+<JsonToTable jsonData={tables.chartWidgets.trend} />
+
+### XY Plot
+
+<JsonToTable jsonData={tables.chartWidgets.xyPlot} />
+
+## Table Widgets
+
+<LinkCards data={
+  [
+    {
+      name: 'Table List',
+      linkTo: '#table-list'
+    },
+    {
+      name: 'Table Geo',
+      linkTo: '#table-geo'
+    },
+    {
+      name: 'Table',
+      linkTo: '#table'
+    },
+  ]
+}/>
+
+### Table List
+
+<JsonToTable jsonData={tables.tableWidgets.tableList} />
+
+### Table Geo
+
+<JsonToTable jsonData={tables.tableWidgets.tableGeo} />
+
+### Table 
+
+<JsonToTable jsonData={tables.tableWidgets.table} />
+
+## Link & Text Widgets
+
+<LinkCards data={
+  [
+    {
+      name: 'Generic Link',
+      linkTo: '#generic-link'
+    },
+    {
+      name: 'Dashboard Link',
+      linkTo: '#dashboard-link'
+    },
+    {
+      name: 'Text Block',
+      linkTo: '#text-block'
+    },
+  ]
+}/>
+
+### Generic Link
+
+<JsonToTable jsonData={tables.linkTextWidgets.genericLink} />
+
+### Dashboard Link
+
+<JsonToTable jsonData={tables.linkTextWidgets.dashboardLink} />
+
+### Text Block
+
+<JsonToTable jsonData={tables.linkTextWidgets.textBlock} />

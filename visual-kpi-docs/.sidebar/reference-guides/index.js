@@ -14,6 +14,15 @@ module.exports = [
     items: [
       {
         type: 'category',
+        label: "AF RCS Dashboard",
+        items: [
+          'references/setup-and-administration/af-rcs-dashboard/object-types',
+          'references/setup-and-administration/af-rcs-dashboard/widgets',
+          'references/setup-and-administration/af-rcs-dashboard/bookmarks',
+        ],
+      },
+      {
+        type: 'category',
         label: "AF Database Keywords",
         items: [
           'references/setup-and-administration/af-database-keywords/kpi-keywords',
