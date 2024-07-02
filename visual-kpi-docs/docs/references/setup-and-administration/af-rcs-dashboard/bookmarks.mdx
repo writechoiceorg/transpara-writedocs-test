@@ -1,0 +1,295 @@
+---
+id: bookmarks
+title: Bookmarks
+slug: /reference/setup-and-administration/af-rcs-dashboard/bookmarks
+description: ''
+tags: ['documentation']
+---
+
+import tables from '@site/static/data/tables/af-rcs/tables.json';
+import JsonToTable from '@site/src/components/Table/JsonToTable';
+import LinkCards from '@site/src/components/Cards/LinkCards';
+
+<LinkCards data={
+  [
+    {
+      name: 'Group Bookmarks',
+      linkTo: '#group-bookmarks'
+    },
+    {
+      name: 'KPI Bookmarks',
+      linkTo: '#kpi-bookmarks'
+    },
+    {
+      name: 'Chart Bookmarks',
+      linkTo: '#chart-bookmarks'
+    },
+    {
+      name: 'Table Bookmarks',
+      linkTo: '#table-bookmarks'
+    },
+    {
+      name: 'Link Bookmarks',
+      linkTo: '#link-bookmarks'
+    },
+  ]
+}/>
+
+## Group Bookmarks
+
+<LinkCards data={
+  [
+    {
+      name: 'Group List',
+      linkTo: '#group-list'
+    },
+    {
+      name: 'Group Geo',
+      linkTo: '#Group-geo'
+    },
+  ]
+}/>
+
+### Group List
+
+<JsonToTable jsonData={tables.groupBookmarks.groupList} />
+
+### Group Geo
+
+<JsonToTable jsonData={tables.groupBookmarks.groupGeo} />
+
+## KPI Bookmarks
+
+<LinkCards data={
+  [
+    {
+      name: 'KPI List',
+      linkTo: '#kpi-list'
+    },
+    {
+      name: 'KPI Geo',
+      linkTo: '#kpi-geo'
+    },
+    {
+      name: 'KPI Bullet',
+      linkTo: '#kpi-bullet'
+    },
+    {
+      name: 'KPI Map',
+      linkTo: '#kpi-map'
+    },
+    {
+      name: 'Group Map',
+      linkTo: '#group-map'
+    },
+    {
+      name: 'KPI Summary History',
+      linkTo: '#kpi-summary-history'
+    },
+    {
+      name: 'KPI Status History',
+      linkTo: '#kpi-status-history'
+    },
+    {
+      name: 'KPI Notification History',
+      linkTo: '#kpi-notification-history'
+    },
+    {
+      name: 'KPI Trend',
+      linkTo: '#kpi-trend'
+    },
+    {
+      name: 'Gauge Chart',
+      linkTo: '#gauge-chart-kpi-gauge'
+    },
+  ]
+}/>
+
+### KPI List
+
+<JsonToTable jsonData={tables.kpiBookmarks.kpiList} />
+
+### KPI Geo
+
+<JsonToTable jsonData={tables.kpiBookmarks.kpiGeo} />
+
+### KPI Bullet
+
+<JsonToTable jsonData={tables.kpiBookmarks.kpiBullet} />
+
+### KPI Map
+
+<JsonToTable jsonData={tables.kpiBookmarks.kpiMap} />
+
+### Group Map
+
+<JsonToTable jsonData={tables.kpiBookmarks.groupMap} />
+
+### KPI Summary History
+
+<JsonToTable jsonData={tables.kpiBookmarks.kpiSummaryHistory} />
+
+### KPI Status History
+
+<JsonToTable jsonData={tables.kpiBookmarks.kpiStatusHistory} />
+
+### KPI Notification History
+
+<JsonToTable jsonData={tables.kpiBookmarks.kpiNotificationHistory} />
+
+### KPI Trend
+
+<JsonToTable jsonData={tables.kpiBookmarks.kpiTrend} />
+
+### Gauge Chart (KPI Gauge)
+
+<JsonToTable jsonData={tables.kpiBookmarks.gaugeChart} />
+
+## Chart Bookmarks
+
+<LinkCards data={
+  [
+    {
+      name: 'Chart List',
+      linkTo: '#chart-list'
+    },
+    {
+      name: 'Chart Geo',
+      linkTo: '#chart-geo'
+    },
+    {
+      name: 'Bar Chart',
+      linkTo: '#bar-chart'
+    },
+    {
+      name: 'Box Plot',
+      linkTo: '#box-plot'
+    },
+    {
+      name: 'Embedded Content',
+      linkTo: '#embedded-content'
+    },
+    {
+      name: 'Gantt Chart',
+      linkTo: '#gantt-chart'
+    },
+    {
+      name: 'Pareto Chart',
+      linkTo: '#pareto-chart'
+    },
+    {
+      name: 'Pie Chart',
+      linkTo: '#pie-chart'
+    },
+    {
+      name: 'Trend',
+      linkTo: '#trend'
+    },
+    {
+      name: 'XY Plot',
+      linkTo: '#xy-plot'
+    },
+  ]
+}/>
+
+### Chart List
+
+<JsonToTable jsonData={tables.chartBookmarks.chartList} />
+
+### Chart Geo
+
+<JsonToTable jsonData={tables.chartBookmarks.chartGeo} />
+
+### Bar Chart
+
+<JsonToTable jsonData={tables.chartBookmarks.barChart} />
+
+### Box Plot
+
+<JsonToTable jsonData={tables.chartBookmarks.boxPlot} />
+
+### Embedded Content
+
+<JsonToTable jsonData={tables.chartBookmarks.embeddedContent} />
+
+### Gantt Chart
+
+<JsonToTable jsonData={tables.chartBookmarks.ganttChart} />
+
+### Pareto Chart
+
+<JsonToTable jsonData={tables.chartBookmarks.paretoChart} />
+
+### Pie Chart
+
+<JsonToTable jsonData={tables.chartBookmarks.pieChart} />
+
+### Trend
+
+<JsonToTable jsonData={tables.chartBookmarks.trend} />
+
+### XY Plot
+
+<JsonToTable jsonData={tables.chartBookmarks.xyPlot} />
+
+## Table Bookmarks
+
+<LinkCards data={
+  [
+    {
+      name: 'Table List',
+      linkTo: '#table-list'
+    },
+    {
+      name: 'Table Geo',
+      linkTo: '#table-geo'
+    },
+    {
+      name: 'Table',
+      linkTo: '#table'
+    },
+  ]
+}/>
+
+### Table List
+
+<JsonToTable jsonData={tables.tableBookmarks.tableList} />
+
+### Table Geo
+
+<JsonToTable jsonData={tables.tableBookmarks.tableGeo} />
+
+### Table
+
+<JsonToTable jsonData={tables.tableBookmarks.table} />
+
+## Link Bookmarks
+
+<LinkCards data={
+  [
+    {
+      name: 'Generic Link',
+      linkTo: '#generic-link'
+    },
+    {
+      name: 'Dashboard',
+      linkTo: '#dashboard'
+    },
+    {
+      name: 'System Link',
+      linkTo: '#system-link'
+    },
+  ]
+}/>
+
+### Generic Link
+
+<JsonToTable jsonData={tables.linkBookmarks.genericLink} />
+
+### Dashboard
+
+<JsonToTable jsonData={tables.linkBookmarks.dashboard} />
+
+### System Link
+
+<JsonToTable jsonData={tables.linkBookmarks.systemLink} />
