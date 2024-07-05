@@ -15,14 +15,11 @@ End users and Admins can configure custom profiles, profile groups, and dashboar
 
 When working with Visual KPI Designer, the Admin has three configuration layers to set profiles and dashboard settings:
 
-- **[Profiles](/docs/visual-kpi-design/authoring/profiles-dashboards#profiles)**: Collections of dashboards, Watchlists, and bookmark bars, associated with individuals, roles, sites, assets, etc.
+- **[Profiles](/docs/visual-kpi-design/authoring/profiles-dashboards#profiles)**: Collections of dashboards, Watchlists, and bookmark bars, which are associated with individuals, roles, sites, assets, etc.
 - **[Profile Groups](/docs/visual-kpi-design/authoring/profiles-dashboards#profile-groups)**: Containers for profiles that allow you to manage and control multiple profiles at once in a centralized way.
-- **[Dashboards](/docs/visual-kpi-design/authoring/profiles-dashboards#dashboards)**:  Custom layouts of visualizations, KPIs, links, trends, tables, embedded content,  and any other object supported by Visual KPI. Dashboards are always linked to one or more profiles.
+- **[Dashboards](/docs/visual-kpi-design/authoring/profiles-dashboards#dashboards)**:  Custom layouts of visualizations, KPIs, links, trends, tables, embedded content, and any other object supported by Visual KPI. Dashboards are always linked to one or more profiles.
 
-
-You can configure several attributes for each of these layers, including the option to show or hide them on the Visual KPI site.
-
-{/*For each Profile Group, Profile or Dashboard, add a Name. The names you choose will appear in your Visual KPI site under the appropriate icon. Each has various attributes you can configure sitewide, including the option to show or hide on your Visual KPI site.*/}
+You can configure several attributes for each of these features, including the option to show or hide them on the Visual KPI site.
 
 ## Profiles
 
@@ -44,12 +41,11 @@ After creating and saving the new profile, it immediately becomes available on t
   alt="Profile creation process"
 />
 
-:::tip 
+:::tip Toolbar buttons
 
 Remember to use the toolbar buttons to speed up the creation process. However, if you prefer, you can type directly on the worksheet.
 
 :::
-
 
 ## Profile Groups
 
@@ -59,7 +55,7 @@ When you create a Profile Group, it has the following default settings:
 - Privacy is disabled (**Private = FALSE**).
 - Editing restrictions are off (**Locked = FALSE**).
 
-You can adjust the privacy settings, making the group private and specifying designated users (domain/user) for access, making it hidden from all other users. In addition, you can lock a profile group, setting **Locked = TRUE**, preventing users from making customizations or edits.
+You can adjust the privacy settings, making the group private and specifying designated users (domain/user) for access, making it hidden from all other users. In addition, you can lock a profile group by setting **Locked = TRUE**, preventing users from making customizations or edits.
 
 <StylizedImage
   imgURL="img/site-settings/profilegroups-worksheet.png"
@@ -68,7 +64,7 @@ You can adjust the privacy settings, making the group private and specifying des
 
 :::note Private Groups
 
-This field is auto populated when creating private profile groups in the web browser, so there is no need to modify these values in Visual KPI Designer.
+This field is auto-populated when creating private profile groups in the web browser, so there is no need to modify these values in Visual KPI Designer.
 
 :::
 
@@ -76,7 +72,7 @@ This field is auto populated when creating private profile groups in the web bro
 
 You can set the following behaviors when creating a dashboard:
 
-- Lock the dashboard to prevent end-users from customizing or deleting it.
+- Lock the dashboard to prevent end users from customizing or deleting it.
 - Set specific time ranges, or relative time functions, for all KPIs on the dashboard. By default, no configuration is defined (blank field), meaning each object can have its independent time range. If you leave it blank, users can choose their device preferences.
 - Assign each dashboard to one or multiple profiles. To specify multiple profiles, enter them separated by semicolons in the **Profile** field.
 
@@ -84,7 +80,7 @@ You can set the following behaviors when creating a dashboard:
 
 If you want new users or devices accessing the site for the first time to be directed to a specific dashboard, set it as the default.
 
-You need to assign one dashboard for each profile. If you don't choose a default dashboard, new users will see an empty dashboard and have to choose one. 
+You need to assign one dashboard for each profile. If you don't choose a default dashboard, new users will see an empty dashboard and have to choose one.
 
 :::
 
@@ -97,13 +93,13 @@ You need to assign one dashboard for each profile. If you don't choose a default
 
 You have two methods for copying dashboards:
 
-- **Designer**: Copying and pasting rows within the worksheet. This approach allows you to adjust attribute adjustments while retaining the dashboard's contents. 
+- **Designer**: Copying and pasting rows within the worksheet. This approach allows you to adjust attribute adjustments while retaining the dashboard's contents.
 
 - **Browser**: In the dashboard selection dropdown, choose New Dashboard, and when creating the new dashboard, be sure to check the box labeled Copy Existing Dashboard. This approach creates a copy of the current dashboard, which you can edit in your device's browser.
 
 :::unique Automatically add dashboards
 
-You can automatically add dashboards coming from SQL or other sources via the Visual KPI [Remote Context Service](/docs/setup-and-administration/automation/rcs). When you have hundreds of sites or assets, this is a good way to automatically generate dashboards following the same pattern, rather than creating them manually.
+You can automatically add dashboards from SQL or other sources via the Visual KPI [Remote Context Service](/docs/setup-and-administration/automation/rcs). When you have hundreds of sites or assets, this is a good way to generate dashboards automatically following the same pattern rather than creating them manually.
 
 If you would like to automate dashboards, [contact us](https://www.transpara.com/contact-us/).
 
