@@ -11,15 +11,15 @@ import PngFont from '@site/src/components/PngFont/PngFont';
 import Accordion from '@site/src/components/accordion/Accordion';
 import AccordionGroup from '@site/src/components/accordion/AccordionGroup';
 
-Visual KPI Designer enables you to configure contacts that can be referenced in your KPI data. This feature gives end-users quick access to the person responsible for a specific data set. Once you've created and saved a contact, it becomes available in the Contact pull-down lists within the Groups, KPIs, Charts, and Tables worksheets in Visual KPI Designer. 
+Visual KPI Designer enables you to configure contacts that can be referenced in your KPI data. This feature gives end users quick access to the person responsible for a specific data set. Once you've created and saved a contact, it becomes available in the Contact drop-down lists within the Groups, KPIs, Charts, and Tables worksheets in Visual KPI Designer.
 
-While contacts provide a way for end-users to report problems or request help, Alert Templates automatically send out notifications to chosen contacts. In Visual KPI Designer, you can define the types of alerts to be sent using Alert Templates. You can decide what information the alert email should include and the time intervals to send the alerts.
+While contacts provide a way for end users to report problems or request help, Alert Templates automatically send out notifications to chosen contacts. In Visual KPI Designer, you can define the types of alerts to be sent using Alert Templates. You can decide what information the alert email should include and the time intervals to send the alerts.
 
 ## Configure Contacts
 
 To add and configure new contacts, follow the steps:
 
-1. Click on the Site Settings icon (<PngFont name='options28' />).
+1. Click the Site Settings icon (<PngFont name='options28' />).
 2. Select **Contacts & Alerts**.
 3. Then, select **Contacts**.
 
@@ -28,7 +28,7 @@ To add and configure new contacts, follow the steps:
  alt="Visual Designer Contacts Worksheet"
 />
 
-On the **Contacts** worksheet, you find all existing contacts. 
+On the **Contacts** worksheet, you find all existing contacts.
 
 ### Add a new contact
 
@@ -36,11 +36,11 @@ To add a new contact to the list, follow the steps:
 
 1. Add a **Name** on the first blank row below the column headers.
 2. Add a **Description** if appropriate.
-3. Enter one or multiple **Contact Names**, **Contact Emails** and **Contact Phones**. If you want to enter multiple names, emails, or phones, just separate them with semicolons. 
-4. Place an **x** in the first column for the new contact. 
+3. Enter one or multiple **Contact Names**, **Contact Emails** and **Contact Phones**. If you want to enter multiple names, emails, or phones, separate them with semicolons.
+4. Place an **x** in the first column for the new contact.
 5. Click the **Save** button (<PngFont name='save28' />) to write the changes to the database.
 
-If some of the available parameters aren't clear, you can see the [Contacts](/docs/reference/visual-kpi-designer/site-settings/contacts) reference page.
+If some of the available parameters are unclear, you can refer to the [Contacts](/docs/reference/visual-kpi-designer/site-settings/contacts) reference page.
 
 :::info Saving Data
 
@@ -48,17 +48,19 @@ To save your changes, place an **x** in the first column for each object you wan
 
 :::
 
-After adding a contact, you can edit it by overwriting the values in the cells, placing an **x** in the first column for the contact you want to edit, and then clicking the **Save** button (<PngFont name='save28' />). 
+After adding a contact, you can edit it by overwriting the values in the cells, placing an **x** in the first column for the contact you want to edit, and then clicking the **Save** button (<PngFont name='save28' />).
 
-To remove contacts, place an **x** in the first column for each contact you want to delete. Then click the Delete Selected Contacts button (<PngFont name='clear28a' />). 
+To remove contacts, place an **x** in the first column for each contact you want to delete. Then click the Delete Selected Contacts button (<PngFont name='clear28a' />).
 
 :::caution Deleting Contacts
- Be careful when deleting contacts. All Contacts marked with an **x** will be deleted from the Visual KPI Server. Before deleting your contact data, it's recommended that you save a copy of the **VisualKPIDesigner.xlsx** file. If you change your mind later and wish to retrieve this data, you can open a copy of the **VisualKPIDesigner.xlsx** file and re-save it.
+
+Be careful when deleting contacts. All Contacts marked with an **x** will be deleted from the Visual KPI Server. Before deleting your contact data, we recommend saving a copy of the **VisualKPIDesigner.xlsx** file. If you change your mind later and wish to retrieve this data, you can open a copy of the **VisualKPIDesigner.xlsx** file and re-save it.
+
 :::
 
 ## Configure Alert Templates
 
-Alerts in Visual KPI Designer allow you to define notification settings based on various states of KPIs. In Visual KPI, you aren't creating Alerts, you're creating Alert Templates, a predefined set of rules that determine when and how notifications are triggered based on KPI status. End users can select and apply these templates to the desired KPIs. 
+Alerts in Visual KPI Designer allow you to define notification settings based on various KPI states. In Visual KPI, you are not creating individual Alerts, you're creating Alert Templates, a predefined set of rules that determine when and how notifications are triggered based on KPI status. End users can select and apply these templates to the desired KPIs.
 
 To access the Alert Templates, follow the steps:
 
@@ -71,7 +73,7 @@ To access the Alert Templates, follow the steps:
  alt="Alert Template"
 />
 
-On the **Alert Templates** worksheet, you find all existing templates. 
+On the **Alert Templates** worksheet, you find all existing templates.
 
 ### Add a new template
 
@@ -80,10 +82,10 @@ To add a new template to the list, follow the steps:
 1. Add a **Name** on the first blank row below the column headers.
 2. Add a **Description** if appropriate.
 3. Enter Alert Template configurations. See the [Alerts](/docs/reference/visual-kpi-designer/site-settings/alerts) reference page for a detailed description of each option available.
-4. Place an **x** in the first column for the new template. 
+4. Place an **x** in the first column for the new template.
 5. Click the **Save** button (<PngFont name='save28' />) to write the changes to the database.
 
-The Alert Templates are defined for the existing KPI status, which refers to the different statuses that a KPI can have, such as Low, High, Out of Range. The notifications will be triggered when the KPI enters or remains within a specified status for a certain period. 
+The Alert Templates are defined for the existing KPI status, which refers to the different statuses a KPI can have, such as Low, High, and Out of Range. The notifications will be triggered when the KPI enters or remains within a specified status for a certain period.
 
 :::note Configured notifications for each status
 
@@ -97,7 +99,7 @@ Several configurations are available when configuring a template. However, most 
 
 :::info Advanced mode
 
-Visual KPI Designer enables you to toggle between basic and advanced modes (<PngFont name='advancedmodereddot28gray' />). The advanced mode makes more configurations (worksheet columns) available. Therefore, if you aren't finding a specific configuration, check if you have enabled the advanced mode. 
+Visual KPI Designer enables you to toggle between basic and advanced modes (<PngFont name='advancedmodereddot28gray' />). The advanced mode makes more configurations (worksheet columns) available. Therefore, if you aren't finding a specific configuration, check if you have enabled the advanced mode.
 
 :::
 
@@ -149,18 +151,16 @@ Visual KPI Designer enables you to toggle between basic and advanced modes (<Png
 | Alert Template ID                   | Read-only system-level identifier.                                                                |
 </Accordion>
 
-
-
 </AccordionGroup>
 
 ### Alert Templates usage
 
 You can verify the KPIs currently using each Alert Template. Follow the steps below to access the information:
 
-1. Select the desired Alert Template by placing an **x** in the first column for the corresponding row. 
+1. Select the desired Alert Template by placing an **x** in the first column for the corresponding row.
 2. Click on **Membership of Selected Alert Templates** button (<PngFont name='membership28' />).
 
-All KPIs that have the selected alert template assigned will be displayed on a new worksheet. 
+All KPIs that have the selected alert template assigned will be displayed on a new worksheet.
 
 <StylizedImage
  imgURL="img/site-settings/alert-tamplates-membership.gif"
