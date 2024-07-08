@@ -17,7 +17,7 @@
   },
   {
     "Attribute": "Default Values",
-    "Description": "A semicolon delimited list of default Attribute values used to populate Designer drop-down menus. Additional attribute values will be appended to the list as they are defined."
+    "Description": "A semicolon delimited list of default Attribute values used to populate Designer pull-down menus. Additional attribute values will be appended to the list as they are defined."
   },
   {
     "Attribute": "Attribute ID",

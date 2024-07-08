@@ -5,15 +5,15 @@
   },
   {
     "Attribute": "Comment Code Label",
-    "Description": "Controls the name of the dropdown for comment codes."
+    "Description": "Controls the name of the pull-down for comment codes."
   },
   {
     "Attribute": "Custom Code Label",
-    "Description": "Controls the name of the dropdown for custom comment codes."
+    "Description": "Controls the name of the pull-down for custom comment codes."
   },
   {
     "Attribute": "Secondary Code Label",
-    "Description": "Controls the name of the dropdown for secondary custom comment codes."
+    "Description": "Controls the name of the pull-down for secondary custom comment codes."
   },
   {
     "Attribute": "Enable Point Based Comments",

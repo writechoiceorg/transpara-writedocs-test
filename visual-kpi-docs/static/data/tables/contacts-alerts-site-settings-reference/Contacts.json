@@ -1,7 +1,7 @@
 [
   {
     "Attribute": "Name",
-    "Description": "The name of the Contact that appears in Designer drop-down menus. This name will not be displayed to site users."
+    "Description": "The name of the Contact that appears in Designer pull-down menus. This name will not be displayed to site users."
   },
   {
     "Attribute": "Description",
