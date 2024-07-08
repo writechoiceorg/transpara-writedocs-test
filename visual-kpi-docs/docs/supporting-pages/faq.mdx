@@ -6,6 +6,7 @@ description: 'Frequent asked questions'
 tags: [FAQ]
 ---
 
+import LinkCards from '@site/src/components/Cards/LinkCards';
 import Technical from './faqs/technical.mdx';
 import Implementation from './faqs/implementation.mdx';
 import Integrations from './faqs/integrations.mdx';
@@ -19,17 +20,50 @@ import CompanyBackground from './faqs/company-background-history-expertise.mdx';
 
 This page contains a list of frequently asked questions (FAQs) that are grouped under different categories. You can find the categories presented below:
 
-- [Technical](#technical-questions)
-- [Implementation](#implementation-questions)
-- [Integrations](#integrations-questions)
-- [Cost & ROI](#cost--roi-questions)
-- [Competition](#competition-questions)
-- [Use Cases & Customers](#use-cases--customers-questions)
-- [Using the Software](#using-the-software-questions)
-- [QuickStart Pilot](#quickstart-pilot-questions)
-- [Support & Services](#support--services-questions)
-- [Company Background, History & Expertise](#company-background-history--expertise-questions)
-
+<LinkCards numColumns={3} className={"center_names"} data={
+  [
+    {
+      name: 'Technical',
+      linkTo: '#technical-questions'
+    },
+    {
+      name: 'Implementation',
+      linkTo: '#implementation-questions'
+    },
+    {
+      name: 'Integrations',
+      linkTo: '#integrations-questions'
+    },
+    {
+      name: 'Cost & ROI',
+      linkTo: '#cost--roi-questions'
+    },
+    {
+      name: 'Competition',
+      linkTo: '#competition-questions'
+    },
+    {
+      name: 'Use Cases & Customers',
+      linkTo: '#use-cases--customers-questions'
+    },
+    {
+      name: 'Using the Software',
+      linkTo: '#using-the-software-questions'
+    },
+    {
+      name: 'QuickStart Pilot',
+      linkTo: '#quickstart-pilot-questions'
+    },
+    {
+      name: 'Support & Services',
+      linkTo: '#support--services-questions'
+    },
+    {
+      name: 'Company Background, History & Expertise',
+      linkTo: '#company-background-history--expertise-questions'
+    }
+  ]
+}/>
 
 ## Technical Questions
 

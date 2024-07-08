@@ -10,6 +10,10 @@
   margin-bottom: 20px;
 }
 
+.accordion_group .accordion_container {
+  margin-bottom: 0;
+}
+
 .accordion_container > * {
   overflow: auto;
 }
