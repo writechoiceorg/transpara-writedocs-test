@@ -66,12 +66,12 @@ module.exports = [
            //className: '',
           link: {
             type: 'doc',
-            id: 'visual-kpi-design/design/kpis',
+            id: 'visual-kpi-design/design/kpis/kpis',
           },
           items: [
-            'visual-kpi-design/design/kpis-sources',
-            'visual-kpi-design/design/spc-kpis',
-            'visual-kpi-design/design/kpis-trends',
+            'visual-kpi-design/design/kpis/kpis-sources',
+            'visual-kpi-design/design/kpis/spc-kpis',
+            'visual-kpi-design/design/kpis/kpis-trends',
           ],
         },
 
