@@ -52,11 +52,11 @@ module.exports = [
          //className: '',
         link: {
           type: 'doc',
-          id: 'visual-kpi-design/design/groups',
+          id: 'visual-kpi-design/design/groups/groups',
         },
         items: [
-          'visual-kpi-design/design/query-builder',
-          'visual-kpi-design/design/group-maps',
+          'visual-kpi-design/design/groups/query-builder',
+          'visual-kpi-design/design/groups/group-maps',
         ],
       },
 
