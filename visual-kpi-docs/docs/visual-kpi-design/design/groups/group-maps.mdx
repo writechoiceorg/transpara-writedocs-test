@@ -43,6 +43,11 @@ To access global settings for Group Maps:
 2. Select **Features & Config** &#8594; **Website** to open the worksheet.
 3. Roll down and you'll see the **Group Map Settings** section.
 
+<StylizedImage
+  imgURL="img/designer/group-map-settings.png"
+  alt="Group Map End User"
+/>
+
 ## Select and Position KPIs in Group Maps
 
 Once you configure Group Map settings, you need to choose KPIs and their positions for the Group Map.
@@ -64,13 +69,6 @@ If you don't select and position KPIs, your Group Map will not appear on your Vi
   alt="Group Map Position"
 />
 
-{/* review example
- For instance, if your global KPI cell count is set to 8, you can select and position up to 8 KPIs. You may have 20 KPIs in the Group, but you only made space for 8 (as shown in the image below). You must set the position of those 8 KPIs (starting at 1, from left to right). If you skip one position (say position 2), you'll only see 7 KPIs, and you'll see a blank hole in the number 2 position. In the image below, the default cell count is set to 8, but only 7 KPI are positioned in Group AM2. Position 2 is empty. Group CE Bus has only 5 KPIs positioned, so 3 positions are empty.
-
-In the example image below, you can see in Visual KPI Designer that 13 KPIs belong to the group Plant 1, but only 6 KPIs will appear in the Group Map, because only 6 KPIs have a Group Map Position.
-
-For this example, you may want to set the Group Map Cell Count to 6. However, if you plan to show many groups in the Group Map and most groups have 10 KPIs, keep the setting at 10 so they are consistent. */}
-
 For instance, if a Group Map has 2 KPIs you can set the default cell count to 2, and then select and position two KPIs for each group. Regardless of the order in which the KPIs are listed in the KPI worksheet, you set the positions in the order that works best for your situation.
 
 ## Override Default Group Map KPI Cell Count
@@ -79,14 +77,11 @@ By default, Visual KPI will display 10 KPIs in a Group Map. You can change the s
 
 1. Open the Groups worksheet from the Groups tab.
 2. Select the group you want to override.
-3. Find the name of the group in the worksheet, and then scroll across the page to find the override setting for Group Map KPI Cell Count in the attributes column headers.
+3. Find the name of the group in the worksheet, and then scroll across the page to find the override setting for **Group Map KPI Cell Count** in the attributes column headers.
 
-In the Group Map KPI Cell Count attribute column, change or add a number to indicate the number of KPIs you want to display in the Group Map for the group you've just selected. 
+<StylizedImage
+  imgURL="img/designer/group-map-kpi-cell-count.png"
+  alt="Group Map Position"
+/>
 
-{/* review example 
-In the example in the image below, you could find E. Region, scroll right on the page, and once you find the Group Map KPI Cell Count column, add the number 15 in the cell for E. Region. In your Visual KPI site, the E. Region Group Map would show 15 KPIs.
-
-This means that you could leave your default cell count set to 10 and only override cell counts for specific groups where you want to show more or less than 10 KPIs in the Group Map. */}
-
-
-
+In the **Group Map KPI Cell Count** attribute column, change or add a number to indicate the number of KPIs you want to display in the Group Map for the group you've just selected.
