@@ -11,9 +11,7 @@ import selection from '@site/static/font/selection.json';
 import positions from '@site/static/data/icons/iconsPosition.json';
 import SvgFont from '@site/src/components/SvgFont/SvgFont';
 
-Box Plots allow you to quickly compare distributions among groups of data or data sets. This article shows you how to configure Box Plots in Visual KPI Designer. Users can also configure Box Plots ad-hoc in Visual KPI sites.
-
-You can configure Box Plots to show the statistical distribution of data, and as always in Visual KPI, you can view the data over time.
+Box Plots allow you to quickly compare distributions among groups of data or data sets. This article demonstrates how to configure Box Plots in Visual KPI Designer. Users can also configure them ad-hoc in Visual KPI sites. Box Plots can be set up to display the statistical distribution of data, and, as always in Visual KPI, you can view this data over time.
 
 <StylizedImage
   imgURL="img/designer/charts-boxplot-enduser.png"
@@ -24,10 +22,10 @@ In Visual KPI sites, hover over Box Plots to see the distributed values. You can
 
 There are four ways to render Box Plots in Visual KPI:
 
-- KPI-based Box Plots (created ad-hoc in Visual KPI sites)
-- Managed Box Plots (defined Pens)
-- Query-based Box Plots (pre-calculated stats)
-- Query-based Box Plots (raw data)
+- **KPI-based Box Plots** (created ad-hoc in Visual KPI sites)
+- **Managed Box Plots** (defined Pens)
+- **Query-based Box Plots** (pre-calculated stats)
+- **Query-based Box Plots** (raw data)
 
 You can configure managed and query-based Box Plots in Visual KPI Designer.
 
@@ -35,7 +33,7 @@ You can configure managed and query-based Box Plots in Visual KPI Designer.
 
 To configure Box Plots in Visual KPI Designer, create a new chart and define attributes. Box Plots are in Charts in Visual KPI Designer.
 
-After creating and configuring some basic attributes for a Box Plot, such as the name, description, and display order, you can begin to describe the data that will build the Box Plots. Here, we show you the basic attributes you need to set to design a basic Box Plot. To see all the possible attributes you can configure, see [Charts Attributes & Keywords Reference Guide](/docs/reference/visual-kpi-designer/attributes-and-keywords/pareto-charts).
+After creating and configuring some basic attributes for a Box Plot, such as the name, description, and display order, you can begin to describe the data that will build the Box Plots. Here, we show you the basic attributes you need to set to design a basic Box Plot.
 
 ## Configure Box Plot Values and Interfaces
 
@@ -46,9 +44,9 @@ You can select the color for each box or leave the attribute blank, and Visual K
 ## Query-based Box Plots (pre-calculated stats)
 
 The query or stored procedure can take in:
-No date (static).
-A timestamp (point in time with scroll interval).
-A start and end timestamp (range-based).
+- No date (static).
+- A timestamp (point in time with scroll interval).
+- A start and end timestamp (range-based).
 
 The query must return the following fields (names are important):
 
@@ -58,9 +56,9 @@ The query must return the following fields (names are important):
 ## Query-based Box Plots (raw data)
 
 The query or stored procedure can take in:
-No data (static).
-A timestamp (point in time with scroll interval).
-A start and end timestamp (range-based).
+- No data (static).
+- A timestamp (point in time with scroll interval).
+- A start and end timestamp (range-based).
 
 :::note Optimizing Box Plot Performance
 
