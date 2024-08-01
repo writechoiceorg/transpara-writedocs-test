@@ -89,8 +89,8 @@ module.exports = [
             'visual-kpi-design/design/charts/pareto-chart',
             'visual-kpi-design/design/charts/pie-chart',
             'visual-kpi-design/design/charts/xy-plots',
-            'visual-kpi-design/design/charts/query-based-chart',
             'visual-kpi-design/design/charts/box-plots',
+            'visual-kpi-design/design/charts/query-based-chart',
           ],
         },
 
