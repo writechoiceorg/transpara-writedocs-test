@@ -59,9 +59,9 @@ Visual KPI Chart queries come in 2 types: basic and series-based. Basic queries 
 ## Query-based charts: parameters
 Visual KPI Chart queries can optionally use a TIMESTAMP parameter, STARTDATE and ENDDATE parameters or no parameters. These date-based parameter keywords will have dates substituted at runtime to allow for time-based (user-selected) charts.
 
-{/* Here's an example query:
+Here's an example query:
 
-[code lang=”sql”]
+```sql
 select sum(HourlyCount) as Value
 
 from tableWidgetProduction
@@ -72,11 +72,12 @@ and [Timestamp] <= getdate() — prevent future data
 
 group by Material
 
-order by Material[/code]
+order by Material
+```
 
-At Runtime, the {STARTDATE} and {ENDDATE} placeholders will be replaced by valid datetime strings and will result in a query that looks like this:
+At Runtime, the `{STARTDATE}` and `{ENDDATE}` placeholders will be replaced by valid datetime strings and will result in a query that looks like this:
 
-[code lang=”sql”]
+```sql
 select sum(HourlyCount) as Value
 
 from tableWidgetProduction
@@ -88,7 +89,7 @@ and [Timestamp] <= getdate() — prevent future data
 group by Material
 
 order by Material
-[/code] */}
+```
 
 ## Basic queries
 
@@ -108,21 +109,21 @@ Given the query above, the resulting dataset and chart would look like this:
 
 In order to give the chart bars names, the query needs to also return a Name field:
 
-    {/* [code lang=”sql”]
-    select sum(HourlyCount) as Value,
+```sql
+select sum(HourlyCount) as Value,
 
-    Material as Name
+Material as Name
 
-    from tableWidgetProduction
+from tableWidgetProduction
 
-    where Timestamp between {STARTDATE} and {ENDDATE}
+where Timestamp between {STARTDATE} and {ENDDATE}
 
-    and [Timestamp] <= getdate() — prevent future data
+and [Timestamp] <= getdate() — prevent future data
 
-    group by Material
+group by Material
 
-    order by Material
-    [/code] */}
+order by Material
+```
 
 Here's the result of this query and the corresponding chart:
 
@@ -138,35 +139,35 @@ Here's the result of this query and the corresponding chart:
 
 Finally, you can add some color to this chart by adding a Color field to the query:
 
-    {/* [code lang=”sql”]
-    select sum(HourlyCount) as Value,
+```sql
+select sum(HourlyCount) as Value,
 
-    Material as Name,
+Material as Name,
 
-    case when (Material = ‘Straw’) then ‘#DFE26E’
+case when (Material = ‘Straw’) then ‘#DFE26E’
 
-    when (Material = ‘Sticks’) then ‘#CA6F1E’
+when (Material = ‘Sticks’) then ‘#CA6F1E’
 
-    when (Material = ‘Bricks’) then ‘#E74C3C’
+when (Material = ‘Bricks’) then ‘#E74C3C’
 
-    when (Material = ‘Glass’) then ‘#85C1E9’
+when (Material = ‘Glass’) then ‘#85C1E9’
 
-    when (Material = ‘Steel’) then ‘#BDC3C7’
+when (Material = ‘Steel’) then ‘#BDC3C7’
 
-    else ‘#2C3E50’
+else ‘#2C3E50’
 
-    end as Color
+end as Color
 
-    from tableWidgetProduction
+from tableWidgetProduction
 
-    where Timestamp between {STARTDATE} and {ENDDATE}
+where Timestamp between {STARTDATE} and {ENDDATE}
 
-    and [Timestamp] <= getdate() — prevent future data
+and [Timestamp] <= getdate() — prevent future data
 
-    group by Material
+group by Material
 
-    order by Material
-    [/code] */}
+order by Material
+```
 
 Which results in the following data and chart (as bar, pareto and pie charts):
 
@@ -194,23 +195,23 @@ Which results in the following data and chart (as bar, pareto and pie charts):
 
 To create a series-based Bar Chart (Clustered or Stacked), you need to return a SeriesName, Name and Value column:
 
-    {/* [code lang=”sql”]
-    select Factory as SeriesName,
+```
+select Factory as SeriesName,
 
-    Material as Name,
+Material as Name,
 
-    sum(HourlyCount) as Value
+sum(HourlyCount) as Value
 
-    from tableWidgetProduction
+from tableWidgetProduction
 
-    where Material is not null
+where Material is not null
 
-    and Timestamp between {STARTDATE} and {ENDDATE}
+and Timestamp between {STARTDATE} and {ENDDATE}
 
-    and [Timestamp] <= getdate() — prevent future data
+and [Timestamp] <= getdate() — prevent future data
 
-    group by Material, Factory
-    [/code] */}
+group by Material, Factory
+```
 
 This results in the following data and chart:
 
@@ -232,37 +233,37 @@ The Bar Chart is set to Stacked in Visual KPI Designer, but the exact same query
 
 To control the series colors, simply add a column called SeriesColor to the results as follows:
 
-    {/* [code lang=”sql”]
-    select Factory as SeriesName,
+```
+select Factory as SeriesName,
 
-    case
+case
 
-    when Factory = ‘Factory A’ then ‘#ED1556’
+when Factory = ‘Factory A’ then ‘#ED1556’
 
-    when Factory = ‘Factory B’ then ‘#669900’
+when Factory = ‘Factory B’ then ‘#669900’
 
-    when Factory = ‘Factory C’ then ‘#0066ff’
+when Factory = ‘Factory C’ then ‘#0066ff’
 
-    when Factory = ‘Factory D’ then ‘#66ff66’
+when Factory = ‘Factory D’ then ‘#66ff66’
 
-    else null
+else null
 
-    end as SeriesColor,
+end as SeriesColor,
 
-    Material as Name,
+Material as Name,
 
-    sum(HourlyCount) as Value
+sum(HourlyCount) as Value
 
-    from tableWidgetProduction
+from tableWidgetProduction
 
-    where Material is not null
+where Material is not null
 
-    and Timestamp between {STARTDATE} and {ENDDATE}
+and Timestamp between {STARTDATE} and {ENDDATE}
 
-    and [Timestamp] <= getdate() — prevent future data
+and [Timestamp] <= getdate() — prevent future data
 
-    group by Material, Factory
-    [/code] */}
+group by Material, Factory
+```
 
 This results in the following data and chart:
 
