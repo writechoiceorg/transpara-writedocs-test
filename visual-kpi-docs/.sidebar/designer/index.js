@@ -52,11 +52,11 @@ module.exports = [
          //className: '',
         link: {
           type: 'doc',
-          id: 'visual-kpi-design/design/groups',
+          id: 'visual-kpi-design/design/groups/groups',
         },
         items: [
-          'visual-kpi-design/design/query-builder',
-          'visual-kpi-design/design/group-maps',
+          'visual-kpi-design/design/groups/query-builder',
+          'visual-kpi-design/design/groups/group-maps',
         ],
       },
 
@@ -66,12 +66,12 @@ module.exports = [
            //className: '',
           link: {
             type: 'doc',
-            id: 'visual-kpi-design/design/kpis',
+            id: 'visual-kpi-design/design/kpis/kpis',
           },
           items: [
-            'visual-kpi-design/design/kpis-sources',
-            'visual-kpi-design/design/spc-kpis',
-            'visual-kpi-design/design/kpis-trends',
+            'visual-kpi-design/design/kpis/kpis-sources',
+            'visual-kpi-design/design/kpis/spc-kpis',
+            'visual-kpi-design/design/kpis/kpis-trends',
           ],
         },
 
@@ -81,16 +81,16 @@ module.exports = [
            //className: '',
           link: {
             type: 'doc',
-            id: 'visual-kpi-design/design/charts',
+            id: 'visual-kpi-design/design/charts/charts',
           },
           items: [
-            'visual-kpi-design/design/bar-chart',
-            'visual-kpi-design/design/gantt-chart',
-            'visual-kpi-design/design/pareto-chart',
-            'visual-kpi-design/design/pie-chart',
-            'visual-kpi-design/design/xy-plots',
-            'visual-kpi-design/design/query-based-chart',
-            'visual-kpi-design/design/box-plots',
+            'visual-kpi-design/design/charts/bar-chart',
+            'visual-kpi-design/design/charts/gantt-chart',
+            'visual-kpi-design/design/charts/pareto-chart',
+            'visual-kpi-design/design/charts/pie-chart',
+            'visual-kpi-design/design/charts/xy-plots',
+            'visual-kpi-design/design/charts/box-plots',
+            'visual-kpi-design/design/charts/query-based-chart',
           ],
         },
 

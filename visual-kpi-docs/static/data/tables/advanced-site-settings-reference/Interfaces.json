@@ -1,7 +1,7 @@
 [
   {
     "Attribute": "Interface Name",
-    "Description": "The name of the Table that appears in Interface drop-down menus (visible in Designer worksheets)."
+    "Description": "The name of the Table that appears in Interface pull-down menus (visible in Designer worksheets)."
   },
   {
     "Attribute": "Reference Count",

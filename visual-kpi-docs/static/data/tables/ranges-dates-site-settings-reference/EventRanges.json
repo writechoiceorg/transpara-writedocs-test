@@ -29,14 +29,14 @@
   },
   {
     "Setting": "Use Type Filter",
-    "Description": "Controls whether or not the query and the UI will contain a drop down for further filtering."
+    "Description": "Controls whether or not the query and the UI will contain a pull-down for further filtering."
   },
   {
     "Setting": "Type Filter Label",
-    "Description": "Controls the label for the optional filtering dropdown. Default name is Type."
+    "Description": "Controls the label for the optional filtering pull-down. Default name is Type."
   },
   {
     "Setting": "Type Filter Values",
-    "Description": "Sets the predefined values for the filtering dropdown. This should be a semicolon delimited list such as Batch;Shift;Plant or an ordinal|value semicolon delimited list (such as 1|Batch;2|Shift;3|Plant). If you use a ordinal|value list, the ordinal will be passed as the parameter."
+    "Description": "Sets the predefined values for the filtering pull-down. This should be a semicolon delimited list such as Batch;Shift;Plant or an ordinal|value semicolon delimited list (such as 1|Batch;2|Shift;3|Plant). If you use a ordinal|value list, the ordinal will be passed as the parameter."
   }
 ]
