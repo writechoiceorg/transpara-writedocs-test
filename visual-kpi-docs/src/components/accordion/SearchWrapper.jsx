@@ -7,7 +7,7 @@ const SearchWrapper = ({ children }) => {
 
   // Filtering logic
   const filteredData = useMemo(() => {
-    console.log(children)
+    // console.log(children)
     return children.props.children.filter((child) =>
       child.props.title.toLowerCase().includes(filter.toLowerCase())
     );
