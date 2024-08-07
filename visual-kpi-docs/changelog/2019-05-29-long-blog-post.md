@@ -1,13 +1,12 @@
 ---
-slug: long-blog-post
-title: Long Blog Post
-authors: endi
+slug: long-post
+title: Long Post
 tags: [hello, docusaurus]
 ---
 
-This is the summary of a very long blog post,
+This is the summary of a very long post,
 
-Use a `<!--` `truncate` `-->` comment to limit blog post size in the list view.
+Use a `<!--` `truncate` `-->` comment to limit post size in the list view.
 
 <!--truncate-->
 
