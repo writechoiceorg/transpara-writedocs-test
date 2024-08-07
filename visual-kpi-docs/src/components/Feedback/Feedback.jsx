@@ -17,11 +17,11 @@ export default function Feedback() {
         e.preventDefault();
         emailjs.sendForm('service_mgdklrf', 'template_8tfc8zu', e.target, '1a6aHxEAzXmMBSep5')
             .then((result) => {
-                console.log('Email successfully sent!', result.text);
+                // console.log('Email successfully sent!', result.text);
                 formRef.current.reset(); // Reset the form fields
                 toggleDialog(); // Close the dialog
             }, (error) => {
-                console.log('Failed to send email.', error.text);
+                // console.log('Failed to send email.', error.text);
             });
     };
 
