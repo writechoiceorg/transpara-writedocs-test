@@ -195,6 +195,7 @@
 
 .container.margin-vert--lg .row {
   background-color: #fff !important;
+  flex-wrap: nowrap;
 }
 
 .container.margin-vert--lg .row aside.col.col--3 {
