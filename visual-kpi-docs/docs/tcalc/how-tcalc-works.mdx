@@ -6,9 +6,11 @@ description: ''
 tags: ['documentation']
 ---
 
+tCalc is a flexible calculation engine built to handle user-defined calculations within a graph database environment. It allows for dynamic data input, supports various calculation templates, and provides efficient ways to process and output calculated results.
+
 ### Input Data/Variables
 
-**Mapping Type, Interface ID, and Mapping Config:**
+tCalc relies on a flexible mapping system to link external data sources to calculation inputs. By using mapping types, interface IDs, and detailed mapping configurations, users can define how data is retrieved and processed for calculations, ensuring that the system operates with up-to-date and relevant data.
 
 - **Mapping Type:** In tCalc, mapping refers to how data from different sources or attributes is linked to specific variables or inputs within the calculation. The mapping type defines the nature of this linkage, determining whether it is static, dynamic, or pulled from an external data source.
 
@@ -18,11 +20,7 @@ tags: ['documentation']
 
 ### Templates
 
-**What is it?**
-
 Templates in tCalc are predefined structures that define how calculations should be performed. A template includes a set of statements, triggers, and variables that guide the calculation process. Templates can be reused across different objects and scenarios, allowing consistency and efficiency in calculations.
-
-**What You Can Do with Templates:**
 
 - **Create and Apply Templates:** You can create new calculation templates or apply existing templates to different objects or nodes within the tModel hierarchy. Templates help standardize calculations across similar objects, ensuring that the same logic and processes are applied consistently.
 
@@ -30,9 +28,7 @@ Templates in tCalc are predefined structures that define how calculations should
 
 - **Customization:** Templates can be customized by modifying the statements they contain, adding or removing triggers, and altering the input and output configurations. This flexibility allows templates to be adapted to specific project needs.
 
-**Statements Compose the Template:**
-
-Statements in a template are the individual operations or steps that the calculation engine executes. They define how input data is processed to produce the output. The statements are executed in a defined order, from top to bottom, with each statement performing a specific calculation, transformation, or data aggregation.
+- **Statements Compose the Template:** Statements in a template are the individual operations or steps that the calculation engine executes. They define how input data is processed to produce the output. The statements are executed in a defined order, from top to bottom, with each statement performing a specific calculation, transformation, or data aggregation.
 
 ### Output Data/Variables
 
@@ -46,12 +42,10 @@ Outputs are critical as they provide the final calculated values that can be use
 
 ### Data Connections
 
-**How to Connect to Databases to Collect Input Data and Send Output Data:**
+The following processes ensure that tCalc can dynamically interact with external data sources, maintain real-time accuracy, and effectively manage large-scale calculations across complex datasets.
 
 - **Connecting to Databases:** tCalc connects to databases and other data sources using defined interfaces. Each interface is associated with an Interface ID, which specifies the database or external service to be accessed. The connection configuration, such as the database credentials, query parameters, or API endpoints, is defined in the Mapping Config.
 
 - **Collecting Input Data:** The system retrieves input data by executing the mapping configurations against the connected databases or data sources. This data is then mapped to the appropriate input variables within the calculation template, allowing the calculations to use up-to-date information.
 
 - **Sending Output Data:** Once the calculations are performed, the results (output data) can be stored back into the connected database or sent to another system via the same or different interfaces. This process is managed by configuring the output mappings, which determine where and how the calculated data should be sent or stored.
-
-These processes ensure that tCalc can dynamically interact with external data sources, maintain real-time accuracy, and effectively manage large-scale calculations across complex datasets.
