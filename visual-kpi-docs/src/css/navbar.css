@@ -109,10 +109,10 @@
   font-size: 16px !important;
 }
 
-.navbar--fixed-top {
+/* .navbar--fixed-top {
   padding-left: 175px;
   padding-right: 255px;
-}
+} */
 
 .navbar__toggle {
   position: absolute;
@@ -196,7 +196,7 @@
   }
 }
 
-@media (max-width: 1440px) {
+/* @media (max-width: 1440px) {
   .navbar--fixed-top {
     padding-left: 151px;
     padding-right: 151px;
@@ -204,6 +204,13 @@
 }
 
 @media (max-width: 1285px) {
+  .navbar--fixed-top {
+    padding-left: 69px;
+    padding-right: 69px;
+  }
+} */
+
+@media (max-width: 996px) {
   .navbar--fixed-top {
     padding-left: 69px;
     padding-right: 69px;
