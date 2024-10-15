@@ -9,6 +9,11 @@ module.exports = [
     id: 'tcalc/how-tcalc-works',
     label: 'How tCalc Works',
   },
+  {
+    type: 'doc',
+    id: 'tcalc/tcalc-glossary',
+    label: 'tCalc Glossary',
+  },
   /*{
     type: 'doc',
     id: 'supporting-pages/troubleshooting',
