@@ -204,7 +204,7 @@ const config = {
               },
               {
                 label: 'FAQ',
-                to: '/docs/faqs',
+                to: '/',
               },
             ],
           },
