@@ -1,7 +1,7 @@
 module.exports = [
   {
     type: 'doc',
-    id: 'visual-kpi-design/overview',
+    id: 'visual-kpi-designer/overview',
     // label: 'How to Use the Documentation',
     // className: '',
   },
@@ -11,38 +11,49 @@ module.exports = [
     // className: '',
     link: {
       type: 'doc',
-      id: 'visual-kpi-design/installation-and-setup/overview',
+      id: 'visual-kpi-designer/installation-and-setup/overview',
     },
     items: [
-      'visual-kpi-design/installation-and-setup/installation',
-      'visual-kpi-design/installation-and-setup/connecting',
-      'visual-kpi-design/installation-and-setup/ui-tour',
-      'visual-kpi-design/installation-and-setup/basic-setup',
+      'visual-kpi-designer/installation-and-setup/installation',
+      'visual-kpi-designer/installation-and-setup/connecting',
+      'visual-kpi-designer/installation-and-setup/basic-setup',
     ],
   },
-  
+  {
+    type: 'category',
+    label: "Interface Tour and Core Patterns",
+    // className: '',
+    link: {
+      type: 'doc',
+      id: 'visual-kpi-designer/interface-tour-and-core-patterns/overview',
+    },
+    items: [
+      'visual-kpi-designer/interface-tour-and-core-patterns/ui-tour',
+      'visual-kpi-designer/interface-tour-and-core-patterns/core-patterns',
+    ],
+  },
+  {
+    type: 'category',
+    label: "Settings",
+    // className: '',
+    link: {
+      type: 'doc',
+      id: 'visual-kpi-designer/settings/overview',
+    },
+    items: [
+      'visual-kpi-designer/settings/profiles-dashboards',
+      'visual-kpi-designer/settings/contacts-alerts',
+      'visual-kpi-designer/settings/features-config',
+      'visual-kpi-designer/settings/advanced',
+    ],
+  },
   {
     type: 'category',
     label: "Authoring",
     // className: '',
     link: {
       type: 'doc',
-      id: 'visual-kpi-design/authoring/overview',
-    },
-    items: [
-      'visual-kpi-design/authoring/profiles-dashboards',
-      'visual-kpi-design/authoring/contacts-alerts',
-      'visual-kpi-design/authoring/features-config',
-      'visual-kpi-design/authoring/advanced',
-    ],
-  },
-  {
-    type: 'category',
-    label: "Design",
-    // className: '',
-    link: {
-      type: 'doc',
-      id: 'visual-kpi-design/design/overview',
+      id: 'visual-kpi-designer/authoring/overview',
     },
     items: [
 
@@ -52,11 +63,11 @@ module.exports = [
          //className: '',
         link: {
           type: 'doc',
-          id: 'visual-kpi-design/design/groups/groups',
+          id: 'visual-kpi-designer/authoring/groups/groups',
         },
         items: [
-          'visual-kpi-design/design/groups/query-builder',
-          'visual-kpi-design/design/groups/group-maps',
+          'visual-kpi-designer/authoring/groups/query-builder',
+          'visual-kpi-designer/authoring/groups/group-maps',
         ],
       },
 
@@ -66,12 +77,12 @@ module.exports = [
            //className: '',
           link: {
             type: 'doc',
-            id: 'visual-kpi-design/design/kpis/kpis',
+            id: 'visual-kpi-designer/authoring/kpis/kpis',
           },
           items: [
-            'visual-kpi-design/design/kpis/kpis-sources',
-            'visual-kpi-design/design/kpis/spc-kpis',
-            'visual-kpi-design/design/kpis/kpis-trends',
+            'visual-kpi-designer/authoring/kpis/kpis-sources',
+            'visual-kpi-designer/authoring/kpis/spc-kpis',
+            'visual-kpi-designer/authoring/kpis/kpis-trends',
           ],
         },
 
@@ -81,50 +92,50 @@ module.exports = [
            //className: '',
           link: {
             type: 'doc',
-            id: 'visual-kpi-design/design/charts/charts',
+            id: 'visual-kpi-designer/authoring/charts/charts',
           },
           items: [
-            'visual-kpi-design/design/charts/bar-chart',
-            'visual-kpi-design/design/charts/gantt-chart',
-            'visual-kpi-design/design/charts/pareto-chart',
-            'visual-kpi-design/design/charts/pie-chart',
-            'visual-kpi-design/design/charts/xy-plots',
-            'visual-kpi-design/design/charts/box-plots',
-            'visual-kpi-design/design/charts/query-based-chart',
+            'visual-kpi-designer/authoring/charts/bar-chart',
+            'visual-kpi-designer/authoring/charts/gantt-chart',
+            'visual-kpi-designer/authoring/charts/pareto-chart',
+            'visual-kpi-designer/authoring/charts/pie-chart',
+            'visual-kpi-designer/authoring/charts/xy-plots',
+            'visual-kpi-designer/authoring/charts/box-plots',
+            'visual-kpi-designer/authoring/charts/query-based-chart',
           ],
         },
 
-        'visual-kpi-design/design/tables',
-        'visual-kpi-design/design/trends',
-
+        'visual-kpi-designer/authoring/tables',
+        'visual-kpi-designer/authoring/trends',
+        
     ],
   },
+    {
+    type: 'doc',
+    id: 'visual-kpi-designer/best-practices',
+    label: 'Best Practices',
+    //className: '',
+    },
   // {
   //   type: 'category',
   //   label: "Reference Tables",
   //   // className: '',
   //   link: {
   //     type: 'doc',
-  //     id: 'visual-kpi-design/reference-tables',
+  //     id: 'visual-kpi-designer/reference-tables',
   //   },
   //   items: [
-  //     'visual-kpi-design/reference-tables/website-reference',
-  //     'visual-kpi-design/reference-tables/profiles-dashboards-reference',
-  //     'visual-kpi-design/reference-tables/ranges-dates-reference',
-  //     'visual-kpi-design/reference-tables/contacts-alerts-reference',
-  //     'visual-kpi-design/reference-tables/features-configuration-reference',
-  //     'visual-kpi-design/reference-tables/advanced-reference',
-  //     'visual-kpi-design/reference-tables/groups-reference',
-  //     'visual-kpi-design/reference-tables/kpis-reference',
-  //     'visual-kpi-design/reference-tables/charts-reference',
-  //     'visual-kpi-design/reference-tables/tables-reference',
-  //     'visual-kpi-design/reference-tables/functions-reference',
+  //     'visual-kpi-designer/reference-tables/website-reference',
+  //     'visual-kpi-designer/reference-tables/profiles-dashboards-reference',
+  //     'visual-kpi-designer/reference-tables/ranges-dates-reference',
+  //     'visual-kpi-designer/reference-tables/contacts-alerts-reference',
+  //     'visual-kpi-designer/reference-tables/features-configuration-reference',
+  //     'visual-kpi-designer/reference-tables/advanced-reference',
+  //     'visual-kpi-designer/reference-tables/groups-reference',
+  //     'visual-kpi-designer/reference-tables/kpis-reference',
+  //     'visual-kpi-designer/reference-tables/charts-reference',
+  //     'visual-kpi-designer/reference-tables/tables-reference',
+  //     'visual-kpi-designer/reference-tables/functions-reference',
   //   ],
   // },
-  /*{
-    type: 'doc',
-    id: 'visual-kpi-design/best-practices',
-    // label: 'How to Use the Documentation',
-    // className: '',
-  },*/
 ]
