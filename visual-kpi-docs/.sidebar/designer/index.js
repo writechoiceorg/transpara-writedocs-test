@@ -116,6 +116,12 @@ module.exports = [
     label: 'Best Practices',
     //className: '',
     },
+    {
+      type: 'doc',
+      id: 'visual-kpi-designer/additional-features',
+      label: 'Additional Features',
+      //className: '',
+      },
   // {
   //   type: 'category',
   //   label: "Reference Tables",
