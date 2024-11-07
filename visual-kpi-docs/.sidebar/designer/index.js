@@ -21,7 +21,7 @@ module.exports = [
   },
   {
     type: 'category',
-    label: "Interface Tour and Core Patterns",
+    label: "UI Tour and Core Patterns",
     // className: '',
     link: {
       type: 'doc',
