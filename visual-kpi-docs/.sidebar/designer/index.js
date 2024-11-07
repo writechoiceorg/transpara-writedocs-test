@@ -22,11 +22,6 @@ module.exports = [
   {
     type: 'category',
     label: "UI Tour and Core Patterns",
-    // className: '',
-    link: {
-      type: 'doc',
-      id: 'visual-kpi-designer/interface-tour-and-core-patterns/overview',
-    },
     items: [
       'visual-kpi-designer/interface-tour-and-core-patterns/ui-tour',
       'visual-kpi-designer/interface-tour-and-core-patterns/core-patterns',
