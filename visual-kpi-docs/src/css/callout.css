@@ -39,7 +39,7 @@
 /*-------------------------------- Custom CALLOUTS configuration ------------------------------  */
 .callout_img {
   cursor: default !important;
-  width: 20px;
+  width: 20px !important;
   height: 20px;
 }
 

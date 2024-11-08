@@ -9,9 +9,69 @@ tags: ['documentation']
 import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
 import PngFont from '@site/src/components/PngFont/PngFont';
 
-## Instance Naming
+Following best practices in Visual KPI Designer is all about creating a reliable, user-friendly experience. When settings are configured thoughtfully, end users see accurate, timely data and receive alerts that matter—without unnecessary noise. Setting things up with care ensures the dashboard performs smoothly, delivering the insights users need without friction. Keep in mind that most of these configurations will only be done once, but might impact your users daily.
 
-When connecting to a Visual KPI instance, it is best to name it in a specific and easily-identifiable manner.
+## Instance Connection Window
+
+In the window you use to connect to a Visual KPI instance, there are important configurations and information you should know about.
+
+<StylizedImage
+  imgURL="img/designer/best-practices-instance-naming.png"
+  alt="KPI Stale Age"
+/>
+
+### Instance Naming
+
+When connecting to a Visual KPI instance, it is best to name it in a specific and easily identifiable manner. Say your company has one power plant, so you want to name your instance "Plant." While that might be easy to identify now, future changes, such as acquiring a new power plant, might make it harder to quickly identify the instance. Even if you only have one instance of Visual KPI, make sure to name it well.
+
+### Instance Security
+
+You can also establish an authentication method for accessing the Visual KPI Designer. This will ensure that only people who have access will be able to modify or delete things.
+
+### Licence information
+
+When an instance is selected, you can click **License Information** to see all the information associated with your license, such as license key, type of license, and initial and final valid dates.
+
+## Configurations
+
+You will likely not need to change most of the available configurations. However, there are some configurations that most people don't change, but changing them makes the Visual KPI website look more polished.
+
+### Site Icon
+
+You can add your company's icon to be displayed on the Visual KPI website. You can add different icons for light and dark themes. To change the logo, click on the Transpara logo on the Visual KPI Designer sidebar.
+
+<StylizedImage
+  imgURL="img/designer/best-practices-icon.png"
+  alt="Website Logo"
+/>
+
+:::unique Logo Size
+
+If you don't have your company's logo in the correct size (140x40 pixels), you can email support@transpara.com with your high resolution logo and ask us to make a version for light and dark themes. Our teams will create a file that is the right size and will look great on the Visual KPI website.
+
+:::
+
+
+If you don't have your company's logo in the correct size (140x40 pixels), you can email support@transpara.com with your high resolution logo and ask us to make a version for light and dark themes. Our teams will create a file that is the right size and will look great on the Visual KPI website.
+
+### Website Name
+
+You can change the name on the browser tab to your company's or the location's name. To do so, go to the Site Settings icon (<PngFont name='options28' />), select **Features & Config**, and then **Website**. In the **Site Basics** section, in the **Site Title** line, alter the text in the **Value** column. To learn more about these settings, go to the [Features & Configuration](/docs/visual-kpi-designer/settings/features-config) guide.
+
+
+<StylizedImage
+  imgURL="img/designer/best-practices-features-config.png"
+  alt="Website Configurations"
+/>
+
+<StylizedImage
+  imgURL="img/designer/best-practices-site-title.png"
+  alt="Website Name"
+/>
+
+## Alerts
+
+We recommend setting up contacts and defining alert templates that suit your organization's needs. When doing so, consider that not all status changes need alerts, and setting up alerts for everything might overwhelm the contacts with messages. For more detailed information on this feature, go to the [Contacts & Alerts](/docs/visual-kpi-designer/settings/contacts-alerts) guide.
 
 ## Stale Age
 
