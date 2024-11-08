@@ -9,7 +9,13 @@ tags: ['documentation']
 import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
 import PngFont from '@site/src/components/PngFont/PngFont';
 
-Following best practices in Visual KPI Designer is all about creating a reliable, user-friendly experience. When settings are configured thoughtfully, end users see accurate, timely data and receive alerts that matter—without unnecessary noise. Setting things up with care ensures the dashboard performs smoothly, delivering the insights users need without friction. Keep in mind that most of these configurations will only be done once, but might impact your users daily.
+Following best practices in Visual KPI Designer is all about creating a reliable, user-friendly experience. When settings are configured thoughtfully, end users see accurate, timely data and receive alerts that matter—without unnecessary noise. Setting things up with care ensures the dashboard performs smoothly, delivering the insights users need without friction.
+
+:::tip Do it Only Once
+
+Most of these configurations will only be done once, but might impact the experience of your Visual KPI website users daily.
+
+:::
 
 ## Instance Connection Window
 
@@ -34,7 +40,7 @@ When an instance is selected, you can click **License Information** to see all t
 
 ## Configurations
 
-You will likely not need to change most of the available configurations. However, there are some configurations that most people don't change, but changing them makes the Visual KPI website look more polished.
+The standard configurations were set up by Transpara's team, as the ones that most clients use or are interested in. You will likely not need to change most of the available configurations. However, there are some configurations that most people don't change, but changing them makes the Visual KPI website look more polished.
 
 ### Site Icon
 
@@ -51,9 +57,6 @@ If you don't have your company's logo in the correct size (140x40 pixels), you c
 
 :::
 
-
-If you don't have your company's logo in the correct size (140x40 pixels), you can email support@transpara.com with your high resolution logo and ask us to make a version for light and dark themes. Our teams will create a file that is the right size and will look great on the Visual KPI website.
-
 ### Website Name
 
 You can change the name on the browser tab to your company's or the location's name. To do so, go to the Site Settings icon (<PngFont name='options28' />), select **Features & Config**, and then **Website**. In the **Site Basics** section, in the **Site Title** line, alter the text in the **Value** column. To learn more about these settings, go to the [Features & Configuration](/docs/visual-kpi-designer/settings/features-config) guide.
@@ -67,6 +70,43 @@ You can change the name on the browser tab to your company's or the location's n
 <StylizedImage
   imgURL="img/designer/best-practices-site-title.png"
   alt="Website Name"
+/>
+
+### Default Theme
+
+The light theme is the standard for every new instance of Visual KPI. However, you can set up the dark theme as the default for your website by selecting it in the **Default Color Theme** line on the **Value** column. You can also change whether users can change the theme for themselves in the **Allow Users to Change Color Theme** line.
+
+<StylizedImage
+  imgURL="img/designer/best-practices-default-color-theme.png"
+  alt="Default Color Theme"
+/>
+
+### Status Name and Color
+
+By going to the Site Settings icon (<PngFont name='options28' />), select **Features & Config**, and then **KPI Status**, you can choose which status your website will show. You can change their color and name, and even select whether they will appear at all on the website.
+
+:::tip Color Visibility
+
+If you change their colors, it is important to check the chosen colors on the light and dark themes to see if they are visible on both.
+
+:::
+
+<StylizedImage
+  imgURL="img/designer/best-practices-status.png"
+  alt="KPI Status"
+/>
+
+:::tip Advanced Columns
+
+If you don't see the columns for selecting the status visibility, click the icon (<PngFont name='advancedmode28gray' />) to toggle the basic/advanced mode on the Visual KPI Designer side panel.
+
+:::
+
+The column **In Alert** means that all KPIs in that status will appear in the alert counter. The Visual KPI website shows this as the orange number and eye symbol at the very top of the screen. If you click on that eye, you will see a visualization with all KPIs with the **In Alert** status.
+
+<StylizedImage
+  imgURL="img/designer/best-practices-in-alert.png"
+  alt="In Alert Status Visualization"
 />
 
 ## Alerts
@@ -85,7 +125,7 @@ Consider setting up an alert for your admin about stale KPIs so that they can ch
 
 :::
 
-To alter the Stale Age sitewide configuration, click on the Site Settings icon (<PngFont name='options28' />), go to **Features & Config**, select **Website** settings, scroll to the **KPI Settings** section and change the number in the **Value** column. This number should be in minutes and if you leave it as 0 (zero), the website will ignore the Stale status. This feature can be overridden by individual KPI's settings.
+To alter the Stale Age sitewide configuration, click on the Site Settings icon (<PngFont name='options28' />), go to **Features & Config**, select **Website** settings, scroll to the **KPI Settings** section and change the number in the **Value** column. This number should be in minutes and if you leave it as 0 (zero), the website will ignore the Stale status. This feature can be overridden by group or individual KPI's settings.
 
 <StylizedImage
   imgURL="img/designer/best-practices-kpi-stale-age.png"
