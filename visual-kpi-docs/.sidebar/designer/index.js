@@ -20,12 +20,8 @@ module.exports = [
     ],
   },
   {
-    type: 'category',
-    label: "UI Tour and Core Patterns",
-    items: [
-      'visual-kpi-designer/interface-tour-and-core-patterns/ui-tour',
-      'visual-kpi-designer/interface-tour-and-core-patterns/core-patterns',
-    ],
+    type: 'doc',
+    id: 'visual-kpi-designer/ui-tour',
   },
   {
     type: 'category',

@@ -17,26 +17,14 @@ Most of these configurations will only be done once, but might impact the experi
 
 :::
 
-## Instance Connection Window
+The best practices outlined here are:
 
-In the window you use to connect to a Visual KPI instance, there are important configurations and information you should know about.
-
-<StylizedImage
-  imgURL="img/designer/best-practices-instance-naming.png"
-  alt="KPI Stale Age"
-/>
-
-### Instance Naming
-
-When connecting to a Visual KPI instance, it is best to name it in a specific and easily identifiable manner. Say your company has one power plant, so you want to name your instance "Plant." While that might be easy to identify now, future changes, such as acquiring a new power plant, might make it harder to quickly identify the instance. Even if you only have one instance of Visual KPI, make sure to name it well.
-
-### Instance Security
-
-You can also establish an authentication method for accessing the Visual KPI Designer. This will ensure that only people who have access will be able to modify or delete things.
-
-### Licence information
-
-When an instance is selected, you can click **License Information** to see all the information associated with your license, such as license key, type of license, and initial and final valid dates.
+- [Configurations](#configurations)
+- [Alerts](#alerts)
+- [Stale Age](#stale-age)
+- [Languages](#languages)
+- [Naming](#naming)
+- [Units of Measure (UoM)](#units-of-measure-uom)
 
 ## Configurations
 
@@ -81,34 +69,6 @@ The light theme is the standard for every new instance of Visual KPI. However, y
   alt="Default Color Theme"
 />
 
-### Status Name and Color
-
-By going to the Site Settings icon (<PngFont name='options28' />), select **Features & Config**, and then **KPI Status**, you can choose which status your website will show. You can change their color and name, and even select whether they will appear at all on the website.
-
-:::warning Color Visibility
-
-If you change any colors in the configurations, it is important to check the chosen colors for visibility on the light and dark themes.
-
-:::
-
-<StylizedImage
-  imgURL="img/designer/best-practices-status.png"
-  alt="KPI Status"
-/>
-
-:::tip Advanced Columns
-
-If you don't see the columns for selecting the status visibility, click the icon (<PngFont name='advancedmode28gray' />) to toggle the basic/advanced mode on the Visual KPI Designer side panel.
-
-:::
-
-The column **In Alert** means that all KPIs in that status will appear in the alert counter. The Visual KPI website shows this as the orange number and eye symbol at the very top of the screen. If you click on that eye, you will see a visualization with all KPIs with the **In Alert** status.
-
-<StylizedImage
-  imgURL="img/designer/best-practices-in-alert.png"
-  alt="In Alert Status Visualization"
-/>
-
 ## Alerts
 
 We recommend setting up contacts and defining alert templates that suit your organization's needs. When doing so, consider that not all status changes need alerts, and setting up alerts for everything might overwhelm the contacts with messages. For more detailed information on this feature, go to the [Contacts & Alerts](/docs/visual-kpi-designer/settings/contacts-alerts) guide.
@@ -135,3 +95,29 @@ To alter the Stale Age sitewide configuration, click on the Site Settings icon (
 ## Languages
 
 Language settings are sitewide. You set the language in the Visual KPI Designer, and everyone who accesses that instance of Visual KPI will see the site with that language setting. You should also note that changing the language settings will only change the site's language, not your data's. For example, if you have a group of KPIs called "Management", and you change the site's language to Spanish, that group will still be called "Management". You can read more on the [Language guide](/docs/visual-kpi-designer/settings/advanced#language).
+
+## Naming
+
+Whenever naming anything in Visual KPI, you should always pay attention to two essential practices that will improve end-user experience:
+
+1. **Use short names**: Long names might take several lines or not be shown completely, especially for mobile users.
+2. **Use unique names**: If you have many things named basically the same, make sure to put the unique part of their names first.
+
+For example, suppose your company has two turbines in three areas, and you need a KPI for each of their internal temperatures. In that case, we recommend naming it "A2 T1 Internal Temperature" instead of "Internal Temperature of Turbine 1 Area 2". That way, if the name is truncated in any part of the website, the user can still quickly identify which turbine that KPI is referring to.
+
+You can use the **Description** column to add the entire name of the KPI. Once all the information is in the Description column, a user searching for it can find it by either the name or the description.
+
+:::tip Search
+
+When users search for something, they find results matching both the **Name** and **Description** columns. In the example above, the user could find the desired KPI by searching "A2 T1" or "Turbine 1 Area 2".
+
+:::
+
+## Units of Measure (UoM)
+
+We recommend that you inform the Unit of Measure (UoM) of all possible objects whenever possible. This can help avoid confusion and make the understanding of any KPI faster. For example, if you have a temperature KPI, it should always say whether that temperature is in Celcius or Fahrenheit. To inform a UoM, scroll to the **UOM** column and inform the unit. You can also then select the **Display Format**. It can be just the number, first the number and then the UOM, or first the UOM and then the number.
+
+<StylizedImage
+  imgURL="img/designer/best-practices-units-of-measurement.png"
+  alt="KPI Stale Age"
+/>

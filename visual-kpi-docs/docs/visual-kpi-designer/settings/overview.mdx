@@ -45,6 +45,25 @@ Site-wide settings are grouped for easy navigation. When you hover over each cat
     - **Site Rollups**: Configure parameters for displaying site rollups within Visual KPI.
     - **Comment Codes**: Define default comments available to end users in comment lists.
 
+## Settings Hierarchy
+
+Many settings you can change in each Object can also be set up in a Group or sitewide. The preference is always for the settings in that specific Object. If there is no Object setting, the preference goes to the Group. If there is no Group setting, the sitewide settings will be used.
+
+<StylizedImage
+  imgURL="img/designer/core-patterns-settings-hierarchy.png"
+  alt="Settings Hierarchy"
+/>
+
+### Settings Example
+
+You set up the default range as one week. That means that, by default, all of your site's objects will show one week of data. However, there is one group in which you wish to show the data as three days by default. You can set that up in the group configurations, and if you do that, your site will show, by default, one week of information, but that group will show three days. And, if in that group you have one specific KPI you wish to see as one month by default, you can do that by changing that KPI's configuration.
+
+:::tip Change as you Wish
+
+Remember that the user can always change the range of any view. Setting a default is for the initial view when opening an object.
+
+:::
+
 ## What's next?
 
 Each of the available options is addressed individually in the documentation. Use the following links to access the content and learn how to configure your Visual KPI site:
