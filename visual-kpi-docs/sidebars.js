@@ -45,7 +45,7 @@ const sidebars = {
     ...setupAdm,
     {
       type: 'html',
-      value: '<span class=\'sidebar_title\'>Visual KPI Design</span>',
+      value: '<span class=\'sidebar_title\'>Visual KPI Designer</span>',
       defaultStyle: true,
       className: 'sidebar_title',
     },
