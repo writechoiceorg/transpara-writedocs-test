@@ -169,7 +169,7 @@ const cardsContent = [
   {
     title: "Design",
     content: "Create KPIs, charts, tables and define the hierarchy of your data.",
-    route: "/docs/visual-kpi-design/overview",
+    route: "/docs/visual-kpi-designer/overview",
     imageClass: "image3",
   },
   {
