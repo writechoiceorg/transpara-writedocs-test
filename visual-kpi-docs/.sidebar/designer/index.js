@@ -33,6 +33,7 @@ module.exports = [
     },
     items: [
       'visual-kpi-designer/settings/profiles-dashboards',
+      'visual-kpi-designer/settings/ranges-dates',
       'visual-kpi-designer/settings/contacts-alerts',
       'visual-kpi-designer/settings/features-config',
       'visual-kpi-designer/settings/advanced',
