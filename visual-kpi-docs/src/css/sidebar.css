@@ -1,5 +1,19 @@
 .theme-doc-sidebar-container {
-  margin: 0 0 0 160px;
+  margin: 0;
+  margin-top: -110px !important;
+}
+
+.theme-doc-sidebar-container [class^="sidebar_"] {
+  padding-top: 110px !important;
+}
+
+ul.breadcrumbs {
+  margin-top: 6px;
+}
+
+.tableOfContents_node_modules-\@docusaurus-theme-classic-lib-theme-TOC-styles-module,
+.thin-scrollbar.theme-doc-toc-desktop {
+  top: 125px !important;
 }
 
 .clean-btn:hover {
@@ -21,15 +35,16 @@
 
 .menu__link {
   font-size: 14px;
-  color: #282A30;
-  font-family: 'Raleway';
+  color: #282a30;
+  font-family: "Raleway";
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
 }
 
-.theme-doc-sidebar-item-category, .theme-doc-sidebar-item-link {
+.theme-doc-sidebar-item-category,
+.theme-doc-sidebar-item-link {
   margin: 8px 0;
 }
 
@@ -38,7 +53,7 @@
   text-transform: uppercase;
   margin: 24px 0 5px !important;
   color: #690;
-  font-feature-settings: 'clig' off, 'liga' off;
+  font-feature-settings: "clig" off, "liga" off;
   font-family: Raleway;
   font-size: 14px;
   font-style: normal;
@@ -70,8 +85,9 @@
   padding-left: 14px;
 }
 
-.menu__list-item-collapsible.menu__list-item-collapsible--active,.menu__link--active {
-  background: #9C0 !important;
+.menu__list-item-collapsible.menu__list-item-collapsible--active,
+.menu__link--active {
+  background: #9c0 !important;
 }
 
 .menu__link--active {
@@ -92,7 +108,8 @@
   margin-top: 15px !important;
 }
 
-.menu__caret:before, .menu__link--sublist-caret:after {
+.menu__caret:before,
+.menu__link--sublist-caret:after {
   background: var(--ifm-menu-link-sublist-icon) 50% / 1.2rem 1.2rem;
 }
 
