@@ -7,5 +7,6 @@ module.exports = {
   },
   items: [
     'setup-and-administration/security/security-inheritance',
+    'setup-and-administration/security/enable-security',
   ],
 };

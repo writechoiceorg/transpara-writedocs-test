@@ -1,0 +1,137 @@
+---
+id: enable-security
+title: Enable Security
+slug: enable-security
+description: ''
+tags: ['documentation']
+---
+
+import StylizedImage from '@site/src/components/StylizedImage/StylizedImage';
+
+To secure your Visual KPI websites, data, and the Visual KPI Designer, you first need to enable security. Visual KPI supports any security model that uses IIS, such as VPN, RSA, and other two-factor authentication methods.
+
+:::tip Save Time
+
+Integrating the Visual KPI Server Manager with IIS saves you the time of setting up website authentication.
+
+:::
+
+To enable security, follow the steps below to use IIS and the Visual KPI Server Manager:
+
+- [Step 1: Decouple parent inheritance in IIS](#step-1-decouple-parent-inheritance-in-iis)
+- [Step 2: Enable security in IIS Manager](#step-2-enable-security-in-iis-manager)
+- [Step 3: Determine who gets access to websites](#step-3-determine-who-gets-access-to-websites)
+- [Step 4: Set up rights assignment](#step-4-set-up-rights-assignment)
+
+## Step 1: Decouple parent inheritance in IIS
+
+To set security for each component of Virtual KPI separately, you need to decouple directory inheritance from the Visual KPI website parent directory so that the Interface and WebService (for the Visual KPI Designer) won't inherit the same security as the Visual KPI website.
+
+:::info This Step is Optional
+
+If you want all components to have the same security, you can skip this step.
+
+:::
+
+Use IIS Manager to decouple inheritance from the parent directory. You'll need to do this for each component:
+- **Interfaces** (data sources)
+- **WebService** (Designer)
+- **Visual KPI Server instance** (website)
+
+<StylizedImage
+  imgURL="img/setup-adm/security/enable-security/decouple-1-KPI-security-parent-directory.png"
+  alt="Components"
+/>
+
+At the parent level of each component:
+1. Right-click and select **Edit Permissions**.
+2. When the **Properties** panel opens, select the **Security** tab.
+3. Click **Advanced**.
+
+<StylizedImage
+  imgURL="img/setup-adm/security/enable-security/decouple-2-KPI-security-IIS-permissions.png"
+  alt="Properties Panel"
+/>
+
+4. In **Advanced Security Settings**, on the **Permissions** tab, click **Disable inheritance**.
+
+<StylizedImage
+  imgURL="img/setup-adm/security/enable-security/decouple-3-IIS-Advanced-Security.png"
+  alt="Advanced Security Settings"
+/>
+
+:::warning Different UI
+
+The UI may be different for other versions of Microsoft Windows Server.
+
+:::
+
+5. In the **Block Inheritance** panel, select **Convert inherited permission into explicit permissions on this object**.
+
+<StylizedImage
+  imgURL="img/setup-adm/security/enable-security/decouple-4-KPI-security-IIS-permissions.png"
+  alt="Block Inheritance"
+/>
+
+6. Click **OK**.
+
+:::important Repeat for Each Component
+
+After you finish, remeber to repeat this for each component.
+
+:::
+
+## Step 2: Enable security in IIS Manager
+
+For every Visual KPI website, use IIS Manager to turn off anonymous access on the Visual KPI website and WebServices (hosts Visual KPI Designer). https://www.transpara.com/knowledge-base/enable-security-iis-manager/
+
+In IIS Manager, change the settings for Sites, Interfaces, and Webservices. To set authentication, click the top-level in the parent directory.
+
+### Enable Security for Visual KPI Sites
+
+You'll likely want to lock down security on the website, allowing access only to authenticated users.
+
+Click Site>Authentication:
+
+Anonymous Authentication: Disabled
+Windows Authentication: Enabled
+
+### Enable Security for Interfaces
+
+The public will not generally have access to the Interface. However, you can allow anyone to access them by setting permissions to Anonymous using Windows authentication.
+
+Click Interfaces>Authentication:
+
+Anonymous Authentication: Enabled
+Windows Authentication: Enabled
+
+### Enable Security for Visual KPI Designer
+
+There are two ways to manage security for the Visual KPI Designer:
+
+- Leave access open (Anonymous) and only give the Visual KPI Designer software to those who need access.
+- Lock security, only enabling access to approved users.
+
+To secure access, click Webservices>Authentication:
+
+Anonymous Authentication: Disabled
+Windows Authentication: Enabled
+
+## Step 3: Determine who gets access to websites
+
+Once you set security in IIS, you must determine who gets access. For example, you can set authentication for the entire website. This sets up who can get access, not who gets to see what. https://www.transpara.com/knowledge-base/security-create-local-groups/
+
+1. Create users and local groups with Visual KPI Server Manager.
+2. Add Active Directory Groups in IIS.
+3. Map user permissions.
+
+## Step 4: Set up rights assignment
+
+Once users get access to the website, what can they see? This is where you'll set up rights assignment or object-level inheritance for users or user groups in the Visual KPI Designer. https://www.transpara.com/knowledge-base/visual-kpi-object-level-security/
+
+### Access Denial Messages
+
+Any user without granted access to Visual KPI sites or virtual directories will see the following messages.
+
+- Visual KPI sites: a simple 403 error page
+- Visual KPI Designer: a modal dialog box telling the user they are forbidden to access the necessary Web services
