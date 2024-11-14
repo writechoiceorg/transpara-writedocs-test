@@ -1,6 +1,7 @@
 const installation = require('./installation');
 const interfaces = require('./interfaces');
 const automation = require('./automation');
+const security = require('./security');
 
 module.exports = [
   {
