@@ -27,12 +27,6 @@ To enable security, follow the steps below to use IIS and the Visual KPI Server 
 
 To set security for each component of Virtual KPI separately, you need to decouple directory inheritance from the Visual KPI website parent directory so that the Interface and WebService (for the Visual KPI Designer) won't inherit the same security as the Visual KPI website.
 
-:::info This Step is Optional
-
-If you want all components to have the same security, you can skip this step.
-
-:::
-
 Use IIS Manager to decouple inheritance from the parent directory. You'll need to do this for each component:
 - **Interfaces** (data sources)
 - **WebService** (Designer)
@@ -83,47 +77,119 @@ After you finish, remeber to repeat this for each component.
 
 ## Step 2: Enable security in IIS Manager
 
-For every Visual KPI website, use IIS Manager to turn off anonymous access on the Visual KPI website and WebServices (hosts Visual KPI Designer). https://www.transpara.com/knowledge-base/enable-security-iis-manager/
+For every Visual KPI website, use IIS Manager to turn off anonymous access on the Visual KPI website and WebServices (hosts Visual KPI Designer).
 
-In IIS Manager, change the settings for Sites, Interfaces, and Webservices. To set authentication, click the top-level in the parent directory.
+Before you set up security for Visual KPI Sites, Interfaces and the Visual KPI Designer, you must enable security in [Microsoft Internet Information Services (or IIS Manager for Windows)](https://docs.microsoft.com/en-us/iis/manage/configuring-security/configuring-ssl-in-iis-manager). You'll need to do this for each virtual directory to which you want to edit permissions.
 
-### Enable Security for Visual KPI Sites
+The most common security settings are for the Visual KPI website and Visual KPI Designer. Most users will only grant access to the Visual KPI Designer software to those who can access it, but you can also set up access through IIS. Most clients do not set security for Interfaces, but you can do it by following the steps outlined below.
 
-You'll likely want to lock down security on the website, allowing access only to authenticated users.
+:::note Previous Step
 
-Click Site>Authentication:
+Before you start this process, you should complete [Step 1: Decouple parent inheritance in IIS](#step-1-decouple-parent-inheritance-in-iis).
 
-Anonymous Authentication: Disabled
-Windows Authentication: Enabled
+:::
 
-### Enable Security for Interfaces
+### Setting Open or Secure access
 
-The public will not generally have access to the Interface. However, you can allow anyone to access them by setting permissions to Anonymous using Windows authentication.
+You can either allow open access to each server or set security, which requires users to authenticate with a username and password.
 
-Click Interfaces>Authentication:
+#### For open access:
 
-Anonymous Authentication: Enabled
-Windows Authentication: Enabled
+1. In IIS Manager, click the virtual directory for which you want to set authentication.
+2. Right-click **Authentication** in the Home panel and select **Open Feature** to open the Authentication panel.
 
-### Enable Security for Visual KPI Designer
+<StylizedImage
+  imgURL="img/setup-adm/security/enable-security/iis-manager-1.png"
+  alt="IIS Manager"
+/>
 
-There are two ways to manage security for the Visual KPI Designer:
+3. Enable **Anonymous Authentication**.
+4. Enable **Windows Authentication**.
 
-- Leave access open (Anonymous) and only give the Visual KPI Designer software to those who need access.
-- Lock security, only enabling access to approved users.
+<StylizedImage
+  imgURL="img/setup-adm/security/enable-security/iis-manager-2.png"
+  alt="Authentication"
+/>
 
-To secure access, click Webservices>Authentication:
+#### To set secure access:
+1. In IIS Manager, click the virtual directory for which you want to set authentication.
+2. Right-click **Authentication** in the Home panel and select **Open Feature** to open the Authentication panel.
 
-Anonymous Authentication: Disabled
-Windows Authentication: Enabled
+<StylizedImage
+  imgURL="img/setup-adm/security/enable-security/iis-manager-1.png"
+  alt="IIS Manager"
+/>
+
+3. Disable **Anonymous Authentication**.
+4. Enable **Windows Authentication**.
+
+<StylizedImage
+  imgURL="img/setup-adm/security/enable-security/iis-manager-3.png"
+  alt="Authentication"
+/>
 
 ## Step 3: Determine who gets access to websites
 
-Once you set security in IIS, you must determine who gets access. For example, you can set authentication for the entire website. This sets up who can get access, not who gets to see what. https://www.transpara.com/knowledge-base/security-create-local-groups/
+Once you set security in IIS, you must determine who gets access. For example, you can set authentication for the entire website. This sets up who can get access, not who gets to see what.
 
-1. Create users and local groups with Visual KPI Server Manager.
-2. Add Active Directory Groups in IIS.
-3. Map user permissions.
+Visual KPI Server Manager allows you to create local groups and users, making it easy to set up authentication in IIS.
+1. Open Visual KPI Server Manager
+2. Click **Tools** in the menu.
+3. Select **Computer Management**.
+
+<StylizedImage
+  imgURL="img/setup-adm/security/enable-security/security-groups-1.png"
+  alt="Computer Management"
+/>
+
+4. Under **Local Users and Groups**, you can have a separate folder for **Users** and **Groups**.
+
+<StylizedImage
+  imgURL="img/setup-adm/security/enable-security/security-groups-2.png"
+  alt="Computer Management"
+/>
+
+5. Move users into groups, or create a new group.
+
+### Create a New Group
+
+1. Right-click in the **Groups** panel.
+2. Click **New Group**.
+3. Name the Group.
+4. Click **Add** to add members to the Group.
+5. Start typing a name and click **Check Name** to find and add users.
+6. Click **Create** to create the Group.
+
+<StylizedImage
+  imgURL="img/setup-adm/security/enable-security/security-groups-3.png"
+  alt="New Group"
+/>
+
+### Add Groups in IIS Manager
+
+1. In IIS Manager, right-click the top level for the website.
+2. Select **Edit Permissions**.
+3. In the Permissions panel, click **Add** to add the new group. It will open the **Permissions Entry** panel.
+
+<StylizedImage
+  imgURL="img/setup-adm/security/enable-security/security-groups-4.png"
+  alt="Edit Permissions"
+/>
+
+4. Click **Locations** and select the server where the group is located.
+
+<StylizedImage
+  imgURL="img/setup-adm/security/enable-security/security-groups-5.png"
+  alt="Locations"
+/>
+
+5. Type the name of the group and click **OK**.
+6. Select the permissions for the new group:
+- Read & Execute
+- List folder contents
+- Read
+7. Click **OK** to save new users.
+
 
 ## Step 4: Set up rights assignment
 
