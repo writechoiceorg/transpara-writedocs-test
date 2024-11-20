@@ -133,23 +133,22 @@ You can either allow open access to each server or set security, which requires 
 Once you set security in IIS, you must determine who gets access. For example, you can set authentication for the entire website. This sets up who can get access, not who gets to see what.
 
 Visual KPI Server Manager allows you to create local groups and users, making it easy to set up authentication in IIS.
-1. Open Visual KPI Server Manager
-2. Click **Tools** in the menu.
-3. Select **Computer Management**.
+1. Open the **Windows Server Manager**.
+2. Click **Tools** and select **Computer Management**.
 
 <StylizedImage
   imgURL="img/setup-adm/security/enable-security/security-groups-1.png"
   alt="Computer Management"
 />
 
-4. Under **Local Users and Groups**, you can have a separate folder for **Users** and **Groups**.
+3. Under **Local Users and Groups**, you can have a separate folder for **Users** and **Groups**.
 
 <StylizedImage
   imgURL="img/setup-adm/security/enable-security/security-groups-2.png"
   alt="Computer Management"
 />
 
-5. Move users into groups, or create a new group.
+4. Move users into groups, or create a new group.
 
 ### Create a New Group
 
@@ -167,28 +166,33 @@ Visual KPI Server Manager allows you to create local groups and users, making it
 
 ### Add Groups in IIS Manager
 
-1. In IIS Manager, right-click the top level for the website.
-2. Select **Edit Permissions**.
-3. In the Permissions panel, click **Add** to add the new group. It will open the **Permissions Entry** panel.
+1. In IIS Manager, right-click the top level for the website and select **Edit Permissions**.
+
+
+
+2. In the **Security** tab, click **Edit...** and then, in the **Permissions** panel, click **Add...** to add the new group.
+
+
+
+3. In the **Permissions Entry** panel, click **Locations** and select the server where the group is located.
 
 <StylizedImage
   imgURL="img/setup-adm/security/enable-security/security-groups-4.png"
   alt="Edit Permissions"
 />
 
-4. Click **Locations** and select the server where the group is located.
 
 <StylizedImage
   imgURL="img/setup-adm/security/enable-security/security-groups-5.png"
   alt="Locations"
 />
 
-5. Type the name of the group and click **OK**.
-6. Select the permissions for the new group:
+4. Type the name of the group and click **OK**.
+5. With the new group selected, set the permissions for the new group as presented below:
     - Read & Execute
     - List folder contents
     - Read
-7. Click **OK** to save new users.
+6. Click **OK** to save.
 
 
 ## Step 4: Set up rights assignment
