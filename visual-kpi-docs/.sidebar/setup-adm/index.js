@@ -1,6 +1,7 @@
 const installation = require('./installation');
 const interfaces = require('./interfaces');
 const automation = require('./automation');
+const security = require('./security');
 
 module.exports = [
   {
@@ -10,6 +11,7 @@ module.exports = [
   installation,
   interfaces,
   automation,
+  security,
   /*{
     type: 'doc',
     id: 'setup-and-administration/best-practices',
