@@ -27,30 +27,36 @@ To enable security, follow the steps below to use IIS and the Visual KPI Server 
 
 To set security for each component of Virtual KPI separately, you need to decouple directory inheritance from the Visual KPI website parent directory so that the Interface and WebService (for the Visual KPI Designer) won't inherit the same security as the Visual KPI website.
 
-Use IIS Manager to decouple inheritance from the parent directory. You'll need to do this for each component:
-- **Interfaces** (data sources)
-- **WebService** (Designer)
-- **Visual KPI Server instance** (website)
+Use IIS Manager to decouple inheritance from the parent directory. You'll need to do this for each component. The components are:
+1. **Visual KPI Server instance** (website)
+2. **Interfaces** (data sources)
+3. **WebService** (Designer)
 
 <StylizedImage
-  imgURL="img/setup-adm/security/enable-security/decouple-1-KPI-security-parent-directory.png"
+  imgURL="img/setup-adm/security/enable-security/decouple-1.png"
   alt="Components"
 />
 
 At the parent level of each component:
 1. Right-click and select **Edit Permissions**.
+
+<StylizedImage
+  imgURL="img/setup-adm/security/enable-security/decouple-2.png"
+  alt="Properties Panel"
+/>
+
 2. When the **Properties** panel opens, select the **Security** tab.
 3. Click **Advanced**.
 
 <StylizedImage
-  imgURL="img/setup-adm/security/enable-security/decouple-2-KPI-security-IIS-permissions.png"
+  imgURL="img/setup-adm/security/enable-security/decouple-3.png"
   alt="Properties Panel"
 />
 
 4. In **Advanced Security Settings**, on the **Permissions** tab, click **Disable inheritance**.
 
 <StylizedImage
-  imgURL="img/setup-adm/security/enable-security/decouple-3-IIS-Advanced-Security.png"
+  imgURL="img/setup-adm/security/enable-security/decouple-4.png"
   alt="Advanced Security Settings"
 />
 
@@ -63,7 +69,7 @@ The UI may be different for other versions of Microsoft Windows Server.
 5. In the **Block Inheritance** panel, select **Convert inherited permission into explicit permissions on this object**.
 
 <StylizedImage
-  imgURL="img/setup-adm/security/enable-security/decouple-4-KPI-security-IIS-permissions.png"
+  imgURL="img/setup-adm/security/enable-security/decouple-5.png"
   alt="Block Inheritance"
 />
 
@@ -145,7 +151,7 @@ Visual KPI Server Manager allows you to create local groups and users, making it
 
 <StylizedImage
   imgURL="img/setup-adm/security/enable-security/security-groups-2.png"
-  alt="Computer Management"
+  alt="Local Users and Groups"
 />
 
 4. Move users into groups, or create a new group.
@@ -154,44 +160,63 @@ Visual KPI Server Manager allows you to create local groups and users, making it
 
 1. Right-click in the **Groups** panel.
 2. Click **New Group**.
-3. Name the Group.
-4. Click **Add** to add members to the Group.
-5. Start typing a name and click **Check Name** to find and add users.
-6. Click **Create** to create the Group.
 
 <StylizedImage
   imgURL="img/setup-adm/security/enable-security/security-groups-3.png"
   alt="New Group"
 />
 
+3. Name the Group.
+4. Click **Add** to add members to the Group.
+
+<StylizedImage
+  imgURL="img/setup-adm/security/enable-security/security-groups-4.png"
+  alt="Add Members"
+/>
+
+5. Start typing a name and click **Check Name** to find and add users.
+
+<StylizedImage
+  imgURL="img/setup-adm/security/enable-security/security-groups-5.png"
+  alt="Check Name"
+/>
+
+6. Click **Create** to create the Group after you added all the users.
+
 ### Add Groups in IIS Manager
 
 1. In IIS Manager, right-click the top level for the website and select **Edit Permissions**.
 
-
+<StylizedImage
+  imgURL="img/setup-adm/security/enable-security/security-groups-6.png"
+  alt="Edit Permissions"
+/>
 
 2. In the **Security** tab, click **Edit...** and then, in the **Permissions** panel, click **Add...** to add the new group.
 
-
+<StylizedImage
+  imgURL="img/setup-adm/security/enable-security/security-groups-7.png"
+  alt="Add Permissions"
+/>
 
 3. In the **Permissions Entry** panel, click **Locations** and select the server where the group is located.
 
 <StylizedImage
-  imgURL="img/setup-adm/security/enable-security/security-groups-4.png"
-  alt="Edit Permissions"
-/>
-
-
-<StylizedImage
-  imgURL="img/setup-adm/security/enable-security/security-groups-5.png"
+  imgURL="img/setup-adm/security/enable-security/security-groups-8.png"
   alt="Locations"
 />
 
 4. Type the name of the group and click **OK**.
-5. With the new group selected, set the permissions for the new group as presented below:
+5. With the new group selected, set the permissions as allowed for the new group as presented below:
     - Read & Execute
     - List folder contents
     - Read
+
+<StylizedImage
+  imgURL="img/setup-adm/security/enable-security/security-groups-9.png"
+  alt="Set the Permissions"
+/>
+
 6. Click **OK** to save.
 
 
