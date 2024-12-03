@@ -222,7 +222,7 @@ const config = {
             ],
           }
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Transpara. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Transpara.`,
       },
       prism: {
         theme: lightTheme,
