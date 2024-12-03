@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-import posthog from "posthog-js";
-import configurations from "../utils/configurations";
 
 const DocsBotComponent = () => {
   useEffect(() => {
@@ -64,51 +62,7 @@ const DocsBotComponent = () => {
   );
 };
 
-const loadPostHog = () => {
-  let posthogKey = process.env.REACT_APP_POSTHOG_API_KEY;
-  let posthogHost = process.env.REACT_APP_POSTHOG_HOST;
-
-  if (!posthogKey) {
-    posthogKey = configurations.integrations?.posthog?.api_key;
-  }
-  if (!posthogHost) {
-    posthogHost = configurations.integrations?.posthog?.api_host;
-  }
-  if (posthogKey && posthogHost) {
-    return {
-      posthogKey,
-      posthogHost,
-    };
-  }
-};
-
-const PostHogProvider = ({ children, posthogKey, posthogHost }) => {
-  useEffect(() => {
-    posthog.init(posthogKey, {
-      api_host: posthogHost,
-      loaded: (posthog) => {
-        console.log("PostHog loaded:", posthog);
-      },
-    });
-    return () => {
-      posthog.shutdown();
-    };
-  }, []);
-  return <>{children}</>;
-};
-
 export default function Root({ children }) {
-  const posthogCredentials = loadPostHog();
-
-  if (posthogCredentials) {
-    const { posthogKey, posthogHost } = posthogCredentials;
-    return (
-      <PostHogProvider posthogKey={posthogKey} posthogHost={posthogHost}>
-        <DocsBotComponent />
-        {children}
-      </PostHogProvider>
-    );
-  }
   return (
     <>
       <DocsBotComponent />
